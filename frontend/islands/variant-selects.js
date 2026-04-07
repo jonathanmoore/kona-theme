@@ -1,22 +1,41 @@
+import { Events, createEvent } from '@/lib/events'
+
 export default class VariantSelects extends window.HTMLElement {
-  constructor() {
-    super()
-    this.addEventListener('change', this.onVariantChange)
+  connectedCallback() {
+    this.controller = new AbortController()
+
+    this.addEventListener('change', this.onVariantChange, {
+      signal: this.controller.signal
+    })
+  }
+
+  disconnectedCallback() {
+    this.controller?.abort()
   }
 
   onVariantChange() {
     this.updateOptions()
     this.updateMasterId()
-    this.toggleAddButton(true, '', false)
-    this.removeErrorMessage()
 
     if (!this.currentVariant) {
-      this.toggleAddButton(true, '', true)
-      this.setUnavailable()
+      this.dispatchEvent(
+        createEvent(Events.VARIANT_CHANGED, {
+          variant: null,
+          available: false,
+          sectionId: this.dataset.section,
+        })
+      )
     } else {
       this.updateURL()
       this.updateVariantInput()
       this.renderProductInfo()
+      this.dispatchEvent(
+        createEvent(Events.VARIANT_CHANGED, {
+          variant: this.currentVariant,
+          available: this.currentVariant.available,
+          sectionId: this.dataset.section,
+        })
+      )
     }
   }
 
@@ -50,85 +69,46 @@ export default class VariantSelects extends window.HTMLElement {
     const productForms = document.querySelectorAll(
       `#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`
     )
-    productForms.forEach((productForm) => {
+    for (const productForm of productForms) {
       const input = productForm.querySelector('input[name="id"]')
       input.value = this.currentVariant.id
       input.dispatchEvent(new Event('change', { bubbles: true }))
-    })
-  }
-
-  removeErrorMessage() {
-    const section = this.closest('section')
-    if (!section) return
-
-    const productForm = section.querySelector('product-form')
-    if (productForm) productForm.handleErrorMessage()
-  }
-
-  renderProductInfo() {
-    fetch(
-      `${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${
-        this.dataset.originalSection
-          ? this.dataset.originalSection
-          : this.dataset.section
-      }`
-    )
-      .then((response) => response.text())
-      .then((responseText) => {
-        const html = new window.DOMParser().parseFromString(
-          responseText,
-          'text/html'
-        )
-        const destination = document.getElementById(
-          `price-${this.dataset.section}`
-        )
-        const source = html.getElementById(
-          `price-${
-            this.dataset.originalSection
-              ? this.dataset.originalSection
-              : this.dataset.section
-          }`
-        )
-        if (source && destination) destination.innerHTML = source.innerHTML
-
-        const price = document.getElementById(`price-${this.dataset.section}`)
-
-        if (price) price.classList.remove('invisible')
-        this.toggleAddButton(
-          !this.currentVariant.available,
-          window.variantStrings.soldOut
-        )
-      })
-  }
-
-  toggleAddButton(disable = true, text) {
-    const productForm = document.getElementById(
-      `product-form-${this.dataset.section}`
-    )
-    if (!productForm) return
-    const addButton = productForm.querySelector('[name="add"]')
-    const addButtonText = productForm.querySelector('[name="add"] > span')
-    if (!addButton) return
-
-    if (disable) {
-      addButton.setAttribute('disabled', 'disabled')
-      if (text) addButtonText.textContent = text
-    } else {
-      addButton.removeAttribute('disabled')
-      addButtonText.textContent = window.variantStrings.addToCart
     }
   }
 
-  setUnavailable() {
-    const button = document.getElementById(
-      `product-form-${this.dataset.section}`
-    )
-    const addButton = button.querySelector('[name="add"]')
-    const addButtonText = button.querySelector('[name="add"] > span')
-    const price = document.getElementById(`price-${this.dataset.section}`)
-    if (!addButton) return
-    addButtonText.textContent = window.variantStrings.unavailable
-    if (price) price.classList.add('invisible')
+  async renderProductInfo() {
+    try {
+      const response = await fetch(
+        `${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${
+          this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
+        }`,
+        { signal: this.controller.signal }
+      )
+      const responseText = await response.text()
+      const html = new window.DOMParser().parseFromString(
+        responseText,
+        'text/html'
+      )
+      const destination = document.getElementById(
+        `price-${this.dataset.section}`
+      )
+      const source = html.getElementById(
+        `price-${
+          this.dataset.originalSection
+            ? this.dataset.originalSection
+            : this.dataset.section
+        }`
+      )
+      if (source && destination) destination.innerHTML = source.innerHTML
+
+      const price = document.getElementById(`price-${this.dataset.section}`)
+
+      if (price) price.classList.remove('invisible')
+    } catch (e) {
+      if (e.name !== 'AbortError') console.error(e)
+    }
   }
 
   getVariantData() {

@@ -1,5 +1,6 @@
 import { debounce, fetchConfig } from '@/lib/utils'
 import { trapFocus } from '@/lib/a11y'
+import { Events, createEvent } from '@/lib/events'
 
 export default class CartItems extends window.HTMLElement {
   constructor() {
@@ -16,8 +17,18 @@ export default class CartItems extends window.HTMLElement {
     this.debouncedOnChange = debounce((event) => {
       this.onChange(event)
     }, 300)
+  }
 
-    this.addEventListener('change', this.debouncedOnChange)
+  connectedCallback() {
+    this.controller = new AbortController()
+
+    this.addEventListener('change', this.debouncedOnChange, {
+      signal: this.controller.signal
+    })
+  }
+
+  disconnectedCallback() {
+    this.controller?.abort()
   }
 
   onChange(event) {
@@ -53,7 +64,7 @@ export default class CartItems extends window.HTMLElement {
     ]
   }
 
-  updateQuantity(line, quantity, name) {
+  async updateQuantity(line, quantity, name) {
     this.enableLoading(line)
 
     const body = JSON.stringify({
@@ -63,67 +74,71 @@ export default class CartItems extends window.HTMLElement {
       sections_url: window.location.pathname
     })
 
-    fetch(`${window.routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
-      .then((response) => {
-        return response.text()
+    try {
+      const response = await fetch(`${window.routes.cart_change_url}`, {
+        ...fetchConfig(),
+        body,
+        signal: this.controller.signal
       })
-      .then((state) => {
-        const parsedState = JSON.parse(state)
-        this.classList.toggle('is-empty', parsedState.item_count === 0)
-        const cartDrawerWrapper = document.querySelector('cart-drawer')
+      const state = await response.text()
+      const parsedState = JSON.parse(state)
+      this.classList.toggle('is-empty', parsedState.item_count === 0)
+      const cartDrawerWrapper = document.querySelector('cart-drawer')
 
-        if (cartDrawerWrapper)
-          cartDrawerWrapper.classList.toggle(
-            'is-empty',
-            parsedState.item_count === 0
-          )
-
-        this.getSectionsToRender().forEach((section) => {
-          const elementToReplace =
-            document
-              .getElementById(section.id)
-              .querySelector(section.selector) ||
-            document.getElementById(section.id)
-          elementToReplace.innerHTML = this.getSectionInnerHTML(
-            parsedState.sections[section.section],
-            section.selector
-          )
+      document.dispatchEvent(
+        createEvent(Events.CART_UPDATED, {
+          source: this.localName,
+          itemCount: parsedState.item_count,
+          sections: parsedState.sections,
         })
+      )
 
-        this.updateLiveRegions(line, parsedState.item_count)
-        const lineItem =
-          document.getElementById(`CartItem-${line}`) ||
-          document.getElementById(`CartDrawer-Item-${line}`)
-        if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
-          cartDrawerWrapper
-            ? trapFocus(
-                cartDrawerWrapper,
-                lineItem.querySelector(`[name="${name}"]`)
-              )
-            : lineItem.querySelector(`[name="${name}"]`).focus()
-        } else if (parsedState.item_count === 0 && cartDrawerWrapper) {
-          trapFocus(
-            cartDrawerWrapper.querySelector('#CartDrawer'),
-            cartDrawerWrapper.querySelector('[tabindex="-1"]')
-          )
-        } else if (document.querySelector('.cart-item') && cartDrawerWrapper) {
-          trapFocus(
-            cartDrawerWrapper,
-            document.querySelector('.cart-item-name')
-          )
-        }
-        this.disableLoading()
-      })
-      .catch(() => {
-        this.querySelectorAll('.loading-overlay').forEach((overlay) =>
-          overlay.classList.add('hidden')
+      for (const section of this.getSectionsToRender()) {
+        const elementToReplace =
+          document
+            .getElementById(section.id)
+            .querySelector(section.selector) ||
+          document.getElementById(section.id)
+        elementToReplace.innerHTML = this.getSectionInnerHTML(
+          parsedState.sections[section.section],
+          section.selector
         )
-        const errors =
-          document.getElementById('cart-errors') ||
-          document.getElementById('CartDrawer-CartErrors')
-        errors.textContent = window.cartStrings.error
-        this.disableLoading()
-      })
+      }
+
+      this.updateLiveRegions(line, parsedState.item_count)
+      const lineItem =
+        document.getElementById(`CartItem-${line}`) ||
+        document.getElementById(`CartDrawer-Item-${line}`)
+      if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
+        cartDrawerWrapper
+          ? trapFocus(
+              cartDrawerWrapper,
+              lineItem.querySelector(`[name="${name}"]`)
+            )
+          : lineItem.querySelector(`[name="${name}"]`).focus()
+      } else if (parsedState.item_count === 0 && cartDrawerWrapper) {
+        trapFocus(
+          cartDrawerWrapper.querySelector('#CartDrawer'),
+          cartDrawerWrapper.querySelector('[tabindex="-1"]')
+        )
+      } else if (document.querySelector('.cart-item') && cartDrawerWrapper) {
+        trapFocus(
+          cartDrawerWrapper,
+          document.querySelector('.cart-item-name')
+        )
+      }
+      this.disableLoading()
+    } catch (e) {
+      if (e.name === 'AbortError') return
+      for (const overlay of this.querySelectorAll('.loading-overlay')) {
+        overlay.classList.add('hidden')
+      }
+      const errors =
+        document.getElementById('cart-errors') ||
+        document.getElementById('CartDrawer-CartErrors')
+      errors.textContent = window.cartStrings.error
+      this.disableLoading()
+    }
   }
 
   updateLiveRegions(line, itemCount) {
@@ -172,9 +187,9 @@ export default class CartItems extends window.HTMLElement {
       `#CartDrawer-Item-${line} .loading-overlay`
     )
 
-    ;[...cartItemElements, ...cartDrawerItemElements].forEach((overlay) =>
+    for (const overlay of [...cartItemElements, ...cartDrawerItemElements]) {
       overlay.classList.remove('hidden')
-    )
+    }
 
     document.activeElement.blur()
     this.lineItemStatusElement.setAttribute('aria-hidden', false)
