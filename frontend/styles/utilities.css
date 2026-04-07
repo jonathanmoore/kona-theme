@@ -1,0 +1,26 @@
+.absolute-center {
+  @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.strike {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 108%;
+    height: 1.5px;
+    left: -4%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(var(--color-primary));
+    box-shadow: 0.5px 0.5px 0px 0.5px rgb(var(--color-contrast));
+  }
+}
+
+.hidden-scroll {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

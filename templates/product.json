@@ -1,0 +1,106 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product-details": {
+          "static": true,
+          "type": "product-details",
+          "blocks": {
+            "title": {
+              "type": "heading",
+              "settings": {
+                "heading": "{{ closest.product.title }}",
+                "heading_level": "h1",
+                "heading_size": "lg"
+              }
+            },
+            "vendor": {
+              "type": "text",
+              "settings": {
+                "text": "<p>{{ closest.product.vendor }}</p>"
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "product": "{{ closest.product }}"
+              }
+            },
+            "variant_picker": {
+              "type": "variant-picker",
+              "settings": {
+                "product": "{{ closest.product }}"
+              }
+            },
+            "buy_buttons": {
+              "type": "buy-buttons",
+              "settings": {
+                "product": "{{ closest.product }}"
+              }
+            },
+            "tab": {
+              "type": "tab"
+            }
+          },
+          "block_order": [
+            "title",
+            "vendor",
+            "price",
+            "variant_picker",
+            "buy_buttons",
+            "tab"
+          ]
+        }
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {},
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "static": true,
+          "settings": {
+            "heading": "You may also like",
+            "heading_level": "h2",
+            "heading_size": "md"
+          }
+        },
+        "static-product-card": {
+          "type": "product-card",
+          "static": true,
+          "settings": {
+            "product": "{{ closest.product }}"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "static": true,
+              "settings": {
+                "text": "<p>{{ closest.product.title }}</p>"
+              }
+            },
+            "price": {
+              "type": "price",
+              "static": true,
+              "id": "price",
+              "settings": {
+                "product": "{{ closest.product }}"
+              }
+            },
+            "image": {
+              "type": "image",
+              "static": true,
+              "id": "image",
+              "settings": {
+                "image": "{{ closest.product.featured_image }}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "order": ["main", "product-recommendations"]
+}

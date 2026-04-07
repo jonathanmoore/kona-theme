@@ -1,0 +1,164 @@
+{
+  "_utils.js": {
+    "file": "utils.js",
+    "name": "utils"
+  },
+  "frontend/entrypoints/theme.css": {
+    "file": "theme.css",
+    "name": "theme",
+    "names": [
+      "theme.css"
+    ],
+    "src": "frontend/entrypoints/theme.css",
+    "isEntry": true
+  },
+  "frontend/entrypoints/theme.js": {
+    "file": "theme2.js",
+    "name": "theme",
+    "src": "frontend/entrypoints/theme.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "frontend/islands/cart-drawer-items.js",
+      "frontend/islands/cart-drawer.js",
+      "frontend/islands/cart-items.js",
+      "frontend/islands/cart-note.js",
+      "frontend/islands/cart-remove-button.js",
+      "frontend/islands/details-disclosure.js",
+      "frontend/islands/details-modal.js",
+      "frontend/islands/header-drawer.js",
+      "frontend/islands/localization-form.js",
+      "frontend/islands/password-modal.js",
+      "frontend/islands/product-form.js",
+      "frontend/islands/product-recommendations.js",
+      "frontend/islands/quantity-input.js",
+      "frontend/islands/sticky-header.js",
+      "frontend/islands/variant-radios.js",
+      "frontend/islands/variant-selects.js"
+    ]
+  },
+  "frontend/islands/cart-drawer-items.js": {
+    "file": "cart-drawer-items.js",
+    "name": "cart-drawer-items",
+    "src": "frontend/islands/cart-drawer-items.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "frontend/islands/cart-items.js"
+    ]
+  },
+  "frontend/islands/cart-drawer.js": {
+    "file": "cart-drawer.js",
+    "name": "cart-drawer",
+    "src": "frontend/islands/cart-drawer.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "frontend/entrypoints/theme.js"
+    ]
+  },
+  "frontend/islands/cart-items.js": {
+    "file": "cart-items.js",
+    "name": "cart-items",
+    "src": "frontend/islands/cart-items.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "frontend/entrypoints/theme.js",
+      "_utils.js"
+    ]
+  },
+  "frontend/islands/cart-note.js": {
+    "file": "cart-note.js",
+    "name": "cart-note",
+    "src": "frontend/islands/cart-note.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_utils.js"
+    ]
+  },
+  "frontend/islands/cart-remove-button.js": {
+    "file": "cart-remove-button.js",
+    "name": "cart-remove-button",
+    "src": "frontend/islands/cart-remove-button.js",
+    "isDynamicEntry": true
+  },
+  "frontend/islands/details-disclosure.js": {
+    "file": "details-disclosure.js",
+    "name": "details-disclosure",
+    "src": "frontend/islands/details-disclosure.js",
+    "isDynamicEntry": true
+  },
+  "frontend/islands/details-modal.js": {
+    "file": "details-modal.js",
+    "name": "details-modal",
+    "src": "frontend/islands/details-modal.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "frontend/entrypoints/theme.js"
+    ]
+  },
+  "frontend/islands/header-drawer.js": {
+    "file": "header-drawer.js",
+    "name": "header-drawer",
+    "src": "frontend/islands/header-drawer.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "frontend/entrypoints/theme.js",
+      "frontend/islands/details-modal.js"
+    ]
+  },
+  "frontend/islands/localization-form.js": {
+    "file": "localization-form.js",
+    "name": "localization-form",
+    "src": "frontend/islands/localization-form.js",
+    "isDynamicEntry": true
+  },
+  "frontend/islands/password-modal.js": {
+    "file": "password-modal.js",
+    "name": "password-modal",
+    "src": "frontend/islands/password-modal.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "frontend/islands/details-modal.js"
+    ]
+  },
+  "frontend/islands/product-form.js": {
+    "file": "product-form.js",
+    "name": "product-form",
+    "src": "frontend/islands/product-form.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_utils.js"
+    ]
+  },
+  "frontend/islands/product-recommendations.js": {
+    "file": "product-recommendations.js",
+    "name": "product-recommendations",
+    "src": "frontend/islands/product-recommendations.js",
+    "isDynamicEntry": true
+  },
+  "frontend/islands/quantity-input.js": {
+    "file": "quantity-input.js",
+    "name": "quantity-input",
+    "src": "frontend/islands/quantity-input.js",
+    "isDynamicEntry": true
+  },
+  "frontend/islands/sticky-header.js": {
+    "file": "sticky-header.js",
+    "name": "sticky-header",
+    "src": "frontend/islands/sticky-header.js",
+    "isDynamicEntry": true
+  },
+  "frontend/islands/variant-radios.js": {
+    "file": "variant-radios.js",
+    "name": "variant-radios",
+    "src": "frontend/islands/variant-radios.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "frontend/islands/variant-selects.js"
+    ]
+  },
+  "frontend/islands/variant-selects.js": {
+    "file": "variant-selects.js",
+    "name": "variant-selects",
+    "src": "frontend/islands/variant-selects.js",
+    "isDynamicEntry": true
+  }
+}

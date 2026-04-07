@@ -1,0 +1,39 @@
+<div id="Banner-{{ section.id }}" class="relative flex w-full flex-wrap">
+  <div class="relative flex min-h-[34rem] w-full items-center justify-center">
+    <div class="flex h-fit w-full flex-col items-center gap-4 px-6 text-center md:px-8 lg:px-12">
+      {%- content_for 'blocks' -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Email signup banner",
+  "tag": "section",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "presets": [
+    {
+      "name": "Email signup banner",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "heading": "Opening soon",
+            "heading_level": "h2",
+            "heading_size": "lg"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "text": "<p>Be the first to know when we launch.</p>"
+          }
+        },
+        {
+          "type": "email-signup"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

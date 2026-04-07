@@ -1,0 +1,29 @@
+{%- liquid
+  assign container_class = 'border-none'
+-%}
+
+<footer
+  role="contentinfo"
+  class="{{ container_class }} bg-contrast text-primary min-h-[25rem] w-full grid-cols-1 border-b px-6 py-8 md:grid md:grid-flow-row md:grid-cols-2 md:items-start md:gap-8 md:px-8 lg:grid-cols-[repeat(auto-fill,minmax(260px,1fr))] lg:gap-12 lg:px-12"
+>
+  {%- content_for 'blocks' -%}
+  {%- content_for 'block', type: '_footer-country-selector', id: 'footer-country-selector' -%}
+  <div class="self-end pt-14 opacity-50 md:col-span-2 md:pt-8 lg:col-span-full">
+    &copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}
+    {{ powered_by_link }}
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "blocks": [{ "type": "_footer-menu" }],
+  "default": {
+    "blocks": [
+      {
+        "type": "_footer-menu"
+      }
+    ]
+  }
+}
+{% endschema %}

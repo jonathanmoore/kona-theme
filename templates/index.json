@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "xl",
+            "heading_level": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Give customers details about the banner image(s) or content on the template.</strong></p>",
+            "text_size": "lg"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop all →",
+            "button_variant": "link",
+            "button_size": "lg",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "full_page_height_enable": true,
+        "lazy_load_enable": false,
+        "preload_first_image_enable": true
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "static": true,
+          "settings": {
+            "heading": "Featured collection",
+            "heading_level": "h2",
+            "heading_size": "md"
+          }
+        },
+        "static-product-card": {
+          "type": "product-card",
+          "static": true,
+          "settings": {
+            "product": "{{ closest.product }}"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "static": true,
+              "settings": {
+                "text": "<p>{{ closest.product.title }}</p>"
+              }
+            },
+            "price": {
+              "type": "price",
+              "static": true,
+              "id": "price",
+              "settings": {
+                "product": "{{ closest.product }}"
+              }
+            },
+            "image": {
+              "type": "image",
+              "static": true,
+              "id": "image",
+              "settings": {
+                "image": "{{ closest.product.featured_image }}"
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8
+      }
+    },
+    "collection_list": {
+      "type": "collection-list",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "static": true,
+          "id": "heading",
+          "settings": {
+            "heading": "Collections",
+            "heading_level": "h2",
+            "heading_size": "md"
+          }
+        },
+        "collection-card": {
+          "type": "collection-card",
+          "id": "collection-card",
+          "static": true,
+          "settings": {
+            "collection": "{{ closest.collection }}"
+          },
+          "blocks": {
+            "image": {
+              "type": "image",
+              "static": true,
+              "id": "image",
+              "settings": {
+                "image": "{{ closest.collection.image }}"
+              }
+            },
+            "heading": {
+              "type": "heading",
+              "static": true,
+              "id": "heading",
+              "settings": {
+                "heading": "{{ closest.collection.title }}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "order": ["image_banner", "featured_collection", "collection_list"]
+}

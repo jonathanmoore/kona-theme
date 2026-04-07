@@ -1,0 +1,39 @@
+{
+  "name": "hygrogen-theme",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "dev": "concurrently -r -k -P 'shopify theme dev {@}' 'vite'",
+    "build": "vite build",
+    "deploy": "pnpm run build && shopify theme push",
+    "lint": "eslint .",
+    "format": "prettier --write --cache .",
+    "format-check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@driver-digital/vite-plugin-shopify-clean": "^1.1.2",
+    "@eslint/js": "^10.0.1",
+    "@shopify/prettier-plugin-liquid": "^1.10.2",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "4.2.2",
+    "concurrently": "^9.2.1",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.2.2",
+    "vite": "^8.0.0",
+    "vite-plugin-shopify": "^4.1.2",
+    "vite-plugin-shopify-import-maps": "^0.7.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "protobufjs"
+    ]
+  }
+}
