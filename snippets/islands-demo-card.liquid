@@ -1,0 +1,45 @@
+{% doc %}
+  Renders a single island demo card showing hydration status.
+
+  @param {string} tag - Custom element tag name, e.g. 'island-demo-idle'
+  @param {string} directive - Hydration attribute name, e.g. 'client:idle'
+  @param {string} [directive_value] - Optional attribute value, e.g. '(min-width: 768px)'
+  @param {string} title - Display label for the card
+  @param {string} description - Explanation of when to use this directive
+{% enddoc %}
+
+<{{ tag }}
+  class="group grid gap-4 rounded-lg border border-primary/10 p-5 transition-colors duration-500 [.is-hydrated&]:border-primary/25 [.is-hydrated&]:bg-primary/[0.02]"
+  {% if directive_value != blank %}
+    {{ directive }}="{{ directive_value }}"
+  {% else %}
+    {{ directive }}
+  {% endif %}
+>
+  {%- comment -%} Header: directive name + status badge {%- endcomment -%}
+  <div class="flex items-center justify-between gap-3">
+    <code class="text-sm font-semibold text-primary">{{ title }}</code>
+    <span
+      data-demo-status
+      class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-primary/10 text-primary/50 transition-colors duration-500 [&[data-hydrated]]:bg-green-100 [&[data-hydrated]]:text-green-700"
+    >
+      Waiting
+    </span>
+  </div>
+
+  {%- comment -%} Description {%- endcomment -%}
+  <p class="text-sm text-primary/60 leading-relaxed">{{ description }}</p>
+
+  {%- comment -%} Progress bar {%- endcomment -%}
+  <div class="h-1.5 w-full overflow-hidden rounded-full bg-primary/10">
+    <div
+      data-demo-indicator
+      class="h-full w-0 rounded-full bg-green-500 transition-all duration-700 [.is-active&]:w-full"
+    ></div>
+  </div>
+
+  {%- comment -%} Timestamp {%- endcomment -%}
+  <p class="text-xs text-primary/40">
+    Hydrated at: <span data-demo-timestamp class="font-mono">--:--:--.---</span>
+  </p>
+</{{ tag }}>

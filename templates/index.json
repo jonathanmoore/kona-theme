@@ -125,7 +125,11 @@
           }
         }
       }
+    },
+    "islands_demo": {
+      "type": "islands-demo",
+      "settings": {}
     }
   },
-  "order": ["image_banner", "featured_collection", "collection_list"]
+  "order": ["image_banner", "featured_collection", "collection_list", "islands_demo"]
 }
