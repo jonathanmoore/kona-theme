@@ -1,11 +1,8 @@
-# Hydrogen Theme
+# Kona Theme
 
-[![Build status](https://github.com/montalvomiguelo/hydrogen-theme/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/montalvomiguelo/hydrogen-theme/actions/workflows/ci.yml?query=branch%3Amain)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/montalvomiguelo/hydrogen-theme/blob/main/LICENSE.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/jonathanmoore/kona-theme/blob/main/LICENSE.md)
 
-A port of Hydrogen's default template to Shopify OS 2.0.
-
-![pika-1697163139924-1x](https://github.com/montalvomiguelo/hydrogen-theme/assets/5134470/d92f6135-62d8-4a7d-a612-c812c6652da1)
+A Vite-powered Shopify OS 2.0 theme with an Astro-inspired islands architecture. Zero runtime JS dependencies — all interactivity is vanilla Web Components.
 
 ## 🔨 Requirements
 
@@ -18,7 +15,7 @@ A port of Hydrogen's default template to Shopify OS 2.0.
 This theme leverages the [default Shopify theme folder structure](https://shopify.dev/themes/tools/github#repository-structure) and introduces the following directories, some of which have special behaviors.
 
 ```bash
-└── hydrogen-theme
+└── kona-theme
     └── frontend
         ├── entrypoints
         ├── islands
@@ -59,8 +56,9 @@ Usage:
 
 ## 🙇‍♂️ Thanks
 
-We would like to specifically thank the following projects for the inspiration and help regarding the creation of hydrogen-theme:
+Kona builds on the work of several excellent projects:
 
+- [hydrogen-theme](https://github.com/montalvomiguelo/hydrogen-theme)
 - [vite-plugin-shopify](https://github.com/barrel/shopify-vite)
 - [hydrogen](https://github.com/Shopify/hydrogen)
 - [dawn](https://github.com/Shopify/dawn)

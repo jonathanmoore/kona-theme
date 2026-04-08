@@ -6,7 +6,7 @@ A native `CustomEvent`-based communication layer for decoupling inter-component 
 
 Before this change, components communicated through direct DOM queries and method calls. `product-form.js` grabbed `document.querySelector('cart-drawer')` and called its methods (`renderContents`, `getSectionsToRender`, `setActiveElement`). `variant-selects.js` reached into product-form's DOM to toggle the add button and clear error messages. This made components fragile, impossible to test in isolation, and tightly coupled to each other's internal APIs.
 
-The event system replaces these direct references with typed `CustomEvent` dispatches. Components announce what happened (e.g. "an item was added to cart") and other components react independently. The approach follows Shopify's Horizon theme pattern, adapted to our smaller codebase with a factory function instead of class-per-event.
+The event system replaces these direct references with typed `CustomEvent` dispatches. Components announce what happened (e.g. "an item was added to cart") and other components react independently. The approach follows a Shopify theme pattern, adapted to our smaller codebase with a factory function instead of class-per-event.
 
 ## Architecture
 

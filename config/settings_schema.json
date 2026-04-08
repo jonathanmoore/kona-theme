@@ -1,11 +1,11 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Hydrogen theme",
+    "theme_name": "Kona",
     "theme_version": "0.0.0",
-    "theme_author": "THEME_AUTHOR",
-    "theme_documentation_url": "https://THEME_DOCUMENTATION_URL.com/",
-    "theme_support_url": "https://THEME_SUPPORT_URL.com/"
+    "theme_author": "Jonathan Moore",
+    "theme_documentation_url": "https://github.com/jonathanmoore/kona-theme",
+    "theme_support_url": "https://github.com/jonathanmoore/kona-theme/issues"
   },
   {
     "name": "Colors",
