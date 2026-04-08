@@ -24,7 +24,7 @@ features:
   - title: 30-Language i18n
     details: Automated translation pipeline using Claude API with content hashing for incremental updates. Supports storefront and schema translations.
   - title: CI/CD Pipeline
-    details: Five GitHub Actions workflows for linting, theme checks, PR preview themes, automated deployment, and translation validation.
+    details: GitHub Actions workflows for linting, theme checks, PR preview themes, automated deployment, and documentation publishing.
   - title: Claude Code Skills
     details: Five built-in skills for Claude Code that provide Liquid reference, accessibility patterns, coding standards, component creation workflows, and translation management.
   - title: Coding Standards
