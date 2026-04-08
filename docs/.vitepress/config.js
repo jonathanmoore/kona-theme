@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: 'Kona Theme',
   description: 'A Vite-powered Shopify OS 2.0 theme with islands architecture',
   base: '/',
@@ -10,13 +11,18 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.svg' }],
   ],
 
+  vite: {
+    optimizeDeps: {
+      include: ['mermaid'],
+    },
+  },
+
   themeConfig: {
     outline: { level: [2, 3] },
 
     nav: [
       { text: 'Guide', link: '/getting-started/' },
       { text: 'Architecture', link: '/architecture/' },
-      { text: 'Reference', link: '/javascript/component-reference' },
       { text: 'Demo Store', link: 'https://kona-theme.myshopify.com/' },
       {
         text: 'Links',
@@ -48,43 +54,29 @@ export default defineConfig({
           { text: 'Hydration Directives', link: '/architecture/hydration-directives' },
           { text: 'Build Pipeline', link: '/architecture/build-pipeline' },
           { text: 'Project Layout', link: '/architecture/project-layout' },
+          { text: 'Islands Demo', link: '/architecture/islands-demo' },
         ],
       },
       {
-        text: 'CSS',
+        text: 'Assets',
         items: [
-          { text: 'Overview', link: '/css/' },
-          { text: 'Design Tokens', link: '/css/design-tokens' },
-          { text: 'Shopify Integration', link: '/css/shopify-integration' },
+          { text: 'Overview', link: '/assets/' },
+          { text: 'CSS', link: '/assets/css' },
+          { text: 'Creating Islands', link: '/assets/creating-islands' },
+          { text: 'Event System', link: '/assets/event-system' },
+          { text: 'Lifecycle', link: '/assets/lifecycle' },
+          { text: 'Utilities', link: '/assets/utilities' },
         ],
       },
       {
-        text: 'JavaScript',
+        text: 'Claude Code Skills',
         items: [
-          { text: 'Overview', link: '/javascript/' },
-          { text: 'Creating Islands', link: '/javascript/creating-islands' },
-          { text: 'Event System', link: '/javascript/event-system' },
-          { text: 'Component Reference', link: '/javascript/component-reference' },
-          { text: 'Lifecycle', link: '/javascript/lifecycle' },
-          { text: 'Utilities', link: '/javascript/utilities' },
-        ],
-      },
-      {
-        text: 'Shopify',
-        items: [
-          { text: 'Overview', link: '/shopify/' },
-          { text: 'Sections & Blocks', link: '/shopify/sections-blocks' },
-          { text: 'Liquid Patterns', link: '/shopify/liquid-patterns' },
-          { text: 'Templates', link: '/shopify/templates' },
-          { text: 'Icons', link: '/shopify/icons' },
-        ],
-      },
-      {
-        text: 'Internationalization',
-        items: [
-          { text: 'Overview', link: '/i18n/' },
-          { text: 'Translation Pipeline', link: '/i18n/translation-pipeline' },
-          { text: 'Adding Translations', link: '/i18n/adding-translations' },
+          { text: 'Overview', link: '/claude-code/' },
+          { text: 'Liquid Reference', link: '/claude-code/liquid-reference' },
+          { text: 'Accessibility', link: '/claude-code/accessibility' },
+          { text: 'Coding Standards', link: '/claude-code/coding-standards' },
+          { text: 'Component Creator', link: '/claude-code/component-creator' },
+          { text: 'Translator', link: '/claude-code/translator' },
         ],
       },
       {
@@ -97,25 +89,11 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Standards',
+        text: 'Internationalization',
         items: [
-          { text: 'Overview', link: '/standards/' },
-          { text: 'JavaScript', link: '/standards/javascript-standards' },
-          { text: 'CSS', link: '/standards/css-standards' },
-          { text: 'Accessibility', link: '/standards/accessibility' },
-          { text: 'Compliance Audit', link: '/standards/compliance-audit' },
-        ],
-      },
-      {
-        text: 'Claude Code Skills',
-        items: [
-          { text: 'Overview', link: '/claude-code/' },
-        ],
-      },
-      {
-        text: 'Demo',
-        items: [
-          { text: 'Islands Demo', link: '/demo/' },
+          { text: 'Overview', link: '/i18n/' },
+          { text: 'Translation Pipeline', link: '/i18n/translation-pipeline' },
+          { text: 'Adding Translations', link: '/i18n/adding-translations' },
         ],
       },
     ],
@@ -138,4 +116,4 @@ export default defineConfig({
       message: 'Built by <a href="https://jonathanmoore.com">Jonathan Moore</a>',
     },
   },
-})
+}))
