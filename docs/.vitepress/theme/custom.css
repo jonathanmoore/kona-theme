@@ -1,0 +1,400 @@
+/* ==========================================================================
+   Kona Theme — Dark Cinematic VitePress Overrides
+   ========================================================================== */
+
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ---------- Root Tokens ---------- */
+:root {
+  /* Brand — warm amber */
+  --vp-c-brand-1: #D4974A;
+  --vp-c-brand-2: #C8873A;
+  --vp-c-brand-3: #B87830;
+  --vp-c-brand-soft: rgba(212, 151, 74, 0.12);
+
+  /* Backgrounds — green-tinted dark */
+  --vp-c-bg: #111614;
+  --vp-c-bg-alt: #191E1C;
+  --vp-c-bg-elv: #212926;
+  --vp-c-bg-soft: #191E1C;
+
+  /* Text — warm off-white */
+  --vp-c-text-1: #F0EDE8;
+  --vp-c-text-2: rgba(240, 237, 232, 0.6);
+  --vp-c-text-3: rgba(240, 237, 232, 0.35);
+
+  /* Borders / Dividers */
+  --vp-c-border: rgba(240, 237, 232, 0.14);
+  --vp-c-divider: rgba(240, 237, 232, 0.08);
+  --vp-c-gutter: #111614;
+
+  /* Default tokens VitePress needs (override the "dark" variants) */
+  --vp-c-default-1: rgba(240, 237, 232, 0.9);
+  --vp-c-default-2: rgba(240, 237, 232, 0.6);
+  --vp-c-default-3: rgba(240, 237, 232, 0.35);
+  --vp-c-default-soft: rgba(240, 237, 232, 0.06);
+
+  /* Teal — links, callable code, tip blocks */
+  --kona-teal: #3A5C5F;
+  --kona-teal-light: #7EBFC3;
+  --kona-teal-bg: rgba(58, 92, 95, 0.20);
+  --kona-teal-border: rgba(58, 92, 95, 0.35);
+
+  /* Tip → teal (informational), Warning → amber (caution) */
+  --vp-c-tip-1: var(--kona-teal-light);
+  --vp-c-tip-2: var(--kona-teal-bg);
+  --vp-c-tip-3: var(--kona-teal-bg);
+  --vp-c-tip-soft: rgba(58, 92, 95, 0.10);
+
+  --vp-c-warning-1: #E8B46A;
+  --vp-c-warning-2: rgba(212, 151, 74, 0.14);
+  --vp-c-warning-3: rgba(212, 151, 74, 0.12);
+  --vp-c-warning-soft: rgba(212, 151, 74, 0.08);
+
+  /* Typography */
+  --vp-font-family-base: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --vp-font-family-mono: ui-monospace, 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
+
+  /* Nav */
+  --vp-nav-bg-color: rgba(17, 22, 20, 0.85);
+
+  /* Sidebar */
+  --vp-sidebar-bg-color: #111614;
+
+  /* Code — inline code is neutral, not amber */
+  --vp-code-block-bg: #0E1210;
+  --vp-code-bg: #212926;
+  --vp-code-color: rgba(240, 237, 232, 0.60);
+  --vp-code-line-highlight-color: rgba(212, 151, 74, 0.10);
+
+  /* Syntax tokens */
+  --code-bg-surface: #141918;
+  --code-bg-gutter: #111614;
+  --code-border: rgba(255, 255, 255, 0.07);
+  --code-ln-color: rgba(255, 255, 255, 0.15);
+
+  /* Home */
+  --vp-home-hero-name-color: #FFFFFF;
+  --vp-home-hero-name-background: none;
+  --vp-home-hero-image-background-image: none;
+  --vp-home-hero-image-filter: none;
+
+  /* Kona custom props */
+  --kona-ocean: #3A5C5F;
+}
+
+/* ---------- Nav ---------- */
+.VPNav {
+  background: var(--vp-nav-bg-color) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.VPNavBar {
+  background: transparent !important;
+  border-bottom-color: var(--vp-c-divider) !important;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-family: var(--vp-font-family-base);
+  font-size: 14px;
+}
+
+/* ---------- Sidebar ---------- */
+.VPSidebar {
+  background: var(--vp-sidebar-bg-color) !important;
+}
+
+/* Active sidebar — amber left bar only, text stays white */
+.VPSidebarItem.is-active > .item > .link,
+.VPSidebarItem.is-active > .item > .link:hover {
+  color: var(--vp-c-text-1) !important;
+  background-color: rgba(240, 237, 232, 0.06);
+  border-left: 2px solid #D4974A;
+  padding-left: 10px;
+}
+
+/* ---------- Nav active ---------- */
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-text-1) !important;
+}
+
+/* ---------- Buttons ---------- */
+.VPButton.brand,
+.VPButton.alt {
+  border-radius: 0 !important;
+  font-family: var(--vp-font-family-base);
+  font-size: 14px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.VPButton.brand {
+  background: transparent;
+  border: 1px solid var(--vp-c-brand-1);
+  color: var(--vp-c-text-1);
+}
+
+.VPButton.brand:hover {
+  background: rgba(212, 151, 74, 0.1);
+  border-color: var(--vp-c-brand-2);
+}
+
+.VPButton.alt {
+  background: transparent;
+  border: 1px solid var(--vp-c-border);
+  color: var(--vp-c-text-2);
+}
+
+.VPButton.alt:hover {
+  border-color: var(--vp-c-text-3);
+  color: var(--vp-c-text-1);
+}
+
+/* ---------- Hero — Full-Bleed Image ---------- */
+
+/* VPHome is the positioning context for the full-bleed background */
+.VPHome {
+  position: relative;
+}
+
+/* The hero background is rendered via home-hero-before slot,
+   so it's a direct child of .VPHome, before .VPHero.
+   Position it to cover the full hero area at viewport width. */
+.kona-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 50vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.kona-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.kona-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(17, 22, 20, 0.3) 0%,
+    rgba(17, 22, 20, 0.5) 40%,
+    rgba(17, 22, 20, 0.85) 70%,
+    #111614 100%
+  );
+}
+
+/* Hero text content sits on top of the background */
+.VPHero {
+  position: relative;
+  z-index: 1;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 50vh;
+}
+
+.VPHero .container {
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.VPHero .main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero typography */
+.VPHero .name {
+  font-family: var(--vp-font-family-base);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 80px !important;
+  line-height: 1 !important;
+}
+
+.VPHero .clip {
+  -webkit-text-fill-color: #FFFFFF;
+}
+
+.VPHero .text {
+  font-family: var(--vp-font-family-base);
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.VPHero .tagline {
+  font-family: var(--vp-font-family-base);
+  font-size: 16px !important;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--vp-c-text-2) !important;
+  line-height: 1.6;
+}
+
+.VPHero .actions {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Feature Cards ---------- */
+.VPFeatures {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.VPFeature {
+  background: var(--vp-c-bg-soft) !important;
+  border: 1px solid var(--vp-c-border) !important;
+  border-radius: 8px !important;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.VPFeature:hover {
+  border-color: rgba(212, 151, 74, 0.3) !important;
+  box-shadow: inset 3px 0 0 var(--vp-c-brand-1);
+}
+
+.VPFeature .title {
+  font-family: var(--vp-font-family-base);
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.VPFeature .details {
+  color: var(--vp-c-text-2);
+}
+
+/* ---------- Content / Prose ---------- */
+.vp-doc a {
+  color: var(--kona-teal-light);
+  text-decoration-color: rgba(126, 191, 195, 0.35);
+}
+
+.vp-doc a:hover {
+  color: #9DCFD2;
+  text-decoration-color: rgba(126, 191, 195, 0.65);
+}
+
+/* Inline code — neutral by default */
+.vp-doc :not(pre) > code {
+  background: var(--vp-code-bg);
+  color: var(--vp-code-color);
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  font-size: 0.875em;
+  padding: 0.15em 0.4em;
+  font-family: var(--vp-font-family-mono);
+}
+
+/* Code blocks */
+.vp-doc div[class*='language-'] {
+  background: var(--code-bg-surface) !important;
+  border: 1px solid var(--code-border);
+  border-radius: 8px;
+}
+
+.vp-doc div[class*='language-'] code {
+  color: #C8C0B8;
+}
+
+.vp-doc div[class*='language-'] .line.highlighted {
+  background: var(--vp-code-line-highlight-color);
+  border-left: 3px solid #D4974A;
+  padding-left: calc(24px - 3px);
+}
+
+.vp-doc div[class*='language-'] .line-numbers-wrapper {
+  color: var(--code-ln-color);
+  border-right-color: var(--code-border);
+}
+
+/* Language label — metadata, not a landmark */
+.vp-doc div[class*='language-'] > span.lang {
+  color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Custom block titles */
+.vp-doc .custom-block-title {
+  font-family: var(--vp-font-family-base);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Tip → teal, Warning → amber */
+.vp-doc .tip { border-color: var(--kona-teal); }
+.vp-doc .tip .custom-block-title { color: var(--kona-teal-light); }
+.vp-doc .warning { border-color: #D4974A; }
+.vp-doc .warning .custom-block-title { color: #E8B46A; }
+
+/* ---------- Search ---------- */
+.VPLocalSearchBox .shell {
+  background: var(--vp-c-bg-elv) !important;
+  border-color: var(--vp-c-border) !important;
+}
+
+/* ---------- Footer ---------- */
+.VPFooter {
+  border-top-color: var(--vp-c-divider) !important;
+}
+
+.VPFooter .message a {
+  color: var(--kona-teal-light);
+}
+
+/* ---------- Scrollbar — sidebar/nav only ---------- */
+.VPSidebar::-webkit-scrollbar,
+.VPNavScreenMenu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.VPSidebar::-webkit-scrollbar-track,
+.VPNavScreenMenu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb,
+.VPNavScreenMenu::-webkit-scrollbar-thumb {
+  background: rgba(240, 237, 232, 0.15);
+  border-radius: 3px;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb:hover,
+.VPNavScreenMenu::-webkit-scrollbar-thumb:hover {
+  background: rgba(240, 237, 232, 0.25);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .VPHero {
+    min-height: 80vh;
+  }
+
+  .VPHero .main {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .VPHero .name {
+    font-size: 48px !important;
+  }
+
+  .VPHero .tagline {
+    font-size: 14px !important;
+  }
+}

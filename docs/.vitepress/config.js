@@ -1,15 +1,27 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
+import coastalTheme from './theme/coastal-theme.json'
 
 export default withMermaid(defineConfig({
   title: 'Kona Theme',
   description: 'A Vite-powered Shopify theme with islands hydration',
   base: '/',
+  appearance: 'force-dark',
   lastUpdated: true,
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.svg' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
   ],
+
+  markdown: {
+    theme: coastalTheme,
+  },
+
+  mermaid: {
+    theme: 'dark',
+  },
 
   vite: {
     optimizeDeps: {
@@ -112,7 +124,7 @@ export default withMermaid(defineConfig({
     },
 
     footer: {
-      message: 'Built by <a href="https://jonathanmoore.com">Jonathan Moore</a>',
+      message: 'Created by <a href="https://jonathanmoore.com">Jonathan Moore</a>',
     },
   },
 }))
