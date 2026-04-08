@@ -38,3 +38,4 @@ English source files (`en.default.json` and `en.default.schema.json`) are the si
 
 - [Adding Translations](./adding-translations) — How to add new strings step by step
 - [Translation Pipeline](./translation-pipeline) — How the script works: hashing, wire format, plurals, concurrency
+- [`/shopify-liquid-translator` skill](../claude-code/translator) — Let Claude drive the translation workflow for you

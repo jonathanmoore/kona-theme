@@ -1,6 +1,6 @@
 # CI/CD Overview
 
-Five GitHub Actions workflows handle linting, deployment, PR previews, translation checks, and docs publishing.
+Five GitHub Actions workflows handle linting, deployment, PR previews, and translation checks.
 
 ## Why CI/CD for this theme
 
@@ -40,5 +40,4 @@ See [Installation](/getting-started/installation#_4-set-up-github-secrets-for-ci
 
 - [Workflows](./workflows) — All five workflows in detail, setup, and gotchas
 - [PR Previews](./pr-previews) — Preview theme lifecycle: creation, updates, cleanup
-- [GitHub Pages](./github-pages) — Docs site deployment
 - [Translation Pipeline](/i18n/translation-pipeline) — The system validated by `i18n-check.yml`

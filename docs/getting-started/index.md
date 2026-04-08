@@ -4,7 +4,7 @@ title: Introduction
 
 # Introduction
 
-Get your dev environment running and start building with islands, Vite, and Tailwind. Kona is a Shopify OS 2.0 theme where Liquid renders HTML server-side and interactive components hydrate client-side as vanilla Web Components — no framework runtime ships to the browser.
+Get your dev environment running and start building with islands, Vite, and Tailwind. Kona is a Shopify theme where Liquid renders HTML server-side and interactive components hydrate client-side as vanilla Web Components — no framework runtime ships to the browser.
 
 ## Requirements
 

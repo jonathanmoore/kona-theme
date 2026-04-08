@@ -51,6 +51,8 @@ The skill loads a complete component creation workflow:
 | [`/shopify-liquid-a11y`](./accessibility) | Accessible markup baked into every new component |
 | [`/shopify-liquid-translator`](./translator) | Generate translations for new locale keys |
 
-## Tier
+## Next steps
 
-**Project** — generates files following Kona's directory structure, naming conventions, and build pipeline. The workflow assumes Kona's islands architecture and Tailwind setup.
+- [`/shopify-liquid-translator`](./translator) — Translate the locale keys your new component generates
+- [`/shopify-liquid-kona-standards`](./coding-standards) — CSS and JS conventions the creator follows
+- [Project Layout](../architecture/project-layout) — Where generated files land in the theme

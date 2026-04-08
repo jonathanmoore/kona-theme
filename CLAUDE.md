@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-A Vite-powered Shopify OS 2.0 theme with an Astro-inspired islands architecture for interactive components. Zero runtime JS dependencies — all interactivity is vanilla Web Components.
+A Vite-powered Shopify theme with islands hydration for interactive components. Zero runtime JS dependencies — all interactivity is vanilla Web Components.
 
 ## Commands
 

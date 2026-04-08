@@ -44,6 +44,8 @@ The skill loads a comprehensive reference covering:
 | [`/shopify-liquid-kona-new`](./component-creator) | Create new sections/blocks/snippets with correct schema |
 | [`/shopify-liquid-translator`](./translator) | Generate translations for locale keys |
 
-## Tier
+## Next steps
 
-**Universal** — works with any Shopify theme, not tied to Kona-specific paths or conventions.
+- [`/shopify-liquid-a11y`](./accessibility) — Add WCAG 2.2 patterns to your Liquid components
+- [`/shopify-liquid-kona-new`](./component-creator) — Scaffold a new section, block, or snippet
+- [Architecture Overview](../architecture/) — How Liquid templates connect to islands and the build pipeline

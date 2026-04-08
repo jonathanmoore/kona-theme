@@ -2,9 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/jonathanmoore/kona-theme/blob/main/LICENSE.md)
 
-A Vite-powered Shopify OS 2.0 theme with an Astro-inspired islands architecture. Zero runtime JS dependencies — all interactivity is vanilla Web Components.
+A Vite-powered Shopify theme with islands hydration. Zero runtime JS dependencies — all interactivity is vanilla Web Components.
 
-**[View Documentation](https://jonathanmoore.github.io/kona-theme/)**
+**[View Documentation](https://kona-theme.jonathanmoore.com/)**
 
 ## Quick Start
 
@@ -24,16 +24,14 @@ pnpm dev -- --store your-store-name
 
 ## Documentation
 
-Full documentation is available at **[jonathanmoore.github.io/kona-theme](https://jonathanmoore.github.io/kona-theme/)** covering:
+Full documentation is available at **[kona-theme.jonathanmoore.com](https://kona-theme.jonathanmoore.com/)** covering:
 
-- [Getting Started](https://jonathanmoore.github.io/kona-theme/getting-started/) — Installation, development, deployment
-- [Architecture](https://jonathanmoore.github.io/kona-theme/architecture/) — Islands, hydration, build pipeline, project layout
-- [CSS](https://jonathanmoore.github.io/kona-theme/css/) — Design tokens, Shopify integration
-- [JavaScript](https://jonathanmoore.github.io/kona-theme/javascript/) — Creating islands, events, lifecycle, utilities
-- [Shopify](https://jonathanmoore.github.io/kona-theme/shopify/) — Sections, blocks, Liquid patterns, templates, icons
-- [Internationalization](https://jonathanmoore.github.io/kona-theme/i18n/) — Translation pipeline
-- [CI/CD](https://jonathanmoore.github.io/kona-theme/ci-cd/) — Workflows, PR previews, GitHub Pages
-- [Standards](https://jonathanmoore.github.io/kona-theme/standards/) — JavaScript, CSS, accessibility, compliance audit
+- [Getting Started](https://kona-theme.jonathanmoore.com/getting-started/) — Installation, development, deployment
+- [Architecture](https://kona-theme.jonathanmoore.com/architecture/) — Islands, hydration, build pipeline, project layout
+- [Assets](https://kona-theme.jonathanmoore.com/assets/) — CSS, creating islands, events, lifecycle, utilities
+- [Claude Code Skills](https://kona-theme.jonathanmoore.com/claude-code/) — Liquid reference, accessibility, standards, component creation, translations
+- [Internationalization](https://kona-theme.jonathanmoore.com/i18n/) — Translation pipeline
+- [CI/CD](https://kona-theme.jonathanmoore.com/ci-cd/) — Workflows, PR previews
 
 ## Author
 

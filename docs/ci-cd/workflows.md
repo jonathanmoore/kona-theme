@@ -137,5 +137,4 @@ gh secret set ANTHROPIC_API_KEY --body "sk-ant-api03-your-key-here"
 ## Next steps
 
 - [PR Previews](./pr-previews) — Deep dive into preview theme lifecycle
-- [GitHub Pages](./github-pages) — Docs site deployment
 - [Installation](/getting-started/installation) — Setting up secrets

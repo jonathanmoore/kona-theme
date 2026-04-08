@@ -3,7 +3,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid(defineConfig({
   title: 'Kona Theme',
-  description: 'A Vite-powered Shopify OS 2.0 theme with islands architecture',
+  description: 'A Vite-powered Shopify theme with islands hydration',
   base: '/',
   lastUpdated: true,
 
@@ -85,7 +85,6 @@ export default withMermaid(defineConfig({
           { text: 'Overview', link: '/ci-cd/' },
           { text: 'Workflows', link: '/ci-cd/workflows' },
           { text: 'PR Previews', link: '/ci-cd/pr-previews' },
-          { text: 'GitHub Pages', link: '/ci-cd/github-pages' },
         ],
       },
       {

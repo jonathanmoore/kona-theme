@@ -44,6 +44,8 @@ The skill loads Kona's full coding conventions:
 | [`/shopify-liquid-a11y`](./accessibility) | Focus-visible styles, motion preferences, touch targets |
 | [`/shopify-liquid-kona-new`](./component-creator) | New components follow these standards automatically |
 
-## Tier
+## Next steps
 
-**Project** — specific to Kona's Tailwind v4 + Vite + islands architecture. The patterns assume Kona's file structure and build pipeline.
+- [`/shopify-liquid-kona-new`](./component-creator) — New components follow these standards automatically
+- [Build Pipeline](../architecture/build-pipeline) — How Vite processes CSS and JS
+- [Assets Overview](../assets/) — CSS architecture, JavaScript patterns, design tokens
