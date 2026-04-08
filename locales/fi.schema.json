@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Kokoelmaluettelo",
+      "settings": {
+        "collection_list": {
+          "label": "Kokoelmat"
+        },
+        "columns_desktop": {
+          "label": "Sarakkeiden määrä työpöydällä"
+        }
+      },
+      "presets": {
+        "name": "Kokoelmaluettelo",
+        "blocks": {
+          "heading": {
+            "heading": "Kokoelmat"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Yhteydenottolomake",
+      "presets": {
+        "name": "Yhteydenottolomake"
+      }
+    },
+    "email_signup_banner": {
+      "name": "Sähköpostin tilausbanneri",
+      "presets": {
+        "name": "Sähköpostin tilausbanneri",
+        "blocks": {
+          "heading": {
+            "heading": "Avataan pian"
+          },
+          "text": {
+            "text": "<p>Ole ensimmäinen joka saa tiedon, kun avaamme.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Esittelykokoelma",
+      "settings": {
+        "collection": {
+          "label": "Kokoelma"
+        },
+        "products_to_show": {
+          "label": "Näytettävien tuotteiden enimmäismäärä"
+        }
+      },
+      "presets": {
+        "name": "Esittelykokoelma",
+        "category": "Tuotteet",
+        "blocks": {
+          "heading": {
+            "heading": "Esittelykokoelma"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Alatunniste"
+    },
+    "header": {
+      "name": "Ylätunniste",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Ota käyttöön kiinteä ylätunniste",
+          "info": "Ylätunniste näkyy ruudulla, kun asiakkaat vierittävät ylös."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Kuvabanneri",
+      "settings": {
+        "image": {
+          "label": "Ensimmäinen kuva"
+        },
+        "image_2": {
+          "label": "Toinen kuva"
+        },
+        "full_page_height_enable": {
+          "label": "Koko sivun korkeus"
+        }
+      },
+      "presets": {
+        "name": "Kuvabanneri",
+        "category": "Bannerit",
+        "blocks": {
+          "heading": {
+            "heading": "Kuvabanneri"
+          },
+          "text": {
+            "text": "<p><strong>Anna asiakkaille tietoja bannerikuvasta/-kuvista tai mallipohjan sisällöstä.</strong></p>"
+          },
+          "button": {
+            "button_label": "Osta kaikki →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Blogikirjoitukset"
+    },
+    "main_cart": {
+      "name": "Ostoskori-sivu"
+    },
+    "main_list_collections": {
+      "name": "Kokoelmaluettelosivu"
+    },
+    "main_page": {
+      "name": "Sivu"
+    },
+    "main_password_footer": {
+      "name": "Salasana-alatunniste"
+    },
+    "main_password_header": {
+      "name": "Salasana-ylätunniste"
+    },
+    "main_product": {
+      "name": "Tuotetiedot"
+    },
+    "product_recommendations": {
+      "name": "Tuotesuositukset",
+      "settings": {
+        "paragraph": {
+          "content": "Dynaamiset suositukset käyttävät tilaus- ja tuotetietoja muuttuakseen ja parantuakseen ajan myötä. [Lue lisää](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Näytettävien tuotteiden enimmäismäärä"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Islands-demo",
+      "settings": {
+        "heading": {
+          "label": "Otsikko",
+          "default": "Islands Architecture -demo"
+        }
+      },
+      "presets": {
+        "name": "Islands-demo"
+      }
+    },
+    "section": {
+      "name": "Osio",
+      "settings": {
+        "header__layout": {
+          "content": "Asettelu"
+        },
+        "gap": {
+          "label": "Väli"
+        },
+        "header__size": {
+          "content": "Koko"
+        },
+        "section_width": {
+          "label": "Leveys",
+          "options__page": {
+            "label": "Sivu"
+          },
+          "options__full": {
+            "label": "Täysi"
+          }
+        },
+        "header__padding": {
+          "content": "Sisennys"
+        },
+        "padding_block_start": {
+          "label": "Yläreuna"
+        },
+        "padding_block_end": {
+          "label": "Alareuna"
+        }
+      },
+      "presets": {
+        "name": "Osio"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Maavalitsin",
+      "settings": {
+        "heading": {
+          "label": "Otsikko",
+          "info": "Maavalitsimen näyttämiseen vaaditaan otsikko",
+          "default": "Maa"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Valikko",
+      "settings": {
+        "heading": {
+          "label": "Otsikko",
+          "info": "Valikon näyttämiseen vaaditaan otsikko",
+          "default": "Pikalinkit"
+        },
+        "menu": {
+          "label": "Valikko",
+          "info": "Näyttää vain ylimmän tason valikkokohteet"
+        }
+      },
+      "presets": {
+        "name": "Valikko",
+        "category": "Alatunniste"
+      }
+    },
+    "header_logo": {
+      "name": "Logo"
+    },
+    "header_menu_mobile": {
+      "name": "Mobiilivalikko",
+      "settings": {
+        "menu": {
+          "label": "Päänavigaatio"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Artikkelikortti"
+    },
+    "article_content": {
+      "name": "Sisältö"
+    },
+    "button": {
+      "name": "Painike",
+      "settings": {
+        "button_label": {
+          "label": "Painikkeen teksti",
+          "info": "Jätä teksti tyhjäksi piilottaaksesi painikkeen.",
+          "default": "Painikkeen teksti"
+        },
+        "button_link": {
+          "label": "Painikkeen linkki"
+        },
+        "button_variant": {
+          "label": "Painikkeen tyyli",
+          "options__default": {
+            "label": "Oletus"
+          },
+          "options__link": {
+            "label": "Linkki"
+          }
+        },
+        "button_size": {
+          "label": "Painikkeen koko",
+          "options__default": {
+            "label": "Oletus"
+          },
+          "options__lg": {
+            "label": "Suuri"
+          }
+        }
+      },
+      "presets": {
+        "name": "Painike",
+        "category": "Perus"
+      }
+    },
+    "buy_buttons": {
+      "name": "Ostopainikkeet",
+      "settings": {
+        "product": {
+          "label": "Tuote"
+        },
+        "show_dynamic_checkout": {
+          "label": "Näytä dynaamiset kassapainikkeet",
+          "info": "Asiakkaat näkevät verkkokauppassasi käytettävissä olevista maksutavoista oman suosikkivaihtoehtosi, kuten PayPal tai Apple Pay. [Lue lisää](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Ostopainikkeet"
+      }
+    },
+    "collection_card": {
+      "name": "Kokoelmakortti",
+      "settings": {
+        "collection": {
+          "label": "Kokoelma"
+        }
+      },
+      "presets": {
+        "name": "Kokoelmakortti"
+      }
+    },
+    "details": {
+      "name": "Tiedot"
+    },
+    "email_signup": {
+      "name": "Sähköpostin tilaus",
+      "presets": {
+        "name": "Sähköpostin tilaus"
+      }
+    },
+    "header_menu": {
+      "name": "Valikko",
+      "settings": {
+        "menu": {
+          "label": "Päänavigaatio"
+        }
+      }
+    },
+    "heading": {
+      "name": "Otsikko",
+      "settings": {
+        "heading": {
+          "label": "Otsikko",
+          "default": "Kerro brändistäsi"
+        },
+        "heading_size": {
+          "label": "Otsikon koko",
+          "options__default": {
+            "label": "Oletus"
+          },
+          "options__md": {
+            "label": "Keskisuuri"
+          },
+          "options__lg": {
+            "label": "Suuri"
+          },
+          "options__xl": {
+            "label": "Erittäin suuri"
+          }
+        },
+        "heading_level": {
+          "label": "Otsikkotaso",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Otsikko",
+        "category": "Perus"
+      }
+    },
+    "image": {
+      "name": "Kuva",
+      "settings": {
+        "image": {
+          "label": "Kuva"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Sivun sisältö"
+    },
+    "price": {
+      "name": "Hinta",
+      "settings": {
+        "product": {
+          "label": "Tuote"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Tuotekortti",
+      "settings": {
+        "product": {
+          "label": "Tuote"
+        }
+      },
+      "presets": {
+        "name": "Tuotekortti",
+        "category": "Tuote"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Tuotemedia"
+    },
+    "search_input": {
+      "name": "Hakukenttä"
+    },
+    "tab": {
+      "name": "Välilehti",
+      "settings": {
+        "title": {
+          "label": "Otsikko",
+          "default": "Toimitusehdot"
+        },
+        "content": {
+          "label": "Välilehden sisältö",
+          "default": "<p>Käytä kokoontaitettavia välilehtiä yksityiskohtaisemmille tiedoille, jotka auttavat asiakkaita tekemään ostopäätöksen.</p><p>Esim: Toimitus- ja palautusehdot, kokoohjeet ja muut yleisesti kysytyt kysymykset.</p>"
+        },
+        "page": {
+          "label": "Välilehden sisältö sivulta"
+        }
+      },
+      "presets": {
+        "name": "Välilehti"
+      }
+    },
+    "text": {
+      "name": "Teksti",
+      "settings": {
+        "text": {
+          "label": "Kuvaus",
+          "default": "<p>Jaa tietoja brändistäsi asiakkaillesi.</p>"
+        },
+        "text_size": {
+          "label": "Tekstin koko",
+          "options__default": {
+            "label": "Oletus"
+          },
+          "options__lg": {
+            "label": "Suuri"
+          }
+        }
+      },
+      "presets": {
+        "name": "Teksti",
+        "category": "Perus"
+      }
+    },
+    "variant_picker": {
+      "name": "Variantinvalitsin",
+      "settings": {
+        "product": {
+          "label": "Tuote"
+        },
+        "picker_type": {
+          "label": "Tyyppi",
+          "options__dropdown": {
+            "label": "Pudotusvalikko"
+          },
+          "options__button": {
+            "label": "Painikkeet"
+          }
+        }
+      },
+      "presets": {
+        "name": "Variantinvalitsin"
+      }
+    },
+    "product_details": {
+      "name": "Tiedot"
+    },
+    "cart_products": {
+      "name": "Ostoskorin tuotteet"
+    }
+  }
+}

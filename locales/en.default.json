@@ -32,9 +32,12 @@
     "search": {
       "search": "Search",
       "submit": "Go",
-      "no_results_html": "Your search for \"{{ terms }}\" did not yield any results."
+      "no_results_html": "Your search for \"{{ terms }}\" did not return results."
     },
-    "continue_shopping": "Continue shopping"
+    "continue_shopping": "Continue shopping",
+    "meta": {
+      "tagged": "tagged \"{{ tags }}\""
+    }
   },
   "newsletter": {
     "label": "Email",

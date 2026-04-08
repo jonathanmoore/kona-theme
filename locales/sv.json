@@ -1,0 +1,258 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Ange lösenord för att komma in i butiken:",
+      "login_password_button": "Ange lösenord för att komma in",
+      "login_form_password_label": "Lösenord",
+      "login_form_password_placeholder": "Ditt lösenord",
+      "login_form_error": "Fel lösenord!",
+      "login_form_submit": "Gå in",
+      "admin_link_html": "Är du butiksägaren? <a href=\"/admin\" class=\"link underlined-link\">Logga in här</a>",
+      "powered_by_shopify_html": "Denna butik drivs av {{ shopify }}"
+    },
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "pagination": {
+      "label": "Sidnumrering",
+      "page": "Sida {{ number }}",
+      "next": "Nästa sida",
+      "previous": "Föregående sida"
+    },
+    "search": {
+      "search": "Sök",
+      "submit": "Kör",
+      "no_results_html": "Din sökning efter \"{{ terms }}\" gav inga resultat."
+    },
+    "continue_shopping": "Fortsätt handla",
+    "meta": {
+      "tagged": "taggad \"{{ tags }}\""
+    }
+  },
+  "newsletter": {
+    "label": "E-post",
+    "success": "Tack för att du prenumererar",
+    "button_label": "Prenumerera"
+  },
+  "accessibility": {
+    "skip_to_text": "Hoppa till innehåll",
+    "close": "Stäng",
+    "unit_price_separator": "per",
+    "link_messages": {
+      "new_window": "Öppnas i ett nytt fönster."
+    },
+    "loading": "Laddar...",
+    "error": "Fel",
+    "main_navigation": "Huvudnavigering"
+  },
+  "sections": {
+    "header": {
+      "menu": "Meny",
+      "cart_count": "PLURAL:{\"one\": \"1 artikel\", \"other\": \"{{ count }} artiklar\"}"
+    },
+    "cart": {
+      "title": "Din varukorg",
+      "empty": "Din varukorg är för närvarande tom.",
+      "remove_title": "Ta bort {{ title }}",
+      "subtotal": "Delsumma",
+      "new_subtotal": "Ny delsumma",
+      "taxes_and_shipping_policy_at_checkout_html": "Moms och <a href=\"{{ link }}\">frakt</a> beräknas i kassan",
+      "taxes_included_but_shipping_at_checkout": "Moms inkluderad och frakt beräknas i kassan",
+      "taxes_included_and_shipping_policy_html": "Moms inkluderad. <a href=\"{{ link }}\">Frakt</a> beräknas i kassan.",
+      "taxes_and_shipping_at_checkout": "Moms och frakt beräknas i kassan",
+      "update": "Uppdatera",
+      "checkout": "Gå till kassan",
+      "note": "Särskilda instruktioner för beställningen",
+      "cart_error": "Det uppstod ett fel när varukorgen uppdaterades. Försök igen.",
+      "cart_quantity_error_html": "Du kan bara lägga till {{ quantity }} av denna artikel i din varukorg."
+    },
+    "collection_template": {
+      "title": "Kollektion"
+    }
+  },
+  "onboarding": {
+    "product_title": "Exempel på produktnamn",
+    "collection_title": "Din kollektions namn"
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "Antal",
+        "input_label": "Antal för {{ product }}",
+        "increase": "Öka antal för {{ product }}",
+        "decrease": "Minska antal för {{ product }}"
+      },
+      "price": {
+        "regular_price": "Ordinarie pris",
+        "sale_price": "Reapris",
+        "from_price_html": "Från {{ min_price }}",
+        "unit_price": "Styckpris"
+      },
+      "add_to_cart": "Lägg i varukorg",
+      "sold_out": "Slutsåld",
+      "unavailable": "Ej tillgänglig",
+      "product_variants": "Produktvarianter"
+    }
+  },
+  "templates": {
+    "cart": {
+      "cart": "Varukorg"
+    },
+    "search": {
+      "title": "Sökresultat"
+    },
+    "404": {
+      "title": "404 Sidan hittades inte",
+      "subtext": "Sidan du begärde finns inte."
+    },
+    "contact": {
+      "form": {
+        "title": "Kontaktformulär",
+        "name": "Namn",
+        "email": "E-post",
+        "phone": "Telefonnummer",
+        "comment": "Kommentar",
+        "send": "Skicka",
+        "post_success": "Tack för att du kontaktade oss. Vi återkommer så snart som möjligt.",
+        "error_heading": "Justera följande:"
+      }
+    }
+  },
+  "customer": {
+    "account_fallback": "Konto",
+    "log_in": "Logga in",
+    "log_out": "Logga ut",
+    "order": {
+      "title": "Beställning {{ name }}",
+      "date_html": "Gjord den {{ date }}",
+      "cancelled_html": "Beställning avbruten den {{ date }}",
+      "cancelled_reason": "Anledning: {{ reason }}",
+      "billing_address": "Fakturaadress",
+      "payment_status": "Betalningsstatus",
+      "shipping_address": "Leveransadress",
+      "fulfillment_status": "Leveransstatus",
+      "discount": "Rabatt",
+      "shipping": "Frakt",
+      "tax": "Moms",
+      "product": "Produkt",
+      "sku": "SKU",
+      "price": "Pris",
+      "quantity": "Antal",
+      "total": "Totalt",
+      "fulfilled_at_html": "Levererad {{ date }}",
+      "track_shipment": "Spåra försändelse",
+      "tracking_url": "Spårningslänk",
+      "tracking_company": "Fraktbolag",
+      "tracking_number": "Spårningsnummer",
+      "subtotal": "Delsumma",
+      "total_duties": "Tullavgifter"
+    },
+    "orders": {
+      "title": "Beställningshistorik",
+      "order_number": "Beställning",
+      "order_number_link": "Beställningsnummer {{ number }}",
+      "date": "Datum",
+      "payment_status": "Betalningsstatus",
+      "fulfillment_status": "Leveransstatus",
+      "total": "Totalt",
+      "none": "Du har inte gjort några beställningar ännu."
+    },
+    "recover_password": {
+      "title": "Återställ ditt lösenord",
+      "subtext": "Vi skickar ett e-postmeddelande till dig för att återställa ditt lösenord",
+      "success": "Vi har skickat ett e-postmeddelande till dig med en länk för att uppdatera ditt lösenord."
+    },
+    "login_page": {
+      "cancel": "Avbryt",
+      "create_account": "Skapa konto",
+      "email": "E-post",
+      "forgot_password": "Glömt ditt lösenord?",
+      "guest_continue": "Fortsätt",
+      "guest_title": "Fortsätt som gäst",
+      "password": "Lösenord",
+      "title": "Logga in",
+      "sign_in": "Logga in",
+      "submit": "Skicka"
+    },
+    "register": {
+      "title": "Skapa konto",
+      "first_name": "Förnamn",
+      "last_name": "Efternamn",
+      "email": "E-post",
+      "password": "Lösenord",
+      "submit": "Skapa"
+    },
+    "reset_password": {
+      "title": "Återställ kontolösenord",
+      "subtext": "Ange ett nytt lösenord för {{ email }}",
+      "password": "Lösenord",
+      "password_confirm": "Bekräfta lösenord",
+      "submit": "Återställ lösenord"
+    },
+    "activate_account": {
+      "title": "Aktivera konto",
+      "subtext": "Skapa ditt lösenord för att aktivera ditt konto.",
+      "password": "Lösenord",
+      "password_confirm": "Bekräfta lösenord",
+      "submit": "Aktivera konto",
+      "cancel": "Avböj inbjudan"
+    },
+    "addresses": {
+      "title": "Adresser",
+      "default": "Standard",
+      "add_new": "Lägg till en ny adress",
+      "edit_address": "Redigera adress",
+      "first_name": "Förnamn",
+      "last_name": "Efternamn",
+      "company": "Företag",
+      "address1": "Adress 1",
+      "address2": "Adress 2",
+      "city": "Ort",
+      "country": "Land/region",
+      "province": "Region",
+      "zip": "Postnummer",
+      "phone": "Telefon",
+      "set_default": "Ange som standardadress",
+      "add": "Lägg till adress",
+      "update": "Uppdatera adress",
+      "cancel": "Avbryt",
+      "edit": "Redigera",
+      "delete": "Ta bort",
+      "delete_confirm": "Är du säker på att du vill ta bort denna adress?"
+    },
+    "account": {
+      "title": "Konto",
+      "details": "Kontouppgifter",
+      "view_addresses": "Visa adresser",
+      "return": "Tillbaka till kontouppgifter"
+    }
+  },
+  "localization": {
+    "update_country": "Uppdatera land/region"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Här är ditt presentkort på {{ value }} för {{ shop }}!",
+      "subtext": "Ditt presentkort",
+      "gift_card_code": "Presentkortskod",
+      "shop_link": "Fortsätt handla",
+      "remaining_html": "{{ balance }} kvar",
+      "add_to_apple_wallet": "Lägg till i Apple Wallet",
+      "qr_image_alt": "QR-kod — skanna för att lösa in presentkort",
+      "copy_code": "Kopiera kod",
+      "expired": "Utgånget",
+      "copy_code_success": "Koden kopierades",
+      "print_gift_card": "Skriv ut"
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Winkel betreden met wachtwoord:",
+      "login_password_button": "Betreden met wachtwoord",
+      "login_form_password_label": "Wachtwoord",
+      "login_form_password_placeholder": "Uw wachtwoord",
+      "login_form_error": "Verkeerd wachtwoord!",
+      "login_form_submit": "Betreden",
+      "admin_link_html": "Bent u de winkeleigenaar? <a href=\"/admin\" class=\"link underlined-link\">Log hier in</a>",
+      "powered_by_shopify_html": "Deze winkel wordt ondersteund door {{ shopify }}"
+    },
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "pagination": {
+      "label": "Paginering",
+      "page": "Pagina {{ number }}",
+      "next": "Volgende pagina",
+      "previous": "Vorige pagina"
+    },
+    "search": {
+      "search": "Zoeken",
+      "submit": "Ga",
+      "no_results_html": "Uw zoekopdracht naar \"{{ terms }}\" heeft geen resultaten opgeleverd."
+    },
+    "continue_shopping": "Verder winkelen",
+    "meta": {
+      "tagged": "getagd \"{{ tags }}\""
+    }
+  },
+  "newsletter": {
+    "label": "E-mail",
+    "success": "Bedankt voor uw inschrijving",
+    "button_label": "Inschrijven"
+  },
+  "accessibility": {
+    "skip_to_text": "Ga naar inhoud",
+    "close": "Sluiten",
+    "unit_price_separator": "per",
+    "link_messages": {
+      "new_window": "Opent in een nieuw venster."
+    },
+    "loading": "Laden...",
+    "error": "Fout",
+    "main_navigation": "Hoofdnavigatie"
+  },
+  "sections": {
+    "header": {
+      "menu": "Menu",
+      "cart_count": "PLURAL:{\"one\": \"{{ count }} artikel\", \"other\": \"{{ count }} artikelen\"}"
+    },
+    "cart": {
+      "title": "Uw winkelwagen",
+      "empty": "Uw winkelwagen is momenteel leeg.",
+      "remove_title": "{{ title }} verwijderen",
+      "subtotal": "Subtotaal",
+      "new_subtotal": "Nieuw subtotaal",
+      "taxes_and_shipping_policy_at_checkout_html": "Belastingen en <a href=\"{{ link }}\">verzending</a> berekend bij het afrekenen",
+      "taxes_included_but_shipping_at_checkout": "Inclusief belasting en verzending berekend bij het afrekenen",
+      "taxes_included_and_shipping_policy_html": "Inclusief belasting. <a href=\"{{ link }}\">Verzending</a> berekend bij het afrekenen.",
+      "taxes_and_shipping_at_checkout": "Belastingen en verzending berekend bij het afrekenen",
+      "update": "Bijwerken",
+      "checkout": "Afrekenen",
+      "note": "Speciale instructies voor bestelling",
+      "cart_error": "Er is een fout opgetreden bij het bijwerken van uw winkelwagen. Probeer het opnieuw.",
+      "cart_quantity_error_html": "U kunt slechts {{ quantity }} van dit artikel aan uw winkelwagen toevoegen."
+    },
+    "collection_template": {
+      "title": "Collectie"
+    }
+  },
+  "onboarding": {
+    "product_title": "Voorbeeld producttitel",
+    "collection_title": "Naam van uw collectie"
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "Aantal",
+        "input_label": "Aantal voor {{ product }}",
+        "increase": "Aantal verhogen voor {{ product }}",
+        "decrease": "Aantal verlagen voor {{ product }}"
+      },
+      "price": {
+        "regular_price": "Normale prijs",
+        "sale_price": "Aanbiedingsprijs",
+        "from_price_html": "Vanaf {{ min_price }}",
+        "unit_price": "Eenheidsprijs"
+      },
+      "add_to_cart": "Toevoegen aan winkelwagen",
+      "sold_out": "Uitverkocht",
+      "unavailable": "Niet beschikbaar",
+      "product_variants": "Productvarianten"
+    }
+  },
+  "templates": {
+    "cart": {
+      "cart": "Winkelwagen"
+    },
+    "search": {
+      "title": "Zoekresultaten"
+    },
+    "404": {
+      "title": "404 Pagina niet gevonden",
+      "subtext": "De pagina die u hebt opgevraagd bestaat niet."
+    },
+    "contact": {
+      "form": {
+        "title": "Contactformulier",
+        "name": "Naam",
+        "email": "E-mail",
+        "phone": "Telefoonnummer",
+        "comment": "Opmerking",
+        "send": "Verzenden",
+        "post_success": "Bedankt voor uw bericht. We nemen zo snel mogelijk contact met u op.",
+        "error_heading": "Pas het volgende aan:"
+      }
+    }
+  },
+  "customer": {
+    "account_fallback": "Account",
+    "log_in": "Inloggen",
+    "log_out": "Uitloggen",
+    "order": {
+      "title": "Bestelling {{ name }}",
+      "date_html": "Geplaatst op {{ date }}",
+      "cancelled_html": "Bestelling geannuleerd op {{ date }}",
+      "cancelled_reason": "Reden: {{ reason }}",
+      "billing_address": "Factuuradres",
+      "payment_status": "Betalingsstatus",
+      "shipping_address": "Verzendadres",
+      "fulfillment_status": "Afhandelingsstatus",
+      "discount": "Korting",
+      "shipping": "Verzending",
+      "tax": "Belasting",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Prijs",
+      "quantity": "Aantal",
+      "total": "Totaal",
+      "fulfilled_at_html": "Afgehandeld {{ date }}",
+      "track_shipment": "Zending volgen",
+      "tracking_url": "Trackinglink",
+      "tracking_company": "Vervoerder",
+      "tracking_number": "Trackingnummer",
+      "subtotal": "Subtotaal",
+      "total_duties": "Invoerrechten"
+    },
+    "orders": {
+      "title": "Bestelgeschiedenis",
+      "order_number": "Bestelling",
+      "order_number_link": "Bestelnummer {{ number }}",
+      "date": "Datum",
+      "payment_status": "Betalingsstatus",
+      "fulfillment_status": "Afhandelingsstatus",
+      "total": "Totaal",
+      "none": "U hebt nog geen bestellingen geplaatst."
+    },
+    "recover_password": {
+      "title": "Uw wachtwoord opnieuw instellen",
+      "subtext": "We sturen u een e-mail om uw wachtwoord opnieuw in te stellen",
+      "success": "We hebben u een e-mail gestuurd met een link om uw wachtwoord bij te werken."
+    },
+    "login_page": {
+      "cancel": "Annuleren",
+      "create_account": "Account aanmaken",
+      "email": "E-mail",
+      "forgot_password": "Wachtwoord vergeten?",
+      "guest_continue": "Doorgaan",
+      "guest_title": "Doorgaan als gast",
+      "password": "Wachtwoord",
+      "title": "Inloggen",
+      "sign_in": "Aanmelden",
+      "submit": "Verzenden"
+    },
+    "register": {
+      "title": "Account aanmaken",
+      "first_name": "Voornaam",
+      "last_name": "Achternaam",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "submit": "Aanmaken"
+    },
+    "reset_password": {
+      "title": "Accountwachtwoord opnieuw instellen",
+      "subtext": "Voer een nieuw wachtwoord in voor {{ email }}",
+      "password": "Wachtwoord",
+      "password_confirm": "Wachtwoord bevestigen",
+      "submit": "Wachtwoord opnieuw instellen"
+    },
+    "activate_account": {
+      "title": "Account activeren",
+      "subtext": "Maak uw wachtwoord aan om uw account te activeren.",
+      "password": "Wachtwoord",
+      "password_confirm": "Wachtwoord bevestigen",
+      "submit": "Account activeren",
+      "cancel": "Uitnodiging afwijzen"
+    },
+    "addresses": {
+      "title": "Adressen",
+      "default": "Standaard",
+      "add_new": "Een nieuw adres toevoegen",
+      "edit_address": "Adres bewerken",
+      "first_name": "Voornaam",
+      "last_name": "Achternaam",
+      "company": "Bedrijf",
+      "address1": "Adres 1",
+      "address2": "Adres 2",
+      "city": "Plaats",
+      "country": "Land/regio",
+      "province": "Provincie",
+      "zip": "Postcode",
+      "phone": "Telefoon",
+      "set_default": "Instellen als standaardadres",
+      "add": "Adres toevoegen",
+      "update": "Adres bijwerken",
+      "cancel": "Annuleren",
+      "edit": "Bewerken",
+      "delete": "Verwijderen",
+      "delete_confirm": "Weet u zeker dat u dit adres wilt verwijderen?"
+    },
+    "account": {
+      "title": "Account",
+      "details": "Accountgegevens",
+      "view_addresses": "Adressen bekijken",
+      "return": "Terug naar accountgegevens"
+    }
+  },
+  "localization": {
+    "update_country": "Land/regio bijwerken"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Hier is uw {{ value }} cadeaubon voor {{ shop }}!",
+      "subtext": "Uw cadeaubon",
+      "gift_card_code": "Cadeauboncode",
+      "shop_link": "Verder winkelen",
+      "remaining_html": "Resterend {{ balance }}",
+      "add_to_apple_wallet": "Toevoegen aan Apple Wallet",
+      "qr_image_alt": "QR-code — scan om cadeaubon te verzilveren",
+      "copy_code": "Code kopiëren",
+      "expired": "Verlopen",
+      "copy_code_success": "Code succesvol gekopieerd",
+      "print_gift_card": "Afdrukken"
+    }
+  }
+}

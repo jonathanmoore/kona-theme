@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Seznam zbirk",
+      "settings": {
+        "collection_list": {
+          "label": "Zbirke"
+        },
+        "columns_desktop": {
+          "label": "Število stolpcev na namizju"
+        }
+      },
+      "presets": {
+        "name": "Seznam zbirk",
+        "blocks": {
+          "heading": {
+            "heading": "Zbirke"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Kontaktni obrazec",
+      "presets": {
+        "name": "Kontaktni obrazec"
+      }
+    },
+    "email_signup_banner": {
+      "name": "Pasica za prijavo na e-novice",
+      "presets": {
+        "name": "Pasica za prijavo na e-novice",
+        "blocks": {
+          "heading": {
+            "heading": "Kmalu odpiramo"
+          },
+          "text": {
+            "text": "<p>Bodite prvi, ki izveste, kdaj začnemo.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Predstavljena zbirka",
+      "settings": {
+        "collection": {
+          "label": "Zbirka"
+        },
+        "products_to_show": {
+          "label": "Največje število prikazanih izdelkov"
+        }
+      },
+      "presets": {
+        "name": "Predstavljena zbirka",
+        "category": "Izdelki",
+        "blocks": {
+          "heading": {
+            "heading": "Predstavljena zbirka"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Noga"
+    },
+    "header": {
+      "name": "Glava",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Omogoči lepljivo glavo",
+          "info": "Glava se prikaže na zaslonu, ko stranke pomikajo navzgor."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Pasica s sliko",
+      "settings": {
+        "image": {
+          "label": "Prva slika"
+        },
+        "image_2": {
+          "label": "Druga slika"
+        },
+        "full_page_height_enable": {
+          "label": "Višina celotne strani"
+        }
+      },
+      "presets": {
+        "name": "Pasica s sliko",
+        "category": "Pasice",
+        "blocks": {
+          "heading": {
+            "heading": "Pasica s sliko"
+          },
+          "text": {
+            "text": "<p><strong>Strankam podajte podrobnosti o pasici s sliko(-ami) ali vsebini predloge.</strong></p>"
+          },
+          "button": {
+            "button_label": "Nakupuj vse →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Objave v blogu"
+    },
+    "main_cart": {
+      "name": "Stran košarice"
+    },
+    "main_list_collections": {
+      "name": "Stran seznama zbirk"
+    },
+    "main_page": {
+      "name": "Stran"
+    },
+    "main_password_footer": {
+      "name": "Noga z geslom"
+    },
+    "main_password_header": {
+      "name": "Glava z geslom"
+    },
+    "main_product": {
+      "name": "Informacije o izdelku"
+    },
+    "product_recommendations": {
+      "name": "Priporočila izdelkov",
+      "settings": {
+        "paragraph": {
+          "content": "Dinamična priporočila uporabljajo informacije o naročilih in izdelkih za spremembe in izboljšave skozi čas. [Več informacij](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Največje število prikazanih izdelkov"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Predstavitev Islands",
+      "settings": {
+        "heading": {
+          "label": "Naslov",
+          "default": "Predstavitev arhitekture Islands"
+        }
+      },
+      "presets": {
+        "name": "Predstavitev Islands"
+      }
+    },
+    "section": {
+      "name": "Razdelek",
+      "settings": {
+        "header__layout": {
+          "content": "Postavitev"
+        },
+        "gap": {
+          "label": "Razmik"
+        },
+        "header__size": {
+          "content": "Velikost"
+        },
+        "section_width": {
+          "label": "Širina",
+          "options__page": {
+            "label": "Stran"
+          },
+          "options__full": {
+            "label": "Polna"
+          }
+        },
+        "header__padding": {
+          "content": "Polnilo"
+        },
+        "padding_block_start": {
+          "label": "Zgoraj"
+        },
+        "padding_block_end": {
+          "label": "Spodaj"
+        }
+      },
+      "presets": {
+        "name": "Razdelek"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Izbirnik države",
+      "settings": {
+        "heading": {
+          "label": "Naslov",
+          "info": "Naslov je obvezen za prikaz izbirnika države",
+          "default": "Država"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Meni",
+      "settings": {
+        "heading": {
+          "label": "Naslov",
+          "info": "Naslov je obvezen za prikaz menija",
+          "default": "Hitre povezave"
+        },
+        "menu": {
+          "label": "Meni",
+          "info": "Prikaže samo elemente menija na prvi ravni"
+        }
+      },
+      "presets": {
+        "name": "Meni",
+        "category": "Noga"
+      }
+    },
+    "header_logo": {
+      "name": "Logotip"
+    },
+    "header_menu_mobile": {
+      "name": "Mobilni meni",
+      "settings": {
+        "menu": {
+          "label": "Glavna navigacija"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Kartica članka"
+    },
+    "article_content": {
+      "name": "Vsebina"
+    },
+    "button": {
+      "name": "Gumb",
+      "settings": {
+        "button_label": {
+          "label": "Oznaka gumba",
+          "info": "Pustite oznako prazno, če želite skriti gumb.",
+          "default": "Oznaka gumba"
+        },
+        "button_link": {
+          "label": "Povezava gumba"
+        },
+        "button_variant": {
+          "label": "Različica gumba",
+          "options__default": {
+            "label": "Privzeto"
+          },
+          "options__link": {
+            "label": "Povezava"
+          }
+        },
+        "button_size": {
+          "label": "Velikost gumba",
+          "options__default": {
+            "label": "Privzeto"
+          },
+          "options__lg": {
+            "label": "Velika"
+          }
+        }
+      },
+      "presets": {
+        "name": "Gumb",
+        "category": "Osnovno"
+      }
+    },
+    "buy_buttons": {
+      "name": "Gumbi za nakup",
+      "settings": {
+        "product": {
+          "label": "Izdelek"
+        },
+        "show_dynamic_checkout": {
+          "label": "Prikaži gumbe za dinamično blagajno",
+          "info": "S plačilnimi metodami, ki so na voljo v vaši trgovini, stranke vidijo svojo prednostno možnost, kot je PayPal ali Apple Pay. [Več informacij](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Gumbi za nakup"
+      }
+    },
+    "collection_card": {
+      "name": "Kartica zbirke",
+      "settings": {
+        "collection": {
+          "label": "Zbirka"
+        }
+      },
+      "presets": {
+        "name": "Kartica zbirke"
+      }
+    },
+    "details": {
+      "name": "Podrobnosti"
+    },
+    "email_signup": {
+      "name": "Prijava na e-novice",
+      "presets": {
+        "name": "Prijava na e-novice"
+      }
+    },
+    "header_menu": {
+      "name": "Meni",
+      "settings": {
+        "menu": {
+          "label": "Glavna navigacija"
+        }
+      }
+    },
+    "heading": {
+      "name": "Naslov",
+      "settings": {
+        "heading": {
+          "label": "Naslov",
+          "default": "Spregovorite o vaši blagovni znamki"
+        },
+        "heading_size": {
+          "label": "Velikost naslova",
+          "options__default": {
+            "label": "Privzeto"
+          },
+          "options__md": {
+            "label": "Srednja"
+          },
+          "options__lg": {
+            "label": "Velika"
+          },
+          "options__xl": {
+            "label": "Zelo velika"
+          }
+        },
+        "heading_level": {
+          "label": "Raven naslova",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Naslov",
+        "category": "Osnovno"
+      }
+    },
+    "image": {
+      "name": "Slika",
+      "settings": {
+        "image": {
+          "label": "Slika"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Vsebina strani"
+    },
+    "price": {
+      "name": "Cena",
+      "settings": {
+        "product": {
+          "label": "Izdelek"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Kartica izdelka",
+      "settings": {
+        "product": {
+          "label": "Izdelek"
+        }
+      },
+      "presets": {
+        "name": "Kartica izdelka",
+        "category": "Izdelek"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Mediji izdelka"
+    },
+    "search_input": {
+      "name": "Polje za iskanje"
+    },
+    "tab": {
+      "name": "Zavihek",
+      "settings": {
+        "title": {
+          "label": "Naslov",
+          "default": "Informacije o dostavi"
+        },
+        "content": {
+          "label": "Vsebina zavihka",
+          "default": "<p>Uporabite zložljive zavihke za bolj podrobne informacije, ki bodo strankam pomagale pri odločitvi za nakup.</p><p>Npr.: Politika dostave in vračil, vodniki za velikosti in druga pogosta vprašanja.</p>"
+        },
+        "page": {
+          "label": "Vsebina zavihka s strani"
+        }
+      },
+      "presets": {
+        "name": "Zavihek"
+      }
+    },
+    "text": {
+      "name": "Besedilo",
+      "settings": {
+        "text": {
+          "label": "Opis",
+          "default": "<p>Delite informacije o vaši blagovni znamki s svojimi strankami.</p>"
+        },
+        "text_size": {
+          "label": "Velikost besedila",
+          "options__default": {
+            "label": "Privzeto"
+          },
+          "options__lg": {
+            "label": "Velika"
+          }
+        }
+      },
+      "presets": {
+        "name": "Besedilo",
+        "category": "Osnovno"
+      }
+    },
+    "variant_picker": {
+      "name": "Izbirnik različic",
+      "settings": {
+        "product": {
+          "label": "Izdelek"
+        },
+        "picker_type": {
+          "label": "Vrsta",
+          "options__dropdown": {
+            "label": "Spustni meni"
+          },
+          "options__button": {
+            "label": "Gumbi"
+          }
+        }
+      },
+      "presets": {
+        "name": "Izbirnik različic"
+      }
+    },
+    "product_details": {
+      "name": "Podrobnosti"
+    },
+    "cart_products": {
+      "name": "Izdelki v košarici"
+    }
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Λίστα συλλογών",
+      "settings": {
+        "collection_list": {
+          "label": "Συλλογές"
+        },
+        "columns_desktop": {
+          "label": "Αριθμός στηλών σε υπολογιστή"
+        }
+      },
+      "presets": {
+        "name": "Λίστα συλλογών",
+        "blocks": {
+          "heading": {
+            "heading": "Συλλογές"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Φόρμα επικοινωνίας",
+      "presets": {
+        "name": "Φόρμα επικοινωνίας"
+      }
+    },
+    "email_signup_banner": {
+      "name": "Banner εγγραφής email",
+      "presets": {
+        "name": "Banner εγγραφής email",
+        "blocks": {
+          "heading": {
+            "heading": "Ανοίγουμε σύντομα"
+          },
+          "text": {
+            "text": "<p>Γίνετε οι πρώτοι που θα μάθετε πότε θα κάνουμε την έναρξη.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Προβεβλημένη συλλογή",
+      "settings": {
+        "collection": {
+          "label": "Συλλογή"
+        },
+        "products_to_show": {
+          "label": "Μέγιστος αριθμός προϊόντων προς εμφάνιση"
+        }
+      },
+      "presets": {
+        "name": "Προβεβλημένη συλλογή",
+        "category": "Προϊόντα",
+        "blocks": {
+          "heading": {
+            "heading": "Προβεβλημένη συλλογή"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Υποσέλιδο"
+    },
+    "header": {
+      "name": "Κεφαλίδα",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Ενεργοποίηση σταθερής κεφαλίδας",
+          "info": "Η κεφαλίδα εμφανίζεται στην οθόνη καθώς οι πελάτες κάνουν κύλιση προς τα πάνω."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Banner εικόνας",
+      "settings": {
+        "image": {
+          "label": "Πρώτη εικόνα"
+        },
+        "image_2": {
+          "label": "Δεύτερη εικόνα"
+        },
+        "full_page_height_enable": {
+          "label": "Πλήρες ύψος σελίδας"
+        }
+      },
+      "presets": {
+        "name": "Banner εικόνας",
+        "category": "Banners",
+        "blocks": {
+          "heading": {
+            "heading": "Banner εικόνας"
+          },
+          "text": {
+            "text": "<p><strong>Δώστε στους πελάτες λεπτομέρειες σχετικά με την εικόνα(-ες) του banner ή το περιεχόμενο στο πρότυπο.</strong></p>"
+          },
+          "button": {
+            "button_label": "Δείτε όλα →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Αναρτήσεις blog"
+    },
+    "main_cart": {
+      "name": "Σελίδα Καλαθιού"
+    },
+    "main_list_collections": {
+      "name": "Σελίδα λίστας συλλογών"
+    },
+    "main_page": {
+      "name": "Σελίδα"
+    },
+    "main_password_footer": {
+      "name": "Υποσέλιδο κωδικού πρόσβασης"
+    },
+    "main_password_header": {
+      "name": "Κεφαλίδα κωδικού πρόσβασης"
+    },
+    "main_product": {
+      "name": "Πληροφορίες προϊόντος"
+    },
+    "product_recommendations": {
+      "name": "Προτάσεις προϊόντων",
+      "settings": {
+        "paragraph": {
+          "content": "Οι δυναμικές προτάσεις χρησιμοποιούν πληροφορίες παραγγελιών και προϊόντων για να αλλάζουν και να βελτιώνονται με την πάροδο του χρόνου. [Μάθετε περισσότερα](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Μέγιστος αριθμός προϊόντων προς εμφάνιση"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Επίδειξη Islands",
+      "settings": {
+        "heading": {
+          "label": "Επικεφαλίδα",
+          "default": "Επίδειξη Islands Architecture"
+        }
+      },
+      "presets": {
+        "name": "Επίδειξη Islands"
+      }
+    },
+    "section": {
+      "name": "Ενότητα",
+      "settings": {
+        "header__layout": {
+          "content": "Διάταξη"
+        },
+        "gap": {
+          "label": "Κενό"
+        },
+        "header__size": {
+          "content": "Μέγεθος"
+        },
+        "section_width": {
+          "label": "Πλάτος",
+          "options__page": {
+            "label": "Σελίδα"
+          },
+          "options__full": {
+            "label": "Πλήρες"
+          }
+        },
+        "header__padding": {
+          "content": "Αναπλήρωση"
+        },
+        "padding_block_start": {
+          "label": "Επάνω"
+        },
+        "padding_block_end": {
+          "label": "Κάτω"
+        }
+      },
+      "presets": {
+        "name": "Ενότητα"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Επιλογέας χώρας",
+      "settings": {
+        "heading": {
+          "label": "Επικεφαλίδα",
+          "info": "Απαιτείται επικεφαλίδα για την εμφάνιση του επιλογέα χώρας",
+          "default": "Χώρα"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Μενού",
+      "settings": {
+        "heading": {
+          "label": "Επικεφαλίδα",
+          "info": "Απαιτείται επικεφαλίδα για την εμφάνιση του μενού",
+          "default": "Γρήγοροι σύνδεσμοι"
+        },
+        "menu": {
+          "label": "Μενού",
+          "info": "Εμφανίζει μόνο στοιχεία μενού ανώτατου επιπέδου"
+        }
+      },
+      "presets": {
+        "name": "Μενού",
+        "category": "Υποσέλιδο"
+      }
+    },
+    "header_logo": {
+      "name": "Λογότυπο"
+    },
+    "header_menu_mobile": {
+      "name": "Μενού κινητού",
+      "settings": {
+        "menu": {
+          "label": "Κύρια πλοήγηση"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Κάρτα άρθρου"
+    },
+    "article_content": {
+      "name": "Περιεχόμενο"
+    },
+    "button": {
+      "name": "Κουμπί",
+      "settings": {
+        "button_label": {
+          "label": "Ετικέτα κουμπιού",
+          "info": "Αφήστε την ετικέτα κενή για να αποκρύψετε το κουμπί.",
+          "default": "Ετικέτα κουμπιού"
+        },
+        "button_link": {
+          "label": "Σύνδεσμος κουμπιού"
+        },
+        "button_variant": {
+          "label": "Παραλλαγή κουμπιού",
+          "options__default": {
+            "label": "Προεπιλογή"
+          },
+          "options__link": {
+            "label": "Σύνδεσμος"
+          }
+        },
+        "button_size": {
+          "label": "Μέγεθος κουμπιού",
+          "options__default": {
+            "label": "Προεπιλογή"
+          },
+          "options__lg": {
+            "label": "Μεγάλο"
+          }
+        }
+      },
+      "presets": {
+        "name": "Κουμπί",
+        "category": "Βασικό"
+      }
+    },
+    "buy_buttons": {
+      "name": "Κουμπιά αγοράς",
+      "settings": {
+        "product": {
+          "label": "Προϊόν"
+        },
+        "show_dynamic_checkout": {
+          "label": "Εμφάνιση κουμπιών δυναμικής ολοκλήρωσης παραγγελίας",
+          "info": "Χρησιμοποιώντας τις μεθόδους πληρωμής που είναι διαθέσιμες στο κατάστημά σας, οι πελάτες βλέπουν την προτιμώμενη επιλογή τους, όπως PayPal ή Apple Pay. [Μάθετε περισσότερα](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Κουμπιά αγοράς"
+      }
+    },
+    "collection_card": {
+      "name": "Κάρτα συλλογής",
+      "settings": {
+        "collection": {
+          "label": "Συλλογή"
+        }
+      },
+      "presets": {
+        "name": "Κάρτα συλλογής"
+      }
+    },
+    "details": {
+      "name": "Λεπτομέρειες"
+    },
+    "email_signup": {
+      "name": "Εγγραφή email",
+      "presets": {
+        "name": "Εγγραφή email"
+      }
+    },
+    "header_menu": {
+      "name": "Μενού",
+      "settings": {
+        "menu": {
+          "label": "Κύρια πλοήγηση"
+        }
+      }
+    },
+    "heading": {
+      "name": "Επικεφαλίδα",
+      "settings": {
+        "heading": {
+          "label": "Επικεφαλίδα",
+          "default": "Μιλήστε για την επωνυμία σας"
+        },
+        "heading_size": {
+          "label": "Μέγεθος επικεφαλίδας",
+          "options__default": {
+            "label": "Προεπιλογή"
+          },
+          "options__md": {
+            "label": "Μεσαίο"
+          },
+          "options__lg": {
+            "label": "Μεγάλο"
+          },
+          "options__xl": {
+            "label": "Πολύ μεγάλο"
+          }
+        },
+        "heading_level": {
+          "label": "Επίπεδο επικεφαλίδας",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Επικεφαλίδα",
+        "category": "Βασικό"
+      }
+    },
+    "image": {
+      "name": "Εικόνα",
+      "settings": {
+        "image": {
+          "label": "Εικόνα"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Περιεχόμενο σελίδας"
+    },
+    "price": {
+      "name": "Τιμή",
+      "settings": {
+        "product": {
+          "label": "Προϊόν"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Κάρτα προϊόντος",
+      "settings": {
+        "product": {
+          "label": "Προϊόν"
+        }
+      },
+      "presets": {
+        "name": "Κάρτα προϊόντος",
+        "category": "Προϊόν"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Πολυμέσα προϊόντος"
+    },
+    "search_input": {
+      "name": "Πεδίο αναζήτησης"
+    },
+    "tab": {
+      "name": "Καρτέλα",
+      "settings": {
+        "title": {
+          "label": "Επικεφαλίδα",
+          "default": "Πληροφορίες αποστολής"
+        },
+        "content": {
+          "label": "Περιεχόμενο καρτέλας",
+          "default": "<p>Χρησιμοποιήστε καρτέλες που συμπτύσσονται για πιο λεπτομερείς πληροφορίες που θα βοηθήσουν τους πελάτες να λάβουν μια απόφαση αγοράς.</p><p>Π.χ.: Πολιτικές αποστολής και επιστροφών, οδηγοί μεγεθών και άλλες συνήθεις ερωτήσεις.</p>"
+        },
+        "page": {
+          "label": "Περιεχόμενο καρτέλας από σελίδα"
+        }
+      },
+      "presets": {
+        "name": "Καρτέλα"
+      }
+    },
+    "text": {
+      "name": "Κείμενο",
+      "settings": {
+        "text": {
+          "label": "Περιγραφή",
+          "default": "<p>Μοιραστείτε πληροφορίες για την επωνυμία σας με τους πελάτες σας.</p>"
+        },
+        "text_size": {
+          "label": "Μέγεθος κειμένου",
+          "options__default": {
+            "label": "Προεπιλογή"
+          },
+          "options__lg": {
+            "label": "Μεγάλο"
+          }
+        }
+      },
+      "presets": {
+        "name": "Κείμενο",
+        "category": "Βασικό"
+      }
+    },
+    "variant_picker": {
+      "name": "Επιλογέας παραλλαγών",
+      "settings": {
+        "product": {
+          "label": "Προϊόν"
+        },
+        "picker_type": {
+          "label": "Τύπος",
+          "options__dropdown": {
+            "label": "Αναπτυσσόμενο μενού"
+          },
+          "options__button": {
+            "label": "Κουμπιά"
+          }
+        }
+      },
+      "presets": {
+        "name": "Επιλογέας παραλλαγών"
+      }
+    },
+    "product_details": {
+      "name": "Λεπτομέρειες"
+    },
+    "cart_products": {
+      "name": "Προϊόντα Καλαθιού"
+    }
+  }
+}

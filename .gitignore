@@ -50,5 +50,12 @@ assets/*
 snippets/vite-tag.liquid
 snippets/importmap.liquid
 
+# Environment variables
+.env
+.env.local
+
+# JTA translation cache
+.jta/
+
 # Theme zip files
 *.zip

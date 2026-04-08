@@ -11,7 +11,12 @@
         }
       },
       "presets": {
-        "name": "Collection list"
+        "name": "Collection list",
+        "blocks": {
+          "heading": {
+            "heading": "Collections"
+          }
+        }
       }
     },
     "contact_form": {
@@ -23,7 +28,15 @@
     "email_signup_banner": {
       "name": "Email signup banner",
       "presets": {
-        "name": "Email signup banner"
+        "name": "Email signup banner",
+        "blocks": {
+          "heading": {
+            "heading": "Opening soon"
+          },
+          "text": {
+            "text": "<p>Be the first to know when we launch.</p>"
+          }
+        }
       }
     },
     "featured_collection": {
@@ -37,7 +50,13 @@
         }
       },
       "presets": {
-        "name": "Featured collection"
+        "name": "Featured collection",
+        "category": "Products",
+        "blocks": {
+          "heading": {
+            "heading": "Featured collection"
+          }
+        }
       }
     },
     "footer": {
@@ -66,7 +85,19 @@
         }
       },
       "presets": {
-        "name": "Image banner"
+        "name": "Image banner",
+        "category": "Banners",
+        "blocks": {
+          "heading": {
+            "heading": "Image banner"
+          },
+          "text": {
+            "text": "<p><strong>Give customers details about the banner image(s) or content on the template.</strong></p>"
+          },
+          "button": {
+            "button_label": "Shop all →"
+          }
+        }
       }
     },
     "main_blog": {
@@ -105,7 +136,8 @@
       "name": "Islands demo",
       "settings": {
         "heading": {
-          "label": "Heading"
+          "label": "Heading",
+          "default": "Islands Architecture Demo"
         }
       },
       "presets": {
@@ -154,7 +186,8 @@
       "settings": {
         "heading": {
           "label": "Heading",
-          "info": "Heading required to display the country selector"
+          "info": "Heading required to display the country selector",
+          "default": "Country"
         }
       }
     },
@@ -163,7 +196,8 @@
       "settings": {
         "heading": {
           "label": "Heading",
-          "info": "Heading required to display the menu"
+          "info": "Heading required to display the menu",
+          "default": "Quick links"
         },
         "menu": {
           "label": "Menu",
@@ -171,7 +205,8 @@
         }
       },
       "presets": {
-        "name": "Menu"
+        "name": "Menu",
+        "category": "Footer"
       }
     },
     "header_logo": {
@@ -196,7 +231,8 @@
       "settings": {
         "button_label": {
           "label": "Button label",
-          "info": "Leave the label blank to hide the button."
+          "info": "Leave the label blank to hide the button.",
+          "default": "Button label"
         },
         "button_link": {
           "label": "Button link"
@@ -221,7 +257,8 @@
         }
       },
       "presets": {
-        "name": "Button"
+        "name": "Button",
+        "category": "Basic"
       }
     },
     "buy_buttons": {
@@ -271,7 +308,8 @@
       "name": "Heading",
       "settings": {
         "heading": {
-          "label": "Heading"
+          "label": "Heading",
+          "default": "Talk about your brand"
         },
         "heading_size": {
           "label": "Heading size",
@@ -305,7 +343,8 @@
         }
       },
       "presets": {
-        "name": "Heading"
+        "name": "Heading",
+        "category": "Basic"
       }
     },
     "image": {
@@ -335,7 +374,8 @@
         }
       },
       "presets": {
-        "name": "Product card"
+        "name": "Product card",
+        "category": "Product"
       }
     },
     "product_media_gallery": {
@@ -348,10 +388,12 @@
       "name": "Tab",
       "settings": {
         "title": {
-          "label": "Heading"
+          "label": "Heading",
+          "default": "Shipping information"
         },
         "content": {
-          "label": "Tab content"
+          "label": "Tab content",
+          "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
         },
         "page": {
           "label": "Tab content from page"
@@ -365,7 +407,8 @@
       "name": "Text",
       "settings": {
         "text": {
-          "label": "Description"
+          "label": "Description",
+          "default": "<p>Share information about your brand with your customers.</p>"
         },
         "text_size": {
           "label": "Text size",
@@ -378,7 +421,8 @@
         }
       },
       "presets": {
-        "name": "Text"
+        "name": "Text",
+        "category": "Basic"
       }
     },
     "variant_picker": {

@@ -1,0 +1,258 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "使用密码进入商店：",
+      "login_password_button": "使用密码进入",
+      "login_form_password_label": "密码",
+      "login_form_password_placeholder": "您的密码",
+      "login_form_error": "密码错误！",
+      "login_form_submit": "进入",
+      "admin_link_html": "您是店主吗？<a href=\"/admin\" class=\"link underlined-link\">在此登录</a>",
+      "powered_by_shopify_html": "本店铺由 {{ shopify }} 提供技术支持"
+    },
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "pagination": {
+      "label": "分页",
+      "page": "第 {{ number }} 页",
+      "next": "下一页",
+      "previous": "上一页"
+    },
+    "search": {
+      "search": "搜索",
+      "submit": "前往",
+      "no_results_html": "您搜索的\"{{ terms }}\"未找到相关结果。"
+    },
+    "continue_shopping": "继续购物",
+    "meta": {
+      "tagged": "标签为\"{{ tags }}\""
+    }
+  },
+  "newsletter": {
+    "label": "电子邮件",
+    "success": "感谢您的订阅",
+    "button_label": "订阅"
+  },
+  "accessibility": {
+    "skip_to_text": "跳至内容",
+    "close": "关闭",
+    "unit_price_separator": "每",
+    "link_messages": {
+      "new_window": "在新窗口中打开。"
+    },
+    "loading": "加载中...",
+    "error": "错误",
+    "main_navigation": "主导航"
+  },
+  "sections": {
+    "header": {
+      "menu": "菜单",
+      "cart_count": "PLURAL:{\"other\": \"{{ count }} \\u4ef6\\u5546\\u54c1\"}"
+    },
+    "cart": {
+      "title": "您的购物车",
+      "empty": "您的购物车目前是空的。",
+      "remove_title": "移除 {{ title }}",
+      "subtotal": "小计",
+      "new_subtotal": "新小计",
+      "taxes_and_shipping_policy_at_checkout_html": "税费和<a href=\"{{ link }}\">运费</a>在结账时计算",
+      "taxes_included_but_shipping_at_checkout": "含税，运费在结账时计算",
+      "taxes_included_and_shipping_policy_html": "含税。<a href=\"{{ link }}\">运费</a>在结账时计算。",
+      "taxes_and_shipping_at_checkout": "税费和运费在结账时计算",
+      "update": "更新",
+      "checkout": "结账",
+      "note": "订单特殊说明",
+      "cart_error": "更新购物车时出错。请重试。",
+      "cart_quantity_error_html": "此商品最多只能添加 {{ quantity }} 件到购物车。"
+    },
+    "collection_template": {
+      "title": "系列"
+    }
+  },
+  "onboarding": {
+    "product_title": "示例商品标题",
+    "collection_title": "您的系列名称"
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "数量",
+        "input_label": "{{ product }} 的数量",
+        "increase": "增加 {{ product }} 的数量",
+        "decrease": "减少 {{ product }} 的数量"
+      },
+      "price": {
+        "regular_price": "常规价格",
+        "sale_price": "促销价格",
+        "from_price_html": "从 {{ min_price }} 起",
+        "unit_price": "单价"
+      },
+      "add_to_cart": "加入购物车",
+      "sold_out": "已售罄",
+      "unavailable": "不可用",
+      "product_variants": "商品选项"
+    }
+  },
+  "templates": {
+    "cart": {
+      "cart": "购物车"
+    },
+    "search": {
+      "title": "搜索结果"
+    },
+    "404": {
+      "title": "404 页面未找到",
+      "subtext": "您请求的页面不存在。"
+    },
+    "contact": {
+      "form": {
+        "title": "联系表单",
+        "name": "姓名",
+        "email": "电子邮件",
+        "phone": "电话号码",
+        "comment": "留言",
+        "send": "发送",
+        "post_success": "感谢您联系我们。我们会尽快回复您。",
+        "error_heading": "请调整以下内容："
+      }
+    }
+  },
+  "customer": {
+    "account_fallback": "账户",
+    "log_in": "登录",
+    "log_out": "退出",
+    "order": {
+      "title": "订单 {{ name }}",
+      "date_html": "下单于 {{ date }}",
+      "cancelled_html": "订单于 {{ date }} 取消",
+      "cancelled_reason": "原因：{{ reason }}",
+      "billing_address": "账单地址",
+      "payment_status": "付款状态",
+      "shipping_address": "配送地址",
+      "fulfillment_status": "配送状态",
+      "discount": "折扣",
+      "shipping": "运费",
+      "tax": "税费",
+      "product": "商品",
+      "sku": "SKU",
+      "price": "价格",
+      "quantity": "数量",
+      "total": "总计",
+      "fulfilled_at_html": "已配送 {{ date }}",
+      "track_shipment": "追踪物流",
+      "tracking_url": "追踪链接",
+      "tracking_company": "承运商",
+      "tracking_number": "追踪单号",
+      "subtotal": "小计",
+      "total_duties": "关税"
+    },
+    "orders": {
+      "title": "订单历史",
+      "order_number": "订单",
+      "order_number_link": "订单号 {{ number }}",
+      "date": "日期",
+      "payment_status": "付款状态",
+      "fulfillment_status": "配送状态",
+      "total": "总计",
+      "none": "您尚未下过任何订单。"
+    },
+    "recover_password": {
+      "title": "重置您的密码",
+      "subtext": "我们将向您发送重置密码的电子邮件",
+      "success": "我们已向您发送了一封包含更新密码链接的电子邮件。"
+    },
+    "login_page": {
+      "cancel": "取消",
+      "create_account": "创建账户",
+      "email": "电子邮件",
+      "forgot_password": "忘记密码？",
+      "guest_continue": "继续",
+      "guest_title": "以访客身份继续",
+      "password": "密码",
+      "title": "登录",
+      "sign_in": "登录",
+      "submit": "提交"
+    },
+    "register": {
+      "title": "创建账户",
+      "first_name": "名字",
+      "last_name": "姓氏",
+      "email": "电子邮件",
+      "password": "密码",
+      "submit": "创建"
+    },
+    "reset_password": {
+      "title": "重置账户密码",
+      "subtext": "为 {{ email }} 输入新密码",
+      "password": "密码",
+      "password_confirm": "确认密码",
+      "submit": "重置密码"
+    },
+    "activate_account": {
+      "title": "激活账户",
+      "subtext": "创建您的密码以激活您的账户。",
+      "password": "密码",
+      "password_confirm": "确认密码",
+      "submit": "激活账户",
+      "cancel": "拒绝邀请"
+    },
+    "addresses": {
+      "title": "地址",
+      "default": "默认",
+      "add_new": "添加新地址",
+      "edit_address": "编辑地址",
+      "first_name": "名字",
+      "last_name": "姓氏",
+      "company": "公司",
+      "address1": "地址 1",
+      "address2": "地址 2",
+      "city": "城市",
+      "country": "国家/地区",
+      "province": "省份",
+      "zip": "邮政编码",
+      "phone": "电话",
+      "set_default": "设为默认地址",
+      "add": "添加地址",
+      "update": "更新地址",
+      "cancel": "取消",
+      "edit": "编辑",
+      "delete": "删除",
+      "delete_confirm": "您确定要删除此地址吗？"
+    },
+    "account": {
+      "title": "账户",
+      "details": "账户详情",
+      "view_addresses": "查看地址",
+      "return": "返回账户详情"
+    }
+  },
+  "localization": {
+    "update_country": "更新国家/地区"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "这是您在 {{ shop }} 的 {{ value }} 礼品卡！",
+      "subtext": "您的礼品卡",
+      "gift_card_code": "礼品卡代码",
+      "shop_link": "继续购物",
+      "remaining_html": "剩余 {{ balance }}",
+      "add_to_apple_wallet": "添加到 Apple Wallet",
+      "qr_image_alt": "二维码 — 扫描兑换礼品卡",
+      "copy_code": "复制代码",
+      "expired": "已过期",
+      "copy_code_success": "代码复制成功",
+      "print_gift_card": "打印"
+    }
+  }
+}

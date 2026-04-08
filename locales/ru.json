@@ -1,0 +1,258 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Введите пароль для входа в магазин:",
+      "login_password_button": "Войти с паролем",
+      "login_form_password_label": "Пароль",
+      "login_form_password_placeholder": "Ваш пароль",
+      "login_form_error": "Неверный пароль!",
+      "login_form_submit": "Войти",
+      "admin_link_html": "Вы владелец магазина? <a href=\"/admin\" class=\"link underlined-link\">Войдите здесь</a>",
+      "powered_by_shopify_html": "Этот магазин работает на платформе {{ shopify }}"
+    },
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "pagination": {
+      "label": "Страницы",
+      "page": "Страница {{ number }}",
+      "next": "Следующая страница",
+      "previous": "Предыдущая страница"
+    },
+    "search": {
+      "search": "Поиск",
+      "submit": "Перейти",
+      "no_results_html": "По Вашему запросу \"{{ terms }}\" результатов не найдено."
+    },
+    "continue_shopping": "Продолжить покупки",
+    "meta": {
+      "tagged": "с тегом \"{{ tags }}\""
+    }
+  },
+  "newsletter": {
+    "label": "Email",
+    "success": "Спасибо за подписку",
+    "button_label": "Подписаться"
+  },
+  "accessibility": {
+    "skip_to_text": "Перейти к содержимому",
+    "close": "Закрыть",
+    "unit_price_separator": "за",
+    "link_messages": {
+      "new_window": "Откроется в новом окне."
+    },
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "main_navigation": "Главное меню"
+  },
+  "sections": {
+    "header": {
+      "menu": "Меню",
+      "cart_count": "PLURAL:{\"one\": \"{{ count }} \\u0442\\u043e\\u0432\\u0430\\u0440\", \"few\": \"{{ count }} \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"many\": \"{{ count }} \\u0442\\u043e\\u0432\\u0430\\u0440\\u043e\\u0432\", \"other\": \"{{ count }} \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\"}"
+    },
+    "cart": {
+      "title": "Ваша корзина",
+      "empty": "Ваша корзина пуста.",
+      "remove_title": "Удалить {{ title }}",
+      "subtotal": "Промежуточный итог",
+      "new_subtotal": "Новый промежуточный итог",
+      "taxes_and_shipping_policy_at_checkout_html": "Налоги и <a href=\"{{ link }}\">доставка</a> рассчитываются при оформлении заказа",
+      "taxes_included_but_shipping_at_checkout": "Налог включён, стоимость доставки рассчитывается при оформлении заказа",
+      "taxes_included_and_shipping_policy_html": "Налог включён. <a href=\"{{ link }}\">Доставка</a> рассчитывается при оформлении заказа.",
+      "taxes_and_shipping_at_checkout": "Налоги и доставка рассчитываются при оформлении заказа",
+      "update": "Обновить",
+      "checkout": "Оформить заказ",
+      "note": "Особые указания к заказу",
+      "cart_error": "Произошла ошибка при обновлении корзины. Пожалуйста, попробуйте ещё раз.",
+      "cart_quantity_error_html": "Вы можете добавить только {{ quantity }} этого товара в корзину."
+    },
+    "collection_template": {
+      "title": "Коллекция"
+    }
+  },
+  "onboarding": {
+    "product_title": "Пример названия товара",
+    "collection_title": "Название вашей коллекции"
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "Количество",
+        "input_label": "Количество для {{ product }}",
+        "increase": "Увеличить количество для {{ product }}",
+        "decrease": "Уменьшить количество для {{ product }}"
+      },
+      "price": {
+        "regular_price": "Обычная цена",
+        "sale_price": "Цена со скидкой",
+        "from_price_html": "От {{ min_price }}",
+        "unit_price": "Цена за единицу"
+      },
+      "add_to_cart": "Добавить в корзину",
+      "sold_out": "Нет в наличии",
+      "unavailable": "Недоступно",
+      "product_variants": "Варианты товара"
+    }
+  },
+  "templates": {
+    "cart": {
+      "cart": "Корзина"
+    },
+    "search": {
+      "title": "Результаты поиска"
+    },
+    "404": {
+      "title": "Ошибка 404. Страница не найдена",
+      "subtext": "Запрашиваемая страница не существует."
+    },
+    "contact": {
+      "form": {
+        "title": "Контактная форма",
+        "name": "Имя",
+        "email": "Email",
+        "phone": "Номер телефона",
+        "comment": "Комментарий",
+        "send": "Отправить",
+        "post_success": "Спасибо, что связались с нами. Мы свяжемся с Вами как можно скорее.",
+        "error_heading": "Пожалуйста, исправьте следующее:"
+      }
+    }
+  },
+  "customer": {
+    "account_fallback": "Аккаунт",
+    "log_in": "Войти",
+    "log_out": "Выйти",
+    "order": {
+      "title": "Заказ {{ name }}",
+      "date_html": "Размещён {{ date }}",
+      "cancelled_html": "Заказ отменён {{ date }}",
+      "cancelled_reason": "Причина: {{ reason }}",
+      "billing_address": "Адрес выставления счёта",
+      "payment_status": "Статус оплаты",
+      "shipping_address": "Адрес доставки",
+      "fulfillment_status": "Статус выполнения",
+      "discount": "Скидка",
+      "shipping": "Доставка",
+      "tax": "Налог",
+      "product": "Товар",
+      "sku": "SKU",
+      "price": "Цена",
+      "quantity": "Количество",
+      "total": "Итого",
+      "fulfilled_at_html": "Выполнен {{ date }}",
+      "track_shipment": "Отследить посылку",
+      "tracking_url": "Ссылка для отслеживания",
+      "tracking_company": "Перевозчик",
+      "tracking_number": "Номер отслеживания",
+      "subtotal": "Промежуточный итог",
+      "total_duties": "Пошлины"
+    },
+    "orders": {
+      "title": "История заказов",
+      "order_number": "Заказ",
+      "order_number_link": "Заказ № {{ number }}",
+      "date": "Дата",
+      "payment_status": "Статус оплаты",
+      "fulfillment_status": "Статус выполнения",
+      "total": "Итого",
+      "none": "Вы ещё не сделали ни одного заказа."
+    },
+    "recover_password": {
+      "title": "Сброс пароля",
+      "subtext": "Мы отправим Вам письмо для сброса пароля",
+      "success": "Мы отправили Вам письмо со ссылкой для обновления пароля."
+    },
+    "login_page": {
+      "cancel": "Отменить",
+      "create_account": "Создать аккаунт",
+      "email": "Email",
+      "forgot_password": "Забыли пароль?",
+      "guest_continue": "Продолжить",
+      "guest_title": "Продолжить как гость",
+      "password": "Пароль",
+      "title": "Вход",
+      "sign_in": "Войти",
+      "submit": "Отправить"
+    },
+    "register": {
+      "title": "Создать аккаунт",
+      "first_name": "Имя",
+      "last_name": "Фамилия",
+      "email": "Email",
+      "password": "Пароль",
+      "submit": "Создать"
+    },
+    "reset_password": {
+      "title": "Сброс пароля аккаунта",
+      "subtext": "Введите новый пароль для {{ email }}",
+      "password": "Пароль",
+      "password_confirm": "Подтвердите пароль",
+      "submit": "Сбросить пароль"
+    },
+    "activate_account": {
+      "title": "Активация аккаунта",
+      "subtext": "Создайте пароль для активации аккаунта.",
+      "password": "Пароль",
+      "password_confirm": "Подтвердите пароль",
+      "submit": "Активировать аккаунт",
+      "cancel": "Отклонить приглашение"
+    },
+    "addresses": {
+      "title": "Адреса",
+      "default": "По умолчанию",
+      "add_new": "Добавить новый адрес",
+      "edit_address": "Редактировать адрес",
+      "first_name": "Имя",
+      "last_name": "Фамилия",
+      "company": "Компания",
+      "address1": "Адрес 1",
+      "address2": "Адрес 2",
+      "city": "Город",
+      "country": "Страна/регион",
+      "province": "Область",
+      "zip": "Почтовый индекс",
+      "phone": "Телефон",
+      "set_default": "Установить адресом по умолчанию",
+      "add": "Добавить адрес",
+      "update": "Обновить адрес",
+      "cancel": "Отменить",
+      "edit": "Редактировать",
+      "delete": "Удалить",
+      "delete_confirm": "Вы действительно хотите удалить этот адрес?"
+    },
+    "account": {
+      "title": "Аккаунт",
+      "details": "Информация об аккаунте",
+      "view_addresses": "Посмотреть адреса",
+      "return": "Вернуться к информации об аккаунте"
+    }
+  },
+  "localization": {
+    "update_country": "Изменить страну/регион"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Вот Ваша подарочная карта на {{ value }} для {{ shop }}!",
+      "subtext": "Ваша подарочная карта",
+      "gift_card_code": "Код подарочной карты",
+      "shop_link": "Продолжить покупки",
+      "remaining_html": "Осталось {{ balance }}",
+      "add_to_apple_wallet": "Добавить в Apple Wallet",
+      "qr_image_alt": "QR-код — отсканируйте, чтобы использовать подарочную карту",
+      "copy_code": "Скопировать код",
+      "expired": "Истёк срок действия",
+      "copy_code_success": "Код успешно скопирован",
+      "print_gift_card": "Печать"
+    }
+  }
+}

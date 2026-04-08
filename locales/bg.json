@@ -1,0 +1,258 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Въведете парола за достъп до магазина:",
+      "login_password_button": "Влезте с парола",
+      "login_form_password_label": "Парола",
+      "login_form_password_placeholder": "Вашата парола",
+      "login_form_error": "Грешна парола!",
+      "login_form_submit": "Вход",
+      "admin_link_html": "Вие собственик ли сте на магазина? <a href=\"/admin\" class=\"link underlined-link\">Влезте тук</a>",
+      "powered_by_shopify_html": "Този магазин се задвижва от {{ shopify }}"
+    },
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "pagination": {
+      "label": "Странициране",
+      "page": "Страница {{ number }}",
+      "next": "Следваща страница",
+      "previous": "Предишна страница"
+    },
+    "search": {
+      "search": "Търсене",
+      "submit": "Напред",
+      "no_results_html": "Търсенето Ви за \\\"{{ terms }}\\\" не върна резултати."
+    },
+    "continue_shopping": "Продължете с пазаруването",
+    "meta": {
+      "tagged": "с етикет \"{{ tags }}\""
+    }
+  },
+  "newsletter": {
+    "label": "Имейл",
+    "success": "Благодарим Ви за абонамента",
+    "button_label": "Абониране"
+  },
+  "accessibility": {
+    "skip_to_text": "Преминаване към съдържанието",
+    "close": "Затваряне",
+    "unit_price_separator": "на",
+    "link_messages": {
+      "new_window": "Отваря се в нов прозорец."
+    },
+    "loading": "Зареждане...",
+    "error": "Грешка",
+    "main_navigation": "Основна навигация"
+  },
+  "sections": {
+    "header": {
+      "menu": "Меню",
+      "cart_count": "PLURAL:{\"one\": \"{{ count }} \\u0430\\u0440\\u0442\\u0438\\u043a\\u0443\\u043b\", \"other\": \"{{ count }} \\u0430\\u0440\\u0442\\u0438\\u043a\\u0443\\u043b\\u0430\"}"
+    },
+    "cart": {
+      "title": "Вашата количка",
+      "empty": "Вашата количка в момента е празна.",
+      "remove_title": "Премахване на {{ title }}",
+      "subtotal": "Междинна сума",
+      "new_subtotal": "Нова междинна сума",
+      "taxes_and_shipping_policy_at_checkout_html": "Данъци и <a href=\"{{ link }}\">доставка</a> се изчисляват при плащане",
+      "taxes_included_but_shipping_at_checkout": "Данъкът е включен, а доставката се изчислява при плащане",
+      "taxes_included_and_shipping_policy_html": "Данъкът е включен. <a href=\"{{ link }}\">Доставката</a> се изчислява при плащане.",
+      "taxes_and_shipping_at_checkout": "Данъци и доставка се изчисляват при плащане",
+      "update": "Актуализиране",
+      "checkout": "Плащане",
+      "note": "Специални инструкции за поръчката",
+      "cart_error": "Възникна грешка при актуализиране на количката Ви. Моля, опитайте отново.",
+      "cart_quantity_error_html": "Можете да добавите само {{ quantity }} от този артикул към количката си."
+    },
+    "collection_template": {
+      "title": "Колекция"
+    }
+  },
+  "onboarding": {
+    "product_title": "Примерно заглавие на продукт",
+    "collection_title": "Име на Вашата колекция"
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "Количество",
+        "input_label": "Количество за {{ product }}",
+        "increase": "Увеличаване на количеството за {{ product }}",
+        "decrease": "Намаляване на количеството за {{ product }}"
+      },
+      "price": {
+        "regular_price": "Редовна цена",
+        "sale_price": "Промоционална цена",
+        "from_price_html": "От {{ min_price }}",
+        "unit_price": "Единична цена"
+      },
+      "add_to_cart": "Добавяне към количката",
+      "sold_out": "Изчерпан",
+      "unavailable": "Недостъпен",
+      "product_variants": "Варианти на продукта"
+    }
+  },
+  "templates": {
+    "cart": {
+      "cart": "Количка"
+    },
+    "search": {
+      "title": "Резултати от търсенето"
+    },
+    "404": {
+      "title": "404 Страницата не е намерена",
+      "subtext": "Страницата, която търсите, не съществува."
+    },
+    "contact": {
+      "form": {
+        "title": "Формуляр за контакт",
+        "name": "Име",
+        "email": "Имейл",
+        "phone": "Телефонен номер",
+        "comment": "Коментар",
+        "send": "Изпращане",
+        "post_success": "Благодарим Ви, че се свързахте с нас. Ще Ви отговорим възможно най-скоро.",
+        "error_heading": "Моля, коригирайте следното:"
+      }
+    }
+  },
+  "customer": {
+    "account_fallback": "Акаунт",
+    "log_in": "Вход",
+    "log_out": "Изход",
+    "order": {
+      "title": "Поръчка {{ name }}",
+      "date_html": "Направена на {{ date }}",
+      "cancelled_html": "Поръчката е анулирана на {{ date }}",
+      "cancelled_reason": "Причина: {{ reason }}",
+      "billing_address": "Адрес за фактуриране",
+      "payment_status": "Статус на плащането",
+      "shipping_address": "Адрес за доставка",
+      "fulfillment_status": "Статус на изпълнението",
+      "discount": "Отстъпка",
+      "shipping": "Доставка",
+      "tax": "Данък",
+      "product": "Продукт",
+      "sku": "SKU",
+      "price": "Цена",
+      "quantity": "Количество",
+      "total": "Общо",
+      "fulfilled_at_html": "Изпълнена {{ date }}",
+      "track_shipment": "Проследяване на пратката",
+      "tracking_url": "Връзка за проследяване",
+      "tracking_company": "Куриер",
+      "tracking_number": "Номер за проследяване",
+      "subtotal": "Междинна сума",
+      "total_duties": "Мита"
+    },
+    "orders": {
+      "title": "История на поръчките",
+      "order_number": "Поръчка",
+      "order_number_link": "Поръчка номер {{ number }}",
+      "date": "Дата",
+      "payment_status": "Статус на плащането",
+      "fulfillment_status": "Статус на изпълнението",
+      "total": "Общо",
+      "none": "Все още не сте направили поръчки."
+    },
+    "recover_password": {
+      "title": "Нулиране на паролата",
+      "subtext": "Ще Ви изпратим имейл за нулиране на паролата",
+      "success": "Изпратихме Ви имейл с връзка за актуализиране на паролата Ви."
+    },
+    "login_page": {
+      "cancel": "Отказ",
+      "create_account": "Създаване на акаунт",
+      "email": "Имейл",
+      "forgot_password": "Забравена парола?",
+      "guest_continue": "Продължаване",
+      "guest_title": "Продължаване като гост",
+      "password": "Парола",
+      "title": "Вход",
+      "sign_in": "Влизане",
+      "submit": "Изпращане"
+    },
+    "register": {
+      "title": "Създаване на акаунт",
+      "first_name": "Собствено име",
+      "last_name": "Фамилно име",
+      "email": "Имейл",
+      "password": "Парола",
+      "submit": "Създаване"
+    },
+    "reset_password": {
+      "title": "Нулиране на паролата на акаунта",
+      "subtext": "Въведете нова парола за {{ email }}",
+      "password": "Парола",
+      "password_confirm": "Потвърдете паролата",
+      "submit": "Нулиране на паролата"
+    },
+    "activate_account": {
+      "title": "Активиране на акаунт",
+      "subtext": "Създайте парола, за да активирате акаунта си.",
+      "password": "Парола",
+      "password_confirm": "Потвърдете паролата",
+      "submit": "Активиране на акаунт",
+      "cancel": "Отхвърляне на поканата"
+    },
+    "addresses": {
+      "title": "Адреси",
+      "default": "По подразбиране",
+      "add_new": "Добавяне на нов адрес",
+      "edit_address": "Редактиране на адрес",
+      "first_name": "Собствено име",
+      "last_name": "Фамилно име",
+      "company": "Фирма",
+      "address1": "Адрес 1",
+      "address2": "Адрес 2",
+      "city": "Град",
+      "country": "Държава/регион",
+      "province": "Област",
+      "zip": "Пощенски код",
+      "phone": "Телефон",
+      "set_default": "Задаване като адрес по подразбиране",
+      "add": "Добавяне на адрес",
+      "update": "Актуализиране на адрес",
+      "cancel": "Отказ",
+      "edit": "Редактиране",
+      "delete": "Изтриване",
+      "delete_confirm": "Сигурни ли сте, че искате да изтриете този адрес?"
+    },
+    "account": {
+      "title": "Акаунт",
+      "details": "Данни за акаунта",
+      "view_addresses": "Преглед на адресите",
+      "return": "Връщане към данните за акаунта"
+    }
+  },
+  "localization": {
+    "update_country": "Актуализиране на държава/регион"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Ето Вашата подаръчна карта на стойност {{ value }} за {{ shop }}!",
+      "subtext": "Вашата подаръчна карта",
+      "gift_card_code": "Код на подаръчната карта",
+      "shop_link": "Продължете с пазаруването",
+      "remaining_html": "Оставащи {{ balance }}",
+      "add_to_apple_wallet": "Добавяне към Apple Wallet",
+      "qr_image_alt": "QR код — сканирайте, за да използвате подаръчната карта",
+      "copy_code": "Копиране на кода",
+      "expired": "Изтекла",
+      "copy_code_success": "Кодът е копиран успешно",
+      "print_gift_card": "Печат"
+    }
+  }
+}

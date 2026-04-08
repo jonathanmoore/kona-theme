@@ -1,0 +1,258 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Mağazaya şifre ile girin:",
+      "login_password_button": "Şifre ile girin",
+      "login_form_password_label": "Şifre",
+      "login_form_password_placeholder": "Şifreniz",
+      "login_form_error": "Yanlış şifre!",
+      "login_form_submit": "Giriş",
+      "admin_link_html": "Mağaza sahibi misiniz? <a href=\"/admin\" class=\"link underlined-link\">Buradan giriş yapın</a>",
+      "powered_by_shopify_html": "Bu mağaza {{ shopify }} tarafından desteklenmektedir"
+    },
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "pagination": {
+      "label": "Sayfalandırma",
+      "page": "Sayfa {{ number }}",
+      "next": "Sonraki sayfa",
+      "previous": "Önceki sayfa"
+    },
+    "search": {
+      "search": "Ara",
+      "submit": "Git",
+      "no_results_html": "\"{{ terms }}\" aramanız sonuç döndürmedi."
+    },
+    "continue_shopping": "Alışverişe devam et",
+    "meta": {
+      "tagged": "\"{{ tags }}\" etiketli"
+    }
+  },
+  "newsletter": {
+    "label": "E-posta",
+    "success": "Abone olduğunuz için teşekkürler",
+    "button_label": "Abone ol"
+  },
+  "accessibility": {
+    "skip_to_text": "İçeriğe atla",
+    "close": "Kapat",
+    "unit_price_separator": "başına",
+    "link_messages": {
+      "new_window": "Yeni bir pencerede açılır."
+    },
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "main_navigation": "Ana menü"
+  },
+  "sections": {
+    "header": {
+      "menu": "Menü",
+      "cart_count": "PLURAL:{\"one\": \"{{ count }} \\u00fcr\\u00fcn\", \"other\": \"{{ count }} \\u00fcr\\u00fcn\"}"
+    },
+    "cart": {
+      "title": "Sepetiniz",
+      "empty": "Sepetiniz şu anda boş.",
+      "remove_title": "{{ title }} ürününü kaldır",
+      "subtotal": "Ara toplam",
+      "new_subtotal": "Yeni ara toplam",
+      "taxes_and_shipping_policy_at_checkout_html": "Vergiler ve <a href=\"{{ link }}\">kargo</a> ödeme sırasında hesaplanır",
+      "taxes_included_but_shipping_at_checkout": "Vergi dahildir, kargo ödeme sırasında hesaplanır",
+      "taxes_included_and_shipping_policy_html": "Vergi dahildir. <a href=\"{{ link }}\">Kargo</a> ödeme sırasında hesaplanır.",
+      "taxes_and_shipping_at_checkout": "Vergiler ve kargo ödeme sırasında hesaplanır",
+      "update": "Güncelle",
+      "checkout": "Ödemeye geç",
+      "note": "Sipariş özel talimatları",
+      "cart_error": "Sepetiniz güncellenirken bir hata oluştu. Lütfen tekrar deneyin.",
+      "cart_quantity_error_html": "Bu üründen sepetinize yalnızca {{ quantity }} adet ekleyebilirsiniz."
+    },
+    "collection_template": {
+      "title": "Koleksiyon"
+    }
+  },
+  "onboarding": {
+    "product_title": "Örnek ürün başlığı",
+    "collection_title": "Koleksiyonunuzun adı"
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "Adet",
+        "input_label": "{{ product }} için adet",
+        "increase": "{{ product }} için adedi artır",
+        "decrease": "{{ product }} için adedi azalt"
+      },
+      "price": {
+        "regular_price": "Normal fiyat",
+        "sale_price": "İndirimli fiyat",
+        "from_price_html": "{{ min_price }} fiyatından başlayan",
+        "unit_price": "Birim fiyat"
+      },
+      "add_to_cart": "Sepete ekle",
+      "sold_out": "Tükendi",
+      "unavailable": "Mevcut değil",
+      "product_variants": "Ürün varyantları"
+    }
+  },
+  "templates": {
+    "cart": {
+      "cart": "Sepet"
+    },
+    "search": {
+      "title": "Arama sonuçları"
+    },
+    "404": {
+      "title": "404 Sayfa Bulunamadı",
+      "subtext": "Aradığınız sayfa mevcut değil."
+    },
+    "contact": {
+      "form": {
+        "title": "İletişim formu",
+        "name": "Ad",
+        "email": "E-posta",
+        "phone": "Telefon numarası",
+        "comment": "Yorum",
+        "send": "Gönder",
+        "post_success": "Bizimle iletişime geçtiğiniz için teşekkürler. En kısa sürede size geri dönüş yapacağız.",
+        "error_heading": "Lütfen aşağıdakileri düzeltin:"
+      }
+    }
+  },
+  "customer": {
+    "account_fallback": "Hesap",
+    "log_in": "Giriş yap",
+    "log_out": "Çıkış yap",
+    "order": {
+      "title": "Sipariş {{ name }}",
+      "date_html": "{{ date }} tarihinde verildi",
+      "cancelled_html": "{{ date }} tarihinde İptal Edildi",
+      "cancelled_reason": "Sebep: {{ reason }}",
+      "billing_address": "Fatura Adresi",
+      "payment_status": "Ödeme Durumu",
+      "shipping_address": "Teslimat Adresi",
+      "fulfillment_status": "Kargo Durumu",
+      "discount": "İndirim",
+      "shipping": "Kargo",
+      "tax": "Vergi",
+      "product": "Ürün",
+      "sku": "SKU",
+      "price": "Fiyat",
+      "quantity": "Adet",
+      "total": "Toplam",
+      "fulfilled_at_html": "{{ date }} tarihinde kargolandı",
+      "track_shipment": "Gönderiyi takip et",
+      "tracking_url": "Takip linki",
+      "tracking_company": "Kargo şirketi",
+      "tracking_number": "Takip numarası",
+      "subtotal": "Ara toplam",
+      "total_duties": "Gümrük vergisi"
+    },
+    "orders": {
+      "title": "Sipariş geçmişi",
+      "order_number": "Sipariş",
+      "order_number_link": "Sipariş numarası {{ number }}",
+      "date": "Tarih",
+      "payment_status": "Ödeme durumu",
+      "fulfillment_status": "Kargo durumu",
+      "total": "Toplam",
+      "none": "Henüz sipariş vermediniz."
+    },
+    "recover_password": {
+      "title": "Şifrenizi sıfırlayın",
+      "subtext": "Şifrenizi sıfırlamanız için size bir e-posta göndereceğiz",
+      "success": "Şifrenizi güncellemek için bir bağlantı içeren e-posta gönderdik."
+    },
+    "login_page": {
+      "cancel": "İptal",
+      "create_account": "Hesap oluştur",
+      "email": "E-posta",
+      "forgot_password": "Şifrenizi mi unuttunuz?",
+      "guest_continue": "Devam et",
+      "guest_title": "Misafir olarak devam et",
+      "password": "Şifre",
+      "title": "Giriş",
+      "sign_in": "Oturum aç",
+      "submit": "Gönder"
+    },
+    "register": {
+      "title": "Hesap oluştur",
+      "first_name": "Ad",
+      "last_name": "Soyad",
+      "email": "E-posta",
+      "password": "Şifre",
+      "submit": "Oluştur"
+    },
+    "reset_password": {
+      "title": "Hesap şifresini sıfırla",
+      "subtext": "{{ email }} için yeni bir şifre girin",
+      "password": "Şifre",
+      "password_confirm": "Şifreyi onayla",
+      "submit": "Şifreyi sıfırla"
+    },
+    "activate_account": {
+      "title": "Hesabı etkinleştir",
+      "subtext": "Hesabınızı etkinleştirmek için şifrenizi oluşturun.",
+      "password": "Şifre",
+      "password_confirm": "Şifreyi onayla",
+      "submit": "Hesabı etkinleştir",
+      "cancel": "Daveti reddet"
+    },
+    "addresses": {
+      "title": "Adresler",
+      "default": "Varsayılan",
+      "add_new": "Yeni adres ekle",
+      "edit_address": "Adresi düzenle",
+      "first_name": "Ad",
+      "last_name": "Soyad",
+      "company": "Şirket",
+      "address1": "Adres 1",
+      "address2": "Adres 2",
+      "city": "Şehir",
+      "country": "Ülke/bölge",
+      "province": "İl",
+      "zip": "Posta kodu",
+      "phone": "Telefon",
+      "set_default": "Varsayılan adres olarak ayarla",
+      "add": "Adres ekle",
+      "update": "Adresi güncelle",
+      "cancel": "İptal",
+      "edit": "Düzenle",
+      "delete": "Sil",
+      "delete_confirm": "Bu adresi silmek istediğinizden emin misiniz?"
+    },
+    "account": {
+      "title": "Hesap",
+      "details": "Hesap bilgileri",
+      "view_addresses": "Adresleri görüntüle",
+      "return": "Hesap bilgilerine dön"
+    }
+  },
+  "localization": {
+    "update_country": "Ülke/bölgeyi güncelle"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "İşte {{ shop }} için {{ value }} değerinde hediye kartınız!",
+      "subtext": "Hediye kartınız",
+      "gift_card_code": "Hediye kartı kodu",
+      "shop_link": "Alışverişe devam et",
+      "remaining_html": "Kalan {{ balance }}",
+      "add_to_apple_wallet": "Apple Wallet'a ekle",
+      "qr_image_alt": "QR kod — hediye kartını kullanmak için tarayın",
+      "copy_code": "Kodu kopyala",
+      "expired": "Süresi doldu",
+      "copy_code_success": "Kod başarıyla kopyalandı",
+      "print_gift_card": "Yazdır"
+    }
+  }
+}

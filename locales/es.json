@@ -1,0 +1,258 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Ingresar a la tienda usando contraseña:",
+      "login_password_button": "Ingresar usando contraseña",
+      "login_form_password_label": "Contraseña",
+      "login_form_password_placeholder": "Su contraseña",
+      "login_form_error": "¡Contraseña incorrecta!",
+      "login_form_submit": "Ingresar",
+      "admin_link_html": "¿Es usted el propietario de la tienda? <a href=\"/admin\" class=\"link underlined-link\">Inicie sesión aquí</a>",
+      "powered_by_shopify_html": "Esta tienda será impulsada por {{ shopify }}"
+    },
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "pagination": {
+      "label": "Paginación",
+      "page": "Página {{ number }}",
+      "next": "Página siguiente",
+      "previous": "Página anterior"
+    },
+    "search": {
+      "search": "Buscar",
+      "submit": "Ir",
+      "no_results_html": "Su búsqueda de \"{{ terms }}\" no devolvió resultados."
+    },
+    "continue_shopping": "Continuar comprando",
+    "meta": {
+      "tagged": "etiquetado \"{{ tags }}\""
+    }
+  },
+  "newsletter": {
+    "label": "Correo electrónico",
+    "success": "Gracias por suscribirse",
+    "button_label": "Suscribirse"
+  },
+  "accessibility": {
+    "skip_to_text": "Saltar al contenido",
+    "close": "Cerrar",
+    "unit_price_separator": "por",
+    "link_messages": {
+      "new_window": "Se abre en una nueva ventana."
+    },
+    "loading": "Cargando...",
+    "error": "Error",
+    "main_navigation": "Navegación principal"
+  },
+  "sections": {
+    "header": {
+      "menu": "Menú",
+      "cart_count": "PLURAL:{\"one\": \"1 art\\u00edculo\", \"many\": \"{{ count }} art\\u00edculos\", \"other\": \"{{ count }} art\\u00edculos\"}"
+    },
+    "cart": {
+      "title": "Su carrito",
+      "empty": "Su carrito está actualmente vacío.",
+      "remove_title": "Eliminar {{ title }}",
+      "subtotal": "Subtotal",
+      "new_subtotal": "Nuevo subtotal",
+      "taxes_and_shipping_policy_at_checkout_html": "Impuestos y <a href=\"{{ link }}\">envío</a> calculados al finalizar compra",
+      "taxes_included_but_shipping_at_checkout": "Impuesto incluido y envío calculado al finalizar compra",
+      "taxes_included_and_shipping_policy_html": "Impuesto incluido. <a href=\"{{ link }}\">Envío</a> calculado al finalizar compra.",
+      "taxes_and_shipping_at_checkout": "Impuestos y envío calculados al finalizar compra",
+      "update": "Actualizar",
+      "checkout": "Finalizar compra",
+      "note": "Instrucciones especiales del pedido",
+      "cart_error": "Hubo un error al actualizar su carrito. Por favor, inténtelo de nuevo.",
+      "cart_quantity_error_html": "Solo puede agregar {{ quantity }} de este artículo a su carrito."
+    },
+    "collection_template": {
+      "title": "Colección"
+    }
+  },
+  "onboarding": {
+    "product_title": "Ejemplo de nombre de producto",
+    "collection_title": "Nombre de su colección"
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "Cantidad",
+        "input_label": "Cantidad para {{ product }}",
+        "increase": "Aumentar cantidad para {{ product }}",
+        "decrease": "Disminuir cantidad para {{ product }}"
+      },
+      "price": {
+        "regular_price": "Precio regular",
+        "sale_price": "Precio de oferta",
+        "from_price_html": "Desde {{ min_price }}",
+        "unit_price": "Precio unitario"
+      },
+      "add_to_cart": "Agregar al carrito",
+      "sold_out": "Agotado",
+      "unavailable": "No disponible",
+      "product_variants": "Variantes del producto"
+    }
+  },
+  "templates": {
+    "cart": {
+      "cart": "Carrito"
+    },
+    "search": {
+      "title": "Resultados de búsqueda"
+    },
+    "404": {
+      "title": "404 Página no encontrada",
+      "subtext": "La página que solicitó no existe."
+    },
+    "contact": {
+      "form": {
+        "title": "Formulario de contacto",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "phone": "Número de teléfono",
+        "comment": "Comentario",
+        "send": "Enviar",
+        "post_success": "Gracias por contactarnos. Le responderemos lo antes posible.",
+        "error_heading": "Por favor ajuste lo siguiente:"
+      }
+    }
+  },
+  "customer": {
+    "account_fallback": "Cuenta",
+    "log_in": "Iniciar sesión",
+    "log_out": "Cerrar sesión",
+    "order": {
+      "title": "Pedido {{ name }}",
+      "date_html": "Realizado el {{ date }}",
+      "cancelled_html": "Pedido cancelado el {{ date }}",
+      "cancelled_reason": "Motivo: {{ reason }}",
+      "billing_address": "Dirección de facturación",
+      "payment_status": "Estado del pago",
+      "shipping_address": "Dirección de envío",
+      "fulfillment_status": "Estado de cumplimiento",
+      "discount": "Descuento",
+      "shipping": "Envío",
+      "tax": "Impuesto",
+      "product": "Producto",
+      "sku": "SKU",
+      "price": "Precio",
+      "quantity": "Cantidad",
+      "total": "Total",
+      "fulfilled_at_html": "Cumplido el {{ date }}",
+      "track_shipment": "Rastrear envío",
+      "tracking_url": "Enlace de rastreo",
+      "tracking_company": "Transportista",
+      "tracking_number": "Número de rastreo",
+      "subtotal": "Subtotal",
+      "total_duties": "Aranceles"
+    },
+    "orders": {
+      "title": "Historial de pedidos",
+      "order_number": "Pedido",
+      "order_number_link": "Pedido número {{ number }}",
+      "date": "Fecha",
+      "payment_status": "Estado del pago",
+      "fulfillment_status": "Estado de cumplimiento",
+      "total": "Total",
+      "none": "Aún no ha realizado ningún pedido."
+    },
+    "recover_password": {
+      "title": "Restablecer su contraseña",
+      "subtext": "Le enviaremos un correo electrónico para restablecer su contraseña",
+      "success": "Le hemos enviado un correo electrónico con un enlace para actualizar su contraseña."
+    },
+    "login_page": {
+      "cancel": "Cancelar",
+      "create_account": "Crear cuenta",
+      "email": "Correo electrónico",
+      "forgot_password": "¿Olvidó su contraseña?",
+      "guest_continue": "Continuar",
+      "guest_title": "Continuar como invitado",
+      "password": "Contraseña",
+      "title": "Iniciar sesión",
+      "sign_in": "Iniciar sesión",
+      "submit": "Enviar"
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Crear"
+    },
+    "reset_password": {
+      "title": "Restablecer contraseña de la cuenta",
+      "subtext": "Ingrese una nueva contraseña para {{ email }}",
+      "password": "Contraseña",
+      "password_confirm": "Confirmar contraseña",
+      "submit": "Restablecer contraseña"
+    },
+    "activate_account": {
+      "title": "Activar cuenta",
+      "subtext": "Cree su contraseña para activar su cuenta.",
+      "password": "Contraseña",
+      "password_confirm": "Confirmar contraseña",
+      "submit": "Activar cuenta",
+      "cancel": "Rechazar invitación"
+    },
+    "addresses": {
+      "title": "Direcciones",
+      "default": "Predeterminada",
+      "add_new": "Agregar una nueva dirección",
+      "edit_address": "Editar dirección",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "company": "Empresa",
+      "address1": "Dirección 1",
+      "address2": "Dirección 2",
+      "city": "Ciudad",
+      "country": "País/región",
+      "province": "Provincia",
+      "zip": "Código postal",
+      "phone": "Teléfono",
+      "set_default": "Establecer como dirección predeterminada",
+      "add": "Agregar dirección",
+      "update": "Actualizar dirección",
+      "cancel": "Cancelar",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "delete_confirm": "¿Está seguro de que desea eliminar esta dirección?"
+    },
+    "account": {
+      "title": "Cuenta",
+      "details": "Detalles de la cuenta",
+      "view_addresses": "Ver direcciones",
+      "return": "Volver a Detalles de la cuenta"
+    }
+  },
+  "localization": {
+    "update_country": "Actualizar país/región"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "¡Aquí está su tarjeta de regalo de {{ value }} para {{ shop }}!",
+      "subtext": "Su tarjeta de regalo",
+      "gift_card_code": "Código de tarjeta de regalo",
+      "shop_link": "Continuar comprando",
+      "remaining_html": "Restante {{ balance }}",
+      "add_to_apple_wallet": "Agregar a Apple Wallet",
+      "qr_image_alt": "Código QR: escanee para canjear la tarjeta de regalo",
+      "copy_code": "Copiar código",
+      "expired": "Vencida",
+      "copy_code_success": "Código copiado exitosamente",
+      "print_gift_card": "Imprimir"
+    }
+  }
+}

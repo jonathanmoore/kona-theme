@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Gyűjteménylista",
+      "settings": {
+        "collection_list": {
+          "label": "Gyűjtemények"
+        },
+        "columns_desktop": {
+          "label": "Oszlopok száma asztali nézetben"
+        }
+      },
+      "presets": {
+        "name": "Gyűjteménylista",
+        "blocks": {
+          "heading": {
+            "heading": "Gyűjtemények"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Kapcsolatfelvételi űrlap",
+      "presets": {
+        "name": "Kapcsolatfelvételi űrlap"
+      }
+    },
+    "email_signup_banner": {
+      "name": "Feliratkozási banner",
+      "presets": {
+        "name": "Feliratkozási banner",
+        "blocks": {
+          "heading": {
+            "heading": "Hamarosan nyitunk"
+          },
+          "text": {
+            "text": "<p>Legyen Ön az első, aki értesül az indulásunkról.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Kiemelt gyűjtemény",
+      "settings": {
+        "collection": {
+          "label": "Gyűjtemény"
+        },
+        "products_to_show": {
+          "label": "Megjelenítendő termékek maximális száma"
+        }
+      },
+      "presets": {
+        "name": "Kiemelt gyűjtemény",
+        "category": "Termékek",
+        "blocks": {
+          "heading": {
+            "heading": "Kiemelt gyűjtemény"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Lábléc"
+    },
+    "header": {
+      "name": "Fejléc",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Rögzített fejléc engedélyezése",
+          "info": "A fejléc megjelenik a képernyőn, amikor a vásárlók felfelé görgetnek."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Képes banner",
+      "settings": {
+        "image": {
+          "label": "Első kép"
+        },
+        "image_2": {
+          "label": "Második kép"
+        },
+        "full_page_height_enable": {
+          "label": "Teljes oldalmagasság"
+        }
+      },
+      "presets": {
+        "name": "Képes banner",
+        "category": "Bannerek",
+        "blocks": {
+          "heading": {
+            "heading": "Képes banner"
+          },
+          "text": {
+            "text": "<p><strong>Adjon meg részleteket a vásárlóknak a banner kép(ek)ről vagy a sablon tartalmáról.</strong></p>"
+          },
+          "button": {
+            "button_label": "Összes megtekintése →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Blogbejegyzések"
+    },
+    "main_cart": {
+      "name": "Kosár oldal"
+    },
+    "main_list_collections": {
+      "name": "Gyűjteménylista oldal"
+    },
+    "main_page": {
+      "name": "Oldal"
+    },
+    "main_password_footer": {
+      "name": "Jelszavas lábléc"
+    },
+    "main_password_header": {
+      "name": "Jelszavas fejléc"
+    },
+    "main_product": {
+      "name": "Termékinformáció"
+    },
+    "product_recommendations": {
+      "name": "Termékajánlások",
+      "settings": {
+        "paragraph": {
+          "content": "A dinamikus ajánlások a rendelési és termékinformációkat használják a folyamatos változáshoz és fejlődéshez. [Tudjon meg többet](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Megjelenítendő termékek maximális száma"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Islands demó",
+      "settings": {
+        "heading": {
+          "label": "Címsor",
+          "default": "Islands Architecture demó"
+        }
+      },
+      "presets": {
+        "name": "Islands demó"
+      }
+    },
+    "section": {
+      "name": "Szekció",
+      "settings": {
+        "header__layout": {
+          "content": "Elrendezés"
+        },
+        "gap": {
+          "label": "Térköz"
+        },
+        "header__size": {
+          "content": "Méret"
+        },
+        "section_width": {
+          "label": "Szélesség",
+          "options__page": {
+            "label": "Oldal"
+          },
+          "options__full": {
+            "label": "Teljes"
+          }
+        },
+        "header__padding": {
+          "content": "Belső margó"
+        },
+        "padding_block_start": {
+          "label": "Felül"
+        },
+        "padding_block_end": {
+          "label": "Alul"
+        }
+      },
+      "presets": {
+        "name": "Szekció"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Országválasztó",
+      "settings": {
+        "heading": {
+          "label": "Címsor",
+          "info": "Az országválasztó megjelenítéséhez címsor szükséges",
+          "default": "Ország"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Menü",
+      "settings": {
+        "heading": {
+          "label": "Címsor",
+          "info": "A menü megjelenítéséhez címsor szükséges",
+          "default": "Gyors linkek"
+        },
+        "menu": {
+          "label": "Menü",
+          "info": "Csak a felső szintű menüpontokat jeleníti meg"
+        }
+      },
+      "presets": {
+        "name": "Menü",
+        "category": "Lábléc"
+      }
+    },
+    "header_logo": {
+      "name": "Logó"
+    },
+    "header_menu_mobile": {
+      "name": "Mobilmenü",
+      "settings": {
+        "menu": {
+          "label": "Elsődleges navigáció"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Cikkártya"
+    },
+    "article_content": {
+      "name": "Tartalom"
+    },
+    "button": {
+      "name": "Gomb",
+      "settings": {
+        "button_label": {
+          "label": "Gomb felirata",
+          "info": "Hagyja üresen a feliratot a gomb elrejtéséhez.",
+          "default": "Gomb felirata"
+        },
+        "button_link": {
+          "label": "Gomb linkje"
+        },
+        "button_variant": {
+          "label": "Gomb változata",
+          "options__default": {
+            "label": "Alapértelmezett"
+          },
+          "options__link": {
+            "label": "Link"
+          }
+        },
+        "button_size": {
+          "label": "Gomb mérete",
+          "options__default": {
+            "label": "Alapértelmezett"
+          },
+          "options__lg": {
+            "label": "Nagy"
+          }
+        }
+      },
+      "presets": {
+        "name": "Gomb",
+        "category": "Alap"
+      }
+    },
+    "buy_buttons": {
+      "name": "Vásárlási gombok",
+      "settings": {
+        "product": {
+          "label": "Termék"
+        },
+        "show_dynamic_checkout": {
+          "label": "Dinamikus pénztárgombok megjelenítése",
+          "info": "Az áruházában elérhető fizetési módszerek használatával a vásárlók láthatják a preferált lehetőségüket, például a PayPal-t vagy az Apple Pay-t. [Tudjon meg többet](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Vásárlási gombok"
+      }
+    },
+    "collection_card": {
+      "name": "Gyűjteménykártya",
+      "settings": {
+        "collection": {
+          "label": "Gyűjtemény"
+        }
+      },
+      "presets": {
+        "name": "Gyűjteménykártya"
+      }
+    },
+    "details": {
+      "name": "Részletek"
+    },
+    "email_signup": {
+      "name": "Feliratkozás e-mailre",
+      "presets": {
+        "name": "Feliratkozás e-mailre"
+      }
+    },
+    "header_menu": {
+      "name": "Menü",
+      "settings": {
+        "menu": {
+          "label": "Elsődleges navigáció"
+        }
+      }
+    },
+    "heading": {
+      "name": "Címsor",
+      "settings": {
+        "heading": {
+          "label": "Címsor",
+          "default": "Meséljen márkájáról"
+        },
+        "heading_size": {
+          "label": "Címsor mérete",
+          "options__default": {
+            "label": "Alapértelmezett"
+          },
+          "options__md": {
+            "label": "Közepes"
+          },
+          "options__lg": {
+            "label": "Nagy"
+          },
+          "options__xl": {
+            "label": "Extra nagy"
+          }
+        },
+        "heading_level": {
+          "label": "Címsor szintje",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Címsor",
+        "category": "Alap"
+      }
+    },
+    "image": {
+      "name": "Kép",
+      "settings": {
+        "image": {
+          "label": "Kép"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Oldal tartalma"
+    },
+    "price": {
+      "name": "Ár",
+      "settings": {
+        "product": {
+          "label": "Termék"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Termékkártya",
+      "settings": {
+        "product": {
+          "label": "Termék"
+        }
+      },
+      "presets": {
+        "name": "Termékkártya",
+        "category": "Termék"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Termék média"
+    },
+    "search_input": {
+      "name": "Keresőmező"
+    },
+    "tab": {
+      "name": "Fül",
+      "settings": {
+        "title": {
+          "label": "Címsor",
+          "default": "Szállítási információk"
+        },
+        "content": {
+          "label": "Fül tartalma",
+          "default": "<p>Használjon összecsukható füleket részletesebb információkhoz, amelyek segítenek a vásárlóknak a vásárlási döntésben.</p><p>Pl.: Szállítási és visszaküldési szabályzat, mérettáblázatok és egyéb gyakori kérdések.</p>"
+        },
+        "page": {
+          "label": "Fül tartalma oldalról"
+        }
+      },
+      "presets": {
+        "name": "Fül"
+      }
+    },
+    "text": {
+      "name": "Szöveg",
+      "settings": {
+        "text": {
+          "label": "Leírás",
+          "default": "<p>Osszon meg információkat márkájáról a vásárlókkal.</p>"
+        },
+        "text_size": {
+          "label": "Szöveg mérete",
+          "options__default": {
+            "label": "Alapértelmezett"
+          },
+          "options__lg": {
+            "label": "Nagy"
+          }
+        }
+      },
+      "presets": {
+        "name": "Szöveg",
+        "category": "Alap"
+      }
+    },
+    "variant_picker": {
+      "name": "Változatválasztó",
+      "settings": {
+        "product": {
+          "label": "Termék"
+        },
+        "picker_type": {
+          "label": "Típus",
+          "options__dropdown": {
+            "label": "Legördülő"
+          },
+          "options__button": {
+            "label": "Gombok"
+          }
+        }
+      },
+      "presets": {
+        "name": "Változatválasztó"
+      }
+    },
+    "product_details": {
+      "name": "Részletek"
+    },
+    "cart_products": {
+      "name": "Kosár termékei"
+    }
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "商品系列清單",
+      "settings": {
+        "collection_list": {
+          "label": "商品系列"
+        },
+        "columns_desktop": {
+          "label": "桌面版欄數"
+        }
+      },
+      "presets": {
+        "name": "商品系列清單",
+        "blocks": {
+          "heading": {
+            "heading": "商品系列"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "聯絡表單",
+      "presets": {
+        "name": "聯絡表單"
+      }
+    },
+    "email_signup_banner": {
+      "name": "電子郵件訂閱橫幅",
+      "presets": {
+        "name": "電子郵件訂閱橫幅",
+        "blocks": {
+          "heading": {
+            "heading": "即將開幕"
+          },
+          "text": {
+            "text": "<p>搶先得知我們的上線消息。</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "精選商品系列",
+      "settings": {
+        "collection": {
+          "label": "商品系列"
+        },
+        "products_to_show": {
+          "label": "顯示商品數量上限"
+        }
+      },
+      "presets": {
+        "name": "精選商品系列",
+        "category": "商品",
+        "blocks": {
+          "heading": {
+            "heading": "精選商品系列"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "頁尾"
+    },
+    "header": {
+      "name": "頁首",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "啟用固定頁首",
+          "info": "當顧客向上捲動時，頁首會顯示在螢幕上。"
+        }
+      }
+    },
+    "image_banner": {
+      "name": "圖片橫幅",
+      "settings": {
+        "image": {
+          "label": "第一張圖片"
+        },
+        "image_2": {
+          "label": "第二張圖片"
+        },
+        "full_page_height_enable": {
+          "label": "整頁高度"
+        }
+      },
+      "presets": {
+        "name": "圖片橫幅",
+        "category": "橫幅",
+        "blocks": {
+          "heading": {
+            "heading": "圖片橫幅"
+          },
+          "text": {
+            "text": "<p><strong>為顧客提供關於橫幅圖片或範本內容的詳細資訊。</strong></p>"
+          },
+          "button": {
+            "button_label": "瀏覽全部 →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "網誌文章"
+    },
+    "main_cart": {
+      "name": "購物車頁面"
+    },
+    "main_list_collections": {
+      "name": "商品系列清單頁面"
+    },
+    "main_page": {
+      "name": "頁面"
+    },
+    "main_password_footer": {
+      "name": "密碼頁尾"
+    },
+    "main_password_header": {
+      "name": "密碼頁首"
+    },
+    "main_product": {
+      "name": "商品資訊"
+    },
+    "product_recommendations": {
+      "name": "商品推薦",
+      "settings": {
+        "paragraph": {
+          "content": "動態推薦會使用訂單和商品資訊，隨時間變化並改善。[瞭解詳情](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "顯示商品數量上限"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Islands 示範",
+      "settings": {
+        "heading": {
+          "label": "標題",
+          "default": "Islands Architecture 示範"
+        }
+      },
+      "presets": {
+        "name": "Islands 示範"
+      }
+    },
+    "section": {
+      "name": "區段",
+      "settings": {
+        "header__layout": {
+          "content": "版面配置"
+        },
+        "gap": {
+          "label": "間距"
+        },
+        "header__size": {
+          "content": "尺寸"
+        },
+        "section_width": {
+          "label": "寬度",
+          "options__page": {
+            "label": "頁面"
+          },
+          "options__full": {
+            "label": "全版"
+          }
+        },
+        "header__padding": {
+          "content": "內距"
+        },
+        "padding_block_start": {
+          "label": "頂部"
+        },
+        "padding_block_end": {
+          "label": "底部"
+        }
+      },
+      "presets": {
+        "name": "區段"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "國家/地區選擇器",
+      "settings": {
+        "heading": {
+          "label": "標題",
+          "info": "顯示國家/地區選擇器需要標題",
+          "default": "國家/地區"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "選單",
+      "settings": {
+        "heading": {
+          "label": "標題",
+          "info": "顯示選單需要標題",
+          "default": "快速連結"
+        },
+        "menu": {
+          "label": "選單",
+          "info": "僅顯示頂層選單項目"
+        }
+      },
+      "presets": {
+        "name": "選單",
+        "category": "頁尾"
+      }
+    },
+    "header_logo": {
+      "name": "標誌"
+    },
+    "header_menu_mobile": {
+      "name": "行動版選單",
+      "settings": {
+        "menu": {
+          "label": "主要導覽"
+        }
+      }
+    },
+    "article_card": {
+      "name": "文章卡片"
+    },
+    "article_content": {
+      "name": "內容"
+    },
+    "button": {
+      "name": "按鈕",
+      "settings": {
+        "button_label": {
+          "label": "按鈕標籤",
+          "info": "將標籤留空以隱藏按鈕。",
+          "default": "按鈕標籤"
+        },
+        "button_link": {
+          "label": "按鈕連結"
+        },
+        "button_variant": {
+          "label": "按鈕樣式",
+          "options__default": {
+            "label": "預設"
+          },
+          "options__link": {
+            "label": "連結"
+          }
+        },
+        "button_size": {
+          "label": "按鈕尺寸",
+          "options__default": {
+            "label": "預設"
+          },
+          "options__lg": {
+            "label": "大"
+          }
+        }
+      },
+      "presets": {
+        "name": "按鈕",
+        "category": "基本"
+      }
+    },
+    "buy_buttons": {
+      "name": "購買按鈕",
+      "settings": {
+        "product": {
+          "label": "商品"
+        },
+        "show_dynamic_checkout": {
+          "label": "顯示動態結帳按鈕",
+          "info": "顧客可以看到他們偏好的付款方式選項，例如 PayPal 或 Apple Pay，這些選項是根據您商店提供的付款方式顯示。[瞭解詳情](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "購買按鈕"
+      }
+    },
+    "collection_card": {
+      "name": "商品系列卡片",
+      "settings": {
+        "collection": {
+          "label": "商品系列"
+        }
+      },
+      "presets": {
+        "name": "商品系列卡片"
+      }
+    },
+    "details": {
+      "name": "詳細資訊"
+    },
+    "email_signup": {
+      "name": "電子郵件訂閱",
+      "presets": {
+        "name": "電子郵件訂閱"
+      }
+    },
+    "header_menu": {
+      "name": "選單",
+      "settings": {
+        "menu": {
+          "label": "主要導覽"
+        }
+      }
+    },
+    "heading": {
+      "name": "標題",
+      "settings": {
+        "heading": {
+          "label": "標題",
+          "default": "介紹您的品牌"
+        },
+        "heading_size": {
+          "label": "標題尺寸",
+          "options__default": {
+            "label": "預設"
+          },
+          "options__md": {
+            "label": "中"
+          },
+          "options__lg": {
+            "label": "大"
+          },
+          "options__xl": {
+            "label": "特大"
+          }
+        },
+        "heading_level": {
+          "label": "標題層級",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "標題",
+        "category": "基本"
+      }
+    },
+    "image": {
+      "name": "圖片",
+      "settings": {
+        "image": {
+          "label": "圖片"
+        }
+      }
+    },
+    "page_content": {
+      "name": "頁面內容"
+    },
+    "price": {
+      "name": "價格",
+      "settings": {
+        "product": {
+          "label": "商品"
+        }
+      }
+    },
+    "product_card": {
+      "name": "商品卡片",
+      "settings": {
+        "product": {
+          "label": "商品"
+        }
+      },
+      "presets": {
+        "name": "商品卡片",
+        "category": "商品"
+      }
+    },
+    "product_media_gallery": {
+      "name": "商品媒體"
+    },
+    "search_input": {
+      "name": "搜尋輸入"
+    },
+    "tab": {
+      "name": "分頁",
+      "settings": {
+        "title": {
+          "label": "標題",
+          "default": "運送資訊"
+        },
+        "content": {
+          "label": "分頁內容",
+          "default": "<p>使用可摺疊分頁提供更詳細的資訊，協助顧客做出購買決策。</p><p>例如：運送和退貨政策、尺寸指南及其他常見問題。</p>"
+        },
+        "page": {
+          "label": "來自頁面的分頁內容"
+        }
+      },
+      "presets": {
+        "name": "分頁"
+      }
+    },
+    "text": {
+      "name": "文字",
+      "settings": {
+        "text": {
+          "label": "說明",
+          "default": "<p>與顧客分享您的品牌資訊。</p>"
+        },
+        "text_size": {
+          "label": "文字尺寸",
+          "options__default": {
+            "label": "預設"
+          },
+          "options__lg": {
+            "label": "大"
+          }
+        }
+      },
+      "presets": {
+        "name": "文字",
+        "category": "基本"
+      }
+    },
+    "variant_picker": {
+      "name": "子類選擇器",
+      "settings": {
+        "product": {
+          "label": "商品"
+        },
+        "picker_type": {
+          "label": "類型",
+          "options__dropdown": {
+            "label": "下拉式選單"
+          },
+          "options__button": {
+            "label": "按鈕"
+          }
+        }
+      },
+      "presets": {
+        "name": "子類選擇器"
+      }
+    },
+    "product_details": {
+      "name": "詳細資訊"
+    },
+    "cart_products": {
+      "name": "購物車商品"
+    }
+  }
+}
