@@ -15,6 +15,9 @@ devDependencies:
   '@eslint/js':
     specifier: ^10.0.1
     version: 10.0.1(eslint@10.2.0)
+  '@phosphor-icons/core':
+    specifier: ^2.1.1
+    version: 2.1.1
   '@shopify/prettier-plugin-liquid':
     specifier: ^1.10.2
     version: 1.10.2(prettier@3.8.1)
@@ -460,6 +463,10 @@ packages:
 
   /@oxc-project/types@0.123.0:
     resolution: {integrity: sha512-YtECP/y8Mj1lSHiUWGSRzy/C6teUKlS87dEfuVKT09LgQbUsBW1rNg+MiJ4buGu3yuADV60gbIvo9/HplA56Ew==}
+    dev: true
+
+  /@phosphor-icons/core@2.1.1:
+    resolution: {integrity: sha512-v4ARvrip4qBCImOE5rmPUylOEK4iiED9ZyKjcvzuezqMaiRASCHKcRIuvvxL/twvLpkfnEODCOJp5dM4eZilxQ==}
     dev: true
 
   /@pnpm/config.env-replace@1.1.0:

@@ -1,6 +1,6 @@
 ---
-name: liquid-theme-standards
-description: "CSS, JavaScript, and HTML coding standards for this Shopify Liquid theme. Covers Tailwind CSS v4 utility-first patterns, island hydration architecture, design tokens via @theme, Web Components with lazy loading, defensive CSS, and progressive enhancement. Use when writing CSS/JS/HTML in .liquid files or theme frontend source files."
+name: shopify-liquid-kona-standards
+description: "CSS, JavaScript, and HTML coding standards for this Kona theme. Covers Tailwind CSS v4 utility-first patterns, Vite build pipeline, island hydration architecture, design tokens via @theme, Web Components, defensive CSS, and progressive enhancement. Use when writing CSS/JS/HTML in .liquid files or theme frontend source files."
 ---
 
 # CSS, JS & HTML Standards
@@ -498,6 +498,12 @@ jq '.sections.header.settings' templates/index.json
 ```
 
 **Prefer `jq` over `edit`** for any `.json` file modification — it validates structure, handles escaping, and avoids whitespace/formatting issues.
+
+## Related Skills
+
+- `/shopify-liquid` — Liquid syntax, filters, tags, objects, and schema reference
+- `/shopify-liquid-a11y` — WCAG 2.2 accessibility patterns for theme components
+- `/shopify-liquid-kona-new` — Guided component creation using these standards
 
 ## References
 

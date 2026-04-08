@@ -1,6 +1,6 @@
 ---
-name: liquid-theme-a11y
-description: "Implement WCAG 2.2 accessibility patterns in Shopify Liquid themes. Covers e-commerce-specific components including product cards, carousels, cart drawers, price display, forms, filters, and modals. Use when building accessible theme components, fixing accessibility issues, or reviewing ARIA patterns in .liquid files."
+name: shopify-liquid-a11y
+description: "WCAG 2.2 accessibility patterns for Shopify Liquid themes. Covers e-commerce components — product cards, carousels, cart drawers, price display, forms, filters, and modals. Use when building accessible theme components, fixing accessibility issues, or reviewing ARIA patterns in .liquid files."
 ---
 
 # Accessibility for Shopify Liquid Themes
@@ -446,6 +446,13 @@ Use for screen-reader-only content like labels and descriptions.
 | Focus indicators | 3:1 |
 
 Never rely solely on color to convey information — always pair with text, icons, or patterns.
+
+## Related Skills
+
+- `/shopify-liquid` — Liquid syntax, filters, tags, objects, and schema reference
+- `/shopify-liquid-translator` — Locale translations (ensures aria-labels and sr-only text are translatable)
+- `/shopify-liquid-kona-standards` — CSS/JS/HTML coding standards (Kona theme-specific)
+- `/shopify-liquid-kona-new` — Guided component creation with built-in a11y checks
 
 ## References
 

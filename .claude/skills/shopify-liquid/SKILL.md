@@ -1,27 +1,21 @@
 ---
-name: shopify-liquid-themes
-description: "Generate Shopify Liquid theme code (sections, blocks, snippets) with correct schema JSON, LiquidDoc headers, translation keys, and CSS/JS patterns. Use when creating or editing .liquid files for Shopify themes, working with schema, doc, stylesheet, javascript tags, or Shopify Liquid objects/filters/tags."
+name: shopify-liquid
+description: "Shopify Liquid reference — syntax, filters, tags, objects, schema settings, LiquidDoc, and translation conventions. Use when writing or editing .liquid files, working with schema JSON, locale keys, or looking up Liquid objects/filters/tags."
 ---
 
-# Shopify Liquid Themes
+# Shopify Liquid Reference
 
 ## Theme Architecture
 
 ```
-theme/
-├── sections/    # Full-width page modules with {% schema %} — hero, product grid, testimonials
-├── blocks/      # Nestable components with {% schema %} — slides, feature items, text blocks
-├── snippets/    # Reusable fragments via {% render %} — buttons, icons, image helpers
-├── layout/      # Page wrappers (must include {{ content_for_header }} and {{ content_for_layout }})
-├── templates/   # JSON files defining which sections appear on each page type
-├── config/      # Global theme settings (settings_schema.json, settings_data.json)
-├── locales/     # Translation files (en.default.json, fr.json, etc.)
-├── assets/      # Vite build output (generated — do not hand-edit)
-└── frontend/    # Source CSS, JS, islands (built by Vite into assets/)
-    ├── entrypoints/  # theme.js and theme.css — Vite entry points
-    ├── islands/      # Lazy-loaded custom element modules (island hydration)
-    ├── lib/          # Shared JS utilities (revive.js, a11y.js, etc.)
-    └── styles/       # CSS layers: theme.css, base.css, components.css, utilities.css
+sections/    # Full-width page modules with {% schema %} — hero, product grid, testimonials
+blocks/      # Nestable components with {% schema %} — slides, feature items, text blocks
+snippets/    # Reusable fragments via {% render %} — buttons, icons, image helpers
+layout/      # Page wrappers (must include {{ content_for_header }} and {{ content_for_layout }})
+templates/   # JSON files defining which sections appear on each page type
+config/      # Global theme settings (settings_schema.json, settings_data.json)
+locales/     # Translation files (en.default.json, fr.json, etc.)
+assets/      # CSS, JS, images served via Shopify CDN
 ```
 
 ### When to use what
@@ -202,50 +196,7 @@ Conditionally shows/hides a setting in the editor based on other setting values.
 
 > Full schema details and all 33 setting types: [references/schema-and-settings.md](references/schema-and-settings.md)
 
-## CSS & JavaScript
-
-### CSS — Tailwind v4 via Vite
-
-This theme uses Tailwind CSS v4 compiled by Vite. There are no `{% stylesheet %}` or `{% javascript %}` tags.
-
-| Location | Purpose |
-|----------|---------|
-| `theme/frontend/entrypoints/theme.css` | Main CSS entry point — imports layers |
-| `theme/frontend/styles/theme.css` | `@theme` block — design tokens (colors, spacing, fonts) |
-| `theme/frontend/styles/base.css` | `@layer base` — element resets |
-| `theme/frontend/styles/components.css` | `@layer components` — reusable classes via `@apply` |
-| `theme/frontend/styles/utilities.css` | `@layer utilities` — custom utility classes |
-
-**Styling approach:** Use Tailwind utility classes directly in Liquid markup. For reusable component classes, define them in `components.css` with `@apply`.
-
-```liquid
-{%- comment -%} Tailwind utilities directly in markup {%- endcomment -%}
-<h2 class="font-heading text-display leading-display text-primary">
-  {{ section.settings.heading }}
-</h2>
-
-{%- comment -%} Dynamic values via inline style + CSS variables {%- endcomment -%}
-<section
-  style="--section-bg: {{ section.settings.bg_color }};"
-  class="py-12 md:py-20"
->
-```
-
-### JavaScript — Island Hydration
-
-Interactive JS uses the island hydration pattern. Islands are custom elements in `theme/frontend/islands/` that are lazy-loaded by `revive.js` when detected in the DOM.
-
-**Hydration directives** (attributes on the custom element tag):
-- `client:visible` — hydrates when element enters viewport (IntersectionObserver)
-- `client:idle` — hydrates during idle time (requestIdleCallback / 200ms fallback)
-- `client:media="(min-width: 768px)"` — hydrates when media query matches
-
-```liquid
-{%- comment -%} Liquid renders the custom element — JS loads on demand {%- endcomment -%}
-<cart-drawer client:visible>
-  <!-- Cart drawer markup -->
-</cart-drawer>
-```
+## CSS & JavaScript in Liquid
 
 ### `{% style %}` tag (Liquid-aware CSS)
 
@@ -359,6 +310,13 @@ jq '.sections.header.settings' templates/index.json
 ```
 
 **Prefer `jq` over `edit`** for any `.json` file modification — it validates structure, handles escaping, and avoids whitespace/formatting issues.
+
+## Related Skills
+
+- `/shopify-liquid-a11y` — WCAG 2.2 accessibility patterns for Liquid theme components
+- `/shopify-liquid-translator` — Locale translation generation and hardcoded string auditing
+- `/shopify-liquid-kona-standards` — CSS/JS/HTML coding standards (Kona theme-specific)
+- `/shopify-liquid-kona-new` — Guided component creation workflow (Kona theme-specific)
 
 ## References
 

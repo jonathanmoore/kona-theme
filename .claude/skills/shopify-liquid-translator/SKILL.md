@@ -1,12 +1,12 @@
 ---
-name: theme-translator
-description: "Generate and maintain Shopify theme locale translations. Translates en.default.json and en.default.schema.json into 30 languages. Use when adding new languages, syncing translations after English changes, auditing for hardcoded strings, or generating a single language. Invoke with: /theme-translator [full|sync|audit|lang-code]"
+name: shopify-liquid-translator
+description: "Generate and maintain Shopify theme locale translations. Translates en.default.json and en.default.schema.json into 30 languages. Use when adding new languages, syncing translations after English changes, auditing for hardcoded strings, or generating a single language. Invoke with: /shopify-liquid-translator [full|sync|audit|lang-code]"
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 
-# Theme Translator
+# Shopify Liquid Translator
 
-Translates this theme's English locale files into 30 target languages. Uses a Python script (`scripts/translate-locales.py`) that calls the Claude API directly with a compact numbered-list format — ~10x more token-efficient than having an LLM write full JSON.
+Translates a Shopify theme's English locale files into 30 target languages. Uses a Python script (`scripts/translate-locales.py`) that calls the Claude API directly with a compact numbered-list format — ~10x more token-efficient than having an LLM write full JSON.
 
 Incremental mode tracks content hashes so unchanged keys are never re-translated.
 
@@ -73,7 +73,7 @@ If no cache file exists, falls back to translating everything (equivalent to `fu
 
 Pre-flight step. Scans all `.liquid` files for hardcoded English strings that should be in locale files, extracts them, and replaces them with translation references. Covers both template content and schema JSON.
 
-**Before running audit**, load the `/shopify-liquid-themes` skill for reference on correct `| t` filter and `t:` schema prefix patterns.
+**Before running audit**, load the `/shopify-liquid` skill for reference on correct `| t` filter and `t:` schema prefix patterns.
 
 #### Skipping files
 
@@ -197,7 +197,7 @@ set -a && source .env && set +a && python3 scripts/translate-locales.py fr de ja
 
 ### No argument — Default to `full`
 
-If the user runs `/theme-translator` with no argument, treat it as `full`.
+If the user runs `/shopify-liquid-translator` with no argument, treat it as `full`.
 
 ## GitHub Actions
 
@@ -240,6 +240,12 @@ for f in theme/locales/*.json; do
   python3 -m json.tool "$f" > /dev/null 2>&1 && echo "OK: $f" || echo "INVALID: $f"
 done
 ```
+
+## Related Skills
+
+- `/shopify-liquid` — Liquid syntax and `| t` filter / `t:` schema prefix patterns
+- `/shopify-liquid-a11y` — Accessibility patterns (ensures translated aria-labels, sr-only text)
+- `/shopify-liquid-kona-new` — Generates components with translation keys pre-wired
 
 ## Configuration
 
