@@ -2,7 +2,7 @@
   "name": "kona-theme",
   "private": true,
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@10.33.0",
   "scripts": {
     "dev": "concurrently -r -k -P 'shopify theme dev --path theme {@}' 'vite'",
@@ -10,7 +10,8 @@
     "deploy": "pnpm run build && shopify theme push --path theme",
     "lint": "eslint .",
     "format": "prettier --write --cache .",
-    "format-check": "prettier --check ."
+    "format-check": "prettier --check .",
+    "package": "pnpm run build && shopify theme package --path theme && mkdir -p dist && mv theme/*.zip dist/"
   },
   "devDependencies": {
     "@driver-digital/vite-plugin-shopify-clean": "^1.1.2",
