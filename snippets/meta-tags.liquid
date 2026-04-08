@@ -1,3 +1,7 @@
+{% doc %}
+  Renders Open Graph and Twitter Card meta tags for SEO and social sharing.
+{% enddoc %}
+
 {%- liquid
   assign og_title = page_title | default: shop.name
   assign og_url = canonical_url | default: request.origin

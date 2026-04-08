@@ -1,3 +1,7 @@
+{% doc %}
+  Renders the cart line items, subtotal, and checkout controls.
+{% enddoc %}
+
 <cart-items
   {% if cart == empty %}
     class="is-empty"
@@ -89,7 +93,7 @@
                   <div class="flex items-center gap-2">
                     <quantity-input class="flex min-h-[theme(spacing.10)] max-w-[107px] rounded border">
                       <button
-                        class="text-primary/50 hover:text-primary no-js:hidden h-10 w-10 shrink-0 transition disabled:cursor-wait"
+                        class="text-primary/50 hover:text-primary no-js:hidden min-h-11 min-w-11 shrink-0 transition motion-reduce:transition-none disabled:cursor-wait"
                         type="button"
                         name="minus"
                         aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}"
@@ -107,7 +111,7 @@
                         data-index="{{ item.index | plus: 1 }}"
                       >
                       <button
-                        class="text-primary/50 hover:text-primary no-js:hidden h-10 w-10 shrink-0 transition disabled:cursor-wait"
+                        class="text-primary/50 hover:text-primary no-js:hidden min-h-11 min-w-11 shrink-0 transition motion-reduce:transition-none disabled:cursor-wait"
                         type="button"
                         name="plus"
                         aria-label="{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}"
@@ -122,7 +126,7 @@
                     >
                       <a
                         href="{{ item.url_to_remove }}"
-                        class="flex h-10 w-10 items-center justify-center rounded border"
+                        class="flex min-h-11 min-w-11 items-center justify-center rounded border"
                         aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                       >
                         {% render 'icon-remove' %}
@@ -136,7 +140,7 @@
                       aria-hidden="true"
                       focusable="false"
                       role="presentation"
-                      class="text-primary h-5 w-5 animate-spin"
+                      class="text-primary h-5 w-5 animate-spin motion-reduce:animate-none"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -257,6 +261,6 @@
 
 {% schema %}
 {
-  "name": "Cart products"
+  "name": "t:blocks.cart_products.name"
 }
 {% endschema %}

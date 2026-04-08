@@ -1,5 +1,7 @@
 class StickyHeader extends window.HTMLElement {
   connectedCallback() {
+    this.controller = new AbortController()
+
     this.header = document.getElementById('shopify-section-header')
     this.headerBounds = {}
     this.currentScrollTop = 0
@@ -10,9 +12,16 @@ class StickyHeader extends window.HTMLElement {
       this.preventReveal = true
     }
 
-    window.addEventListener('scroll', this.onScrollHandler, false)
+    window.addEventListener('scroll', this.onScrollHandler, {
+      signal: this.controller.signal
+    })
 
     this.createObserver()
+  }
+
+  disconnectedCallback() {
+    this.controller?.abort()
+    clearTimeout(this.isScrolling)
   }
 
   createObserver() {

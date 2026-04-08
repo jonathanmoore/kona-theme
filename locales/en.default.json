@@ -49,7 +49,8 @@
       "new_window": "Opens in a new window."
     },
     "loading": "Loading...",
-    "error": "Error"
+    "error": "Error",
+    "main_navigation": "Main navigation"
   },
   "sections": {
     "header": {

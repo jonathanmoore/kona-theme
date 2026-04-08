@@ -1,9 +1,13 @@
+{% doc %}
+  Displays the content body of a page.
+{% enddoc %}
+
 <div class="article prose empty:hidden">
   {{- page.content -}}
 </div>
 
 {% schema %}
 {
-  "name": "Page content"
+  "name": "t:blocks.page_content.name"
 }
 {% endschema %}

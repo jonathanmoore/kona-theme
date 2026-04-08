@@ -1,5 +1,5 @@
 import { removeTrapFocus, trapFocus } from '@/lib/a11y'
-import DetailsModal from './details-modal'
+import DetailsModal from '@/islands/details-modal'
 
 class HeaderDrawer extends DetailsModal {
   open(event) {

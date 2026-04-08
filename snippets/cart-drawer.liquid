@@ -1,18 +1,15 @@
-{% comment %}
-  Renders cart drawer
-
-  Usage:
-  {% render 'cart-drawer' %}
-{% endcomment %}
+{% doc %}
+  Renders a slide-out cart drawer with line items and checkout.
+{% enddoc %}
 
 <cart-drawer
-  class="invisible absolute transition-[visibility] duration-300 [.active&]:visible{% if cart == empty %} is-empty{% endif %}"
+  class="invisible absolute transition-[visibility] duration-300 motion-reduce:transition-none [.active&]:visible{% if cart == empty %} is-empty{% endif %}"
   client:idle
 >
   <div id="CartDrawer" class="fixed inset-0 z-20 flex h-full w-screen justify-end">
     <div id="CartDrawer-Overlay" class="fixed inset-0 hidden bg-black/25 [.active_&]:block"></div>
     <div
-      class="bg-contrast relative flex h-full w-full max-w-lg translate-x-full flex-col overflow-y-auto transition-transform duration-300 [.active_&]:translate-x-0"
+      class="bg-contrast text-primary relative flex h-full w-full max-w-lg translate-x-full flex-col overflow-y-auto transition-transform duration-300 motion-reduce:transition-none [.active_&]:translate-x-0"
       role="dialog"
       aria-modal="true"
       aria-label="{{ 'sections.cart.title' | t }}"
@@ -22,7 +19,7 @@
         <h2 class="text-lead font-body-weight-bold max-w-prose whitespace-pre-wrap">{{ 'sections.cart.title' | t }}</h2>
         <button
           type="button"
-          class="text-primary hover:text-primary/50 -m-4 p-4 transition"
+          class="text-primary hover:text-primary/50 -m-4 p-4 transition motion-reduce:transition-none"
           onclick="this.closest('cart-drawer').close()"
           aria-label="{{ 'accessibility.close' | t }}"
         >
@@ -64,7 +61,7 @@
                 </div>
                 <div class="flex flex-grow justify-between">
                   <div class="grid gap-2">
-                    <h3 class="text-copy font-body-weight-bold max-w-prose whitespace-pre-wrap">
+                    <h3 class="text-copy font-body-weight-bold max-w-prose">
                       <a class="cart-item-name" href="{{ item.url }}">{{ item.product.title | escape }}</a>
                     </h3>
                     {%- if item.product.has_only_default_variant == false
@@ -124,7 +121,7 @@
                     <div class="flex items-center gap-2">
                       <quantity-input class="flex min-h-[theme(spacing.10)] max-w-[107px] rounded border" client:idle>
                         <button
-                          class="text-primary/50 hover:text-primary h-10 w-10 shrink-0 transition disabled:cursor-wait"
+                          class="text-primary/50 hover:text-primary min-h-11 min-w-11 shrink-0 transition motion-reduce:transition-none disabled:cursor-wait"
                           type="button"
                           name="minus"
                           aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}"
@@ -142,7 +139,7 @@
                           data-index="{{ item.index | plus: 1 }}"
                         >
                         <button
-                          class="text-primary/50 hover:text-primary h-10 w-10 shrink-0 transition disabled:cursor-wait"
+                          class="text-primary/50 hover:text-primary min-h-11 min-w-11 shrink-0 transition motion-reduce:transition-none disabled:cursor-wait"
                           type="button"
                           name="plus"
                           aria-label="{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}"
@@ -157,7 +154,7 @@
                       >
                         <button
                           type="button"
-                          class="flex h-10 w-10 items-center justify-center rounded border"
+                          class="flex min-h-11 min-w-11 items-center justify-center rounded border"
                           aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                         >
                           {% render 'icon-remove' %}
@@ -171,7 +168,7 @@
                         aria-hidden="true"
                         focusable="false"
                         role="presentation"
-                        class="text-primary h-5 w-5 animate-spin"
+                        class="text-primary h-5 w-5 animate-spin motion-reduce:animate-none"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"

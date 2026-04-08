@@ -28,7 +28,8 @@
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.0",
     "vite-plugin-shopify": "^4.1.2",
-    "vite-plugin-shopify-import-maps": "^0.7.2"
+    "vite-plugin-shopify-import-maps": "^0.7.2",
+    "vite-plugin-shopify-theme-islands": "^1.3.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

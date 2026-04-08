@@ -24,13 +24,13 @@
       >
         <input type="hidden" name="type" value="product">
 
-        <button type="submit" class="flex h-8 w-8 items-center justify-center">
+        <button type="submit" class="flex min-h-11 min-w-11 items-center justify-center">
           {% render 'icon-search' %}
           <span class="sr-only">{{ 'general.search.search' | t }}</span>
         </button>
 
         <input
-          class="{{ input_class }} -mb-px hidden appearance-none border-x-0 border-b border-t-0 border-transparent bg-transparent px-0 py-1 text-left transition placeholder:text-inherit placeholder:opacity-20 focus:ring-transparent md:inline-block lg:text-right"
+          class="{{ input_class }} -mb-px hidden appearance-none border-x-0 border-b border-t-0 border-transparent bg-transparent px-0 py-1 text-left transition motion-reduce:transition-none placeholder:text-inherit placeholder:opacity-20 focus:ring-transparent md:inline-block lg:text-right"
           type="search"
           name="q"
           placeholder="{{ 'general.search.search' | t }}"
@@ -49,13 +49,13 @@
     <div class="flex w-full items-center justify-end gap-4 lg:w-auto lg:gap-1">
       <form action="{{ routes.search_url }}" method="get" role="search" class="hidden items-center gap-2 lg:flex">
         <input
-          class="{{ input_class }} -mb-px hidden appearance-none border-x-0 border-b border-t-0 border-transparent bg-transparent px-0 py-1 text-left transition placeholder:text-inherit placeholder:opacity-20 focus:ring-transparent md:inline-block lg:text-right"
+          class="{{ input_class }} -mb-px hidden appearance-none border-x-0 border-b border-t-0 border-transparent bg-transparent px-0 py-1 text-left transition motion-reduce:transition-none placeholder:text-inherit placeholder:opacity-20 focus:ring-transparent md:inline-block lg:text-right"
           type="search"
           name="q"
           placeholder="{{ 'general.search.search' | t }}"
         >
 
-        <button type="submit" class="flex h-8 w-8 items-center justify-center">
+        <button type="submit" class="flex min-h-11 min-w-11 items-center justify-center">
           {% render 'icon-search' %}
           <span class="sr-only">{{ 'general.search.search' | t }}</span>
         </button>
@@ -64,7 +64,7 @@
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-          class="flex h-8 w-8 items-center justify-center"
+          class="flex min-h-11 min-w-11 items-center justify-center"
         >
           {% render 'icon-account' %}
           <span class="sr-only">
@@ -79,7 +79,7 @@
         </a>
       {%- endif -%}
 
-      <a href="{{ routes.cart_url }}" class="relative flex h-8 w-8 items-center justify-center" id="cart-icon-bubble">
+      <a href="{{ routes.cart_url }}" class="relative flex min-h-11 min-w-11 items-center justify-center" id="cart-icon-bubble">
         {%- render 'cart-icon-bubble' -%}
       </a>
     </div>
@@ -128,15 +128,15 @@
 
 {% schema %}
 {
-  "name": "Header",
+  "name": "t:sections.header.name",
   "class": "z-10",
   "settings": [
     {
       "type": "checkbox",
       "id": "enable_sticky_header",
       "default": true,
-      "label": "Enable sticky header",
-      "info": "Header shows on the screen as customers scroll up."
+      "label": "t:sections.header.settings.enable_sticky_header.label",
+      "info": "t:sections.header.settings.enable_sticky_header.info"
     }
   ]
 }

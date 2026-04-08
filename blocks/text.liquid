@@ -1,3 +1,7 @@
+{% doc %}
+  Renders a block of rich text content using the text snippet.
+{% enddoc %}
+
 {%- render 'text',
   content: block.settings.text,
   size: block.settings.text_size,
@@ -6,14 +10,14 @@
 
 {% schema %}
 {
-  "name": "Text",
+  "name": "t:blocks.text.name",
   "tag": null,
   "settings": [
     {
       "type": "richtext",
       "id": "text",
       "default": "<p>Share information about your brand with your customers.</p>",
-      "label": "Description"
+      "label": "t:blocks.text.settings.text.label"
     },
     {
       "type": "select",
@@ -21,20 +25,20 @@
       "options": [
         {
           "value": "",
-          "label": "Default"
+          "label": "t:blocks.text.settings.text_size.options__default.label"
         },
         {
           "value": "lg",
-          "label": "Large"
+          "label": "t:blocks.text.settings.text_size.options__lg.label"
         }
       ],
       "default": "",
-      "label": "Text size"
+      "label": "t:blocks.text.settings.text_size.label"
     }
   ],
   "presets": [
     {
-      "name": "Text",
+      "name": "t:blocks.text.presets.name",
       "category": "Basic"
     }
   ]

@@ -1,4 +1,4 @@
-import VariantSelects from './variant-selects'
+import VariantSelects from '@/islands/variant-selects'
 
 class VariantRadios extends VariantSelects {
   updateOptions() {

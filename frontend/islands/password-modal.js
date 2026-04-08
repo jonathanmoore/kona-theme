@@ -1,4 +1,4 @@
-import DetailsModal from './details-modal'
+import DetailsModal from '@/islands/details-modal'
 
 class PasswordModal extends DetailsModal {
   constructor() {

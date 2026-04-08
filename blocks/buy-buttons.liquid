@@ -1,3 +1,7 @@
+{% doc %}
+  Renders add-to-cart and dynamic checkout buttons for a product.
+{% enddoc %}
+
 {%- liquid
   assign product = block.settings.product
   assign product_form_id = 'product-form-' | append: section.id
@@ -46,25 +50,25 @@
 
 {% schema %}
 {
-  "name": "Buy buttons",
+  "name": "t:blocks.buy_buttons.name",
   "tag": null,
   "settings": [
     {
       "type": "product",
       "id": "product",
-      "label": "Product"
+      "label": "t:blocks.buy_buttons.settings.product.label"
     },
     {
       "type": "checkbox",
       "id": "show_dynamic_checkout",
       "default": true,
-      "label": "Show dynamic checkout buttons",
-      "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+      "label": "t:blocks.buy_buttons.settings.show_dynamic_checkout.label",
+      "info": "t:blocks.buy_buttons.settings.show_dynamic_checkout.info"
     }
   ],
   "presets": [
     {
-      "name": "Buy buttons"
+      "name": "t:blocks.buy_buttons.presets.name"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import CartItems from './cart-items'
+import CartItems from '@/islands/cart-items'
 
 class CartDrawerItems extends CartItems {
   getSectionsToRender() {

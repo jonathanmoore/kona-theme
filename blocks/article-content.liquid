@@ -1,8 +1,12 @@
+{% doc %}
+  Displays the full content body of an article.
+{% enddoc %}
+
 <div class="article prose" {{ block.shopify_attributes }}>{{ article.content }}</div>
 
 {% schema %}
 {
-  "name": "Content",
+  "name": "t:blocks.article_content.name",
   "tag": null
 }
 {% endschema %}

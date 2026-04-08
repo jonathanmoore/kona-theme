@@ -1,19 +1,29 @@
 class ProductRecommendations extends window.HTMLElement {
   connectedCallback() {
-    fetch(this.dataset.url)
-      .then((response) => response.text())
-      .then((text) => {
-        const html = document.createElement('div')
-        html.innerHTML = text
-        const recommendations = html.querySelector('product-recommendations')
+    this.controller = new AbortController()
+    this.loadRecommendations()
+  }
 
-        if (recommendations && recommendations.innerHTML.trim().length) {
-          this.innerHTML = recommendations.innerHTML
-        }
+  disconnectedCallback() {
+    this.controller?.abort()
+  }
+
+  async loadRecommendations() {
+    try {
+      const response = await fetch(this.dataset.url, {
+        signal: this.controller.signal
       })
-      .catch((e) => {
-        console.error(e)
-      })
+      const text = await response.text()
+      const html = document.createElement('div')
+      html.innerHTML = text
+      const recommendations = html.querySelector('product-recommendations')
+
+      if (recommendations && recommendations.innerHTML.trim().length) {
+        this.innerHTML = recommendations.innerHTML
+      }
+    } catch (e) {
+      if (e.name !== 'AbortError') console.error(e)
+    }
   }
 }
 

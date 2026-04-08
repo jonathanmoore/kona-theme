@@ -81,30 +81,30 @@
 
 {% schema %}
 {
-  "name": "Image banner",
+  "name": "t:sections.image_banner.name",
   "tag": "section",
   "settings": [
     {
       "type": "image_picker",
       "id": "image",
-      "label": "First image"
+      "label": "t:sections.image_banner.settings.image.label"
     },
     {
       "type": "image_picker",
       "id": "image_2",
-      "label": "Second image"
+      "label": "t:sections.image_banner.settings.image_2.label"
     },
     {
       "type": "checkbox",
       "id": "full_page_height_enable",
       "default": true,
-      "label": "Full page height"
+      "label": "t:sections.image_banner.settings.full_page_height_enable.label"
     }
   ],
   "blocks": [{ "type": "@theme" }],
   "presets": [
     {
-      "name": "Image banner",
+      "name": "t:sections.image_banner.presets.name",
       "category": "Banners",
       "blocks": {
         "heading": {

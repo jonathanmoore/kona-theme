@@ -1,3 +1,7 @@
+{% doc %}
+  Renders a search input form for product search.
+{% enddoc %}
+
 <form
   action="{{ routes.search_url }}"
   method="get"
@@ -21,7 +25,7 @@
 
 {% schema %}
 {
-  "name": "Search input",
+  "name": "t:blocks.search_input.name",
   "tag": null
 }
 {% endschema %}

@@ -1,6 +1,8 @@
 class LocalizationForm extends window.HTMLElement {
-  constructor() {
-    super()
+  connectedCallback() {
+    this.controller = new AbortController()
+    const { signal } = this.controller
+
     this.elements = {
       input: this.querySelector(
         'input[name="language_code"], input[name="country_code"]'
@@ -8,22 +10,34 @@ class LocalizationForm extends window.HTMLElement {
       button: this.querySelector('button'),
       list: this.querySelector('ul')
     }
-    this.elements.button.addEventListener('click', this.toggleList.bind(this))
+    this.elements.button.addEventListener('click', this.toggleList.bind(this), {
+      signal
+    })
     this.elements.button.addEventListener(
       'focusout',
-      this.onButtonFocusOut.bind(this)
+      this.onButtonFocusOut.bind(this),
+      { signal }
     )
     this.elements.list.addEventListener(
       'focusout',
-      this.onListFocusOut.bind(this)
+      this.onListFocusOut.bind(this),
+      { signal }
     )
-    this.addEventListener('keyup', this.onLocalizationFormKeyUp.bind(this))
+    this.addEventListener('keyup', this.onLocalizationFormKeyUp.bind(this), {
+      signal
+    })
 
-    this.querySelectorAll('a').forEach((item) =>
-      item.addEventListener('click', this.onItemClick.bind(this))
-    )
+    for (const item of this.querySelectorAll('a')) {
+      item.addEventListener('click', this.onItemClick.bind(this), { signal })
+    }
 
-    document.body.addEventListener('click', this.onBodyClick.bind(this))
+    document.body.addEventListener('click', this.onBodyClick.bind(this), {
+      signal
+    })
+  }
+
+  disconnectedCallback() {
+    this.controller?.abort()
   }
 
   hideList() {

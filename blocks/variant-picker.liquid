@@ -1,3 +1,7 @@
+{% doc %}
+  Renders product variant selection as radio buttons or dropdowns.
+{% enddoc %}
+
 {%- liquid
   assign product = block.settings.product
   assign product_form_id = 'product-form-' | append: section.id
@@ -127,13 +131,13 @@
 
 {% schema %}
 {
-  "name": "Variant picker",
+  "name": "t:blocks.variant_picker.name",
   "tag": null,
   "settings": [
     {
       "type": "product",
       "id": "product",
-      "label": "Product"
+      "label": "t:blocks.variant_picker.settings.product.label"
     },
     {
       "type": "select",
@@ -141,20 +145,20 @@
       "options": [
         {
           "value": "dropdown",
-          "label": "Dropdown"
+          "label": "t:blocks.variant_picker.settings.picker_type.options__dropdown.label"
         },
         {
           "value": "button",
-          "label": "Buttons"
+          "label": "t:blocks.variant_picker.settings.picker_type.options__button.label"
         }
       ],
       "default": "button",
-      "label": "Type"
+      "label": "t:blocks.variant_picker.settings.picker_type.label"
     }
   ],
   "presets": [
     {
-      "name": "Variant picker"
+      "name": "t:blocks.variant_picker.presets.name"
     }
   ]
 }

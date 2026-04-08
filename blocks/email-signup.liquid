@@ -1,3 +1,7 @@
+{% doc %}
+  Renders an email newsletter signup form.
+{% enddoc %}
+
 <div class="w-full max-w-[335px]" {{ block.shopify_attributes }}>
   {% form 'customer', class: '' %}
     <input type="hidden" name="contact[tags]" value="newsletter">
@@ -55,11 +59,11 @@
 
 {% schema %}
 {
-  "name": "Email signup",
+  "name": "t:blocks.email_signup.name",
   "tag": null,
   "presets": [
     {
-      "name": "Email signup"
+      "name": "t:blocks.email_signup.presets.name"
     }
   ]
 }

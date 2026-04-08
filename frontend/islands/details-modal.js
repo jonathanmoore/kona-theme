@@ -5,18 +5,30 @@ export default class DetailsModal extends window.HTMLElement {
     super()
     this.detailsContainer = this.querySelector('details')
     this.summaryToggle = this.querySelector('summary')
+    this.summaryToggle.setAttribute('role', 'button')
+  }
+
+  connectedCallback() {
+    this.controller = new AbortController()
+    const { signal } = this.controller
 
     this.detailsContainer.addEventListener(
       'keyup',
-      (event) => event.code.toUpperCase() === 'ESCAPE' && this.close()
+      (event) => event.code.toUpperCase() === 'ESCAPE' && this.close(),
+      { signal }
     )
-    this.summaryToggle.addEventListener('click', this.onSummaryClick.bind(this))
+    this.summaryToggle.addEventListener('click', this.onSummaryClick.bind(this), {
+      signal
+    })
     this.querySelector('button[type="button"]').addEventListener(
       'click',
-      this.close.bind(this)
+      this.close.bind(this),
+      { signal }
     )
+  }
 
-    this.summaryToggle.setAttribute('role', 'button')
+  disconnectedCallback() {
+    this.controller?.abort()
   }
 
   isOpen() {

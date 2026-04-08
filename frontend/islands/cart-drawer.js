@@ -62,9 +62,6 @@ class CartDrawer extends window.HTMLElement {
 
   open(triggeredBy) {
     if (triggeredBy) this.setActiveElement(triggeredBy)
-    const dialog = this.querySelector('dialog')
-    dialog.showModal()
-    // here the animation doesn't seem to always get triggered. A timeout seem to help
     setTimeout(() => {
       this.classList.add('active')
     })
@@ -84,8 +81,6 @@ class CartDrawer extends window.HTMLElement {
 
   close() {
     this.classList.remove('active')
-    const dialog = this.querySelector('dialog')
-    dialog.close()
     removeTrapFocus(this.activeElement)
     document.body.classList.remove('overflow-hidden')
   }

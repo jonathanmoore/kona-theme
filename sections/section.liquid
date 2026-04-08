@@ -12,17 +12,17 @@
 
 {% schema %}
 {
-  "name": "Section",
+  "name": "t:sections.section.name",
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
       "type": "header",
-      "content": "Layout"
+      "content": "t:sections.section.settings.header__layout.content"
     },
     {
       "type": "range",
       "id": "gap",
-      "label": "Gap",
+      "label": "t:sections.section.settings.gap.label",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -31,32 +31,32 @@
     },
     {
       "type": "header",
-      "content": "Size"
+      "content": "t:sections.section.settings.header__size.content"
     },
     {
       "type": "select",
       "id": "section_width",
-      "label": "Width",
+      "label": "t:sections.section.settings.section_width.label",
       "options": [
         {
           "value": "page-width",
-          "label": "Page"
+          "label": "t:sections.section.settings.section_width.options__page.label"
         },
         {
           "value": "full-width",
-          "label": "Full"
+          "label": "t:sections.section.settings.section_width.options__full.label"
         }
       ],
       "default": "page-width"
     },
     {
       "type": "header",
-      "content": "Padding"
+      "content": "t:sections.section.settings.header__padding.content"
     },
     {
       "type": "range",
       "id": "padding-block-start",
-      "label": "Top",
+      "label": "t:sections.section.settings.padding_block_start.label",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -66,7 +66,7 @@
     {
       "type": "range",
       "id": "padding-block-end",
-      "label": "Bottom",
+      "label": "t:sections.section.settings.padding_block_end.label",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -76,7 +76,7 @@
   ],
   "presets": [
     {
-      "name": "Section"
+      "name": "t:sections.section.presets.name"
     }
   ]
 }

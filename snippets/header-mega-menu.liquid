@@ -5,7 +5,7 @@
   @param {linklist} linklist
 {%- enddoc -%}
 
-<nav class="hidden gap-8 lg:flex" {{ shopify_attributes }}>
+<nav class="hidden gap-8 lg:flex" aria-label="{{ 'accessibility.main_navigation' | t }}" {{ shopify_attributes }}>
   {%- for link in linklist.links -%}
     <a href="{{ link.url }}">
       {{ link.title }}

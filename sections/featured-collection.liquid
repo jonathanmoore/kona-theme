@@ -24,18 +24,18 @@
 
 {% schema %}
 {
-  "name": "Featured collection",
+  "name": "t:sections.featured_collection.name",
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
       "type": "collection",
       "id": "collection",
-      "label": "Collection"
+      "label": "t:sections.featured_collection.settings.collection.label"
     },
     {
       "type": "range",
       "id": "products_to_show",
-      "label": "Maximum products to show",
+      "label": "t:sections.featured_collection.settings.products_to_show.label",
       "default": 5,
       "min": 5,
       "max": 15,
@@ -44,7 +44,7 @@
   ],
   "presets": [
     {
-      "name": "Featured collection",
+      "name": "t:sections.featured_collection.presets.name",
       "category": "Products",
       "blocks": [
         {
