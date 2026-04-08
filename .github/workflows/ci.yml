@@ -13,17 +13,14 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
+      - uses: pnpm/action-setup@v4
 
-      - name: Set node
-        uses: actions/setup-node@v3
+      - name: Set up Node
+        uses: actions/setup-node@v5
         with:
-          node-version: lts/*
+          node-version: 22.x
           cache: pnpm
 
       - name: Install
@@ -50,7 +47,21 @@ jobs:
     name: Theme Check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22.x
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build
 
       - name: Theme Check
         uses: shopify/theme-check-action@v2

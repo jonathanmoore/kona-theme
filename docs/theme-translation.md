@@ -116,11 +116,30 @@ set -a && source .env && set +a && python3 scripts/translate-locales.py pt-BR zh
 set -a && source .env && set +a && python3 scripts/translate-locales.py full fr
 ```
 
+### Check mode — Verify translations are current (no API key needed)
+
+```bash
+# All 30 languages
+python3 scripts/translate-locales.py check
+
+# Specific languages
+python3 scripts/translate-locales.py check fr de ja
+```
+
+Reports three types of issues without calling the API or writing any files:
+
+- **Missing** — Keys present in English but absent from a locale file
+- **Obsolete** — Keys in a locale file that no longer exist in English
+- **Stale** — English value changed since the last `sync` (detected via the content hash cache)
+
+Exits 0 if all translations are current, 1 if any issues are found. Used by the `i18n-check.yml` CI workflow to gate PRs — see [ci-cd.md](ci-cd.md).
+
 ### Via Claude Code skill
 
 ```
 /theme-translator full       # all languages
 /theme-translator sync       # incremental
+/theme-translator check      # verify translations are current
 /theme-translator fr         # single language
 /theme-translator audit      # find hardcoded strings (see Audit section)
 ```
@@ -232,7 +251,13 @@ The audit mode scans `.liquid` files for hardcoded English strings and extracts 
 
 ## GitHub Actions
 
-The script works directly in CI. Add your `ANTHROPIC_API_KEY` as a repository secret, then create a workflow that runs `sync` when English locale files change:
+### PR check (no API key needed)
+
+The repo includes `.github/workflows/i18n-check.yml`, which runs `check` mode on every PR. It verifies that all locale files are complete and current by comparing against the English sources and the content hash cache. If any translations are missing, obsolete, or stale, the check fails and prints what needs attention. See [ci-cd.md](ci-cd.md) for setup.
+
+### Auto-sync on push (optional)
+
+To automatically translate changed strings when English locale files are updated on `main`, add your `ANTHROPIC_API_KEY` as a repository secret (see [ci-cd.md](ci-cd.md) step 4), then create a workflow:
 
 ```yaml
 # .github/workflows/translate.yml

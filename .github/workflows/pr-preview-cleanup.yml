@@ -1,0 +1,34 @@
+name: PR Preview Cleanup
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+jobs:
+  cleanup:
+    name: Delete Preview Theme
+    runs-on: ubuntu-latest
+    env:
+      SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+      SHOPIFY_FLAG_STORE: ${{ vars.STORE }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+    steps:
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22.x
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli@latest
+
+      - name: Delete preview theme
+        run: |
+          EXISTING=$(shopify theme list --json | jq -r --arg pr "PR #${PR_NUMBER} " '.[] | select(.name | startswith($pr)) | .id' | head -1)
+
+          if [ -n "$EXISTING" ]; then
+            echo "Deleting theme $EXISTING..."
+            shopify theme delete --theme "$EXISTING" --force
+          else
+            echo "No preview theme found for PR #${PR_NUMBER}, skipping."
+          fi

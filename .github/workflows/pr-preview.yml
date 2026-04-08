@@ -1,0 +1,111 @@
+name: PR Preview
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: pr-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Deploy Preview Theme
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    env:
+      SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+      SHOPIFY_FLAG_STORE: ${{ vars.STORE }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+      BRANCH_NAME: ${{ github.head_ref }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22.x
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli@latest
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Remove Vite manifest
+        run: rm -rf theme/assets/.vite
+
+      - name: Find or create preview theme
+        id: theme
+        run: |
+          THEME_NAME="PR #${PR_NUMBER} - ${BRANCH_NAME}"
+
+          # Search for existing theme by PR number prefix
+          EXISTING=$(shopify theme list --json | jq -r --arg pr "PR #${PR_NUMBER} " '.[] | select(.name | startswith($pr)) | .id' | head -1)
+
+          if [ -n "$EXISTING" ]; then
+            echo "Found existing theme: $EXISTING"
+            shopify theme push --theme "$EXISTING" --path theme
+            THEME_ID="$EXISTING"
+          else
+            echo "Creating new preview theme..."
+            shopify theme push --unpublished --theme "$THEME_NAME" --path theme
+            THEME_ID=$(shopify theme list --json | jq -r --arg name "$THEME_NAME" '.[] | select(.name == $name) | .id' | head -1)
+          fi
+          echo "theme_id=$THEME_ID" >> "$GITHUB_OUTPUT"
+          echo "theme_name=$THEME_NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const themeId = '${{ steps.theme.outputs.theme_id }}';
+            const themeName = '${{ steps.theme.outputs.theme_name }}';
+            const store = '${{ vars.STORE }}';
+            const storeHandle = store.replace('.myshopify.com', '');
+            const marker = '<!-- shopify-preview-comment -->';
+
+            const body = [
+              marker,
+              `### Preview theme deployed`,
+              '',
+              `**Theme:** ${themeName}`,
+              '',
+              `| | |`,
+              `|---|---|`,
+              `| **Preview** | [Open store preview](https://${store}/?preview_theme_id=${themeId}) |`,
+              `| **Editor** | [Open theme editor](https://admin.shopify.com/store/${storeHandle}/themes/${themeId}/editor) |`,
+            ].join('\n');
+
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find(c => c.body.includes(marker));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }

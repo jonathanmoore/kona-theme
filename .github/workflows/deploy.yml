@@ -1,0 +1,54 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22.x
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli@latest
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Remove Vite manifest
+        run: rm -rf theme/assets/.vite
+
+      - name: Pull customizations
+        if: github.event_name == 'push'
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+        run: shopify theme pull --theme ${{ vars.LIVE_THEME_ID }} --store ${{ vars.STORE }} --path theme --only templates/*.json --only sections/*.json --only config/settings_data.json
+
+      - name: Get commit subject
+        id: commit-msg
+        run: echo "subject=$(git log -1 --format=%s)" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to live branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: theme
+          branch: live/${{ vars.STORE }}
+          clean: true
+          commit-message: ${{ steps.commit-msg.outputs.subject || 'Manual deploy' }}
+          single-commit: true

@@ -8,6 +8,7 @@ Incremental mode tracks content hashes to skip unchanged keys.
 Usage:
   python3 scripts/translate-locales.py full              # all languages, all keys
   python3 scripts/translate-locales.py sync              # only changed/new keys
+  python3 scripts/translate-locales.py check             # verify translations are current (no API key needed)
   python3 scripts/translate-locales.py fr                # single language (full)
   python3 scripts/translate-locales.py fr de ja          # specific languages (full)
 
@@ -24,7 +25,6 @@ import sys
 import re
 import time
 import concurrent.futures
-import anthropic
 
 # ── Config ──────────────────────────────────────────────────────────
 
@@ -244,6 +244,7 @@ def parse_response(response_text, entries, plural_forms):
 
 def call_api(client, entries, lang_code, file_type):
     """Call Claude API with retries. Returns list of (path, value) pairs."""
+    import anthropic
     cfg = LANG_CONFIG[lang_code]
     prompt = build_prompt(lang_code, entries, file_type)
 
@@ -368,6 +369,64 @@ def process_task(client, task, mode):
     return output_path, n
 
 
+# ── Check mode ────────────────────────────────────────────────────
+
+def check_translations(langs):
+    """Report missing or stale translations. Exits 1 if issues found. No API key needed."""
+    with open(EN_STOREFRONT) as f:
+        sf_entries = flatten(json.load(f))
+    with open(EN_SCHEMA) as f:
+        sc_entries = flatten(json.load(f))
+
+    cache = load_cache()
+    issues = []
+
+    for lang in langs:
+        for entries, suffix, file_type in [
+            (sf_entries, ".json", "storefront"),
+            (sc_entries, ".schema.json", "schema"),
+        ]:
+            filename = f"{lang}{suffix}"
+            path = os.path.join(LOCALES_DIR, filename)
+            cache_key = f"{file_type}:{lang}"
+
+            if not os.path.exists(path):
+                issues.append(f"  {filename} — missing ({len(entries)} keys)")
+                continue
+
+            problems = []
+
+            # Keys in English but not in this locale file
+            with open(path) as f:
+                locale_keys = set(dict(flatten(json.load(f))).keys())
+            en_keys = {p for p, _ in entries}
+            missing_keys = en_keys - locale_keys
+            extra_keys = locale_keys - en_keys
+            if missing_keys:
+                problems.append(f"{len(missing_keys)} missing")
+            if extra_keys:
+                problems.append(f"{len(extra_keys)} obsolete")
+
+            # English value changed since last sync (via cache hashes)
+            changed, _ = diff_entries(entries, cache_key, cache)
+            stale_keys = {p for p, _ in changed} - missing_keys
+            if stale_keys:
+                problems.append(f"{len(stale_keys)} stale")
+
+            if problems:
+                issues.append(f"  {filename} — {', '.join(problems)}")
+
+    if not issues:
+        print("All translations are up to date.")
+        return
+
+    print("Translation issues found:\n")
+    for line in issues:
+        print(line)
+    print("\nRun to fix: python3 scripts/translate-locales.py sync")
+    sys.exit(1)
+
+
 # ── Main ───────────────────────────────────────────────────────────
 
 def main():
@@ -378,6 +437,9 @@ def main():
         langs = args[1:] if len(args) > 1 else ALL_LANGS
     elif args[0] == "sync":
         mode = "sync"
+        langs = args[1:] if len(args) > 1 else ALL_LANGS
+    elif args[0] == "check":
+        mode = "check"
         langs = args[1:] if len(args) > 1 else ALL_LANGS
     else:
         # Treat all args as language codes → sync mode (respects cache)
@@ -392,12 +454,18 @@ def main():
             print(f"Valid: {', '.join(ALL_LANGS)}")
             sys.exit(1)
 
+    # Check mode — no API key needed
+    if mode == "check":
+        check_translations(langs)
+        return
+
     # Check API key
     if not os.environ.get("ANTHROPIC_API_KEY"):
         print("ANTHROPIC_API_KEY not set.")
         print("Copy .env.example to .env, add your key, then: source .env")
         sys.exit(1)
 
+    import anthropic
     client = anthropic.Anthropic()
     cache = load_cache()
 
