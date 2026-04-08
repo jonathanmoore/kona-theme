@@ -1,56 +1,21 @@
 # Architecture Overview
 
-Kona is a Vite-powered Shopify OS 2.0 theme built on an **islands architecture** inspired by [Astro](https://astro.build). The core idea: Liquid renders complete HTML on the server, and only the interactive parts of the page receive JavaScript through selective hydration.
+Kona has three layers: Liquid renders the page, Vite builds the assets, and islands hydrate the interactive parts. Everything else is static HTML — no framework owns the page.
 
-## The Three Layers
+## The three layers
 
-### 1. Server Rendering (Liquid)
+**Server rendering (Liquid)** — Shopify renders every page to complete HTML before any JavaScript executes. Pages are fast and functional with JS disabled.
 
-Shopify's Liquid templating engine renders every page to full HTML on the server. The browser receives a complete document -- text, images, layout -- before any JavaScript executes. This means pages are fast and functional even with JS disabled.
+**Build pipeline (Vite)** — Vite compiles frontend source (`theme/frontend/`) into production assets (`theme/assets/`). In development, Vite serves assets with HMR. In production, built files ship from the Shopify CDN. Five plugins coordinate the integration.
 
-### 2. Build Pipeline (Vite)
+**Client hydration (Islands)** — Interactive components are Web Components that hydrate on the client. The revive runtime scans the DOM for custom elements, matches them to island files, and loads them based on [hydration directives](./hydration-directives) that control _when_ each component's JavaScript loads.
 
-Vite compiles frontend source code (`theme/frontend/`) into production assets (`theme/assets/`). In development, Vite serves assets with hot module replacement at `localhost:5173`. In production, built files are served from the Shopify CDN. Five Vite plugins coordinate the integration between Vite and Shopify.
-
-### 3. Client Hydration (Islands)
-
-Interactive components are implemented as Web Components (custom elements) that hydrate on the client. The hydration runtime from `vite-plugin-shopify-theme-islands` scans the DOM for custom elements, matches them to island files, and loads them based on **hydration directives** that control _when_ each component's JavaScript is fetched.
-
-## Request Lifecycle
-
-```mermaid
-flowchart TD
-    A[Browser Request] --> B[Shopify CDN / Storefront]
-    B --> C[Liquid Rendering]
-    C --> D[Full HTML Response]
-    D --> E[Browser Paints Page]
-    E --> F["theme.js loads revive runtime"]
-    F --> G["revive scans DOM for custom elements"]
-    G --> H{"Hydration directive?"}
-    H -->|client:idle| I["requestIdleCallback"]
-    H -->|client:visible| J["IntersectionObserver"]
-    H -->|client:media| K["matchMedia"]
-    H -->|client:defer| L["setTimeout"]
-    H -->|client:interaction| M["mouseenter / touchstart / focusin"]
-    I --> N["Dynamic import island JS"]
-    J --> N
-    K --> N
-    L --> N
-    M --> N
-    N --> O["customElements.define"]
-    O --> P[Web Component Hydrates]
-    P --> Q["MutationObserver discovers nested islands"]
-    Q --> G
-```
-
-## How the Pieces Connect
+## How the pieces connect
 
 The layout file `theme/layout/theme.liquid` loads two entry points via auto-generated snippets:
 
-- **`theme.css`** -- Tailwind CSS v4 with the full design system
-- **`theme.js`** -- Imports the revive runtime and accessibility utilities
-
-In development, the `vite-tag` snippet points `<script>` and `<link>` tags to the Vite dev server (`localhost:5173`). In production, it references hashed URLs from Vite's build manifest, served by the Shopify CDN.
+- **`theme.css`** — Tailwind CSS v4 with the full design system
+- **`theme.js`** — Imports the revive runtime and accessibility utilities
 
 Sections and snippets render custom elements with hydration directives:
 
@@ -62,17 +27,15 @@ Sections and snippets render custom elements with hydration directives:
 </header-drawer>
 ```
 
-The revive runtime sees `<header-drawer>`, finds a matching file at `theme/frontend/islands/header-drawer.js`, checks the `client:media` directive, and dynamically imports the island when the media query matches.
+The revive runtime sees `<header-drawer>`, finds `theme/frontend/islands/header-drawer.js`, checks the `client:media` directive, and dynamically imports the island when the media query matches.
 
-## Zero Runtime Dependencies
+All npm packages are devDependencies. No third-party JavaScript ships to the browser — every interactive component is a vanilla Web Component using platform APIs.
 
-Every dependency in `package.json` is a `devDependency`. No npm packages ship to the browser. All interactivity is vanilla Web Components using platform APIs: `customElements.define`, `IntersectionObserver`, `AbortController`, `CustomEvent`, and standard DOM methods.
+## Deep dives
 
-## Architecture Deep Dives
-
-| Page | What It Covers |
+| Page | What it covers |
 |------|---------------|
-| [Islands Architecture](./islands) | How partial hydration works, the revive runtime, progressive enhancement, nested islands |
-| [Hydration Directives](./hydration-directives) | The 5 directives that control when islands load, with usage guidance |
-| [Build Pipeline](./build-pipeline) | Vite config, the 5 plugins, dev vs. production modes, import maps |
-| [Project Layout](./project-layout) | Directory structure, file organization, auto-generated files |
+| [Islands Architecture](./islands) | Partial hydration, the revive runtime, progressive enhancement, nested islands |
+| [Hydration Directives](./hydration-directives) | The 5 directives that control when islands load |
+| [Build Pipeline](./build-pipeline) | Vite config, the 5 plugins, dev vs. production modes |
+| [Project Layout](./project-layout) | Directory structure and file organization |

@@ -1,123 +1,51 @@
 # PR Previews
 
-Every pull request targeting `main` gets its own unpublished preview theme on the Shopify store. Two workflows manage the lifecycle: `pr-preview.yml` creates and updates the theme, `pr-preview-cleanup.yml` deletes it when the PR closes.
+Every PR targeting `main` gets its own unpublished preview theme. `pr-preview.yml` creates/updates it, `pr-preview-cleanup.yml` deletes it when the PR closes.
 
-## How it works
-
-```
-PR opened/updated → build theme → find or create preview theme → push to Shopify → comment on PR
-PR closed         → find preview theme by PR number → delete from store
-```
-
-## Theme naming convention
-
-Preview themes are named using the pattern:
+## Lifecycle
 
 ```
-PR #<number> - <branch-name>
+PR opened/updated → build → find or create preview theme → push → comment on PR
+PR closed         → find theme by PR number → delete
 ```
 
-For example, a PR numbered 42 from branch `feature/cart-upsell` creates a theme named `PR #42 - feature/cart-upsell`.
+## Theme naming
 
-The PR number prefix is the stable identifier. When the workflow searches for an existing preview theme, it matches on `PR #<number> ` (with a trailing space) rather than the full name. This means renaming the branch mid-PR does not create a duplicate theme.
+Preview themes are named `PR #<number> - <branch-name>`. The workflow searches by `PR #<number> ` (with trailing space), so renaming the branch mid-PR doesn't create a duplicate.
 
-## Build and push cycle
+## Build and push
 
-The preview workflow runs the same build steps as the production deploy:
+Same build as production deploy (checkout, install, build, remove `.vite`). Then:
 
-1. Checkout, install pnpm, Node, and dependencies
-2. Install Shopify CLI globally
-3. `pnpm run build` -- compile JS/CSS into `theme/assets/`
-4. Remove `theme/assets/.vite` -- strip the Vite manifest directory
+```bash
+# Search for existing theme
+EXISTING=$(shopify theme list --json \
+  | jq -r --arg pr "PR #${PR_NUMBER} " \
+    '.[] | select(.name | startswith($pr)) | .id' \
+  | head -1)
 
-After building, the workflow searches for an existing preview theme and either updates it or creates a new one:
-
-```yaml
-- name: Find or create preview theme
-  id: theme
-  run: |
-    THEME_NAME="PR #${PR_NUMBER} - ${BRANCH_NAME}"
-
-    # Search for existing theme by PR number prefix
-    EXISTING=$(shopify theme list --json \
-      | jq -r --arg pr "PR #${PR_NUMBER} " \
-        '.[] | select(.name | startswith($pr)) | .id' \
-      | head -1)
-
-    if [ -n "$EXISTING" ]; then
-      echo "Found existing theme: $EXISTING"
-      shopify theme push --theme "$EXISTING" --path theme
-      THEME_ID="$EXISTING"
-    else
-      echo "Creating new preview theme..."
-      shopify theme push --unpublished --theme "$THEME_NAME" --path theme
-      THEME_ID=$(shopify theme list --json \
-        | jq -r --arg name "$THEME_NAME" \
-          '.[] | select(.name == $name) | .id' \
-        | head -1)
-    fi
-    echo "theme_id=$THEME_ID" >> "$GITHUB_OUTPUT"
-    echo "theme_name=$THEME_NAME" >> "$GITHUB_OUTPUT"
+if [ -n "$EXISTING" ]; then
+  shopify theme push --theme "$EXISTING" --path theme
+else
+  shopify theme push --unpublished --theme "$THEME_NAME" --path theme
+fi
 ```
 
-Key details:
-- `shopify theme push --unpublished` creates a new theme without affecting the published one
-- On subsequent pushes, `shopify theme push --theme "$EXISTING"` updates the existing preview in place
-- The theme ID and name are passed to the next step via `$GITHUB_OUTPUT`
+- `--unpublished` creates a new theme without affecting the published one
+- Subsequent pushes update the existing preview in place
 
-## PR comment with preview links
+## PR comment
 
-After deploying, the workflow posts a comment on the PR with two links:
+After deploying, the workflow posts a comment with two links:
 
 | Link | URL pattern |
 |------|-------------|
 | **Preview** | `https://<store>/?preview_theme_id=<theme_id>` |
-| **Editor** | `https://admin.shopify.com/store/<store_handle>/themes/<theme_id>/editor` |
+| **Editor** | `https://admin.shopify.com/store/<handle>/themes/<theme_id>/editor` |
 
-The preview link appends `?preview_theme_id=` to the storefront URL, which tells Shopify to render the unpublished theme instead of the published one. The editor link opens the theme in the Shopify admin's visual editor.
+An HTML marker (`<!-- shopify-preview-comment -->`) identifies the comment. Subsequent pushes update the same comment instead of creating duplicates. Uses `actions/github-script@v7`.
 
-### Updating existing comments
-
-The workflow uses an HTML marker to avoid creating duplicate comments on subsequent pushes:
-
-```javascript
-const marker = '<!-- shopify-preview-comment -->';
-```
-
-On each run, it:
-
-1. Lists all comments on the PR
-2. Searches for one containing the marker string
-3. If found, updates that comment with the new theme ID and links
-4. If not found, creates a new comment
-
-This keeps the PR thread clean -- a single comment is updated in place rather than posting a new one for every push:
-
-```javascript
-const existing = comments.find(c => c.body.includes(marker));
-
-if (existing) {
-  await github.rest.issues.updateComment({
-    owner: context.repo.owner,
-    repo: context.repo.repo,
-    comment_id: existing.id,
-    body,
-  });
-} else {
-  await github.rest.issues.createComment({
-    owner: context.repo.owner,
-    repo: context.repo.repo,
-    issue_number: context.issue.number,
-    body,
-  });
-}
-```
-
-The workflow uses `actions/github-script@v7` to run this logic directly in the workflow YAML, avoiding the need for a separate script file.
-
-## Concurrency handling
-
-Multiple pushes to the same PR branch can trigger overlapping workflow runs. The workflow uses GitHub Actions concurrency groups to cancel previous runs:
+## Concurrency
 
 ```yaml
 concurrency:
@@ -125,64 +53,29 @@ concurrency:
   cancel-in-progress: true
 ```
 
-The concurrency group is keyed by PR number, so:
-- Push A triggers a run, push B triggers another -- run A is cancelled
-- Different PRs run independently (each has its own group)
-- Only the most recent push deploys to the preview theme
+Push A triggers a run, push B cancels it. Different PRs run independently.
 
-## Cleanup on PR close
+## Cleanup
 
-When a PR is closed (merged or discarded), `pr-preview-cleanup.yml` fires:
+When a PR closes, `pr-preview-cleanup.yml` searches for the theme and deletes it with `--force`. No checkout or build — just Node (for Shopify CLI) and store credentials. If the theme was already deleted manually, it skips silently.
 
-```yaml
-on:
-  pull_request:
-    branches:
-      - main
-    types: [closed]
-```
-
-The cleanup workflow:
-
-1. Installs Node and Shopify CLI (no checkout or build needed)
-2. Searches for a theme whose name starts with `PR #<number> `
-3. Deletes it with `shopify theme delete --theme "$EXISTING" --force`
-4. If no matching theme is found (e.g., already deleted manually), logs a message and exits cleanly
-
-```yaml
-- name: Delete preview theme
-  run: |
-    EXISTING=$(shopify theme list --json \
-      | jq -r --arg pr "PR #${PR_NUMBER} " \
-        '.[] | select(.name | startswith($pr)) | .id' \
-      | head -1)
-
-    if [ -n "$EXISTING" ]; then
-      echo "Deleting theme $EXISTING..."
-      shopify theme delete --theme "$EXISTING" --force
-    else
-      echo "No preview theme found for PR #${PR_NUMBER}, skipping."
-    fi
-```
-
-::: tip
-The cleanup workflow does not check out the repo or build the theme. It only needs Node (to run the Shopify CLI) and the store credentials.
-:::
-
-## Required permissions
-
-The preview workflow requires two GitHub token permissions:
+## Permissions
 
 ```yaml
 permissions:
-  contents: read        # Checkout the repo
-  pull-requests: write  # Post and update comments
+  contents: read
+  pull-requests: write
 ```
 
-Both workflows require the `SHOPIFY_CLI_THEME_TOKEN` secret and `STORE` variable. The cleanup workflow sets `SHOPIFY_FLAG_STORE` as an environment variable so the Shopify CLI picks it up automatically without the `--store` flag.
+Both workflows need `SHOPIFY_CLI_THEME_TOKEN` and `STORE`.
 
 ## Limitations
 
-- Preview themes are unpublished and only accessible via the `?preview_theme_id=` URL parameter or the theme editor. They are not visible to customers.
-- Each preview theme counts toward the store's theme limit (typically 20 themes for non-Plus stores). Clean up regularly or rely on the automatic cleanup.
-- The preview does not pull merchant customizations like the deploy workflow does. Templates and sections reflect the code in the PR branch, not the live theme's customizations.
+- Preview themes are only accessible via `?preview_theme_id=` or the theme editor — not visible to customers
+- Each counts toward the store's theme limit (typically 20 for non-Plus stores)
+- Previews don't pull merchant customizations — they reflect the PR branch code, not the live theme's settings
+
+## Next steps
+
+- [Workflows](./workflows) — All five workflows in detail
+- [Deployment](/getting-started/deployment) — Production deploy process
