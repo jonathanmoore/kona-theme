@@ -3,8 +3,8 @@
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["frontend/*"],
-      "~/*": ["frontend/*"]
+      "@/*": ["theme/frontend/*"],
+      "~/*": ["theme/frontend/*"]
     }
   }
 }

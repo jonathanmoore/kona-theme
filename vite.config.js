@@ -11,17 +11,22 @@ import cleanup from '@driver-digital/vite-plugin-shopify-clean'
 export default defineConfig({
   plugins: [
     shopifyThemeIslands({
-      directories: ['/frontend/islands/']
+      directories: ['/theme/frontend/islands/']
     }),
-    shopify({ versionNumbers: true }),
+    shopify({
+      versionNumbers: true,
+      themeRoot: './theme',
+      sourceCodeDir: 'theme/frontend'
+    }),
     importMaps({
+      themeRoot: './theme',
       bareModules: {
         defaultGroup: '@theme',
         groups: {}
       },
       modulePreload: true
     }),
-    cleanup(),
+    cleanup({ themeRoot: './theme' }),
     tailwindcss()
   ],
   build: {

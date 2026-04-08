@@ -28,7 +28,7 @@ import anthropic
 
 # ── Config ──────────────────────────────────────────────────────────
 
-LOCALES_DIR = "locales"
+LOCALES_DIR = "theme/locales"
 EN_STOREFRONT = os.path.join(LOCALES_DIR, "en.default.json")
 EN_SCHEMA = os.path.join(LOCALES_DIR, "en.default.schema.json")
 CACHE_FILE = os.path.join(LOCALES_DIR, ".translation-cache.json")

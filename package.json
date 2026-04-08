@@ -5,9 +5,9 @@
   "version": "0.0.0",
   "packageManager": "pnpm@10.33.0",
   "scripts": {
-    "dev": "concurrently -r -k -P 'shopify theme dev {@}' 'vite'",
+    "dev": "concurrently -r -k -P 'shopify theme dev --path theme {@}' 'vite'",
     "build": "vite build",
-    "deploy": "pnpm run build && shopify theme push",
+    "deploy": "pnpm run build && shopify theme push --path theme",
     "lint": "eslint .",
     "format": "prettier --write --cache .",
     "format-check": "prettier --check ."

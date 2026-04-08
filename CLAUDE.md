@@ -11,23 +11,35 @@ A Vite-powered Shopify OS 2.0 theme with an Astro-inspired islands architecture 
 ```bash
 pnpm install                          # Install dependencies
 pnpm dev -- --store <store-name>      # Run Shopify + Vite dev servers in parallel
-pnpm run build                        # Build frontend assets to /assets
+pnpm run build                        # Build frontend assets to theme/assets
 pnpm run deploy                       # Build + push theme to Shopify
 pnpm run lint                         # ESLint
 pnpm run format                       # Prettier (Liquid + JS + CSS)
 ```
 
-Dev runs two servers concurrently: `shopify theme dev` (proxies the store) and `vite` (serves frontend assets with HMR at localhost:5173).
+Dev runs two servers concurrently: `shopify theme dev --path theme` (proxies the store) and `vite` (serves frontend assets with HMR at localhost:5173).
 
 ## Architecture
+
+### Project Layout
+
+Theme source files live in `theme/` to separate them from build tooling:
+
+```
+theme/           → Shopify theme (assets, blocks, config, layout, locales, sections, snippets, templates, frontend)
+scripts/         → Build/utility scripts
+docs/            → Documentation
+vite.config.js   → Vite config (references theme/ via themeRoot)
+package.json     → Dependencies and scripts
+```
 
 ### Islands Hydration System
 
 The core pattern: Liquid renders HTML server-side, interactive components hydrate client-side via Web Components.
 
-- **`frontend/lib/revive.js`** — Hydration runtime. Uses `import.meta.glob()` to map all `frontend/islands/*.js` files. Scans the DOM for custom elements with kebab-case names matching island files, then loads them based on hydration directives.
-- **`frontend/islands/*.js`** — Each file defines one custom element (extends `HTMLElement`, registered with `customElements.define`). These are dynamically imported by revive.js.
-- **`frontend/entrypoints/theme.js`** — Main entry point, imports revive and accessibility utilities.
+- **`theme/frontend/lib/revive.js`** — Hydration runtime. Uses `import.meta.glob()` to map all `theme/frontend/islands/*.js` files. Scans the DOM for custom elements with kebab-case names matching island files, then loads them based on hydration directives.
+- **`theme/frontend/islands/*.js`** — Each file defines one custom element (extends `HTMLElement`, registered with `customElements.define`). These are dynamically imported by revive.js.
+- **`theme/frontend/entrypoints/theme.js`** — Main entry point, imports revive and accessibility utilities.
 
 Three hydration directives (set as HTML attributes in Liquid templates):
 - `client:idle` — Load when main thread is free (`requestIdleCallback`)
@@ -46,17 +58,17 @@ Layout (theme.liquid)
   → revive.js dynamically imports matching island JS
 ```
 
-`snippets/vite-tag.liquid` and `snippets/importmap.liquid` are **auto-generated** by vite-plugin-shopify — don't edit them manually.
+`theme/snippets/vite-tag.liquid` and `theme/snippets/importmap.liquid` are **auto-generated** by vite-plugin-shopify — don't edit them manually.
 
 ### CSS
 
-Tailwind CSS v4 via `@tailwindcss/vite` plugin (no tailwind.config.js). Design system defined in `frontend/styles/theme.css` using `@theme` directive with CSS custom properties. CSS layers: base → components → utilities, all imported from `frontend/entrypoints/theme.css`.
+Tailwind CSS v4 via `@tailwindcss/vite` plugin (no tailwind.config.js). Design system defined in `theme/frontend/styles/theme.css` using `@theme` directive with CSS custom properties. CSS layers: base → components → utilities, all imported from `theme/frontend/entrypoints/theme.css`.
 
 The theme uses CSS variables set in Liquid (from Shopify theme settings) that feed into Tailwind's `@theme` block, bridging Shopify's theme editor with Tailwind's utility system.
 
 ### Path Aliases
 
-`@/` and `~/` both resolve to `frontend/` (configured in jsconfig.json and handled by Vite).
+`@/` and `~/` both resolve to `theme/frontend/` (configured in jsconfig.json and handled by Vite via `sourceCodeDir`).
 
 ### Component Inheritance
 
@@ -64,11 +76,11 @@ The theme uses CSS variables set in Liquid (from Shopify theme settings) that fe
 
 ### Key Files
 
-- `frontend/lib/revive.js` — Island hydration framework
-- `frontend/lib/a11y.js` — Focus trap and accessibility utilities
-- `frontend/lib/utils.js` — Shared helpers (debounce, fetchConfig)
-- `frontend/styles/theme.css` — Tailwind @theme design tokens
-- `layout/theme.liquid` — Main layout, loads all entry points
+- `theme/frontend/lib/revive.js` — Island hydration framework
+- `theme/frontend/lib/a11y.js` — Focus trap and accessibility utilities
+- `theme/frontend/lib/utils.js` — Shared helpers (debounce, fetchConfig)
+- `theme/frontend/styles/theme.css` — Tailwind @theme design tokens
+- `theme/layout/theme.liquid` — Main layout, loads all entry points
 - `vite.config.js` — Vite plugins: shopify, import-maps, cleanup, tailwindcss
 
 ## Conventions
@@ -76,5 +88,5 @@ The theme uses CSS variables set in Liquid (from Shopify theme settings) that fe
 - Islands are pure Web Components — no frameworks. Keep them small and focused.
 - Prettier handles both Liquid and JS with different configs per file type (see prettier.config.js).
 - All dependencies are devDependencies. No runtime npm packages ship to the browser.
-- Built assets go to `/assets` with `emptyOutDir: false` (Shopify needs other files in /assets to persist).
+- Built assets go to `theme/assets` with `emptyOutDir: false` (Shopify needs other files in /assets to persist).
 - Build output uses flat filenames (no hashes): `[name].js`, `[name].[ext]`.

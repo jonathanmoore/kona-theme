@@ -12,8 +12,8 @@ Incremental mode tracks content hashes so unchanged keys are never re-translated
 
 ## Source Files
 
-- `locales/en.default.json` — Storefront-facing strings (customer sees these)
-- `locales/en.default.schema.json` — Theme editor strings (merchant sees these in Shopify admin)
+- `theme/locales/en.default.json` — Storefront-facing strings (customer sees these)
+- `theme/locales/en.default.schema.json` — Theme editor strings (merchant sees these in Shopify admin)
 
 ## Target Languages (30)
 
@@ -52,11 +52,11 @@ set -a && source .env && set +a && python3 scripts/translate-locales.py ...
    set -a && source .env && set +a && python3 scripts/translate-locales.py full fr de ja
    ```
 3. The script handles concurrency (3 workers), retries, and validation
-4. After completion, a cache file (`locales/.translation-cache.json`) is saved for future `sync` runs
+4. After completion, a cache file (`theme/locales/.translation-cache.json`) is saved for future `sync` runs
 
 ### `sync` — Update existing translations after English changes
 
-Only translates new/changed keys. Uses content hashes stored in `locales/.translation-cache.json` to detect what changed. Typically saves 80-90% of API costs compared to `full`.
+Only translates new/changed keys. Uses content hashes stored in `theme/locales/.translation-cache.json` to detect what changed. Typically saves 80-90% of API costs compared to `full`.
 
 ```bash
 set -a && source .env && set +a && python3 scripts/translate-locales.py sync
@@ -91,7 +91,7 @@ Use this for developer-only demo sections, documentation pages, or any file wher
 
 **1. Template markup — hardcoded text in HTML**
 
-Scan all `.liquid` files in `sections/`, `blocks/`, `snippets/`, and `layout/` for English text outside of Liquid tags. **Skip** any file containing the `theme-translator:skip` comment. Look for:
+Scan all `.liquid` files in `theme/sections/`, `theme/blocks/`, `theme/snippets/`, and `theme/layout/` for English text outside of Liquid tags. **Skip** any file containing the `theme-translator:skip` comment. Look for:
 
 - Text content between HTML tags: `<h2>Welcome</h2>` → should be `<h2>{{ 'sections.hero.heading' | t }}</h2>`
 - Text in attributes that users see: `aria-label="Close menu"`, `title="Search"`, `placeholder="Enter email"`
@@ -156,8 +156,8 @@ Preset block setting values (inside `presets[].blocks[].settings` or `presets[].
    | sections/header.liquid | schema.name | "Header" | t:sections.header.name | schema |
    ```
 4. **Extract** — After user confirms (or immediately if running as part of `full`):
-   - Add new keys + English values to `locales/en.default.json` (template strings)
-   - Add new keys + English values to `locales/en.default.schema.json` (schema strings)
+   - Add new keys + English values to `theme/locales/en.default.json` (template strings)
+   - Add new keys + English values to `theme/locales/en.default.schema.json` (schema strings)
    - Replace hardcoded text in `.liquid` files with `{{ 'key' | t }}` (template) or `"t:key"` (schema)
 5. **Validate** — Confirm the locale files are still valid JSON after additions
 
@@ -207,7 +207,7 @@ The script works directly in CI. Example workflow (`.github/workflows/translate.
 name: Translate locales
 on:
   push:
-    paths: ['locales/en.default*.json']
+    paths: ['theme/locales/en.default*.json']
     branches: [main]
 
 jobs:
@@ -235,7 +235,7 @@ After translation completes, the script validates each output file as valid JSON
 
 ```bash
 # Parse check all locale files
-for f in locales/*.json; do
+for f in theme/locales/*.json; do
   [[ "$f" == *"en.default"* || "$f" == *".translation-cache"* ]] && continue
   python3 -m json.tool "$f" > /dev/null 2>&1 && echo "OK: $f" || echo "INVALID: $f"
 done

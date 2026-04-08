@@ -1,0 +1,265 @@
+{
+  "_a11y.js": {
+    "file": "a11y.js",
+    "name": "a11y"
+  },
+  "_events.js": {
+    "file": "events.js",
+    "name": "events"
+  },
+  "_island-demo.js": {
+    "file": "island-demo.js",
+    "name": "island-demo"
+  },
+  "_utils.js": {
+    "file": "utils.js",
+    "name": "utils"
+  },
+  "theme/frontend/entrypoints/theme.css": {
+    "file": "theme.css",
+    "name": "theme",
+    "names": [
+      "theme.css"
+    ],
+    "src": "theme/frontend/entrypoints/theme.css",
+    "isEntry": true
+  },
+  "theme/frontend/entrypoints/theme.js": {
+    "file": "theme2.js",
+    "name": "theme",
+    "src": "theme/frontend/entrypoints/theme.js",
+    "isEntry": true,
+    "imports": [
+      "_a11y.js"
+    ],
+    "dynamicImports": [
+      "theme/frontend/islands/cart-drawer-items.js",
+      "theme/frontend/islands/cart-drawer.js",
+      "theme/frontend/islands/cart-items.js",
+      "theme/frontend/islands/cart-note.js",
+      "theme/frontend/islands/cart-remove-button.js",
+      "theme/frontend/islands/details-disclosure.js",
+      "theme/frontend/islands/details-modal.js",
+      "theme/frontend/islands/header-drawer.js",
+      "theme/frontend/islands/island-demo-child.js",
+      "theme/frontend/islands/island-demo-defer.js",
+      "theme/frontend/islands/island-demo-idle.js",
+      "theme/frontend/islands/island-demo-interaction.js",
+      "theme/frontend/islands/island-demo-media-mobile.js",
+      "theme/frontend/islands/island-demo-media.js",
+      "theme/frontend/islands/island-demo-parent.js",
+      "theme/frontend/islands/island-demo-visible.js",
+      "theme/frontend/islands/localization-form.js",
+      "theme/frontend/islands/password-modal.js",
+      "theme/frontend/islands/product-form.js",
+      "theme/frontend/islands/product-recommendations.js",
+      "theme/frontend/islands/quantity-input.js",
+      "theme/frontend/islands/sticky-header.js",
+      "theme/frontend/islands/variant-radios.js",
+      "theme/frontend/islands/variant-selects.js"
+    ]
+  },
+  "theme/frontend/islands/cart-drawer-items.js": {
+    "file": "cart-drawer-items.js",
+    "name": "cart-drawer-items",
+    "src": "theme/frontend/islands/cart-drawer-items.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "theme/frontend/islands/cart-items.js"
+    ]
+  },
+  "theme/frontend/islands/cart-drawer.js": {
+    "file": "cart-drawer.js",
+    "name": "cart-drawer",
+    "src": "theme/frontend/islands/cart-drawer.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_a11y.js",
+      "_events.js"
+    ]
+  },
+  "theme/frontend/islands/cart-items.js": {
+    "file": "cart-items.js",
+    "name": "cart-items",
+    "src": "theme/frontend/islands/cart-items.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_a11y.js",
+      "_events.js",
+      "_utils.js"
+    ]
+  },
+  "theme/frontend/islands/cart-note.js": {
+    "file": "cart-note.js",
+    "name": "cart-note",
+    "src": "theme/frontend/islands/cart-note.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_utils.js"
+    ]
+  },
+  "theme/frontend/islands/cart-remove-button.js": {
+    "file": "cart-remove-button.js",
+    "name": "cart-remove-button",
+    "src": "theme/frontend/islands/cart-remove-button.js",
+    "isDynamicEntry": true
+  },
+  "theme/frontend/islands/details-disclosure.js": {
+    "file": "details-disclosure.js",
+    "name": "details-disclosure",
+    "src": "theme/frontend/islands/details-disclosure.js",
+    "isDynamicEntry": true
+  },
+  "theme/frontend/islands/details-modal.js": {
+    "file": "details-modal.js",
+    "name": "details-modal",
+    "src": "theme/frontend/islands/details-modal.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_a11y.js"
+    ]
+  },
+  "theme/frontend/islands/header-drawer.js": {
+    "file": "header-drawer.js",
+    "name": "header-drawer",
+    "src": "theme/frontend/islands/header-drawer.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "theme/frontend/islands/details-modal.js",
+      "_a11y.js"
+    ]
+  },
+  "theme/frontend/islands/island-demo-child.js": {
+    "file": "island-demo-child.js",
+    "name": "island-demo-child",
+    "src": "theme/frontend/islands/island-demo-child.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_island-demo.js"
+    ]
+  },
+  "theme/frontend/islands/island-demo-defer.js": {
+    "file": "island-demo-defer.js",
+    "name": "island-demo-defer",
+    "src": "theme/frontend/islands/island-demo-defer.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_island-demo.js"
+    ]
+  },
+  "theme/frontend/islands/island-demo-idle.js": {
+    "file": "island-demo-idle.js",
+    "name": "island-demo-idle",
+    "src": "theme/frontend/islands/island-demo-idle.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_island-demo.js"
+    ]
+  },
+  "theme/frontend/islands/island-demo-interaction.js": {
+    "file": "island-demo-interaction.js",
+    "name": "island-demo-interaction",
+    "src": "theme/frontend/islands/island-demo-interaction.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_island-demo.js"
+    ]
+  },
+  "theme/frontend/islands/island-demo-media-mobile.js": {
+    "file": "island-demo-media-mobile.js",
+    "name": "island-demo-media-mobile",
+    "src": "theme/frontend/islands/island-demo-media-mobile.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_island-demo.js"
+    ]
+  },
+  "theme/frontend/islands/island-demo-media.js": {
+    "file": "island-demo-media.js",
+    "name": "island-demo-media",
+    "src": "theme/frontend/islands/island-demo-media.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_island-demo.js"
+    ]
+  },
+  "theme/frontend/islands/island-demo-parent.js": {
+    "file": "island-demo-parent.js",
+    "name": "island-demo-parent",
+    "src": "theme/frontend/islands/island-demo-parent.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_island-demo.js"
+    ]
+  },
+  "theme/frontend/islands/island-demo-visible.js": {
+    "file": "island-demo-visible.js",
+    "name": "island-demo-visible",
+    "src": "theme/frontend/islands/island-demo-visible.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_island-demo.js"
+    ]
+  },
+  "theme/frontend/islands/localization-form.js": {
+    "file": "localization-form.js",
+    "name": "localization-form",
+    "src": "theme/frontend/islands/localization-form.js",
+    "isDynamicEntry": true
+  },
+  "theme/frontend/islands/password-modal.js": {
+    "file": "password-modal.js",
+    "name": "password-modal",
+    "src": "theme/frontend/islands/password-modal.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "theme/frontend/islands/details-modal.js"
+    ]
+  },
+  "theme/frontend/islands/product-form.js": {
+    "file": "product-form.js",
+    "name": "product-form",
+    "src": "theme/frontend/islands/product-form.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_events.js",
+      "_utils.js"
+    ]
+  },
+  "theme/frontend/islands/product-recommendations.js": {
+    "file": "product-recommendations.js",
+    "name": "product-recommendations",
+    "src": "theme/frontend/islands/product-recommendations.js",
+    "isDynamicEntry": true
+  },
+  "theme/frontend/islands/quantity-input.js": {
+    "file": "quantity-input.js",
+    "name": "quantity-input",
+    "src": "theme/frontend/islands/quantity-input.js",
+    "isDynamicEntry": true
+  },
+  "theme/frontend/islands/sticky-header.js": {
+    "file": "sticky-header.js",
+    "name": "sticky-header",
+    "src": "theme/frontend/islands/sticky-header.js",
+    "isDynamicEntry": true
+  },
+  "theme/frontend/islands/variant-radios.js": {
+    "file": "variant-radios.js",
+    "name": "variant-radios",
+    "src": "theme/frontend/islands/variant-radios.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "theme/frontend/islands/variant-selects.js"
+    ]
+  },
+  "theme/frontend/islands/variant-selects.js": {
+    "file": "variant-selects.js",
+    "name": "variant-selects",
+    "src": "theme/frontend/islands/variant-selects.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_events.js"
+    ]
+  }
+}
