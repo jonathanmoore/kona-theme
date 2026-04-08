@@ -59,3 +59,7 @@ theme/snippets/importmap.liquid
 
 # Theme zip files
 *.zip
+
+# VitePress
+docs/.vitepress/dist
+docs/.vitepress/cache
