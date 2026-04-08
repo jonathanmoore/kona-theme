@@ -3,11 +3,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Kona Theme',
   description: 'A Vite-powered Shopify OS 2.0 theme with islands architecture',
-  base: '/kona-theme/',
+  base: '/',
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', href: '/kona-theme/favicon.svg' }],
+    ['link', { rel: 'icon', href: '/favicon.svg' }],
   ],
 
   themeConfig: {
