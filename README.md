@@ -4,57 +4,42 @@
 
 A Vite-powered Shopify OS 2.0 theme with an Astro-inspired islands architecture. Zero runtime JS dependencies — all interactivity is vanilla Web Components.
 
-## 🔨 Requirements
+**[View Documentation](https://jonathanmoore.github.io/kona-theme/)**
 
-- [Node.js (latest LTS version)](https://nodejs.org/en/)
-- [pnpm](https://pnpm.io/)
-- [Shopify CLI](https://shopify.dev/themes/tools/cli)
-
-## 🚀 Project Structure
-
-This theme leverages the [default Shopify theme folder structure](https://shopify.dev/themes/tools/github#repository-structure) and introduces the following directories, some of which have special behaviors.
+## Quick Start
 
 ```bash
-└── kona-theme
-    └── frontend
-        ├── entrypoints
-        ├── islands
-        ├── lib
-        └── styles
+pnpm install
+pnpm dev -- --store your-store-name
 ```
 
-| Subdirectory  | Description                           |
-| :------------ | :------------------------------------ |
-| `entrypoints` | The entry points for your theme       |
-| `islands`     | The interactive islands in your theme |
-| `lib`         | Theme specific libraries              |
-| `styles`      | The styles of your theme              |
+## Key Features
 
-## 🧞 Commands
+- **Islands Architecture** — Liquid renders server-side, Web Components hydrate client-side with `client:idle`, `client:visible`, and `client:media` directives
+- **Vite Build Pipeline** — HMR in development, optimized production builds with five custom plugins
+- **Tailwind CSS v4** — Utility-first styling with `@theme` design tokens bridged to Shopify's theme editor
+- **30-Language i18n** — Automated translation pipeline with content hashing for incremental updates
+- **CI/CD Workflows** — GitHub Actions for linting, theme checks, PR previews, and deployment
+- **Claude Code Skills** — Five built-in skills for Liquid reference, accessibility, standards, component creation, and translations
 
-| Command                             | Action                                                                  |
-| :---------------------------------- | :---------------------------------------------------------------------- |
-| `pnpm install`                      | Installs dependencies                                                   |
-| `pnpm dev -- --store johns-apparel` | Launch the Shopify and Vite servers in parallel                         |
-| `pnpm run deploy`                   | Bundle your theme's assets and upload your local theme files to Shopify |
+## Documentation
 
-## 🏝️ Hydration Directives
+Full documentation is available at **[jonathanmoore.github.io/kona-theme](https://jonathanmoore.github.io/kona-theme/)** covering:
 
-The following hydration strategies are available (borrowed from [Astro](https://docs.astro.build/en/concepts/islands/)).
+- [Getting Started](https://jonathanmoore.github.io/kona-theme/getting-started/) — Installation, development, deployment
+- [Architecture](https://jonathanmoore.github.io/kona-theme/architecture/) — Islands, hydration, build pipeline, project layout
+- [CSS](https://jonathanmoore.github.io/kona-theme/css/) — Design tokens, Shopify integration
+- [JavaScript](https://jonathanmoore.github.io/kona-theme/javascript/) — Creating islands, events, lifecycle, utilities
+- [Shopify](https://jonathanmoore.github.io/kona-theme/shopify/) — Sections, blocks, Liquid patterns, templates, icons
+- [Internationalization](https://jonathanmoore.github.io/kona-theme/i18n/) — Translation pipeline
+- [CI/CD](https://jonathanmoore.github.io/kona-theme/ci-cd/) — Workflows, PR previews, GitHub Pages
+- [Standards](https://jonathanmoore.github.io/kona-theme/standards/) — JavaScript, CSS, accessibility, compliance audit
 
-| Directive        | Description                                                                                                                                       |
-| :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `client:idle`    | Hydrate the component as soon as the main thread is [free](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback)           |
-| `client:visible` | Hydrates the component as soon as the element [enters the viewport](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)   |
-| `client:media`   | Hydrates the component as soon as the browser [matches the given media query](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) |
+## Author
 
-Usage:
+[Jonathan Moore](https://jonathanmoore.com) · [@moore](https://x.com/moore)
 
-```html
-<my-component client:visible>This is an island.</my-component>
-```
-
-## 🙇‍♂️ Thanks
+## Thanks
 
 Kona builds on the work of several excellent projects:
 

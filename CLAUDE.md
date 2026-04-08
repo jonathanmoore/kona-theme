@@ -15,6 +15,8 @@ pnpm run build                        # Build frontend assets to theme/assets
 pnpm run deploy                       # Build + push theme to Shopify
 pnpm run lint                         # ESLint
 pnpm run format                       # Prettier (Liquid + JS + CSS)
+pnpm docs:dev                         # Run docs site locally (VitePress)
+pnpm docs:build                       # Build docs site
 ```
 
 Dev runs two servers concurrently: `shopify theme dev --path theme` (proxies the store) and `vite` (serves frontend assets with HMR at localhost:5173).
@@ -23,12 +25,10 @@ Dev runs two servers concurrently: `shopify theme dev --path theme` (proxies the
 
 ### Project Layout
 
-Theme source files live in `theme/` to separate them from build tooling:
-
 ```
 theme/           → Shopify theme (assets, blocks, config, layout, locales, sections, snippets, templates, frontend)
 scripts/         → Build/utility scripts
-docs/            → Documentation
+docs/            → VitePress documentation site (10 sections, 40 pages)
 vite.config.js   → Vite config (references theme/ via themeRoot)
 package.json     → Dependencies and scripts
 ```
@@ -90,3 +90,7 @@ The theme uses CSS variables set in Liquid (from Shopify theme settings) that fe
 - All dependencies are devDependencies. No runtime npm packages ship to the browser.
 - Built assets go to `theme/assets` with `emptyOutDir: false` (Shopify needs other files in /assets to persist).
 - Build output uses flat filenames (no hashes): `[name].js`, `[name].[ext]`.
+
+## Documentation
+
+Full docs live in `docs/` as a VitePress site. Run `pnpm docs:dev` to browse locally. Covers architecture, CSS, JavaScript, Shopify patterns, i18n, CI/CD, coding standards, and Claude Code skills.
