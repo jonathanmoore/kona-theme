@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Daftar koleksi",
+      "settings": {
+        "collection_list": {
+          "label": "Koleksi"
+        },
+        "columns_desktop": {
+          "label": "Jumlah kolom di desktop"
+        }
+      },
+      "presets": {
+        "name": "Daftar koleksi",
+        "blocks": {
+          "heading": {
+            "heading": "Koleksi"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Formulir Kontak",
+      "presets": {
+        "name": "Formulir Kontak"
+      }
+    },
+    "email_signup_banner": {
+      "name": "Banner pendaftaran email",
+      "presets": {
+        "name": "Banner pendaftaran email",
+        "blocks": {
+          "heading": {
+            "heading": "Segera dibuka"
+          },
+          "text": {
+            "text": "<p>Jadilah yang pertama tahu saat kami meluncurkan.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Koleksi unggulan",
+      "settings": {
+        "collection": {
+          "label": "Koleksi"
+        },
+        "products_to_show": {
+          "label": "Jumlah maksimal produk yang ditampilkan"
+        }
+      },
+      "presets": {
+        "name": "Koleksi unggulan",
+        "category": "Produk",
+        "blocks": {
+          "heading": {
+            "heading": "Koleksi unggulan"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Footer"
+    },
+    "header": {
+      "name": "Header",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Aktifkan header tetap",
+          "info": "Header ditampilkan di layar saat pelanggan menggulir ke atas."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Banner gambar",
+      "settings": {
+        "image": {
+          "label": "Gambar pertama"
+        },
+        "image_2": {
+          "label": "Gambar kedua"
+        },
+        "full_page_height_enable": {
+          "label": "Tinggi halaman penuh"
+        }
+      },
+      "presets": {
+        "name": "Banner gambar",
+        "category": "Banner",
+        "blocks": {
+          "heading": {
+            "heading": "Banner gambar"
+          },
+          "text": {
+            "text": "<p><strong>Berikan detail kepada pelanggan tentang gambar banner atau konten pada template.</strong></p>"
+          },
+          "button": {
+            "button_label": "Belanja semua →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Postingan blog"
+    },
+    "main_cart": {
+      "name": "Halaman keranjang"
+    },
+    "main_list_collections": {
+      "name": "Halaman daftar koleksi"
+    },
+    "main_page": {
+      "name": "Halaman"
+    },
+    "main_password_footer": {
+      "name": "Footer password"
+    },
+    "main_password_header": {
+      "name": "Header password"
+    },
+    "main_product": {
+      "name": "Informasi produk"
+    },
+    "product_recommendations": {
+      "name": "Rekomendasi produk",
+      "settings": {
+        "paragraph": {
+          "content": "Rekomendasi dinamis menggunakan informasi pesanan dan produk untuk berubah dan meningkat seiring waktu. [Pelajari lebih lanjut](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Jumlah maksimal produk yang ditampilkan"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Demo islands",
+      "settings": {
+        "heading": {
+          "label": "Judul",
+          "default": "Demo Islands Architecture"
+        }
+      },
+      "presets": {
+        "name": "Demo islands"
+      }
+    },
+    "section": {
+      "name": "Bagian",
+      "settings": {
+        "header__layout": {
+          "content": "Tata letak"
+        },
+        "gap": {
+          "label": "Jarak"
+        },
+        "header__size": {
+          "content": "Ukuran"
+        },
+        "section_width": {
+          "label": "Lebar",
+          "options__page": {
+            "label": "Halaman"
+          },
+          "options__full": {
+            "label": "Penuh"
+          }
+        },
+        "header__padding": {
+          "content": "Padding"
+        },
+        "padding_block_start": {
+          "label": "Atas"
+        },
+        "padding_block_end": {
+          "label": "Bawah"
+        }
+      },
+      "presets": {
+        "name": "Bagian"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Pemilih negara",
+      "settings": {
+        "heading": {
+          "label": "Judul",
+          "info": "Judul diperlukan untuk menampilkan pemilih negara",
+          "default": "Negara"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Menu",
+      "settings": {
+        "heading": {
+          "label": "Judul",
+          "info": "Judul diperlukan untuk menampilkan menu",
+          "default": "Tautan cepat"
+        },
+        "menu": {
+          "label": "Menu",
+          "info": "Hanya menampilkan item menu tingkat atas"
+        }
+      },
+      "presets": {
+        "name": "Menu",
+        "category": "Footer"
+      }
+    },
+    "header_logo": {
+      "name": "Logo"
+    },
+    "header_menu_mobile": {
+      "name": "Menu mobile",
+      "settings": {
+        "menu": {
+          "label": "Navigasi utama"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Kartu artikel"
+    },
+    "article_content": {
+      "name": "Konten"
+    },
+    "button": {
+      "name": "Tombol",
+      "settings": {
+        "button_label": {
+          "label": "Label tombol",
+          "info": "Biarkan label kosong untuk menyembunyikan tombol.",
+          "default": "Label tombol"
+        },
+        "button_link": {
+          "label": "Tautan tombol"
+        },
+        "button_variant": {
+          "label": "Varian tombol",
+          "options__default": {
+            "label": "Default"
+          },
+          "options__link": {
+            "label": "Tautan"
+          }
+        },
+        "button_size": {
+          "label": "Ukuran tombol",
+          "options__default": {
+            "label": "Default"
+          },
+          "options__lg": {
+            "label": "Besar"
+          }
+        }
+      },
+      "presets": {
+        "name": "Tombol",
+        "category": "Dasar"
+      }
+    },
+    "buy_buttons": {
+      "name": "Tombol beli",
+      "settings": {
+        "product": {
+          "label": "Produk"
+        },
+        "show_dynamic_checkout": {
+          "label": "Tampilkan tombol checkout dinamis",
+          "info": "Menggunakan metode pembayaran yang tersedia di toko Anda, pelanggan melihat pilihan yang mereka sukai, seperti PayPal atau Apple Pay. [Pelajari lebih lanjut](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Tombol beli"
+      }
+    },
+    "collection_card": {
+      "name": "Kartu koleksi",
+      "settings": {
+        "collection": {
+          "label": "Koleksi"
+        }
+      },
+      "presets": {
+        "name": "Kartu koleksi"
+      }
+    },
+    "details": {
+      "name": "Detail"
+    },
+    "email_signup": {
+      "name": "Pendaftaran email",
+      "presets": {
+        "name": "Pendaftaran email"
+      }
+    },
+    "header_menu": {
+      "name": "Menu",
+      "settings": {
+        "menu": {
+          "label": "Navigasi utama"
+        }
+      }
+    },
+    "heading": {
+      "name": "Judul",
+      "settings": {
+        "heading": {
+          "label": "Judul",
+          "default": "Ceritakan tentang brand Anda"
+        },
+        "heading_size": {
+          "label": "Ukuran judul",
+          "options__default": {
+            "label": "Default"
+          },
+          "options__md": {
+            "label": "Sedang"
+          },
+          "options__lg": {
+            "label": "Besar"
+          },
+          "options__xl": {
+            "label": "Sangat besar"
+          }
+        },
+        "heading_level": {
+          "label": "Level judul",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Judul",
+        "category": "Dasar"
+      }
+    },
+    "image": {
+      "name": "Gambar",
+      "settings": {
+        "image": {
+          "label": "Gambar"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Konten halaman"
+    },
+    "price": {
+      "name": "Harga",
+      "settings": {
+        "product": {
+          "label": "Produk"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Kartu produk",
+      "settings": {
+        "product": {
+          "label": "Produk"
+        }
+      },
+      "presets": {
+        "name": "Kartu produk",
+        "category": "Produk"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Media produk"
+    },
+    "search_input": {
+      "name": "Input pencarian"
+    },
+    "tab": {
+      "name": "Tab",
+      "settings": {
+        "title": {
+          "label": "Judul",
+          "default": "Informasi pengiriman"
+        },
+        "content": {
+          "label": "Konten tab",
+          "default": "<p>Gunakan tab yang dapat dilipat untuk informasi lebih detail yang akan membantu pelanggan membuat keputusan pembelian.</p><p>Contoh: Kebijakan pengiriman dan pengembalian, panduan ukuran, dan pertanyaan umum lainnya.</p>"
+        },
+        "page": {
+          "label": "Konten tab dari halaman"
+        }
+      },
+      "presets": {
+        "name": "Tab"
+      }
+    },
+    "text": {
+      "name": "Teks",
+      "settings": {
+        "text": {
+          "label": "Deskripsi",
+          "default": "<p>Bagikan informasi tentang brand Anda dengan pelanggan Anda.</p>"
+        },
+        "text_size": {
+          "label": "Ukuran teks",
+          "options__default": {
+            "label": "Default"
+          },
+          "options__lg": {
+            "label": "Besar"
+          }
+        }
+      },
+      "presets": {
+        "name": "Teks",
+        "category": "Dasar"
+      }
+    },
+    "variant_picker": {
+      "name": "Pemilih varian",
+      "settings": {
+        "product": {
+          "label": "Produk"
+        },
+        "picker_type": {
+          "label": "Jenis",
+          "options__dropdown": {
+            "label": "Dropdown"
+          },
+          "options__button": {
+            "label": "Tombol"
+          }
+        }
+      },
+      "presets": {
+        "name": "Pemilih varian"
+      }
+    },
+    "product_details": {
+      "name": "Detail"
+    },
+    "cart_products": {
+      "name": "Produk keranjang"
+    }
+  }
+}

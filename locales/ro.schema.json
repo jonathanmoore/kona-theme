@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Lista de colecții",
+      "settings": {
+        "collection_list": {
+          "label": "Colecții"
+        },
+        "columns_desktop": {
+          "label": "Număr de coloane pe desktop"
+        }
+      },
+      "presets": {
+        "name": "Lista de colecții",
+        "blocks": {
+          "heading": {
+            "heading": "Colecții"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Formular de contact",
+      "presets": {
+        "name": "Formular de contact"
+      }
+    },
+    "email_signup_banner": {
+      "name": "Banner de înscriere email",
+      "presets": {
+        "name": "Banner de înscriere email",
+        "blocks": {
+          "heading": {
+            "heading": "Se deschide în curând"
+          },
+          "text": {
+            "text": "<p>Fiți primul care află când lansăm.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Colecție recomandată",
+      "settings": {
+        "collection": {
+          "label": "Colecție"
+        },
+        "products_to_show": {
+          "label": "Numărul maxim de produse de afișat"
+        }
+      },
+      "presets": {
+        "name": "Colecție recomandată",
+        "category": "Produse",
+        "blocks": {
+          "heading": {
+            "heading": "Colecție recomandată"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Subsol"
+    },
+    "header": {
+      "name": "Antet",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Activează antet fix",
+          "info": "Antetul se afișează pe ecran când clienții derulează în sus."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Banner imagine",
+      "settings": {
+        "image": {
+          "label": "Prima imagine"
+        },
+        "image_2": {
+          "label": "A doua imagine"
+        },
+        "full_page_height_enable": {
+          "label": "Înălțime pagină întreagă"
+        }
+      },
+      "presets": {
+        "name": "Banner imagine",
+        "category": "Bannere",
+        "blocks": {
+          "heading": {
+            "heading": "Banner imagine"
+          },
+          "text": {
+            "text": "<p><strong>Oferiți clienților detalii despre imaginea(ile) banner-ului sau conținutul din șablon.</strong></p>"
+          },
+          "button": {
+            "button_label": "Cumpără tot →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Articole blog"
+    },
+    "main_cart": {
+      "name": "Pagina Coș de cumpărături"
+    },
+    "main_list_collections": {
+      "name": "Pagina Listă de colecții"
+    },
+    "main_page": {
+      "name": "Pagină"
+    },
+    "main_password_footer": {
+      "name": "Subsol parolă"
+    },
+    "main_password_header": {
+      "name": "Antet parolă"
+    },
+    "main_product": {
+      "name": "Informații produs"
+    },
+    "product_recommendations": {
+      "name": "Recomandări de produse",
+      "settings": {
+        "paragraph": {
+          "content": "Recomandările dinamice folosesc informații despre comenzi și produse pentru a se îmbunătăți în timp. [Aflați mai multe](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Numărul maxim de produse de afișat"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Demo Islands",
+      "settings": {
+        "heading": {
+          "label": "Titlu",
+          "default": "Demo Islands Architecture"
+        }
+      },
+      "presets": {
+        "name": "Demo Islands"
+      }
+    },
+    "section": {
+      "name": "Secțiune",
+      "settings": {
+        "header__layout": {
+          "content": "Aspect"
+        },
+        "gap": {
+          "label": "Spațiere"
+        },
+        "header__size": {
+          "content": "Dimensiune"
+        },
+        "section_width": {
+          "label": "Lățime",
+          "options__page": {
+            "label": "Pagină"
+          },
+          "options__full": {
+            "label": "Complet"
+          }
+        },
+        "header__padding": {
+          "content": "Spațiere interioară"
+        },
+        "padding_block_start": {
+          "label": "Sus"
+        },
+        "padding_block_end": {
+          "label": "Jos"
+        }
+      },
+      "presets": {
+        "name": "Secțiune"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Selector țară",
+      "settings": {
+        "heading": {
+          "label": "Titlu",
+          "info": "Titlul este necesar pentru a afișa selectorul de țară",
+          "default": "Țară"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Meniu",
+      "settings": {
+        "heading": {
+          "label": "Titlu",
+          "info": "Titlul este necesar pentru a afișa meniul",
+          "default": "Link-uri rapide"
+        },
+        "menu": {
+          "label": "Meniu",
+          "info": "Afișează doar elementele de meniu de nivel superior"
+        }
+      },
+      "presets": {
+        "name": "Meniu",
+        "category": "Subsol"
+      }
+    },
+    "header_logo": {
+      "name": "Logo"
+    },
+    "header_menu_mobile": {
+      "name": "Meniu mobil",
+      "settings": {
+        "menu": {
+          "label": "Navigare principală"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Card articol"
+    },
+    "article_content": {
+      "name": "Conținut"
+    },
+    "button": {
+      "name": "Buton",
+      "settings": {
+        "button_label": {
+          "label": "Etichetă buton",
+          "info": "Lăsați eticheta goală pentru a ascunde butonul.",
+          "default": "Etichetă buton"
+        },
+        "button_link": {
+          "label": "Link buton"
+        },
+        "button_variant": {
+          "label": "Variantă buton",
+          "options__default": {
+            "label": "Implicit"
+          },
+          "options__link": {
+            "label": "Link"
+          }
+        },
+        "button_size": {
+          "label": "Dimensiune buton",
+          "options__default": {
+            "label": "Implicit"
+          },
+          "options__lg": {
+            "label": "Mare"
+          }
+        }
+      },
+      "presets": {
+        "name": "Buton",
+        "category": "De bază"
+      }
+    },
+    "buy_buttons": {
+      "name": "Butoane de cumpărare",
+      "settings": {
+        "product": {
+          "label": "Produs"
+        },
+        "show_dynamic_checkout": {
+          "label": "Afișează butoane de finalizare comandă dinamice",
+          "info": "Folosind metodele de plată disponibile în magazinul dumneavoastră, clienții văd opțiunea preferată, precum PayPal sau Apple Pay. [Aflați mai multe](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Butoane de cumpărare"
+      }
+    },
+    "collection_card": {
+      "name": "Card colecție",
+      "settings": {
+        "collection": {
+          "label": "Colecție"
+        }
+      },
+      "presets": {
+        "name": "Card colecție"
+      }
+    },
+    "details": {
+      "name": "Detalii"
+    },
+    "email_signup": {
+      "name": "Înscriere email",
+      "presets": {
+        "name": "Înscriere email"
+      }
+    },
+    "header_menu": {
+      "name": "Meniu",
+      "settings": {
+        "menu": {
+          "label": "Navigare principală"
+        }
+      }
+    },
+    "heading": {
+      "name": "Titlu",
+      "settings": {
+        "heading": {
+          "label": "Titlu",
+          "default": "Povestiți despre brandul dumneavoastră"
+        },
+        "heading_size": {
+          "label": "Dimensiune titlu",
+          "options__default": {
+            "label": "Implicit"
+          },
+          "options__md": {
+            "label": "Mediu"
+          },
+          "options__lg": {
+            "label": "Mare"
+          },
+          "options__xl": {
+            "label": "Extra mare"
+          }
+        },
+        "heading_level": {
+          "label": "Nivel titlu",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Titlu",
+        "category": "De bază"
+      }
+    },
+    "image": {
+      "name": "Imagine",
+      "settings": {
+        "image": {
+          "label": "Imagine"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Conținut pagină"
+    },
+    "price": {
+      "name": "Preț",
+      "settings": {
+        "product": {
+          "label": "Produs"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Card produs",
+      "settings": {
+        "product": {
+          "label": "Produs"
+        }
+      },
+      "presets": {
+        "name": "Card produs",
+        "category": "Produs"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Media produs"
+    },
+    "search_input": {
+      "name": "Câmp de căutare"
+    },
+    "tab": {
+      "name": "Filă",
+      "settings": {
+        "title": {
+          "label": "Titlu",
+          "default": "Informații de livrare"
+        },
+        "content": {
+          "label": "Conținut filă",
+          "default": "<p>Folosiți file pliabile pentru informații mai detaliate care îi vor ajuta pe clienți să ia o decizie de cumpărare.</p><p>Ex: Politici de livrare și returnare, ghiduri de mărimi și alte întrebări frecvente.</p>"
+        },
+        "page": {
+          "label": "Conținut filă din pagină"
+        }
+      },
+      "presets": {
+        "name": "Filă"
+      }
+    },
+    "text": {
+      "name": "Text",
+      "settings": {
+        "text": {
+          "label": "Descriere",
+          "default": "<p>Distribuiți informații despre brandul dumneavoastră cu clienții.</p>"
+        },
+        "text_size": {
+          "label": "Dimensiune text",
+          "options__default": {
+            "label": "Implicit"
+          },
+          "options__lg": {
+            "label": "Mare"
+          }
+        }
+      },
+      "presets": {
+        "name": "Text",
+        "category": "De bază"
+      }
+    },
+    "variant_picker": {
+      "name": "Selector variantă",
+      "settings": {
+        "product": {
+          "label": "Produs"
+        },
+        "picker_type": {
+          "label": "Tip",
+          "options__dropdown": {
+            "label": "Dropdown"
+          },
+          "options__button": {
+            "label": "Butoane"
+          }
+        }
+      },
+      "presets": {
+        "name": "Selector variantă"
+      }
+    },
+    "product_details": {
+      "name": "Detalii"
+    },
+    "cart_products": {
+      "name": "Produse din coș"
+    }
+  }
+}

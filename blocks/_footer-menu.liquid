@@ -1,0 +1,68 @@
+{% doc %}
+  Displays a footer navigation menu with collapsible details on mobile.
+{% enddoc %}
+
+<section class="pt-10 first-of-type:-mt-10 md:pt-0 first-of-type:md:mt-0" {{ block.shopify_attributes }}>
+  <details id="Details-{{ block.id }}" class="md:hidden">
+    <summary>
+      <h3 class="font-heading text-lead font-heading-weight flex max-w-prose justify-between overflow-hidden whitespace-pre-wrap">
+        <span class="flex-shrink">{{- block.settings.heading | escape -}}</span>
+        {%- render 'icon-caret' -%}
+      </h3>
+    </summary>
+    <div id="Panel-{{ block.id }}" class="footer-panel pt-4">
+      <nav class="grid gap-2 pb-2">
+        {%- for link in block.settings.menu.links -%}
+          <a href="{{ link.url }}">
+            {{ link.title }}
+          </a>
+        {%- endfor -%}
+      </nav>
+    </div>
+  </details>
+  <div class="hidden gap-4 md:grid">
+    <h3 class="font-heading text-lead font-heading-weight max-w-prose whitespace-pre-wrap">
+      {{- block.settings.heading | escape -}}
+    </h3>
+    <div>
+      <nav class="grid gap-2 pb-6">
+        {%- for link in block.settings.menu.links -%}
+          <div>
+            <a href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          </div>
+        {%- endfor -%}
+      </nav>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:blocks.footer_menu.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "t:blocks.footer_menu.settings.heading.default",
+      "label": "t:blocks.footer_menu.settings.heading.label",
+      "info": "t:blocks.footer_menu.settings.heading.info"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "footer",
+      "label": "t:blocks.footer_menu.settings.menu.label",
+      "info": "t:blocks.footer_menu.settings.menu.info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.footer_menu.presets.name",
+      "category": "t:blocks.footer_menu.presets.category"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,18 @@
+{% doc %}
+  Renders product pricing using the price snippet.
+{% enddoc %}
+
+{%- render 'price', product: block.settings.product, shopify_attributes: block.shopify_attributes -%}
+
+{% schema %}
+{
+  "name": "t:blocks.price.name",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:blocks.price.settings.product.label"
+    }
+  ]
+}
+{% endschema %}

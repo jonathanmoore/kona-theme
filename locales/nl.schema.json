@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Collectielijst",
+      "settings": {
+        "collection_list": {
+          "label": "Collecties"
+        },
+        "columns_desktop": {
+          "label": "Aantal kolommen op desktop"
+        }
+      },
+      "presets": {
+        "name": "Collectielijst",
+        "blocks": {
+          "heading": {
+            "heading": "Collecties"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Contactformulier",
+      "presets": {
+        "name": "Contactformulier"
+      }
+    },
+    "email_signup_banner": {
+      "name": "E-mailregistratiebanner",
+      "presets": {
+        "name": "E-mailregistratiebanner",
+        "blocks": {
+          "heading": {
+            "heading": "Binnenkort geopend"
+          },
+          "text": {
+            "text": "<p>Wees de eerste die het weet wanneer we lanceren.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Uitgelichte collectie",
+      "settings": {
+        "collection": {
+          "label": "Collectie"
+        },
+        "products_to_show": {
+          "label": "Maximum aantal producten om weer te geven"
+        }
+      },
+      "presets": {
+        "name": "Uitgelichte collectie",
+        "category": "Producten",
+        "blocks": {
+          "heading": {
+            "heading": "Uitgelichte collectie"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Voettekst"
+    },
+    "header": {
+      "name": "Koptekst",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Plakkerige koptekst inschakelen",
+          "info": "Koptekst wordt op het scherm weergegeven wanneer klanten omhoog scrollen."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Afbeeldingsbanner",
+      "settings": {
+        "image": {
+          "label": "Eerste afbeelding"
+        },
+        "image_2": {
+          "label": "Tweede afbeelding"
+        },
+        "full_page_height_enable": {
+          "label": "Volledige paginahoogte"
+        }
+      },
+      "presets": {
+        "name": "Afbeeldingsbanner",
+        "category": "Banners",
+        "blocks": {
+          "heading": {
+            "heading": "Afbeeldingsbanner"
+          },
+          "text": {
+            "text": "<p><strong>Geef klanten details over de bannerafbeelding(en) of inhoud op de sjabloon.</strong></p>"
+          },
+          "button": {
+            "button_label": "Bekijk alles →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Blogberichten"
+    },
+    "main_cart": {
+      "name": "Winkelwagenpagina"
+    },
+    "main_list_collections": {
+      "name": "Collectielijstpagina"
+    },
+    "main_page": {
+      "name": "Pagina"
+    },
+    "main_password_footer": {
+      "name": "Wachtwoord voettekst"
+    },
+    "main_password_header": {
+      "name": "Wachtwoord koptekst"
+    },
+    "main_product": {
+      "name": "Productinformatie"
+    },
+    "product_recommendations": {
+      "name": "Productaanbevelingen",
+      "settings": {
+        "paragraph": {
+          "content": "Dynamische aanbevelingen gebruiken bestelling- en productinformatie om in de loop van de tijd te veranderen en te verbeteren. [Meer informatie](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Maximum aantal producten om weer te geven"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Islands demo",
+      "settings": {
+        "heading": {
+          "label": "Titel",
+          "default": "Islands Architecture Demo"
+        }
+      },
+      "presets": {
+        "name": "Islands demo"
+      }
+    },
+    "section": {
+      "name": "Sectie",
+      "settings": {
+        "header__layout": {
+          "content": "Lay-out"
+        },
+        "gap": {
+          "label": "Tussenruimte"
+        },
+        "header__size": {
+          "content": "Grootte"
+        },
+        "section_width": {
+          "label": "Breedte",
+          "options__page": {
+            "label": "Pagina"
+          },
+          "options__full": {
+            "label": "Vol"
+          }
+        },
+        "header__padding": {
+          "content": "Opvulling"
+        },
+        "padding_block_start": {
+          "label": "Boven"
+        },
+        "padding_block_end": {
+          "label": "Onder"
+        }
+      },
+      "presets": {
+        "name": "Sectie"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Landkiezer",
+      "settings": {
+        "heading": {
+          "label": "Titel",
+          "info": "Titel vereist om de landkiezer weer te geven",
+          "default": "Land"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Menu",
+      "settings": {
+        "heading": {
+          "label": "Titel",
+          "info": "Titel vereist om het menu weer te geven",
+          "default": "Snelle links"
+        },
+        "menu": {
+          "label": "Menu",
+          "info": "Geeft alleen menu-items op het hoogste niveau weer"
+        }
+      },
+      "presets": {
+        "name": "Menu",
+        "category": "Voettekst"
+      }
+    },
+    "header_logo": {
+      "name": "Logo"
+    },
+    "header_menu_mobile": {
+      "name": "Menu mobiel",
+      "settings": {
+        "menu": {
+          "label": "Primaire navigatie"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Artikelkaart"
+    },
+    "article_content": {
+      "name": "Inhoud"
+    },
+    "button": {
+      "name": "Knop",
+      "settings": {
+        "button_label": {
+          "label": "Knoplabel",
+          "info": "Laat het label leeg om de knop te verbergen.",
+          "default": "Knoplabel"
+        },
+        "button_link": {
+          "label": "Knoplink"
+        },
+        "button_variant": {
+          "label": "Knopvariant",
+          "options__default": {
+            "label": "Standaard"
+          },
+          "options__link": {
+            "label": "Link"
+          }
+        },
+        "button_size": {
+          "label": "Knopgrootte",
+          "options__default": {
+            "label": "Standaard"
+          },
+          "options__lg": {
+            "label": "Groot"
+          }
+        }
+      },
+      "presets": {
+        "name": "Knop",
+        "category": "Basis"
+      }
+    },
+    "buy_buttons": {
+      "name": "Koopknoppen",
+      "settings": {
+        "product": {
+          "label": "Product"
+        },
+        "show_dynamic_checkout": {
+          "label": "Dynamische afrekenknopen weergeven",
+          "info": "Met de betaalmethoden die beschikbaar zijn in uw winkel, zien klanten hun voorkeursoptie, zoals PayPal of Apple Pay. [Meer informatie](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Koopknoppen"
+      }
+    },
+    "collection_card": {
+      "name": "Collectiekaart",
+      "settings": {
+        "collection": {
+          "label": "Collectie"
+        }
+      },
+      "presets": {
+        "name": "Collectiekaart"
+      }
+    },
+    "details": {
+      "name": "Details"
+    },
+    "email_signup": {
+      "name": "E-mailregistratie",
+      "presets": {
+        "name": "E-mailregistratie"
+      }
+    },
+    "header_menu": {
+      "name": "Menu",
+      "settings": {
+        "menu": {
+          "label": "Primaire navigatie"
+        }
+      }
+    },
+    "heading": {
+      "name": "Titel",
+      "settings": {
+        "heading": {
+          "label": "Titel",
+          "default": "Vertel over uw merk"
+        },
+        "heading_size": {
+          "label": "Titelgrootte",
+          "options__default": {
+            "label": "Standaard"
+          },
+          "options__md": {
+            "label": "Middel"
+          },
+          "options__lg": {
+            "label": "Groot"
+          },
+          "options__xl": {
+            "label": "Extra groot"
+          }
+        },
+        "heading_level": {
+          "label": "Titelniveau",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Titel",
+        "category": "Basis"
+      }
+    },
+    "image": {
+      "name": "Afbeelding",
+      "settings": {
+        "image": {
+          "label": "Afbeelding"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Pagina-inhoud"
+    },
+    "price": {
+      "name": "Prijs",
+      "settings": {
+        "product": {
+          "label": "Product"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Productkaart",
+      "settings": {
+        "product": {
+          "label": "Product"
+        }
+      },
+      "presets": {
+        "name": "Productkaart",
+        "category": "Product"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Productmedia"
+    },
+    "search_input": {
+      "name": "Zoekinvoer"
+    },
+    "tab": {
+      "name": "Tabblad",
+      "settings": {
+        "title": {
+          "label": "Titel",
+          "default": "Verzendinformatie"
+        },
+        "content": {
+          "label": "Tabbladinhoud",
+          "default": "<p>Gebruik inklapbare tabbladen voor meer gedetailleerde informatie die klanten helpt bij het nemen van een aankoopbeslissing.</p><p>Bijvoorbeeld: verzend- en retourbeleid, maatgidsen en andere veelgestelde vragen.</p>"
+        },
+        "page": {
+          "label": "Tabbladinhoud van pagina"
+        }
+      },
+      "presets": {
+        "name": "Tabblad"
+      }
+    },
+    "text": {
+      "name": "Tekst",
+      "settings": {
+        "text": {
+          "label": "Omschrijving",
+          "default": "<p>Deel informatie over uw merk met uw klanten.</p>"
+        },
+        "text_size": {
+          "label": "Tekstgrootte",
+          "options__default": {
+            "label": "Standaard"
+          },
+          "options__lg": {
+            "label": "Groot"
+          }
+        }
+      },
+      "presets": {
+        "name": "Tekst",
+        "category": "Basis"
+      }
+    },
+    "variant_picker": {
+      "name": "Variantkiezer",
+      "settings": {
+        "product": {
+          "label": "Product"
+        },
+        "picker_type": {
+          "label": "Type",
+          "options__dropdown": {
+            "label": "Vervolgkeuzelijst"
+          },
+          "options__button": {
+            "label": "Knoppen"
+          }
+        }
+      },
+      "presets": {
+        "name": "Variantkiezer"
+      }
+    },
+    "product_details": {
+      "name": "Details"
+    },
+    "cart_products": {
+      "name": "Winkelwagenproducten"
+    }
+  }
+}

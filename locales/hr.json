@@ -1,0 +1,258 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Unesite lozinku trgovine:",
+      "login_password_button": "Unesite lozinku",
+      "login_form_password_label": "Lozinka",
+      "login_form_password_placeholder": "Vaša lozinka",
+      "login_form_error": "Pogrešna lozinka!",
+      "login_form_submit": "Unesi",
+      "admin_link_html": "Jeste li vlasnik trgovine? <a href=\"/admin\" class=\"link underlined-link\">Prijavite se ovdje</a>",
+      "powered_by_shopify_html": "Ova trgovina će biti pokrenuta na {{ shopify }}"
+    },
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "pagination": {
+      "label": "Paginacija",
+      "page": "Stranica {{ number }}",
+      "next": "Sljedeća stranica",
+      "previous": "Prethodna stranica"
+    },
+    "search": {
+      "search": "Pretraživanje",
+      "submit": "Pretražite proizvode",
+      "no_results_html": "Vaša pretraga za \"{{ terms }}\" nije vratila rezultate."
+    },
+    "continue_shopping": "Nastavi kupovinu",
+    "meta": {
+      "tagged": "označeno \\\"{{ tags }}\\\""
+    }
+  },
+  "newsletter": {
+    "label": "E-pošta",
+    "success": "Hvala na pretplati",
+    "button_label": "Pretplati se"
+  },
+  "accessibility": {
+    "skip_to_text": "Prijeđi na sadržaj",
+    "close": "Zatvori",
+    "unit_price_separator": "po",
+    "link_messages": {
+      "new_window": "Otvara se u novom prozoru."
+    },
+    "loading": "Učitavanje...",
+    "error": "Greška",
+    "main_navigation": "Glavna navigacija"
+  },
+  "sections": {
+    "header": {
+      "menu": "Izbornik",
+      "cart_count": "PLURAL:{\"one\": \"{{ count }} artikl\", \"few\": \"{{ count }} artikla\", \"other\": \"{{ count }} artikala\"}"
+    },
+    "cart": {
+      "title": "Vaša košarica",
+      "empty": "Vaša košarica je trenutno prazna.",
+      "remove_title": "Ukloni {{ title }}",
+      "subtotal": "Međuzbroj",
+      "new_subtotal": "Novi međuzbroj",
+      "taxes_and_shipping_policy_at_checkout_html": "Porezi i <a href=\"{{ link }}\">dostava</a> izračunavaju se prilikom plaćanja",
+      "taxes_included_but_shipping_at_checkout": "Porez uključen i dostava se izračunava prilikom plaćanja",
+      "taxes_included_and_shipping_policy_html": "Porez uključen. <a href=\"{{ link }}\">Dostava</a> se izračunava prilikom plaćanja.",
+      "taxes_and_shipping_at_checkout": "Porezi i dostava izračunavaju se prilikom plaćanja",
+      "update": "Ažuriraj",
+      "checkout": "Idi na plaćanje",
+      "note": "Posebne upute za narudžbu",
+      "cart_error": "Došlo je do greške prilikom ažuriranja košarice. Molimo pokušajte ponovno.",
+      "cart_quantity_error_html": "Možete dodati samo {{ quantity }} ovog artikla u košaricu."
+    },
+    "collection_template": {
+      "title": "Kolekcija"
+    }
+  },
+  "onboarding": {
+    "product_title": "Primjer naziva proizvoda",
+    "collection_title": "Naziv Vaše kolekcije"
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "Količina",
+        "input_label": "Količina za {{ product }}",
+        "increase": "Povećaj količinu za {{ product }}",
+        "decrease": "Smanji količinu za {{ product }}"
+      },
+      "price": {
+        "regular_price": "Redovna cijena",
+        "sale_price": "Prodajna cijena",
+        "from_price_html": "Od {{ min_price }}",
+        "unit_price": "Jedinična cijena"
+      },
+      "add_to_cart": "Dodaj u košaricu",
+      "sold_out": "Rasprodano",
+      "unavailable": "Nedostupno",
+      "product_variants": "Varijante proizvoda"
+    }
+  },
+  "templates": {
+    "cart": {
+      "cart": "Košarica"
+    },
+    "search": {
+      "title": "Rezultati pretraživanja"
+    },
+    "404": {
+      "title": "404 Stranica nije pronađena",
+      "subtext": "Stranica koju ste zatražili ne postoji."
+    },
+    "contact": {
+      "form": {
+        "title": "Kontakt obrazac",
+        "name": "Ime",
+        "email": "E-pošta",
+        "phone": "Broj telefona",
+        "comment": "Komentar",
+        "send": "Pošalji",
+        "post_success": "Hvala što ste nas kontaktirali. Javit ćemo Vam se što je prije moguće.",
+        "error_heading": "Molimo prilagodite sljedeće:"
+      }
+    }
+  },
+  "customer": {
+    "account_fallback": "Račun",
+    "log_in": "Prijava",
+    "log_out": "Odjava",
+    "order": {
+      "title": "Narudžba {{ name }}",
+      "date_html": "Podneseno {{ date }}",
+      "cancelled_html": "Narudžba otkazana {{ date }}",
+      "cancelled_reason": "Razlog: {{ reason }}",
+      "billing_address": "Adresa za naplatu",
+      "payment_status": "Status plaćanja",
+      "shipping_address": "Adresa za dostavu",
+      "fulfillment_status": "Status izvršenja",
+      "discount": "Popust",
+      "shipping": "Dostava",
+      "tax": "Porez",
+      "product": "Proizvod",
+      "sku": "SKU",
+      "price": "Cijena",
+      "quantity": "Količina",
+      "total": "Ukupno",
+      "fulfilled_at_html": "Izvršeno {{ date }}",
+      "track_shipment": "Prati pošiljku",
+      "tracking_url": "Poveznica za praćenje",
+      "tracking_company": "Dostavljač",
+      "tracking_number": "Broj za praćenje",
+      "subtotal": "Međuzbroj",
+      "total_duties": "Carine"
+    },
+    "orders": {
+      "title": "Povijest narudžbi",
+      "order_number": "Narudžba",
+      "order_number_link": "Broj narudžbe {{ number }}",
+      "date": "Datum",
+      "payment_status": "Status plaćanja",
+      "fulfillment_status": "Status izvršenja",
+      "total": "Ukupno",
+      "none": "Još niste napravili nijednu narudžbu."
+    },
+    "recover_password": {
+      "title": "Resetirajte lozinku",
+      "subtext": "Poslat ćemo Vam e-poštu za resetiranje lozinke",
+      "success": "Poslali smo Vam e-poštu s poveznicom za ažuriranje lozinke."
+    },
+    "login_page": {
+      "cancel": "Odustani",
+      "create_account": "Izradi račun",
+      "email": "E-pošta",
+      "forgot_password": "Zaboravili ste lozinku?",
+      "guest_continue": "Nastavi",
+      "guest_title": "Nastavi kao gost",
+      "password": "Lozinka",
+      "title": "Prijava",
+      "sign_in": "Prijavite se",
+      "submit": "Pošalji"
+    },
+    "register": {
+      "title": "Izradi račun",
+      "first_name": "Ime",
+      "last_name": "Prezime",
+      "email": "E-pošta",
+      "password": "Lozinka",
+      "submit": "Izradi"
+    },
+    "reset_password": {
+      "title": "Resetiraj lozinku računa",
+      "subtext": "Unesite novu lozinku za {{ email }}",
+      "password": "Lozinka",
+      "password_confirm": "Potvrdi lozinku",
+      "submit": "Resetiraj lozinku"
+    },
+    "activate_account": {
+      "title": "Aktiviraj račun",
+      "subtext": "Izradite svoju lozinku za aktivaciju računa.",
+      "password": "Lozinka",
+      "password_confirm": "Potvrdi lozinku",
+      "submit": "Aktiviraj račun",
+      "cancel": "Odbij pozivnicu"
+    },
+    "addresses": {
+      "title": "Adrese",
+      "default": "Zadano",
+      "add_new": "Dodaj novu adresu",
+      "edit_address": "Uredi adresu",
+      "first_name": "Ime",
+      "last_name": "Prezime",
+      "company": "Tvrtka",
+      "address1": "Adresa 1",
+      "address2": "Adresa 2",
+      "city": "Grad",
+      "country": "Država/regija",
+      "province": "Pokrajina",
+      "zip": "Poštanski broj",
+      "phone": "Telefon",
+      "set_default": "Postavi kao zadanu adresu",
+      "add": "Dodaj adresu",
+      "update": "Ažuriraj adresu",
+      "cancel": "Odustani",
+      "edit": "Uredi",
+      "delete": "Izbriši",
+      "delete_confirm": "Jeste li sigurni da želite izbrisati ovu adresu?"
+    },
+    "account": {
+      "title": "Račun",
+      "details": "Detalji računa",
+      "view_addresses": "Pregledaj adrese",
+      "return": "Povratak na detalje računa"
+    }
+  },
+  "localization": {
+    "update_country": "Ažuriraj državu/regiju"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Evo Vaše poklon kartice vrijednosti {{ value }} za {{ shop }}!",
+      "subtext": "Vaša poklon kartica",
+      "gift_card_code": "Kod poklon kartice",
+      "shop_link": "Nastavi kupovinu",
+      "remaining_html": "Preostalo {{ balance }}",
+      "add_to_apple_wallet": "Dodaj u Apple Wallet",
+      "qr_image_alt": "QR kod — skenirajte za iskorištenje poklon kartice",
+      "copy_code": "Kopiraj kod",
+      "expired": "Isteklo",
+      "copy_code_success": "Kod uspješno kopiran",
+      "print_gift_card": "Ispis"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.icon {
+  @apply h-5 w-5;
+}
+
+.button {
+  @apply font-body-weight-bold inline-block rounded px-6 py-3 text-center;
+}
+
+.article {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-primary;
+  }
+  @apply prose font-body text-primary mx-auto mb-12 grid justify-center;
+  p,
+  ul,
+  li {
+    @apply mb-4 text-lg;
+  }
+  img {
+    @apply md:-mx-8 lg:-mx-16;
+
+    @media (min-width: 48em) {
+      width: calc(100% + 4rem);
+      max-width: 100vw;
+    }
+    @media (min-width: 64em) {
+      width: calc(100% + 8rem);
+    }
+  }
+}
+
+shopify-accelerated-checkout {
+  --shopify-accelerated-checkout-button-border-radius: 0.25rem;
+  --shopify-accelerated-checkout-button-block-size: 48px;
+}
+
+.shopify-payment-button__button--unbranded {
+  background-color: var(--color-accent) !important;
+  color: var(--color-contrast) !important;
+  font-weight: var(--font-body-weight-bold) !important;
+}
+
+.swimlane {
+  @apply grid w-full snap-x snap-mandatory scroll-px-6 grid-flow-col justify-start gap-4 overflow-x-scroll px-6 pb-4;
+}
