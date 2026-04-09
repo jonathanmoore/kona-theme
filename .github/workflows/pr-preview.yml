@@ -4,6 +4,13 @@ on:
     branches:
       - main
     types: [opened, synchronize, reopened]
+    paths:
+      - 'theme/**'
+      - 'vite.config.js'
+      - 'jsconfig.json'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/pr-preview.yml'
 
 concurrency:
   group: pr-preview-${{ github.event.pull_request.number }}
