@@ -1,0 +1,36 @@
+name: Deploy Docs to Netlify
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/docs-deploy.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/docs-deploy.yml'
+
+jobs:
+  trigger-netlify:
+    name: Trigger Netlify Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify deploy
+        run: |
+          RESPONSE=$(curl -X POST -D - "${{ secrets.NETLIFY_BUILD_HOOK }}")
+          echo "$RESPONSE"
+
+          # Check if build was triggered successfully
+          if echo "$RESPONSE" | grep -q "HTTP/2 200\|HTTP/1.1 200"; then
+            echo "✅ Netlify build triggered successfully"
+          else
+            echo "❌ Failed to trigger Netlify build"
+            exit 1
+          fi
