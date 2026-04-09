@@ -1,0 +1,39 @@
+# Netlify configuration for VitePress documentation site
+# Only builds when docs/ directory changes
+
+[build]
+  base = "."
+  publish = "docs/.vitepress/dist"
+  command = "pnpm docs:build"
+
+  # Skip build if no changes in docs directory
+  # Returns exit code 1 to skip build, 0 to proceed
+  ignore = """
+    # Get the base branch (usually main)
+    BASE=$(git merge-base HEAD origin/main 2>/dev/null || git merge-base HEAD origin/HEAD 2>/dev/null || echo "HEAD~1")
+
+    # Check if any files in docs/ changed since base
+    git diff --quiet $BASE HEAD -- docs/ package.json pnpm-lock.yaml
+
+    # If exit code is 0 (no changes), return 1 to skip build
+    # If exit code is 1 (changes found), return 0 to proceed with build
+    if [ $? -eq 0 ]; then
+      echo "No changes in docs/ - skipping build"
+      exit 1
+    else
+      echo "Changes detected in docs/ - proceeding with build"
+      exit 0
+    fi
+  """
+
+# Deploy preview settings
+[context.deploy-preview]
+  command = "pnpm docs:build"
+
+# Production settings
+[context.production]
+  command = "pnpm docs:build"
+
+# Branch deploy settings
+[context.branch-deploy]
+  command = "pnpm docs:build"
