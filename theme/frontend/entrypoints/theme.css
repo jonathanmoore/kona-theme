@@ -6,3 +6,24 @@
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
+
+/* Override typography plugin defaults with theme colors.
+   .prose.prose doubles specificity to beat the plugin's .prose rule. */
+.prose.prose {
+  --tw-prose-body: var(--color-primary);
+  --tw-prose-headings: var(--color-primary);
+  --tw-prose-lead: color-mix(in oklab, var(--color-primary) 70%, transparent);
+  --tw-prose-links: var(--color-primary);
+  --tw-prose-bold: var(--color-primary);
+  --tw-prose-counters: color-mix(in oklab, var(--color-primary) 60%, transparent);
+  --tw-prose-bullets: color-mix(in oklab, var(--color-primary) 40%, transparent);
+  --tw-prose-hr: color-mix(in oklab, var(--color-primary) 15%, transparent);
+  --tw-prose-quotes: var(--color-primary);
+  --tw-prose-quote-borders: color-mix(in oklab, var(--color-primary) 25%, transparent);
+  --tw-prose-captions: color-mix(in oklab, var(--color-primary) 60%, transparent);
+  --tw-prose-code: var(--color-primary);
+  --tw-prose-pre-code: var(--color-primary);
+  --tw-prose-pre-bg: color-mix(in oklab, var(--color-primary) 5%, transparent);
+  --tw-prose-th-borders: color-mix(in oklab, var(--color-primary) 20%, transparent);
+  --tw-prose-td-borders: color-mix(in oklab, var(--color-primary) 10%, transparent);
+}

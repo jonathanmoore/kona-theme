@@ -26,6 +26,13 @@
       },
       {
         "type": "color",
+        "id": "colors_background",
+        "default": "#202124",
+        "label": "Background",
+        "info": "Page background color"
+      },
+      {
+        "type": "color",
         "id": "colors_accent",
         "default": "#EB5628",
         "label": "Labels like \"On sale\""

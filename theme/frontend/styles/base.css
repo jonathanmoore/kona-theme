@@ -25,7 +25,12 @@
 }
 
 body {
-  @apply border-primary/10 bg-contrast text-primary/90 antialiased;
+  @apply border-primary/10 bg-background text-primary/90 antialiased;
+}
+
+::placeholder {
+  color: var(--color-primary, #F0EDE8);
+  opacity: 0.3;
 }
 
 html {

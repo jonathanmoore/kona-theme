@@ -1,7 +1,8 @@
 @theme {
   --color-primary: rgb(20 20 20);
   --color-contrast: rgb(250 250 249);
-  --color-notice: rgb(191 72 0);
+  --color-background: rgb(32 33 36);
+  --color-accent: rgb(235 86 40);
   --color-shop-pay: #5a31f4;
 
   --spacing-nav: var(--height-nav);
@@ -34,3 +35,4 @@
   --shadow-dark-header: inset 0px -1px 0px 0px rgba(21, 21, 21, 0.4);
   --shadow-light-header: inset 0px -1px 0px 0px rgba(21, 21, 21, 0.05);
 }
+

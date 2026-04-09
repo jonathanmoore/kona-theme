@@ -33,6 +33,17 @@
   }
 }
 
+shopify-accelerated-checkout {
+  --shopify-accelerated-checkout-button-border-radius: 0.25rem;
+  --shopify-accelerated-checkout-button-block-size: 48px;
+}
+
+.shopify-payment-button__button--unbranded {
+  background-color: var(--color-accent) !important;
+  color: var(--color-contrast) !important;
+  font-weight: var(--font-body-weight-bold) !important;
+}
+
 .swimlane {
   @apply grid w-full snap-x snap-mandatory scroll-px-6 grid-flow-col justify-start gap-4 overflow-x-scroll px-6 pb-4;
 }
