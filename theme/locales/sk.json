@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Vyhľadávanie",
-      "submit": "Hľadať",
+      "submit": "Hľadať produkty",
       "no_results_html": "Vaše vyhľadávanie výrazu \"{{ terms }}\" nevrátilo žiadne výsledky."
     },
     "continue_shopping": "Pokračovať v nákupe",

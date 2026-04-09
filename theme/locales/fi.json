@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Haku",
-      "submit": "Hae",
+      "submit": "Hae tuotteita",
       "no_results_html": "Hakusanalla \"{{ terms }}\" ei löytynyt tuloksia."
     },
     "continue_shopping": "Jatka ostoksia",

@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Suche",
-      "submit": "Los",
+      "submit": "Produkte durchsuchen",
       "no_results_html": "Ihre Suche nach \\\"{{ terms }}\\\" hat keine Ergebnisse zurückgegeben."
     },
     "continue_shopping": "Weiter einkaufen",

@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "搜索",
-      "submit": "前往",
+      "submit": "搜索产品",
       "no_results_html": "您搜索的\"{{ terms }}\"未找到相关结果。"
     },
     "continue_shopping": "继续购物",

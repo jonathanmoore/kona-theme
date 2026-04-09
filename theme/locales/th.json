@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "ค้นหา",
-      "submit": "ไป",
+      "submit": "ค้นหาสินค้า",
       "no_results_html": "ค้นหา \"{{ terms }}\" ของคุณไม่พบผลลัพธ์"
     },
     "continue_shopping": "เลือกซื้อสินค้าต่อ",

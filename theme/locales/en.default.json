@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Search",
-      "submit": "Go",
+      "submit": "Search products",
       "no_results_html": "Your search for \"{{ terms }}\" did not return results."
     },
     "continue_shopping": "Continue shopping",

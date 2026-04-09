@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Keresés",
-      "submit": "Tovább",
+      "submit": "Termékek keresése",
       "no_results_html": "Az \"{{ terms }}\" kifejezésre nincs találat."
     },
     "continue_shopping": "Vásárlás folytatása",

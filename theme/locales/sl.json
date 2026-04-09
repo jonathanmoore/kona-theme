@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Iskanje",
-      "submit": "Išči",
+      "submit": "Iskite proizvode",
       "no_results_html": "Vaša iskanja za \"{{ terms }}\" niso vrnila rezultatov."
     },
     "continue_shopping": "Nadaljuj z nakupovanjem",

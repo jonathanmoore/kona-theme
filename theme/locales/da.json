@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Søg",
-      "submit": "Søg",
+      "submit": "Søg efter produkter",
       "no_results_html": "Dit søgeord \"{{ terms }}\" gav ingen resultater."
     },
     "continue_shopping": "Fortsæt med at handle",

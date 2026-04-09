@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "搜尋",
-      "submit": "前往",
+      "submit": "搜尋產品",
       "no_results_html": "您搜尋「{{ terms }}」未找到相關結果。"
     },
     "continue_shopping": "繼續購物",
