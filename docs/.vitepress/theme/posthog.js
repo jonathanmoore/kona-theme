@@ -17,7 +17,7 @@ export function setupPostHog(router) {
 
   // Track SPA navigation using VitePress router
   if (router && typeof router.onAfterRouteChanged === 'function') {
-    router.onAfterRouteChanged((to) => {
+    router.onAfterRouteChanged(() => {
       posthog.capture('$pageview', {
         $current_url: window.location.href,
       })
