@@ -29,6 +29,9 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Build docs
+        run: pnpm docs:build
+
   # lhci:
   #   name: Lighthouse
   #   runs-on: ubuntu-latest
