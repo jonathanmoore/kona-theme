@@ -10,10 +10,98 @@ export default withMermaid(defineConfig({
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.svg' }],
+    // Favicons
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+
+    // Fonts
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+
+    // Open Graph (Facebook, LinkedIn, Slack)
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Kona Theme Documentation' }],
+    ['meta', { property: 'og:image', content: 'https://kona-theme.jonathanmoore.com/kona-hero.jpg' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
+
+    // Twitter Card
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: 'https://kona-theme.jonathanmoore.com/kona-hero.jpg' }],
+    ['meta', { name: 'twitter:site', content: '@moore' }],
+
+    // Additional meta
+    ['meta', { name: 'theme-color', content: '#D4974A' }],
+
+    // Structured Data for Google Rich Results
+    ['script', {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Kona Theme Documentation',
+        description: 'A Vite-powered Shopify theme with islands hydration',
+        author: {
+          '@type': 'Person',
+          name: 'Jonathan Moore',
+          url: 'https://jonathanmoore.com',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Style Hatch',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://kona-theme.jonathanmoore.com/favicon.svg',
+          },
+        },
+        inLanguage: 'en-US',
+        datePublished: '2026-04-09',
+        dateModified: new Date().toISOString().split('T')[0],
+      }),
+    }],
   ],
+
+  // Generate sitemap
+  sitemap: {
+    hostname: 'https://kona-theme.jonathanmoore.com',
+    transformItems: (items) => {
+      return items.map((item) => ({
+        ...item,
+        lastmod: new Date().toISOString(),
+        changefreq: item.url === '/' ? 'weekly' : 'monthly',
+        priority: item.url === '/' ? 1.0 : 0.8,
+      }))
+    },
+  },
+
+  // Auto-generate meta descriptions and canonical URLs
+  async transformPageData(pageData) {
+    // Auto-generate meta description from first paragraph if not set
+    if (!pageData.frontmatter.description && pageData.content) {
+      const firstParagraph = pageData.content
+        .split('\n')
+        .find(line => line.trim() && !line.startsWith('#'))
+        ?.trim()
+        .slice(0, 160) // SEO sweet spot: 150-160 chars
+
+      if (firstParagraph) {
+        pageData.frontmatter.description = firstParagraph
+      }
+    }
+
+    // Set canonical URL for each page
+    const canonicalUrl = `https://kona-theme.jonathanmoore.com${pageData.relativePath
+      .replace(/\.md$/, '.html')
+      .replace(/index\.html$/, '')}`
+
+    pageData.frontmatter.head = pageData.frontmatter.head || []
+    pageData.frontmatter.head.push(['link', { rel: 'canonical', href: canonicalUrl }])
+
+    return pageData
+  },
 
   markdown: {
     theme: coastalTheme,
