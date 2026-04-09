@@ -7,7 +7,7 @@ import globals from 'globals'
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ['theme/assets/']
+    ignores: ['theme/assets/', 'docs/.vitepress/cache/', 'docs/.vitepress/dist/']
   },
   {
     languageOptions: {

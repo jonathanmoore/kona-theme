@@ -1,7 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import KonaHero from './KonaHero.vue'
-import DocFooterCredit from './DocFooterCredit.vue'
 import './custom.css'
 
 export default {
