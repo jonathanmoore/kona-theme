@@ -1,4 +1,8 @@
 theme/assets
+theme/templates/*.json
 pnpm-lock.yaml
 vite-tag.liquid
 importmap.liquid
+eslint.config.js
+prettier.config.js
+*.md

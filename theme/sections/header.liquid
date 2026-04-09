@@ -26,7 +26,7 @@
 
         <button type="submit" class="flex min-h-11 min-w-11 items-center justify-center">
           {% render 'icon-search' %}
-          <span class="sr-only">{{ 'general.search.search' | t }}</span>
+          <span class="sr-only">{{ 'general.search.submit' | t }}</span>
         </button>
 
         <input
@@ -34,6 +34,7 @@
           type="search"
           name="q"
           placeholder="{{ 'general.search.search' | t }}"
+          aria-label="{{ 'general.search.search' | t }}"
         >
       </form>
     </div>
@@ -53,11 +54,12 @@
           type="search"
           name="q"
           placeholder="{{ 'general.search.search' | t }}"
+          aria-label="{{ 'general.search.search' | t }}"
         >
 
         <button type="submit" class="flex min-h-11 min-w-11 items-center justify-center">
           {% render 'icon-search' %}
-          <span class="sr-only">{{ 'general.search.search' | t }}</span>
+          <span class="sr-only">{{ 'general.search.submit' | t }}</span>
         </button>
       </form>
 

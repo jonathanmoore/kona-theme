@@ -33,7 +33,7 @@
                 {% endif %}
               >
               <label
-                class="peer-checked:border-primary/50 cursor-pointer py-1 leading-none transition-all duration-200 peer-checked:border-b-[1.5px]"
+                class="peer-checked:border-primary/50 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary cursor-pointer py-1 leading-none transition-all duration-200 motion-reduce:transition-none peer-checked:border-b-[1.5px]"
                 for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
               >
                 {{ value }}
