@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Căutare",
-      "submit": "Mergi",
+      "submit": "Căutați produse",
       "no_results_html": "Căutarea dvs. pentru \"{{ terms }}\" nu a returnat rezultate."
     },
     "continue_shopping": "Continuați cumpărăturile",

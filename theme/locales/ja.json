@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "検索",
-      "submit": "移動",
+      "submit": "商品を検索",
       "no_results_html": "「{{ terms }}」の検索では結果が見つかりませんでした。"
     },
     "continue_shopping": "ショッピングを続ける",

@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Paieška",
-      "submit": "Ieškoti",
+      "submit": "Ieškoti produktų",
       "no_results_html": "Jūsų paieška pagal „{{ terms }}\" rezultatų negrąžino."
     },
     "continue_shopping": "Tęsti apsipirkimą",

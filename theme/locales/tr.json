@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Ara",
-      "submit": "Git",
+      "submit": "Ürünlerde ara",
       "no_results_html": "\"{{ terms }}\" aramanız sonuç döndürmedi."
     },
     "continue_shopping": "Alışverişe devam et",

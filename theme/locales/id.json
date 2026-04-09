@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Cari",
-      "submit": "Cari",
+      "submit": "Cari produk",
       "no_results_html": "Pencarian Anda untuk \"{{ terms }}\" tidak mengembalikan hasil."
     },
     "continue_shopping": "Lanjutkan berbelanja",

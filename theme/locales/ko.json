@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "검색",
-      "submit": "이동",
+      "submit": "상품 검색",
       "no_results_html": "\"{{ terms }}\"에 대한 검색 결과가 없습니다."
     },
     "continue_shopping": "쇼핑 계속하기",

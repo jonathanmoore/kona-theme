@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Tìm kiếm",
-      "submit": "Đi",
+      "submit": "Tìm kiếm sản phẩm",
       "no_results_html": "Tìm kiếm của bạn cho \\\"{{ terms }}\\\" không trả về kết quả."
     },
     "continue_shopping": "Tiếp tục mua sắm",

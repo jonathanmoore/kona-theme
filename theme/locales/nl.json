@@ -31,7 +31,7 @@
     },
     "search": {
       "search": "Zoeken",
-      "submit": "Ga",
+      "submit": "Producten zoeken",
       "no_results_html": "Uw zoekopdracht naar \"{{ terms }}\" heeft geen resultaten opgeleverd."
     },
     "continue_shopping": "Verder winkelen",
