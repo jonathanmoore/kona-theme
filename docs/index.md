@@ -28,5 +28,5 @@ features:
   - title: Claude Code Skills
     details: Five built-in skills for Claude Code that provide Liquid reference, accessibility patterns, coding standards, component creation workflows, and translation management.
   - title: Coding Standards
-    details: Comprehensive JavaScript, CSS, and accessibility standards with a three-phase compliance audit. Tailwind utility-first, AbortController lifecycle, WCAG 2.2.
+    details: Comprehensive JavaScript, CSS, and accessibility standards with a three-phase compliance audit. Tailwind utility-first, AbortController lifecycle, WCAG 2.2. Optimized GitHub Actions workflows with path filtering for efficient CI/CD.
 ---
