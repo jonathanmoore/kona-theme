@@ -124,7 +124,7 @@ export default withMermaid(defineConfig({
     },
 
     footer: {
-      message: 'Created by <a href="https://jonathanmoore.com">Jonathan Moore</a>',
+      message: '<a href="https://jonathanmoore.com">Created by Jonathan Moore</a>',
     },
   },
 }))

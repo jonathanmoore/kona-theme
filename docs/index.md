@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: KONA
-  text: Vite-Powered Shopify Theme
+  text: Vite-Powered Shopify Theme System
   tagline: Islands hydration. Vanilla Web Components. Zero runtime dependencies.
   actions:
     - theme: brand

@@ -1,6 +1,6 @@
 # Assets Overview
 
-Vite compiles JavaScript and CSS from `theme/frontend/` into `theme/assets/`. No runtime npm packages ship to the browser — every byte is vanilla, hand-written code.
+[Vite](https://vitejs.dev/) compiles JavaScript and CSS from `theme/frontend/` into `theme/assets/`. No runtime npm packages ship to the browser — every byte is vanilla, hand-written code.
 
 ## JavaScript
 

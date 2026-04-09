@@ -2,7 +2,7 @@
 
 Liquid renders complete HTML on the server. Only the interactive parts of the page — the "islands" — receive JavaScript. Each island hydrates independently, on its own schedule, with its own module.
 
-This is [partial hydration](https://docs.astro.build/en/concepts/islands/), adapted for Shopify. Where Astro uses its own compiler and supports multiple frameworks, Kona uses Liquid for server rendering, [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) for client interactivity, and `vite-plugin-shopify-theme-islands` for hydration orchestration. The `client:*` directive syntax mirrors Astro's API.
+This is [partial hydration](https://docs.astro.build/en/concepts/islands/), adapted for Shopify. Where Astro uses its own compiler and supports multiple frameworks, Kona uses Liquid for server rendering, [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) for client interactivity, and [`vite-plugin-shopify-theme-islands`](https://github.com/Rees1993/vite-plugin-shopify-theme-islands) by Alex Rees for hydration orchestration. The plugin provides the revive runtime, the `client:*` directive syntax (which mirrors [Astro's API](https://docs.astro.build/en/reference/directives-reference/#client-directives)), and the dynamic import machinery that ties it all together.
 
 ## How revive works
 

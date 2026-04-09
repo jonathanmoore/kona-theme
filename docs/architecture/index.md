@@ -6,9 +6,9 @@ Kona has three layers: Liquid renders the page, Vite builds the assets, and isla
 
 **Server rendering (Liquid)** — Shopify renders every page to complete HTML before any JavaScript executes. Pages are fast and functional with JS disabled.
 
-**Build pipeline (Vite)** — Vite compiles frontend source (`theme/frontend/`) into production assets (`theme/assets/`). In development, Vite serves assets with HMR. In production, built files ship from the Shopify CDN. Five plugins coordinate the integration.
+**Build pipeline ([Vite](https://vitejs.dev/))** — Vite compiles frontend source (`theme/frontend/`) into production assets (`theme/assets/`). In development, Vite serves assets with HMR. In production, built files ship from the Shopify CDN. Five plugins coordinate the integration — see [Build Pipeline](./build-pipeline) for credits and details.
 
-**Client hydration (Islands)** — Interactive components are Web Components that hydrate on the client. The revive runtime scans the DOM for custom elements, matches them to island files, and loads them based on [hydration directives](./hydration-directives) that control _when_ each component's JavaScript loads.
+**Client hydration (Islands)** — Interactive components are Web Components that hydrate on the client. The revive runtime from [`vite-plugin-shopify-theme-islands`](https://github.com/Rees1993/vite-plugin-shopify-theme-islands) scans the DOM for custom elements, matches them to island files, and loads them based on [hydration directives](./hydration-directives) that control _when_ each component's JavaScript loads.
 
 ## How the pieces connect
 

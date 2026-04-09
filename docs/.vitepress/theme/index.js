@@ -9,7 +9,6 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'home-hero-before': () => h(KonaHero),
-      'doc-footer-before': () => h(DocFooterCredit),
     })
   },
 }

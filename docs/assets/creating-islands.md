@@ -93,7 +93,7 @@ The HTML works without JavaScript — `hidden` hides the content, and the button
 
 ## How revive discovers islands
 
-The hydration runtime uses `import.meta.glob()` to build a map of all `theme/frontend/islands/*.js` files at build time. When the page loads, it scans the DOM for matching custom elements, reads the `client:*` directive, and dynamically imports the module.
+The hydration runtime from [`vite-plugin-shopify-theme-islands`](https://github.com/Rees1993/vite-plugin-shopify-theme-islands) uses `import.meta.glob()` to build a map of all `theme/frontend/islands/*.js` files at build time. When the page loads, it scans the DOM for matching custom elements, reads the `client:*` directive, and dynamically imports the module.
 
 You don't register islands in any central file. Place a `.js` file in `islands/` and use the matching tag in Liquid — that's it.
 

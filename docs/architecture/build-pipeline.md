@@ -1,30 +1,30 @@
 # Build Pipeline
 
-Five Vite plugins bridge Vite's module system with Shopify's theme platform. The full configuration lives in [`vite.config.js`](https://github.com/jonathanmoore/kona-theme/blob/main/vite.config.js).
+Five Vite plugins bridge [Vite](https://vitejs.dev/)'s module system with Shopify's theme platform. The full configuration lives in [`vite.config.js`](https://github.com/jonathanmoore/kona-theme/blob/main/vite.config.js).
 
 ## The five plugins
 
 Plugins execute in order:
 
-### 1. `vite-plugin-shopify-theme-islands`
+### 1. [`vite-plugin-shopify-theme-islands`](https://github.com/Rees1993/vite-plugin-shopify-theme-islands)
 
-Scans `theme/frontend/islands/` for Web Components, provides the `revive` import used by `theme.js`, and maps tag names to module paths at build time.
+By Alex Rees. Scans `theme/frontend/islands/` for Web Components, provides the `revive` import used by `theme.js`, and maps tag names to module paths at build time. This plugin powers the entire [islands hydration system](./islands) — the `client:*` directive syntax, the revive runtime, and the dynamic import orchestration.
 
-### 2. `vite-plugin-shopify`
+### 2. [`vite-plugin-shopify`](https://github.com/barrel/shopify-vite)
 
-Core Shopify integration. Discovers entry points from `theme/frontend/entrypoints/`, generates `vite-tag.liquid` (which loads assets from the dev server or CDN depending on mode), and resolves the `@/` path alias via `sourceCodeDir`.
+By [Barrel](https://shopify-vite.barrelny.com/). Core Shopify integration. Discovers entry points from `theme/frontend/entrypoints/`, generates `vite-tag.liquid` (which loads assets from the dev server or CDN depending on mode), and resolves the `@/` path alias via `sourceCodeDir`.
 
-### 3. `vite-plugin-shopify-import-maps`
+### 3. [`vite-plugin-shopify-import-maps`](https://github.com/slavamak/vite-plugin-shopify-import-maps)
 
-Generates `theme/snippets/importmap.liquid` with an ES module import map. Enables bare imports in islands and adds `<link rel="modulepreload">` for discovered modules.
+By slavamak. Generates `theme/snippets/importmap.liquid` with an ES module import map. Enables bare imports in islands and adds `<link rel="modulepreload">` for discovered modules.
 
-### 4. `@driver-digital/vite-plugin-shopify-clean`
+### 4. [`@driver-digital/vite-plugin-shopify-clean`](https://www.npmjs.com/package/@driver-digital/vite-plugin-shopify-clean)
 
-Removes stale JS/CSS build artifacts from `theme/assets/` after builds, while preserving non-build files (images, fonts).
+By [Driver Digital](https://driverdigital.com/). Removes stale JS/CSS build artifacts from `theme/assets/` after builds, while preserving non-build files (images, fonts).
 
-### 5. `@tailwindcss/vite`
+### 5. [`@tailwindcss/vite`](https://github.com/tailwindlabs/tailwindcss)
 
-Compiles Tailwind CSS v4. No `tailwind.config.js` needed — configuration is CSS-first via the `@theme` block in `theme/frontend/styles/theme.css`.
+By [Tailwind Labs](https://tailwindcss.com/). Compiles Tailwind CSS v4. No `tailwind.config.js` needed — configuration is CSS-first via the `@theme` block in `theme/frontend/styles/theme.css`.
 
 ::: warning
 `vite-tag.liquid` and `importmap.liquid` are auto-generated. Don't edit them — they're overwritten on every build and dev server start.

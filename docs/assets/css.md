@@ -1,6 +1,6 @@
 # CSS
 
-Style components with Tailwind CSS v4 utility classes in Liquid templates. For custom styles, add them to the appropriate CSS layer file.
+Style components with [Tailwind CSS v4](https://tailwindcss.com/) utility classes in Liquid templates, compiled by [`@tailwindcss/vite`](https://github.com/tailwindlabs/tailwindcss). For custom styles, add them to the appropriate CSS layer file.
 
 ## Entry point
 
@@ -35,8 +35,8 @@ The `@theme` tokens in `theme.css` are imported without a layer because they con
 
 ## Tailwind plugins
 
-- **`@tailwindcss/typography`** — The `prose` class for rich text content (blog posts, product descriptions)
-- **`@tailwindcss/forms`** — Normalized form element styling across browsers
+- **[`@tailwindcss/typography`](https://github.com/tailwindlabs/tailwindcss-typography)** — The `prose` class for rich text content (blog posts, product descriptions)
+- **[`@tailwindcss/forms`](https://github.com/tailwindlabs/tailwindcss-forms)** — Normalized form element styling across browsers
 
 ## Next steps
 

@@ -209,6 +209,8 @@
   display: flex;
   align-items: center;
   min-height: 50vh;
+  padding-top: calc(var(--vp-nav-height, 64px) + 48px);
+  padding-bottom: 48px;
 }
 
 .VPHero .main {
@@ -233,6 +235,7 @@
   font-family: var(--vp-font-family-base);
   font-weight: 600;
   color: var(--vp-c-text-1);
+  max-width: 600px !important;
 }
 
 .VPHero .tagline {
@@ -353,7 +356,17 @@
   border-top-color: var(--vp-c-divider) !important;
 }
 
+.VPFooter .message {
+  text-align: right;
+  font-size: 12px;
+}
+
 .VPFooter .message a {
+  color: var(--vp-c-text-3);
+  text-decoration: none;
+}
+
+.VPFooter .message a:hover {
   color: var(--kona-teal-light);
 }
 
@@ -396,5 +409,21 @@
 
   .VPHero .tagline {
     font-size: 14px !important;
+  }
+
+  .VPHero .actions .action:first-child {
+    flex-basis: 100%;
+  }
+
+  .VPHero .actions .action:first-child .VPButton {
+    width: 100%;
+  }
+
+  .VPHero .actions .action:not(:first-child) {
+    flex: 1;
+  }
+
+  .VPHero .actions .action:not(:first-child) .VPButton {
+    width: 100%;
   }
 }

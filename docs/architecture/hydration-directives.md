@@ -1,6 +1,6 @@
 # Hydration Directives
 
-Hydration directives are HTML attributes on custom elements that tell revive _when_ to load an island's JavaScript. Every island needs at least one directive.
+Hydration directives are HTML attributes on custom elements that tell revive _when_ to load an island's JavaScript. Every island needs at least one directive. These directives are provided by [`vite-plugin-shopify-theme-islands`](https://github.com/Rees1993/vite-plugin-shopify-theme-islands).
 
 ## Which directive should I use?
 
