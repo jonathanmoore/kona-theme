@@ -62,6 +62,13 @@ export default withMermaid(defineConfig({
         dateModified: new Date().toISOString().split('T')[0],
       }),
     }],
+
+    // Umami analytics (running parallel to PostHog during migration)
+    ['script', {
+      defer: '',
+      src: 'https://t.jonathanmoore.com/script.js',
+      'data-website-id': '952703e6-c033-4ae3-9777-71b136a13992',
+    }],
   ],
 
   // Generate sitemap
