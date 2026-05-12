@@ -63,7 +63,7 @@ export default withMermaid(defineConfig({
       }),
     }],
 
-    // Umami analytics (running parallel to PostHog during migration)
+    // Umami analytics
     ['script', {
       defer: '',
       src: 'https://t.jonathanmoore.com/script.js',

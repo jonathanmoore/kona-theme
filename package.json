@@ -45,8 +45,5 @@
       "esbuild",
       "protobufjs"
     ]
-  },
-  "dependencies": {
-    "posthog-js": "^1.367.0"
   }
 }
