@@ -1,0 +1,83 @@
+<div
+  class="pt-(--padding-block-start) pb-(--padding-block-end) gap-(--gap) grid w-full justify-items-start px-6 data-[width=full-width]:px-0 md:px-8 lg:px-12"
+  data-width="{{ section.settings.section_width }}"
+  style="
+    --padding-block-start: {{ section.settings.padding-block-start | default: 0 }}px;
+    --padding-block-end: {{ section.settings.padding-block-end | default: 0 }}px;
+    --gap: {{ section.settings.gap | default: 0 }}px;
+  "
+>
+  {%- content_for 'blocks' -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.section.name",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.section.settings.header__layout.content"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:sections.section.settings.gap.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "t:sections.section.settings.header__size.content"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:sections.section.settings.section_width.label",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:sections.section.settings.section_width.options__page.label"
+        },
+        {
+          "value": "full-width",
+          "label": "t:sections.section.settings.section_width.options__full.label"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.section.settings.header__padding.content"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:sections.section.settings.padding_block_start.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:sections.section.settings.padding_block_end.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.section.presets.name"
+    }
+  ]
+}
+{% endschema %}

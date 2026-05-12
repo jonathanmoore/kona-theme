@@ -1,0 +1,145 @@
+{%- liquid
+  assign container_class = 'bg-contrast/80 text-primary'
+  assign input_class = 'focus:border-primary/20'
+
+  assign header_tag = 'div'
+  if section.settings.enable_sticky_header
+    assign header_tag = 'sticky-header'
+  endif
+-%}
+
+<{{ header_tag }} client:idle>
+  <header
+    role="banner"
+    class="{{ container_class }} h-nav flex w-full items-center justify-between gap-4 px-4 leading-none backdrop-blur-lg md:px-8 lg:gap-8 lg:px-12 lg:py-8"
+  >
+    <div class="flex w-full items-center justify-start gap-4 lg:hidden">
+      {%- content_for 'block', type: 'header-menu', id: 'header-menu', variant: 'mobile' -%}
+
+      <form
+        action="{{ routes.search_url }}"
+        method="get"
+        role="search"
+        class="w-full max-w-[335px] items-center gap-2 sm:flex"
+      >
+        <input type="hidden" name="type" value="product">
+
+        <button type="submit" class="flex min-h-11 min-w-11 items-center justify-center">
+          {% render 'icon-search' %}
+          <span class="sr-only">{{ 'general.search.submit' | t }}</span>
+        </button>
+
+        <input
+          class="{{ input_class }} -mb-px hidden appearance-none border-x-0 border-b border-t-0 border-transparent bg-transparent px-0 py-1 text-left transition motion-reduce:transition-none placeholder:text-inherit placeholder:opacity-20 focus:ring-transparent md:inline-block lg:text-right"
+          type="search"
+          name="q"
+          placeholder="{{ 'general.search.search' | t }}"
+          aria-label="{{ 'general.search.search' | t }}"
+        >
+      </form>
+    </div>
+
+    <div class="flex w-full items-center gap-12 lg:w-auto">
+      {%- content_for 'block', type: '_header-logo', id: 'header-logo' -%}
+
+      {%- # theme-check-disable UniqueStaticBlockId -%}
+      {%- content_for 'block', type: 'header-menu', id: 'header-menu' -%}
+      {%- # theme-check-enable UniqueStaticBlockId -%}
+    </div>
+
+    <div class="flex w-full items-center justify-end gap-4 lg:w-auto lg:gap-1">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="hidden items-center gap-2 lg:flex">
+        <input
+          class="{{ input_class }} -mb-px hidden appearance-none border-x-0 border-b border-t-0 border-transparent bg-transparent px-0 py-1 text-left transition motion-reduce:transition-none placeholder:text-inherit placeholder:opacity-20 focus:ring-transparent md:inline-block lg:text-right"
+          type="search"
+          name="q"
+          placeholder="{{ 'general.search.search' | t }}"
+          aria-label="{{ 'general.search.search' | t }}"
+        >
+
+        <button type="submit" class="flex min-h-11 min-w-11 items-center justify-center">
+          {% render 'icon-search' %}
+          <span class="sr-only">{{ 'general.search.submit' | t }}</span>
+        </button>
+      </form>
+
+      {%- if shop.customer_accounts_enabled -%}
+        <a
+          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+          class="flex min-h-11 min-w-11 items-center justify-center"
+        >
+          {% render 'icon-account' %}
+          <span class="sr-only">
+            {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+          </span>
+        </a>
+      {%- endif -%}
+
+      <a href="{{ routes.cart_url }}" class="relative flex min-h-11 min-w-11 items-center justify-center" id="cart-icon-bubble">
+        {%- render 'cart-icon-bubble' -%}
+      </a>
+    </div>
+  </header>
+</{{ header_tag }}>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if section.settings.logo %}
+      "logo": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tiktok_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ],
+    "url": {{ request.origin | append: page.url | json }}
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = request.origin | append: routes.search_url | append: '?q={search_term_string}' %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ request.origin | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "z-10",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header",
+      "default": true,
+      "label": "t:sections.header.settings.enable_sticky_header.label",
+      "info": "t:sections.header.settings.enable_sticky_header.info"
+    }
+  ]
+}
+{% endschema %}

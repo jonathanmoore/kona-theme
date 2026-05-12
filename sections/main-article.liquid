@@ -1,0 +1,47 @@
+<div class="grid w-full gap-4 p-6 py-8 md:justify-items-center md:p-8 md:text-center lg:p-12">
+  {%- content_for 'block', type: 'heading', id: 'heading', wrapper_class: 'max-w-prose-narrow inline-block' -%}
+  {%- content_for 'block', type: 'details', id: 'details' -%}
+</div>
+<div class="grid w-full gap-4 border-none px-6 md:gap-8 md:px-8 lg:px-12">
+  {%- content_for 'block', type: 'image', id: 'image' -%}
+  {%- content_for 'block', type: 'article-content', id: 'article-content' -%}
+</div>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "articleBody": {{ article.content | strip_html | json }},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ request.origin | append: page.url | json }}
+    },
+    "headline": {{ article.title | json }},
+    {% if article.excerpt != blank %}
+      "description": {{ article.excerpt | strip_html | json }},
+    {% endif %}
+    {% if article.image %}
+      "image": [
+        {{ article | image_url: width: article.image.width | prepend: "https:" | json }}
+      ],
+    {% endif %}
+    "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "author": {
+      "@type": "Person",
+      "name": {{ article.author | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      {% if settings.share_image %}
+        "logo": {
+          "@type": "ImageObject",
+          "height": {{ settings.share_image.height | json }},
+          "url": {{ settings.share_image | image_url: width: settings.share_image.width | prepend: "https:" | json }},
+          "width": {{ settings.share_image.width | json }}
+        },
+      {% endif %}
+      "name": {{ shop.name | json }}
+    }
+  }
+</script>

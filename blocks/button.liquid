@@ -1,0 +1,70 @@
+{% doc %}
+  Renders a button or link using the button snippet.
+{% enddoc %}
+
+{%- render 'button',
+  content: block.settings.button_label,
+  href: block.settings.button_link,
+  size: block.settings.button_size,
+  variant: block.settings.button_variant,
+  shopify_attributes: block.shopify_attributes
+-%}
+
+{% schema %}
+{
+  "name": "t:blocks.button.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:blocks.button.settings.button_label.default",
+      "label": "t:blocks.button.settings.button_label.label",
+      "info": "t:blocks.button.settings.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:blocks.button.settings.button_link.label"
+    },
+    {
+      "type": "select",
+      "id": "button_variant",
+      "options": [
+        {
+          "value": "",
+          "label": "t:blocks.button.settings.button_variant.options__default.label"
+        },
+        {
+          "value": "link",
+          "label": "t:blocks.button.settings.button_variant.options__link.label"
+        }
+      ],
+      "default": "",
+      "label": "t:blocks.button.settings.button_variant.label"
+    },
+    {
+      "type": "select",
+      "id": "button_size",
+      "options": [
+        {
+          "value": "",
+          "label": "t:blocks.button.settings.button_size.options__default.label"
+        },
+        {
+          "value": "lg",
+          "label": "t:blocks.button.settings.button_size.options__lg.label"
+        }
+      ],
+      "default": "",
+      "label": "t:blocks.button.settings.button_size.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.button.presets.name",
+      "category": "t:blocks.button.presets.category"
+    }
+  ]
+}
+{% endschema %}

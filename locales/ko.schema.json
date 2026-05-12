@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "컬렉션 목록",
+      "settings": {
+        "collection_list": {
+          "label": "컬렉션"
+        },
+        "columns_desktop": {
+          "label": "데스크톱에서 열 개수"
+        }
+      },
+      "presets": {
+        "name": "컬렉션 목록",
+        "blocks": {
+          "heading": {
+            "heading": "컬렉션"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "문의 양식",
+      "presets": {
+        "name": "문의 양식"
+      }
+    },
+    "email_signup_banner": {
+      "name": "이메일 가입 배너",
+      "presets": {
+        "name": "이메일 가입 배너",
+        "blocks": {
+          "heading": {
+            "heading": "곧 오픈"
+          },
+          "text": {
+            "text": "<p>출시 소식을 가장 먼저 받아보세요.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "추천 컬렉션",
+      "settings": {
+        "collection": {
+          "label": "컬렉션"
+        },
+        "products_to_show": {
+          "label": "표시할 최대 제품 수"
+        }
+      },
+      "presets": {
+        "name": "추천 컬렉션",
+        "category": "제품",
+        "blocks": {
+          "heading": {
+            "heading": "추천 컬렉션"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "푸터"
+    },
+    "header": {
+      "name": "헤더",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "고정 헤더 사용",
+          "info": "고객이 위로 스크롤할 때 헤더가 화면에 표시됩니다."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "이미지 배너",
+      "settings": {
+        "image": {
+          "label": "첫 번째 이미지"
+        },
+        "image_2": {
+          "label": "두 번째 이미지"
+        },
+        "full_page_height_enable": {
+          "label": "전체 페이지 높이"
+        }
+      },
+      "presets": {
+        "name": "이미지 배너",
+        "category": "배너",
+        "blocks": {
+          "heading": {
+            "heading": "이미지 배너"
+          },
+          "text": {
+            "text": "<p><strong>배너 이미지 또는 템플릿의 콘텐츠에 대한 세부 정보를 고객에게 제공하세요.</strong></p>"
+          },
+          "button": {
+            "button_label": "전체 보기 →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "블로그 게시물"
+    },
+    "main_cart": {
+      "name": "장바구니 페이지"
+    },
+    "main_list_collections": {
+      "name": "컬렉션 목록 페이지"
+    },
+    "main_page": {
+      "name": "페이지"
+    },
+    "main_password_footer": {
+      "name": "비밀번호 푸터"
+    },
+    "main_password_header": {
+      "name": "비밀번호 헤더"
+    },
+    "main_product": {
+      "name": "제품 정보"
+    },
+    "product_recommendations": {
+      "name": "추천 제품",
+      "settings": {
+        "paragraph": {
+          "content": "동적 추천은 주문 및 제품 정보를 사용하여 시간이 지남에 따라 변경되고 개선됩니다. [자세히 알아보기](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "표시할 최대 제품 수"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "아일랜드 데모",
+      "settings": {
+        "heading": {
+          "label": "제목",
+          "default": "아일랜드 아키텍처 데모"
+        }
+      },
+      "presets": {
+        "name": "아일랜드 데모"
+      }
+    },
+    "section": {
+      "name": "섹션",
+      "settings": {
+        "header__layout": {
+          "content": "레이아웃"
+        },
+        "gap": {
+          "label": "간격"
+        },
+        "header__size": {
+          "content": "크기"
+        },
+        "section_width": {
+          "label": "너비",
+          "options__page": {
+            "label": "페이지"
+          },
+          "options__full": {
+            "label": "전체"
+          }
+        },
+        "header__padding": {
+          "content": "여백"
+        },
+        "padding_block_start": {
+          "label": "상단"
+        },
+        "padding_block_end": {
+          "label": "하단"
+        }
+      },
+      "presets": {
+        "name": "섹션"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "국가 선택",
+      "settings": {
+        "heading": {
+          "label": "제목",
+          "info": "국가 선택을 표시하려면 제목이 필요합니다",
+          "default": "국가"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "메뉴",
+      "settings": {
+        "heading": {
+          "label": "제목",
+          "info": "메뉴를 표시하려면 제목이 필요합니다",
+          "default": "빠른 링크"
+        },
+        "menu": {
+          "label": "메뉴",
+          "info": "최상위 메뉴 항목만 표시합니다"
+        }
+      },
+      "presets": {
+        "name": "메뉴",
+        "category": "푸터"
+      }
+    },
+    "header_logo": {
+      "name": "로고"
+    },
+    "header_menu_mobile": {
+      "name": "모바일 메뉴",
+      "settings": {
+        "menu": {
+          "label": "기본 탐색"
+        }
+      }
+    },
+    "article_card": {
+      "name": "아티클 카드"
+    },
+    "article_content": {
+      "name": "콘텐츠"
+    },
+    "button": {
+      "name": "버튼",
+      "settings": {
+        "button_label": {
+          "label": "버튼 레이블",
+          "info": "버튼을 숨기려면 레이블을 비워두세요.",
+          "default": "버튼 레이블"
+        },
+        "button_link": {
+          "label": "버튼 링크"
+        },
+        "button_variant": {
+          "label": "버튼 변형",
+          "options__default": {
+            "label": "기본"
+          },
+          "options__link": {
+            "label": "링크"
+          }
+        },
+        "button_size": {
+          "label": "버튼 크기",
+          "options__default": {
+            "label": "기본"
+          },
+          "options__lg": {
+            "label": "대형"
+          }
+        }
+      },
+      "presets": {
+        "name": "버튼",
+        "category": "기본"
+      }
+    },
+    "buy_buttons": {
+      "name": "구매 버튼",
+      "settings": {
+        "product": {
+          "label": "제품"
+        },
+        "show_dynamic_checkout": {
+          "label": "동적 결제 버튼 표시",
+          "info": "스토어에서 사용 가능한 결제 수단을 사용하여 고객이 PayPal 또는 Apple Pay와 같은 선호하는 옵션을 볼 수 있습니다. [자세히 알아보기](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "구매 버튼"
+      }
+    },
+    "collection_card": {
+      "name": "컬렉션 카드",
+      "settings": {
+        "collection": {
+          "label": "컬렉션"
+        }
+      },
+      "presets": {
+        "name": "컬렉션 카드"
+      }
+    },
+    "details": {
+      "name": "세부정보"
+    },
+    "email_signup": {
+      "name": "이메일 가입",
+      "presets": {
+        "name": "이메일 가입"
+      }
+    },
+    "header_menu": {
+      "name": "메뉴",
+      "settings": {
+        "menu": {
+          "label": "기본 탐색"
+        }
+      }
+    },
+    "heading": {
+      "name": "제목",
+      "settings": {
+        "heading": {
+          "label": "제목",
+          "default": "브랜드 소개"
+        },
+        "heading_size": {
+          "label": "제목 크기",
+          "options__default": {
+            "label": "기본"
+          },
+          "options__md": {
+            "label": "중형"
+          },
+          "options__lg": {
+            "label": "대형"
+          },
+          "options__xl": {
+            "label": "초대형"
+          }
+        },
+        "heading_level": {
+          "label": "제목 수준",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "제목",
+        "category": "기본"
+      }
+    },
+    "image": {
+      "name": "이미지",
+      "settings": {
+        "image": {
+          "label": "이미지"
+        }
+      }
+    },
+    "page_content": {
+      "name": "페이지 콘텐츠"
+    },
+    "price": {
+      "name": "가격",
+      "settings": {
+        "product": {
+          "label": "제품"
+        }
+      }
+    },
+    "product_card": {
+      "name": "제품 카드",
+      "settings": {
+        "product": {
+          "label": "제품"
+        }
+      },
+      "presets": {
+        "name": "제품 카드",
+        "category": "제품"
+      }
+    },
+    "product_media_gallery": {
+      "name": "제품 미디어"
+    },
+    "search_input": {
+      "name": "검색 입력"
+    },
+    "tab": {
+      "name": "탭",
+      "settings": {
+        "title": {
+          "label": "제목",
+          "default": "배송 정보"
+        },
+        "content": {
+          "label": "탭 콘텐츠",
+          "default": "<p>고객이 구매 결정을 내리는 데 도움이 되는 자세한 정보를 접을 수 있는 탭에 표시하세요.</p><p>예: 배송 및 반품 정책, 사이즈 가이드 및 기타 일반적인 질문.</p>"
+        },
+        "page": {
+          "label": "페이지의 탭 콘텐츠"
+        }
+      },
+      "presets": {
+        "name": "탭"
+      }
+    },
+    "text": {
+      "name": "텍스트",
+      "settings": {
+        "text": {
+          "label": "설명",
+          "default": "<p>고객에게 브랜드에 대한 정보를 공유하세요.</p>"
+        },
+        "text_size": {
+          "label": "텍스트 크기",
+          "options__default": {
+            "label": "기본"
+          },
+          "options__lg": {
+            "label": "대형"
+          }
+        }
+      },
+      "presets": {
+        "name": "텍스트",
+        "category": "기본"
+      }
+    },
+    "variant_picker": {
+      "name": "옵션 선택",
+      "settings": {
+        "product": {
+          "label": "제품"
+        },
+        "picker_type": {
+          "label": "유형",
+          "options__dropdown": {
+            "label": "드롭다운"
+          },
+          "options__button": {
+            "label": "버튼"
+          }
+        }
+      },
+      "presets": {
+        "name": "옵션 선택"
+      }
+    },
+    "product_details": {
+      "name": "세부정보"
+    },
+    "cart_products": {
+      "name": "장바구니 제품"
+    }
+  }
+}

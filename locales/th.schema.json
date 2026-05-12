@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "รายการคอลเลกชัน",
+      "settings": {
+        "collection_list": {
+          "label": "คอลเลกชัน"
+        },
+        "columns_desktop": {
+          "label": "จำนวนคอลัมน์บนเดสก์ท็อป"
+        }
+      },
+      "presets": {
+        "name": "รายการคอลเลกชัน",
+        "blocks": {
+          "heading": {
+            "heading": "คอลเลกชัน"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "แบบฟอร์มติดต่อ",
+      "presets": {
+        "name": "แบบฟอร์มติดต่อ"
+      }
+    },
+    "email_signup_banner": {
+      "name": "แบนเนอร์สมัครรับอีเมล",
+      "presets": {
+        "name": "แบนเนอร์สมัครรับอีเมล",
+        "blocks": {
+          "heading": {
+            "heading": "เปิดให้บริการเร็วๆ นี้"
+          },
+          "text": {
+            "text": "<p>เป็นคนแรกที่รู้เมื่อเราเปิดตัว</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "คอลเลกชันแนะนำ",
+      "settings": {
+        "collection": {
+          "label": "คอลเลกชัน"
+        },
+        "products_to_show": {
+          "label": "จำนวนสินค้าสูงสุดที่จะแสดง"
+        }
+      },
+      "presets": {
+        "name": "คอลเลกชันแนะนำ",
+        "category": "สินค้า",
+        "blocks": {
+          "heading": {
+            "heading": "คอลเลกชันแนะนำ"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "ส่วนท้าย"
+    },
+    "header": {
+      "name": "ส่วนหัว",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "เปิดใช้งานส่วนหัวแบบติดหน้าจอ",
+          "info": "ส่วนหัวจะแสดงบนหน้าจอเมื่อลูกค้าเลื่อนขึ้น"
+        }
+      }
+    },
+    "image_banner": {
+      "name": "แบนเนอร์รูปภาพ",
+      "settings": {
+        "image": {
+          "label": "รูปภาพแรก"
+        },
+        "image_2": {
+          "label": "รูปภาพที่สอง"
+        },
+        "full_page_height_enable": {
+          "label": "ความสูงเต็มหน้า"
+        }
+      },
+      "presets": {
+        "name": "แบนเนอร์รูปภาพ",
+        "category": "แบนเนอร์",
+        "blocks": {
+          "heading": {
+            "heading": "แบนเนอร์รูปภาพ"
+          },
+          "text": {
+            "text": "<p><strong>ให้รายละเอียดแก่ลูกค้าเกี่ยวกับรูปภาพแบนเนอร์หรือเนื้อหาในเทมเพลต</strong></p>"
+          },
+          "button": {
+            "button_label": "ช็อปทั้งหมด →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "โพสต์บล็อก"
+    },
+    "main_cart": {
+      "name": "หน้าตะกร้าสินค้า"
+    },
+    "main_list_collections": {
+      "name": "หน้ารายการคอลเลกชัน"
+    },
+    "main_page": {
+      "name": "หน้า"
+    },
+    "main_password_footer": {
+      "name": "ส่วนท้ายหน้ารหัสผ่าน"
+    },
+    "main_password_header": {
+      "name": "ส่วนหัวหน้ารหัสผ่าน"
+    },
+    "main_product": {
+      "name": "ข้อมูลสินค้า"
+    },
+    "product_recommendations": {
+      "name": "สินค้าแนะนำ",
+      "settings": {
+        "paragraph": {
+          "content": "คำแนะนำแบบไดนามิกใช้ข้อมูลคำสั่งซื้อและสินค้าเพื่อเปลี่ยนแปลงและปรับปรุงเมื่อเวลาผ่านไป [เรียนรู้เพิ่มเติม](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "จำนวนสินค้าสูงสุดที่จะแสดง"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Islands demo",
+      "settings": {
+        "heading": {
+          "label": "หัวเรื่อง",
+          "default": "Islands Architecture Demo"
+        }
+      },
+      "presets": {
+        "name": "Islands demo"
+      }
+    },
+    "section": {
+      "name": "ส่วน",
+      "settings": {
+        "header__layout": {
+          "content": "เลย์เอาต์"
+        },
+        "gap": {
+          "label": "ระยะห่าง"
+        },
+        "header__size": {
+          "content": "ขนาด"
+        },
+        "section_width": {
+          "label": "ความกว้าง",
+          "options__page": {
+            "label": "หน้า"
+          },
+          "options__full": {
+            "label": "เต็ม"
+          }
+        },
+        "header__padding": {
+          "content": "ระยะขอบ"
+        },
+        "padding_block_start": {
+          "label": "ด้านบน"
+        },
+        "padding_block_end": {
+          "label": "ด้านล่าง"
+        }
+      },
+      "presets": {
+        "name": "ส่วน"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "ตัวเลือกประเทศ",
+      "settings": {
+        "heading": {
+          "label": "หัวเรื่อง",
+          "info": "ต้องมีหัวเรื่องเพื่อแสดงตัวเลือกประเทศ",
+          "default": "ประเทศ"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "เมนู",
+      "settings": {
+        "heading": {
+          "label": "หัวเรื่อง",
+          "info": "ต้องมีหัวเรื่องเพื่อแสดงเมนู",
+          "default": "ลิงก์ด่วน"
+        },
+        "menu": {
+          "label": "เมนู",
+          "info": "แสดงเฉพาะรายการเมนูระดับบนสุด"
+        }
+      },
+      "presets": {
+        "name": "เมนู",
+        "category": "ส่วนท้าย"
+      }
+    },
+    "header_logo": {
+      "name": "โลโก้"
+    },
+    "header_menu_mobile": {
+      "name": "เมนูมือถือ",
+      "settings": {
+        "menu": {
+          "label": "เมนูหลัก"
+        }
+      }
+    },
+    "article_card": {
+      "name": "การ์ดบทความ"
+    },
+    "article_content": {
+      "name": "เนื้อหา"
+    },
+    "button": {
+      "name": "ปุ่ม",
+      "settings": {
+        "button_label": {
+          "label": "ป้ายกำกับปุ่ม",
+          "info": "เว้นว่างป้ายกำกับเพื่อซ่อนปุ่ม",
+          "default": "ป้ายกำกับปุ่ม"
+        },
+        "button_link": {
+          "label": "ลิงก์ปุ่ม"
+        },
+        "button_variant": {
+          "label": "รูปแบบปุ่ม",
+          "options__default": {
+            "label": "ค่าเริ่มต้น"
+          },
+          "options__link": {
+            "label": "ลิงก์"
+          }
+        },
+        "button_size": {
+          "label": "ขนาดปุ่ม",
+          "options__default": {
+            "label": "ค่าเริ่มต้น"
+          },
+          "options__lg": {
+            "label": "ใหญ่"
+          }
+        }
+      },
+      "presets": {
+        "name": "ปุ่ม",
+        "category": "พื้นฐาน"
+      }
+    },
+    "buy_buttons": {
+      "name": "ปุ่มซื้อ",
+      "settings": {
+        "product": {
+          "label": "สินค้า"
+        },
+        "show_dynamic_checkout": {
+          "label": "แสดงปุ่มชำระเงินแบบไดนามิก",
+          "info": "โดยใช้วิธีการชำระเงินที่มีในร้านค้าของคุณ ลูกค้าจะเห็นตัวเลือกที่พวกเขาต้องการ เช่น PayPal หรือ Apple Pay [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "ปุ่มซื้อ"
+      }
+    },
+    "collection_card": {
+      "name": "การ์ดคอลเลกชัน",
+      "settings": {
+        "collection": {
+          "label": "คอลเลกชัน"
+        }
+      },
+      "presets": {
+        "name": "การ์ดคอลเลกชัน"
+      }
+    },
+    "details": {
+      "name": "รายละเอียด"
+    },
+    "email_signup": {
+      "name": "สมัครรับอีเมล",
+      "presets": {
+        "name": "สมัครรับอีเมล"
+      }
+    },
+    "header_menu": {
+      "name": "เมนู",
+      "settings": {
+        "menu": {
+          "label": "เมนูหลัก"
+        }
+      }
+    },
+    "heading": {
+      "name": "หัวเรื่อง",
+      "settings": {
+        "heading": {
+          "label": "หัวเรื่อง",
+          "default": "บอกเล่าเกี่ยวกับแบรนด์ของคุณ"
+        },
+        "heading_size": {
+          "label": "ขนาดหัวเรื่อง",
+          "options__default": {
+            "label": "ค่าเริ่มต้น"
+          },
+          "options__md": {
+            "label": "กลาง"
+          },
+          "options__lg": {
+            "label": "ใหญ่"
+          },
+          "options__xl": {
+            "label": "ใหญ่พิเศษ"
+          }
+        },
+        "heading_level": {
+          "label": "ระดับหัวเรื่อง",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "หัวเรื่อง",
+        "category": "พื้นฐาน"
+      }
+    },
+    "image": {
+      "name": "รูปภาพ",
+      "settings": {
+        "image": {
+          "label": "รูปภาพ"
+        }
+      }
+    },
+    "page_content": {
+      "name": "เนื้อหาหน้า"
+    },
+    "price": {
+      "name": "ราคา",
+      "settings": {
+        "product": {
+          "label": "สินค้า"
+        }
+      }
+    },
+    "product_card": {
+      "name": "การ์ดสินค้า",
+      "settings": {
+        "product": {
+          "label": "สินค้า"
+        }
+      },
+      "presets": {
+        "name": "การ์ดสินค้า",
+        "category": "สินค้า"
+      }
+    },
+    "product_media_gallery": {
+      "name": "มีเดียสินค้า"
+    },
+    "search_input": {
+      "name": "ช่องค้นหา"
+    },
+    "tab": {
+      "name": "แท็บ",
+      "settings": {
+        "title": {
+          "label": "หัวเรื่อง",
+          "default": "ข้อมูลการจัดส่ง"
+        },
+        "content": {
+          "label": "เนื้อหาแท็บ",
+          "default": "<p>ใช้แท็บแบบย่อได้สำหรับข้อมูลโดยละเอียดที่จะช่วยให้ลูกค้าตัดสินใจซื้อ</p><p>ตัวอย่าง: นโยบายการจัดส่งและการคืนสินค้า คู่มือขนาด และคำถามทั่วไปอื่นๆ</p>"
+        },
+        "page": {
+          "label": "เนื้อหาแท็บจากหน้า"
+        }
+      },
+      "presets": {
+        "name": "แท็บ"
+      }
+    },
+    "text": {
+      "name": "ข้อความ",
+      "settings": {
+        "text": {
+          "label": "คำอธิบาย",
+          "default": "<p>แบ่งปันข้อมูลเกี่ยวกับแบรนด์ของคุณกับลูกค้า</p>"
+        },
+        "text_size": {
+          "label": "ขนาดข้อความ",
+          "options__default": {
+            "label": "ค่าเริ่มต้น"
+          },
+          "options__lg": {
+            "label": "ใหญ่"
+          }
+        }
+      },
+      "presets": {
+        "name": "ข้อความ",
+        "category": "พื้นฐาน"
+      }
+    },
+    "variant_picker": {
+      "name": "ตัวเลือกรูปแบบสินค้า",
+      "settings": {
+        "product": {
+          "label": "สินค้า"
+        },
+        "picker_type": {
+          "label": "ประเภท",
+          "options__dropdown": {
+            "label": "เมนูดรอปดาวน์"
+          },
+          "options__button": {
+            "label": "ปุ่ม"
+          }
+        }
+      },
+      "presets": {
+        "name": "ตัวเลือกรูปแบบสินค้า"
+      }
+    },
+    "product_details": {
+      "name": "รายละเอียด"
+    },
+    "cart_products": {
+      "name": "สินค้าในตะกร้าสินค้า"
+    }
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Список коллекций",
+      "settings": {
+        "collection_list": {
+          "label": "Коллекции"
+        },
+        "columns_desktop": {
+          "label": "Количество столбцов на десктопе"
+        }
+      },
+      "presets": {
+        "name": "Список коллекций",
+        "blocks": {
+          "heading": {
+            "heading": "Коллекции"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Форма обратной связи",
+      "presets": {
+        "name": "Форма обратной связи"
+      }
+    },
+    "email_signup_banner": {
+      "name": "Баннер подписки на email",
+      "presets": {
+        "name": "Баннер подписки на email",
+        "blocks": {
+          "heading": {
+            "heading": "Скоро открытие"
+          },
+          "text": {
+            "text": "<p>Будьте первыми, кто узнает о нашем запуске.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Избранная коллекция",
+      "settings": {
+        "collection": {
+          "label": "Коллекция"
+        },
+        "products_to_show": {
+          "label": "Максимальное количество товаров для показа"
+        }
+      },
+      "presets": {
+        "name": "Избранная коллекция",
+        "category": "Товары",
+        "blocks": {
+          "heading": {
+            "heading": "Избранная коллекция"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Подвал"
+    },
+    "header": {
+      "name": "Шапка",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Включить закрепленную шапку",
+          "info": "Шапка отображается на экране, когда покупатели прокручивают вверх."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Баннер с изображением",
+      "settings": {
+        "image": {
+          "label": "Первое изображение"
+        },
+        "image_2": {
+          "label": "Второе изображение"
+        },
+        "full_page_height_enable": {
+          "label": "На всю высоту страницы"
+        }
+      },
+      "presets": {
+        "name": "Баннер с изображением",
+        "category": "Баннеры",
+        "blocks": {
+          "heading": {
+            "heading": "Баннер с изображением"
+          },
+          "text": {
+            "text": "<p><strong>Предоставьте покупателям информацию о баннере или контенте в шаблоне.</strong></p>"
+          },
+          "button": {
+            "button_label": "Смотреть всё →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Записи блога"
+    },
+    "main_cart": {
+      "name": "Страница корзины"
+    },
+    "main_list_collections": {
+      "name": "Страница списка коллекций"
+    },
+    "main_page": {
+      "name": "Страница"
+    },
+    "main_password_footer": {
+      "name": "Подвал страницы пароля"
+    },
+    "main_password_header": {
+      "name": "Шапка страницы пароля"
+    },
+    "main_product": {
+      "name": "Информация о товаре"
+    },
+    "product_recommendations": {
+      "name": "Рекомендации товаров",
+      "settings": {
+        "paragraph": {
+          "content": "Динамические рекомендации используют информацию о заказах и товарах для улучшения со временем. [Подробнее](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Максимальное количество товаров для показа"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Демо Islands",
+      "settings": {
+        "heading": {
+          "label": "Заголовок",
+          "default": "Демонстрация Islands Architecture"
+        }
+      },
+      "presets": {
+        "name": "Демо Islands"
+      }
+    },
+    "section": {
+      "name": "Секция",
+      "settings": {
+        "header__layout": {
+          "content": "Макет"
+        },
+        "gap": {
+          "label": "Отступ"
+        },
+        "header__size": {
+          "content": "Размер"
+        },
+        "section_width": {
+          "label": "Ширина",
+          "options__page": {
+            "label": "Страница"
+          },
+          "options__full": {
+            "label": "Полная"
+          }
+        },
+        "header__padding": {
+          "content": "Внутренние отступы"
+        },
+        "padding_block_start": {
+          "label": "Сверху"
+        },
+        "padding_block_end": {
+          "label": "Снизу"
+        }
+      },
+      "presets": {
+        "name": "Секция"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Выбор страны",
+      "settings": {
+        "heading": {
+          "label": "Заголовок",
+          "info": "Заголовок необходим для отображения выбора страны",
+          "default": "Страна"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Меню",
+      "settings": {
+        "heading": {
+          "label": "Заголовок",
+          "info": "Заголовок необходим для отображения меню",
+          "default": "Быстрые ссылки"
+        },
+        "menu": {
+          "label": "Меню",
+          "info": "Отображаются только элементы меню верхнего уровня"
+        }
+      },
+      "presets": {
+        "name": "Меню",
+        "category": "Подвал"
+      }
+    },
+    "header_logo": {
+      "name": "Логотип"
+    },
+    "header_menu_mobile": {
+      "name": "Мобильное меню",
+      "settings": {
+        "menu": {
+          "label": "Основная навигация"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Карточка статьи"
+    },
+    "article_content": {
+      "name": "Контент"
+    },
+    "button": {
+      "name": "Кнопка",
+      "settings": {
+        "button_label": {
+          "label": "Текст кнопки",
+          "info": "Оставьте текст пустым, чтобы скрыть кнопку.",
+          "default": "Текст кнопки"
+        },
+        "button_link": {
+          "label": "Ссылка кнопки"
+        },
+        "button_variant": {
+          "label": "Вариант кнопки",
+          "options__default": {
+            "label": "По умолчанию"
+          },
+          "options__link": {
+            "label": "Ссылка"
+          }
+        },
+        "button_size": {
+          "label": "Размер кнопки",
+          "options__default": {
+            "label": "По умолчанию"
+          },
+          "options__lg": {
+            "label": "Большая"
+          }
+        }
+      },
+      "presets": {
+        "name": "Кнопка",
+        "category": "Основное"
+      }
+    },
+    "buy_buttons": {
+      "name": "Кнопки покупки",
+      "settings": {
+        "product": {
+          "label": "Товар"
+        },
+        "show_dynamic_checkout": {
+          "label": "Показывать кнопки быстрого оформления",
+          "info": "Используя способы оплаты, доступные в вашем магазине, покупатели видят предпочитаемый вариант, например PayPal или Apple Pay. [Подробнее](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Кнопки покупки"
+      }
+    },
+    "collection_card": {
+      "name": "Карточка коллекции",
+      "settings": {
+        "collection": {
+          "label": "Коллекция"
+        }
+      },
+      "presets": {
+        "name": "Карточка коллекции"
+      }
+    },
+    "details": {
+      "name": "Детали"
+    },
+    "email_signup": {
+      "name": "Подписка на email",
+      "presets": {
+        "name": "Подписка на email"
+      }
+    },
+    "header_menu": {
+      "name": "Меню",
+      "settings": {
+        "menu": {
+          "label": "Основная навигация"
+        }
+      }
+    },
+    "heading": {
+      "name": "Заголовок",
+      "settings": {
+        "heading": {
+          "label": "Заголовок",
+          "default": "Расскажите о Вашем бренде"
+        },
+        "heading_size": {
+          "label": "Размер заголовка",
+          "options__default": {
+            "label": "По умолчанию"
+          },
+          "options__md": {
+            "label": "Средний"
+          },
+          "options__lg": {
+            "label": "Большой"
+          },
+          "options__xl": {
+            "label": "Очень большой"
+          }
+        },
+        "heading_level": {
+          "label": "Уровень заголовка",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Заголовок",
+        "category": "Основное"
+      }
+    },
+    "image": {
+      "name": "Изображение",
+      "settings": {
+        "image": {
+          "label": "Изображение"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Содержимое страницы"
+    },
+    "price": {
+      "name": "Цена",
+      "settings": {
+        "product": {
+          "label": "Товар"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Карточка товара",
+      "settings": {
+        "product": {
+          "label": "Товар"
+        }
+      },
+      "presets": {
+        "name": "Карточка товара",
+        "category": "Товар"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Медиафайлы товара"
+    },
+    "search_input": {
+      "name": "Поле поиска"
+    },
+    "tab": {
+      "name": "Вкладка",
+      "settings": {
+        "title": {
+          "label": "Заголовок",
+          "default": "Информация о доставке"
+        },
+        "content": {
+          "label": "Содержимое вкладки",
+          "default": "<p>Используйте раскрывающиеся вкладки для более детальной информации, которая поможет покупателям принять решение о покупке.</p><p>Например: правила доставки и возврата, руководства по размерам и другие частые вопросы.</p>"
+        },
+        "page": {
+          "label": "Содержимое вкладки со страницы"
+        }
+      },
+      "presets": {
+        "name": "Вкладка"
+      }
+    },
+    "text": {
+      "name": "Текст",
+      "settings": {
+        "text": {
+          "label": "Описание",
+          "default": "<p>Поделитесь информацией о Вашем бренде с покупателями.</p>"
+        },
+        "text_size": {
+          "label": "Размер текста",
+          "options__default": {
+            "label": "По умолчанию"
+          },
+          "options__lg": {
+            "label": "Большой"
+          }
+        }
+      },
+      "presets": {
+        "name": "Текст",
+        "category": "Основное"
+      }
+    },
+    "variant_picker": {
+      "name": "Выбор варианта",
+      "settings": {
+        "product": {
+          "label": "Товар"
+        },
+        "picker_type": {
+          "label": "Тип",
+          "options__dropdown": {
+            "label": "Выпадающий список"
+          },
+          "options__button": {
+            "label": "Кнопки"
+          }
+        }
+      },
+      "presets": {
+        "name": "Выбор варианта"
+      }
+    },
+    "product_details": {
+      "name": "Детали"
+    },
+    "cart_products": {
+      "name": "Товары в корзине"
+    }
+  }
+}

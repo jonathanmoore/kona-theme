@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Liste de collections",
+      "settings": {
+        "collection_list": {
+          "label": "Collections"
+        },
+        "columns_desktop": {
+          "label": "Nombre de colonnes sur ordinateur"
+        }
+      },
+      "presets": {
+        "name": "Liste de collections",
+        "blocks": {
+          "heading": {
+            "heading": "Collections"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Formulaire de contact",
+      "presets": {
+        "name": "Formulaire de contact"
+      }
+    },
+    "email_signup_banner": {
+      "name": "Bannière d'inscription à l'infolettre",
+      "presets": {
+        "name": "Bannière d'inscription à l'infolettre",
+        "blocks": {
+          "heading": {
+            "heading": "Ouverture prochainement"
+          },
+          "text": {
+            "text": "<p>Soyez le premier à savoir quand nous lanceons.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Collection en vedette",
+      "settings": {
+        "collection": {
+          "label": "Collection"
+        },
+        "products_to_show": {
+          "label": "Nombre maximum de produits à afficher"
+        }
+      },
+      "presets": {
+        "name": "Collection en vedette",
+        "category": "Produits",
+        "blocks": {
+          "heading": {
+            "heading": "Collection en vedette"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Pied de page"
+    },
+    "header": {
+      "name": "En-tête",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Activer l'en-tête fixe",
+          "info": "L'en-tête s'affiche à l'écran lorsque les clients font défiler vers le haut."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Bannière d'image",
+      "settings": {
+        "image": {
+          "label": "Première image"
+        },
+        "image_2": {
+          "label": "Deuxième image"
+        },
+        "full_page_height_enable": {
+          "label": "Hauteur de page complète"
+        }
+      },
+      "presets": {
+        "name": "Bannière d'image",
+        "category": "Bannières",
+        "blocks": {
+          "heading": {
+            "heading": "Bannière d'image"
+          },
+          "text": {
+            "text": "<p><strong>Donnez aux clients des détails sur l'image ou le contenu de la bannière.</strong></p>"
+          },
+          "button": {
+            "button_label": "Voir tous les articles →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Articles de blog"
+    },
+    "main_cart": {
+      "name": "Page du panier"
+    },
+    "main_list_collections": {
+      "name": "Page de liste des collections"
+    },
+    "main_page": {
+      "name": "Page"
+    },
+    "main_password_footer": {
+      "name": "Pied de page de protection par mot de passe"
+    },
+    "main_password_header": {
+      "name": "En-tête de protection par mot de passe"
+    },
+    "main_product": {
+      "name": "Informations sur le produit"
+    },
+    "product_recommendations": {
+      "name": "Recommandations de produits",
+      "settings": {
+        "paragraph": {
+          "content": "Les recommandations dynamiques utilisent les commandes et les informations sur les produits pour changer et s'améliorer au fil du temps. [En savoir plus](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Nombre maximum de produits à afficher"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Démonstration Islands",
+      "settings": {
+        "heading": {
+          "label": "Titre",
+          "default": "Démonstration de l'architecture Islands"
+        }
+      },
+      "presets": {
+        "name": "Démonstration Islands"
+      }
+    },
+    "section": {
+      "name": "Section",
+      "settings": {
+        "header__layout": {
+          "content": "Mise en page"
+        },
+        "gap": {
+          "label": "Espace"
+        },
+        "header__size": {
+          "content": "Taille"
+        },
+        "section_width": {
+          "label": "Largeur",
+          "options__page": {
+            "label": "Page"
+          },
+          "options__full": {
+            "label": "Plein"
+          }
+        },
+        "header__padding": {
+          "content": "Remplissage"
+        },
+        "padding_block_start": {
+          "label": "Haut"
+        },
+        "padding_block_end": {
+          "label": "Bas"
+        }
+      },
+      "presets": {
+        "name": "Section"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Sélecteur de pays",
+      "settings": {
+        "heading": {
+          "label": "Titre",
+          "info": "Titre requis pour afficher le sélecteur de pays",
+          "default": "Pays"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Menu",
+      "settings": {
+        "heading": {
+          "label": "Titre",
+          "info": "Titre requis pour afficher le menu",
+          "default": "Liens rapides"
+        },
+        "menu": {
+          "label": "Menu",
+          "info": "Affiche uniquement les éléments de menu de niveau supérieur"
+        }
+      },
+      "presets": {
+        "name": "Menu",
+        "category": "Pied de page"
+      }
+    },
+    "header_logo": {
+      "name": "Logo"
+    },
+    "header_menu_mobile": {
+      "name": "Menu mobile",
+      "settings": {
+        "menu": {
+          "label": "Navigation principale"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Carte d'article"
+    },
+    "article_content": {
+      "name": "Contenu"
+    },
+    "button": {
+      "name": "Bouton",
+      "settings": {
+        "button_label": {
+          "label": "Étiquette du bouton",
+          "info": "Laissez l'étiquette vide pour masquer le bouton.",
+          "default": "Étiquette du bouton"
+        },
+        "button_link": {
+          "label": "Lien du bouton"
+        },
+        "button_variant": {
+          "label": "Variante du bouton",
+          "options__default": {
+            "label": "Par défaut"
+          },
+          "options__link": {
+            "label": "Lien"
+          }
+        },
+        "button_size": {
+          "label": "Taille du bouton",
+          "options__default": {
+            "label": "Par défaut"
+          },
+          "options__lg": {
+            "label": "Grand"
+          }
+        }
+      },
+      "presets": {
+        "name": "Bouton",
+        "category": "Basique"
+      }
+    },
+    "buy_buttons": {
+      "name": "Boutons d'achat",
+      "settings": {
+        "product": {
+          "label": "Produit"
+        },
+        "show_dynamic_checkout": {
+          "label": "Afficher les boutons de paiement dynamiques",
+          "info": "En utilisant les modes de paiement disponibles dans votre boutique, les clients voient leur option préférée, comme PayPal ou Apple Pay. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Boutons d'achat"
+      }
+    },
+    "collection_card": {
+      "name": "Carte de collection",
+      "settings": {
+        "collection": {
+          "label": "Collection"
+        }
+      },
+      "presets": {
+        "name": "Carte de collection"
+      }
+    },
+    "details": {
+      "name": "Détails"
+    },
+    "email_signup": {
+      "name": "Inscription à l'infolettre",
+      "presets": {
+        "name": "Inscription à l'infolettre"
+      }
+    },
+    "header_menu": {
+      "name": "Menu",
+      "settings": {
+        "menu": {
+          "label": "Navigation principale"
+        }
+      }
+    },
+    "heading": {
+      "name": "Titre",
+      "settings": {
+        "heading": {
+          "label": "Titre",
+          "default": "Parlez de votre marque"
+        },
+        "heading_size": {
+          "label": "Taille du titre",
+          "options__default": {
+            "label": "Par défaut"
+          },
+          "options__md": {
+            "label": "Moyen"
+          },
+          "options__lg": {
+            "label": "Grand"
+          },
+          "options__xl": {
+            "label": "Très grand"
+          }
+        },
+        "heading_level": {
+          "label": "Niveau de titre",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Titre",
+        "category": "Basique"
+      }
+    },
+    "image": {
+      "name": "Image",
+      "settings": {
+        "image": {
+          "label": "Image"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Contenu de la page"
+    },
+    "price": {
+      "name": "Prix",
+      "settings": {
+        "product": {
+          "label": "Produit"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Carte de produit",
+      "settings": {
+        "product": {
+          "label": "Produit"
+        }
+      },
+      "presets": {
+        "name": "Carte de produit",
+        "category": "Produit"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Média du produit"
+    },
+    "search_input": {
+      "name": "Entrée de recherche"
+    },
+    "tab": {
+      "name": "Onglet",
+      "settings": {
+        "title": {
+          "label": "Titre",
+          "default": "Informations d'expédition"
+        },
+        "content": {
+          "label": "Contenu de l'onglet",
+          "default": "<p>Utilisez des onglets repliables pour plus d'informations détaillées qui aideront les clients à prendre une décision d'achat.</p><p>Ex : Politiques d'expédition et de retour, guides des tailles et autres questions fréquemment posées.</p>"
+        },
+        "page": {
+          "label": "Contenu de l'onglet à partir de la page"
+        }
+      },
+      "presets": {
+        "name": "Onglet"
+      }
+    },
+    "text": {
+      "name": "Texte",
+      "settings": {
+        "text": {
+          "label": "Description",
+          "default": "<p>Partagez des informations sur votre marque avec vos clients.</p>"
+        },
+        "text_size": {
+          "label": "Taille du texte",
+          "options__default": {
+            "label": "Par défaut"
+          },
+          "options__lg": {
+            "label": "Grand"
+          }
+        }
+      },
+      "presets": {
+        "name": "Texte",
+        "category": "Basique"
+      }
+    },
+    "variant_picker": {
+      "name": "Sélecteur de variante",
+      "settings": {
+        "product": {
+          "label": "Produit"
+        },
+        "picker_type": {
+          "label": "Type",
+          "options__dropdown": {
+            "label": "Liste déroulante"
+          },
+          "options__button": {
+            "label": "Boutons"
+          }
+        }
+      },
+      "presets": {
+        "name": "Sélecteur de variante"
+      }
+    },
+    "product_details": {
+      "name": "Détails"
+    },
+    "cart_products": {
+      "name": "Produits du panier"
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{%- comment -%}theme-translator:skip{%- endcomment -%}
+<!-- Islands Architecture Demo Section
+     Demonstrates each hydration directive with live interactive demos,
+     showing the waiting-to-hydrated transition per card with timestamps
+     and a live event log. -->
+
+<div class="grid w-full gap-8 px-6 py-6 md:gap-12 md:px-8 md:py-8 lg:px-12 lg:py-12">
+
+  {%- comment -%} Header {%- endcomment -%}
+  <div class="grid gap-4 max-w-3xl">
+    <h2 class="text-heading font-heading text-2xl md:text-3xl">
+      {{ section.settings.heading }}
+    </h2>
+    <p class="text-primary/60 leading-relaxed">
+      Island hydration is a performance pattern where the server renders all HTML upfront,
+      and JavaScript only loads for interactive components — called "islands" — when they're
+      actually needed.
+    </p>
+    <p class="text-primary/60 leading-relaxed">
+      Each card below uses a unique custom element tag with a different hydration directive.
+      The runtime loads each island's JS independently based on its trigger — watch them
+      transition from "Waiting" to "Hydrated" at different times.
+    </p>
+  </div>
+
+  {%- comment -%} Demo Grid {%- endcomment -%}
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {% render 'islands-demo-card',
+      tag: 'island-demo-idle',
+      directive: 'client:idle',
+      title: 'client:idle',
+      description: 'Hydrates when the main thread is free (requestIdleCallback). Best for components needed soon but not critical to first paint.'
+    %}
+    {% render 'islands-demo-card',
+      tag: 'island-demo-visible',
+      directive: 'client:visible',
+      title: 'client:visible',
+      description: 'Hydrates when the element enters the viewport (IntersectionObserver). Ideal for below-the-fold content like footers or product recommendations.'
+    %}
+    {% render 'islands-demo-card',
+      tag: 'island-demo-media',
+      directive: 'client:media',
+      directive_value: '(min-width: 768px)',
+      title: 'client:media (desktop)',
+      description: 'Hydrates only when the viewport is ≥768px. On mobile this card stays in "Waiting" — resize your browser to see it activate.'
+    %}
+    {% render 'islands-demo-card',
+      tag: 'island-demo-media-mobile',
+      directive: 'client:media',
+      directive_value: '(max-width: 767px)',
+      title: 'client:media (mobile)',
+      description: 'Hydrates only when the viewport is <768px. On desktop this card stays in "Waiting" — the inverse of the card above.'
+    %}
+    {% render 'islands-demo-card',
+      tag: 'island-demo-defer',
+      directive: 'client:defer',
+      directive_value: '2000',
+      title: 'client:defer',
+      description: 'Hydrates after a fixed delay (2 seconds here). Useful for non-critical components you want to defer without waiting for user interaction.'
+    %}
+    {% render 'islands-demo-card',
+      tag: 'island-demo-interaction',
+      directive: 'client:interaction',
+      title: 'client:interaction',
+      description: 'Hydrates on hover, touch, or focus. Try hovering over or tabbing to this card. Perfect for components that are inert until the user engages.'
+    %}
+  </div>
+
+  {%- comment -%} Nested Islands Demo {%- endcomment -%}
+  <div class="grid gap-3 max-w-3xl">
+    <h3 class="text-lg font-semibold">Nested Islands</h3>
+    <p class="text-sm text-primary/60 leading-relaxed">
+      When a parent island hydrates, the runtime re-walks its children to discover nested islands.
+      Child islands are <strong>skipped</strong> during the initial DOM scan — they only activate
+      after their parent loads. Hover over the parent to hydrate it (via <code class="text-xs font-semibold">client:interaction</code>),
+      then watch the child start its own <code class="text-xs font-semibold">client:defer</code> countdown.
+    </p>
+
+    {%- comment -%} Parent island: hydrates on idle, contains a child island {%- endcomment -%}
+    <island-demo-parent
+      class="group grid gap-4 rounded-lg border border-primary/10 p-5 transition-colors duration-500 [.is-hydrated&]:border-primary/25 [.is-hydrated&]:bg-primary/[0.02]"
+      client:interaction
+    >
+      <div class="flex items-center justify-between gap-3">
+        <code class="text-sm font-semibold text-primary">Parent (client:interaction)</code>
+        <span
+          data-demo-status
+          class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-primary/10 text-primary/50 transition-colors duration-500 [&[data-hydrated]]:bg-green-100 [&[data-hydrated]]:text-green-700"
+        >
+          Waiting
+        </span>
+      </div>
+      <p class="text-sm text-primary/60 leading-relaxed">
+        Hover, touch, or tab into this card to hydrate it. Once it does, the runtime discovers the child island below.
+      </p>
+      <div class="h-1.5 w-full overflow-hidden rounded-full bg-primary/10">
+        <div
+          data-demo-indicator
+          class="h-full w-0 rounded-full bg-green-500 transition-all duration-700 [.is-active&]:w-full"
+        ></div>
+      </div>
+      <p class="text-xs text-primary/60">
+        Hydrated at: <span data-demo-timestamp class="font-mono">--:--:--.---</span>
+      </p>
+
+      {%- comment -%} Child island: only discovered after parent hydrates {%- endcomment -%}
+      <island-demo-child
+        class="group grid gap-3 rounded-lg border border-dashed border-primary/15 p-4 transition-colors duration-500 [.is-hydrated&]:border-primary/25 [.is-hydrated&]:bg-primary/[0.02]"
+        client:defer="1000"
+      >
+        <div class="flex items-center justify-between gap-3">
+          <code class="text-sm font-semibold text-primary/70">Child (client:defer 1s)</code>
+          <span
+            data-demo-status
+            class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-primary/10 text-primary/50 transition-colors duration-500 [&[data-hydrated]]:bg-green-100 [&[data-hydrated]]:text-green-700"
+          >
+            Waiting
+          </span>
+        </div>
+        <p class="text-xs text-primary/50 leading-relaxed">
+          This child island is invisible to the runtime until the parent hydrates. Then it waits 1s before activating.
+          Compare the timestamps to see the cascade.
+        </p>
+        <div class="h-1 w-full overflow-hidden rounded-full bg-primary/10">
+          <div
+            data-demo-indicator
+            class="h-full w-0 rounded-full bg-green-500 transition-all duration-700 [.is-active&]:w-full"
+          ></div>
+        </div>
+        <p class="text-xs text-primary/60">
+          Hydrated at: <span data-demo-timestamp class="font-mono">--:--:--.---</span>
+        </p>
+      </island-demo-child>
+    </island-demo-parent>
+  </div>
+
+  {%- comment -%} Event Log {%- endcomment -%}
+  <div class="grid gap-3 max-w-3xl">
+    <h3 class="text-lg font-semibold">Event Log</h3>
+    <p class="text-sm text-primary/60">
+      Live feed of <code class="text-xs font-semibold">islands:load</code> events dispatched
+      by the hydration runtime as each island activates.
+    </p>
+    <div
+      id="islands-demo-log"
+      class="grid gap-1 rounded-lg border border-primary/10 bg-primary/[0.02] p-4 font-mono text-xs text-primary/60 min-h-[6rem]"
+    >
+      <p class="text-primary/30 italic">Waiting for events…</p>
+    </div>
+  </div>
+</div>
+
+<!-- Non-module script: runs synchronously during parse to register event
+     listeners before any ES module (including revive.js) can fire events.
+     This guarantees we capture every islands:load event. -->
+<script>
+  (function () {
+    var log = document.getElementById('islands-demo-log')
+    if (!log) return
+    var count = 0
+    var cleared = false
+
+    function appendEntry(type, detail) {
+      if (!cleared) {
+        log.innerHTML = ''
+        cleared = true
+      }
+      count++
+      var el = document.createElement('p')
+      var tag = (detail && detail.tag) || 'unknown'
+      var duration = detail && detail.duration != null ? detail.duration.toFixed(1) + 'ms' : ''
+      var attempt = detail && detail.attempt != null ? ' (attempt ' + detail.attempt + ')' : ''
+      el.textContent = '#' + count + ' ' + type + ' <' + tag + '> ' + duration + attempt
+      log.appendChild(el)
+    }
+
+    document.addEventListener('islands:load', function (e) {
+      appendEntry('islands:load', e.detail)
+    })
+    document.addEventListener('islands:error', function (e) {
+      appendEntry('islands:error', e.detail)
+    })
+  })()
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.islands_demo.name",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.islands_demo.settings.heading.label",
+      "default": "t:sections.islands_demo.settings.heading.default"
+    }
+  ],
+  "presets": [{ "name": "t:sections.islands_demo.presets.name" }]
+}
+{% endschema %}

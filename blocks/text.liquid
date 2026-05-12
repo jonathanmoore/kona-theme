@@ -1,0 +1,46 @@
+{% doc %}
+  Renders a block of rich text content using the text snippet.
+{% enddoc %}
+
+{%- render 'text',
+  content: block.settings.text,
+  size: block.settings.text_size,
+  shopify_attributes: block.shopify_attributes
+-%}
+
+{% schema %}
+{
+  "name": "t:blocks.text.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "t:blocks.text.settings.text.default",
+      "label": "t:blocks.text.settings.text.label"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "options": [
+        {
+          "value": "",
+          "label": "t:blocks.text.settings.text_size.options__default.label"
+        },
+        {
+          "value": "lg",
+          "label": "t:blocks.text.settings.text_size.options__lg.label"
+        }
+      ],
+      "default": "",
+      "label": "t:blocks.text.settings.text_size.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.text.presets.name",
+      "category": "t:blocks.text.presets.category"
+    }
+  ]
+}
+{% endschema %}

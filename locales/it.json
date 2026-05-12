@@ -1,0 +1,258 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Accedi al negozio utilizzando la password:",
+      "login_password_button": "Accedi utilizzando la password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "La Sua password",
+      "login_form_error": "Password errata!",
+      "login_form_submit": "Accedi",
+      "admin_link_html": "È il proprietario del negozio? <a href=\"/admin\" class=\"link underlined-link\">Acceda qui</a>",
+      "powered_by_shopify_html": "Questo negozio sarà alimentato da {{ shopify }}"
+    },
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "pagination": {
+      "label": "Paginazione",
+      "page": "Pagina {{ number }}",
+      "next": "Pagina successiva",
+      "previous": "Pagina precedente"
+    },
+    "search": {
+      "search": "Cerca",
+      "submit": "Cerchi prodotti",
+      "no_results_html": "La Sua ricerca per \\\"{{ terms }}\\\" non ha restituito risultati."
+    },
+    "continue_shopping": "Continua lo shopping",
+    "meta": {
+      "tagged": "etichettato \"{{ tags }}\""
+    }
+  },
+  "newsletter": {
+    "label": "Email",
+    "success": "Grazie per essersi iscritto",
+    "button_label": "Iscriviti"
+  },
+  "accessibility": {
+    "skip_to_text": "Passa al contenuto",
+    "close": "Chiudi",
+    "unit_price_separator": "per",
+    "link_messages": {
+      "new_window": "Si apre in una nuova finestra."
+    },
+    "loading": "Caricamento in corso...",
+    "error": "Errore",
+    "main_navigation": "Navigazione principale"
+  },
+  "sections": {
+    "header": {
+      "menu": "Menu",
+      "cart_count": "PLURAL:{\"one\": \"1 articolo\", \"other\": \"{{ count }} articoli\"}"
+    },
+    "cart": {
+      "title": "Il Suo carrello",
+      "empty": "Il Suo carrello è attualmente vuoto.",
+      "remove_title": "Rimuovi {{ title }}",
+      "subtotal": "Subtotale",
+      "new_subtotal": "Nuovo subtotale",
+      "taxes_and_shipping_policy_at_checkout_html": "Imposte e <a href=\"{{ link }}\">spedizione</a> calcolate al checkout",
+      "taxes_included_but_shipping_at_checkout": "Imposte incluse e spedizione calcolata al checkout",
+      "taxes_included_and_shipping_policy_html": "Imposte incluse. <a href=\"{{ link }}\">Spedizione</a> calcolata al checkout.",
+      "taxes_and_shipping_at_checkout": "Imposte e spedizione calcolate al checkout",
+      "update": "Aggiorna",
+      "checkout": "Procedi al checkout",
+      "note": "Istruzioni speciali per l'ordine",
+      "cart_error": "Si è verificato un errore durante l'aggiornamento del carrello. Riprovi.",
+      "cart_quantity_error_html": "Può aggiungere solo {{ quantity }} di questo articolo al Suo carrello."
+    },
+    "collection_template": {
+      "title": "Collezione"
+    }
+  },
+  "onboarding": {
+    "product_title": "Esempio titolo prodotto",
+    "collection_title": "Nome della Sua collezione"
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "Quantità",
+        "input_label": "Quantità per {{ product }}",
+        "increase": "Aumenta quantità per {{ product }}",
+        "decrease": "Diminuisci quantità per {{ product }}"
+      },
+      "price": {
+        "regular_price": "Prezzo normale",
+        "sale_price": "Prezzo scontato",
+        "from_price_html": "Da {{ min_price }}",
+        "unit_price": "Prezzo unitario"
+      },
+      "add_to_cart": "Aggiungi al carrello",
+      "sold_out": "Esaurito",
+      "unavailable": "Non disponibile",
+      "product_variants": "Varianti prodotto"
+    }
+  },
+  "templates": {
+    "cart": {
+      "cart": "Carrello"
+    },
+    "search": {
+      "title": "Risultati di ricerca"
+    },
+    "404": {
+      "title": "Errore 404 - Pagina non trovata",
+      "subtext": "La pagina richiesta non esiste."
+    },
+    "contact": {
+      "form": {
+        "title": "Modulo di contatto",
+        "name": "Nome",
+        "email": "Email",
+        "phone": "Numero di telefono",
+        "comment": "Commento",
+        "send": "Invia",
+        "post_success": "Grazie per averci contattato. Le risponderemo il prima possibile.",
+        "error_heading": "Si prega di correggere quanto segue:"
+      }
+    }
+  },
+  "customer": {
+    "account_fallback": "Account",
+    "log_in": "Accedi",
+    "log_out": "Esci",
+    "order": {
+      "title": "Ordine {{ name }}",
+      "date_html": "Effettuato il {{ date }}",
+      "cancelled_html": "Ordine annullato il {{ date }}",
+      "cancelled_reason": "Motivo: {{ reason }}",
+      "billing_address": "Indirizzo di fatturazione",
+      "payment_status": "Stato del pagamento",
+      "shipping_address": "Indirizzo di spedizione",
+      "fulfillment_status": "Stato di evasione",
+      "discount": "Sconto",
+      "shipping": "Spedizione",
+      "tax": "Imposta",
+      "product": "Prodotto",
+      "sku": "SKU",
+      "price": "Prezzo",
+      "quantity": "Quantità",
+      "total": "Totale",
+      "fulfilled_at_html": "Evaso il {{ date }}",
+      "track_shipment": "Traccia spedizione",
+      "tracking_url": "Link di tracciamento",
+      "tracking_company": "Corriere",
+      "tracking_number": "Numero di tracciamento",
+      "subtotal": "Subtotale",
+      "total_duties": "Dazi"
+    },
+    "orders": {
+      "title": "Cronologia ordini",
+      "order_number": "Ordine",
+      "order_number_link": "Ordine numero {{ number }}",
+      "date": "Data",
+      "payment_status": "Stato del pagamento",
+      "fulfillment_status": "Stato di evasione",
+      "total": "Totale",
+      "none": "Non ha ancora effettuato ordini."
+    },
+    "recover_password": {
+      "title": "Reimposta la Sua password",
+      "subtext": "Le invieremo un'email per reimpostare la Sua password",
+      "success": "Le abbiamo inviato un'email con un link per aggiornare la Sua password."
+    },
+    "login_page": {
+      "cancel": "Annulla",
+      "create_account": "Crea account",
+      "email": "Email",
+      "forgot_password": "Ha dimenticato la password?",
+      "guest_continue": "Continua",
+      "guest_title": "Continua come ospite",
+      "password": "Password",
+      "title": "Accedi",
+      "sign_in": "Accedi",
+      "submit": "Invia"
+    },
+    "register": {
+      "title": "Crea account",
+      "first_name": "Nome",
+      "last_name": "Cognome",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Crea"
+    },
+    "reset_password": {
+      "title": "Reimposta password account",
+      "subtext": "Inserisca una nuova password per {{ email }}",
+      "password": "Password",
+      "password_confirm": "Conferma password",
+      "submit": "Reimposta password"
+    },
+    "activate_account": {
+      "title": "Attiva account",
+      "subtext": "Crei la Sua password per attivare il Suo account.",
+      "password": "Password",
+      "password_confirm": "Conferma password",
+      "submit": "Attiva account",
+      "cancel": "Rifiuta invito"
+    },
+    "addresses": {
+      "title": "Indirizzi",
+      "default": "Predefinito",
+      "add_new": "Aggiungi un nuovo indirizzo",
+      "edit_address": "Modifica indirizzo",
+      "first_name": "Nome",
+      "last_name": "Cognome",
+      "company": "Azienda",
+      "address1": "Indirizzo 1",
+      "address2": "Indirizzo 2",
+      "city": "Città",
+      "country": "Paese/regione",
+      "province": "Provincia",
+      "zip": "CAP",
+      "phone": "Telefono",
+      "set_default": "Imposta come indirizzo predefinito",
+      "add": "Aggiungi indirizzo",
+      "update": "Aggiorna indirizzo",
+      "cancel": "Annulla",
+      "edit": "Modifica",
+      "delete": "Elimina",
+      "delete_confirm": "È sicuro di voler eliminare questo indirizzo?"
+    },
+    "account": {
+      "title": "Account",
+      "details": "Dettagli account",
+      "view_addresses": "Visualizza indirizzi",
+      "return": "Torna ai dettagli account"
+    }
+  },
+  "localization": {
+    "update_country": "Aggiorna paese/regione"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Ecco la Sua carta regalo da {{ value }} per {{ shop }}!",
+      "subtext": "La Sua carta regalo",
+      "gift_card_code": "Codice carta regalo",
+      "shop_link": "Continua lo shopping",
+      "remaining_html": "Saldo residuo {{ balance }}",
+      "add_to_apple_wallet": "Aggiungi a Apple Wallet",
+      "qr_image_alt": "Codice QR — scansiona per riscattare la carta regalo",
+      "copy_code": "Copia codice",
+      "expired": "Scaduta",
+      "copy_code_success": "Codice copiato con successo",
+      "print_gift_card": "Stampa"
+    }
+  }
+}

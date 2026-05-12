@@ -1,0 +1,95 @@
+{%- doc -%}
+  Displays a heading element.
+
+  @param {string} [wrapper_class]
+{%- enddoc -%}
+
+{%- liquid
+  assign heading_tag = 'div'
+  case block.settings.heading_level
+    when 'h1'
+      assign heading_tag = 'h1'
+    when 'h2'
+      assign heading_tag = 'h2'
+    when 'h3'
+      assign heading_tag = 'h3'
+  endcase
+-%}
+
+<{{ heading_tag }}
+  class="{{ wrapper_class }} font-heading font-heading-weight data-[size=xl]:text-display data-[size=lg]:text-heading data-[size=md]:text-lead"
+  data-slot="heading"
+  data-size="{{ block.settings.heading_size }}"
+  {{ block.shopify_attributes }}
+>
+  {{- block.settings.heading | escape -}}
+</{{ heading_tag }}>
+
+{% schema %}
+{
+  "name": "t:blocks.heading.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:blocks.heading.settings.heading.label",
+      "default": "t:blocks.heading.settings.heading.default"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "",
+          "label": "t:blocks.heading.settings.heading_size.options__default.label"
+        },
+        {
+          "value": "md",
+          "label": "t:blocks.heading.settings.heading_size.options__md.label"
+        },
+        {
+          "value": "lg",
+          "label": "t:blocks.heading.settings.heading_size.options__lg.label"
+        },
+        {
+          "value": "xl",
+          "label": "t:blocks.heading.settings.heading_size.options__xl.label"
+        }
+      ],
+      "default": "",
+      "label": "t:blocks.heading.settings.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "options": [
+        {
+          "value": "div",
+          "label": "t:blocks.heading.settings.heading_level.options__div.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:blocks.heading.settings.heading_level.options__h1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:blocks.heading.settings.heading_level.options__h2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:blocks.heading.settings.heading_level.options__h3.label"
+        }
+      ],
+      "default": "div",
+      "label": "t:blocks.heading.settings.heading_level.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.heading.presets.name",
+      "category": "t:blocks.heading.presets.category"
+    }
+  ]
+}
+{% endschema %}

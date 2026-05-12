@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Списък с колекции",
+      "settings": {
+        "collection_list": {
+          "label": "Колекции"
+        },
+        "columns_desktop": {
+          "label": "Брой колони на десктоп"
+        }
+      },
+      "presets": {
+        "name": "Списък с колекции",
+        "blocks": {
+          "heading": {
+            "heading": "Колекции"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Формуляр за контакт",
+      "presets": {
+        "name": "Формуляр за контакт"
+      }
+    },
+    "email_signup_banner": {
+      "name": "Банер за абониране за имейли",
+      "presets": {
+        "name": "Банер за абониране за имейли",
+        "blocks": {
+          "heading": {
+            "heading": "Скоро отваряме"
+          },
+          "text": {
+            "text": "<p>Бъдете първите, които ще разберат, когато стартираме.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Представена колекция",
+      "settings": {
+        "collection": {
+          "label": "Колекция"
+        },
+        "products_to_show": {
+          "label": "Максимален брой продукти за показване"
+        }
+      },
+      "presets": {
+        "name": "Представена колекция",
+        "category": "Продукти",
+        "blocks": {
+          "heading": {
+            "heading": "Представена колекция"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Долен колонтитул"
+    },
+    "header": {
+      "name": "Горен колонтитул",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Активиране на лепнещ горен колонтитул",
+          "info": "Горният колонтитул се показва на екрана, когато клиентите превъртат нагоре."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Банер с изображение",
+      "settings": {
+        "image": {
+          "label": "Първо изображение"
+        },
+        "image_2": {
+          "label": "Второ изображение"
+        },
+        "full_page_height_enable": {
+          "label": "Пълна височина на страницата"
+        }
+      },
+      "presets": {
+        "name": "Банер с изображение",
+        "category": "Банери",
+        "blocks": {
+          "heading": {
+            "heading": "Банер с изображение"
+          },
+          "text": {
+            "text": "<p><strong>Предоставете на клиентите детайли за банерното изображение или съдържанието на шаблона.</strong></p>"
+          },
+          "button": {
+            "button_label": "Разгледайте всички →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Публикации в блога"
+    },
+    "main_cart": {
+      "name": "Страница на количката"
+    },
+    "main_list_collections": {
+      "name": "Страница със списък на колекциите"
+    },
+    "main_page": {
+      "name": "Страница"
+    },
+    "main_password_footer": {
+      "name": "Долен колонтитул на паролата"
+    },
+    "main_password_header": {
+      "name": "Горен колонтитул на паролата"
+    },
+    "main_product": {
+      "name": "Информация за продукта"
+    },
+    "product_recommendations": {
+      "name": "Препоръки за продукти",
+      "settings": {
+        "paragraph": {
+          "content": "Динамичните препоръки използват информация за поръчките и продуктите, за да се променят и подобряват с течение на времето. [Научете повече](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Максимален брой продукти за показване"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Демо на Islands",
+      "settings": {
+        "heading": {
+          "label": "Заглавие",
+          "default": "Демо на Islands Architecture"
+        }
+      },
+      "presets": {
+        "name": "Демо на Islands"
+      }
+    },
+    "section": {
+      "name": "Секция",
+      "settings": {
+        "header__layout": {
+          "content": "Оформление"
+        },
+        "gap": {
+          "label": "Разстояние"
+        },
+        "header__size": {
+          "content": "Размер"
+        },
+        "section_width": {
+          "label": "Ширина",
+          "options__page": {
+            "label": "Страница"
+          },
+          "options__full": {
+            "label": "Пълна"
+          }
+        },
+        "header__padding": {
+          "content": "Отстояние"
+        },
+        "padding_block_start": {
+          "label": "Отгоре"
+        },
+        "padding_block_end": {
+          "label": "Отдолу"
+        }
+      },
+      "presets": {
+        "name": "Секция"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Избор на държава",
+      "settings": {
+        "heading": {
+          "label": "Заглавие",
+          "info": "Изисква се заглавие, за да се покаже изборът на държава",
+          "default": "Държава"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Меню",
+      "settings": {
+        "heading": {
+          "label": "Заглавие",
+          "info": "Изисква се заглавие, за да се покаже менюто",
+          "default": "Бързи връзки"
+        },
+        "menu": {
+          "label": "Меню",
+          "info": "Показва само елементи от първо ниво на менюто"
+        }
+      },
+      "presets": {
+        "name": "Меню",
+        "category": "Долен колонтитул"
+      }
+    },
+    "header_logo": {
+      "name": "Лого"
+    },
+    "header_menu_mobile": {
+      "name": "Мобилно меню",
+      "settings": {
+        "menu": {
+          "label": "Основна навигация"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Карта на статия"
+    },
+    "article_content": {
+      "name": "Съдържание"
+    },
+    "button": {
+      "name": "Бутон",
+      "settings": {
+        "button_label": {
+          "label": "Етикет на бутона",
+          "info": "Оставете етикета празен, за да скриете бутона.",
+          "default": "Етикет на бутона"
+        },
+        "button_link": {
+          "label": "Връзка на бутона"
+        },
+        "button_variant": {
+          "label": "Вариант на бутона",
+          "options__default": {
+            "label": "По подразбиране"
+          },
+          "options__link": {
+            "label": "Връзка"
+          }
+        },
+        "button_size": {
+          "label": "Размер на бутона",
+          "options__default": {
+            "label": "По подразбиране"
+          },
+          "options__lg": {
+            "label": "Голям"
+          }
+        }
+      },
+      "presets": {
+        "name": "Бутон",
+        "category": "Основни"
+      }
+    },
+    "buy_buttons": {
+      "name": "Бутони за покупка",
+      "settings": {
+        "product": {
+          "label": "Продукт"
+        },
+        "show_dynamic_checkout": {
+          "label": "Показване на бутони за динамично плащане",
+          "info": "Използвайки методите за плащане, налични в Вашия магазин, клиентите виждат предпочитания от тях вариант, като PayPal или Apple Pay. [Научете повече](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Бутони за покупка"
+      }
+    },
+    "collection_card": {
+      "name": "Карта на колекция",
+      "settings": {
+        "collection": {
+          "label": "Колекция"
+        }
+      },
+      "presets": {
+        "name": "Карта на колекция"
+      }
+    },
+    "details": {
+      "name": "Детайли"
+    },
+    "email_signup": {
+      "name": "Абониране за имейли",
+      "presets": {
+        "name": "Абониране за имейли"
+      }
+    },
+    "header_menu": {
+      "name": "Меню",
+      "settings": {
+        "menu": {
+          "label": "Основна навигация"
+        }
+      }
+    },
+    "heading": {
+      "name": "Заглавие",
+      "settings": {
+        "heading": {
+          "label": "Заглавие",
+          "default": "Разкажете за Вашата марка"
+        },
+        "heading_size": {
+          "label": "Размер на заглавието",
+          "options__default": {
+            "label": "По подразбиране"
+          },
+          "options__md": {
+            "label": "Среден"
+          },
+          "options__lg": {
+            "label": "Голям"
+          },
+          "options__xl": {
+            "label": "Много голям"
+          }
+        },
+        "heading_level": {
+          "label": "Ниво на заглавието",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Заглавие",
+        "category": "Основни"
+      }
+    },
+    "image": {
+      "name": "Изображение",
+      "settings": {
+        "image": {
+          "label": "Изображение"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Съдържание на страницата"
+    },
+    "price": {
+      "name": "Цена",
+      "settings": {
+        "product": {
+          "label": "Продукт"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Карта на продукт",
+      "settings": {
+        "product": {
+          "label": "Продукт"
+        }
+      },
+      "presets": {
+        "name": "Карта на продукт",
+        "category": "Продукт"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Медия на продукта"
+    },
+    "search_input": {
+      "name": "Поле за търсене"
+    },
+    "tab": {
+      "name": "Раздел",
+      "settings": {
+        "title": {
+          "label": "Заглавие",
+          "default": "Информация за доставка"
+        },
+        "content": {
+          "label": "Съдържание на раздела",
+          "default": "<p>Използвайте сгъваеми раздели за по-подробна информация, която ще помогне на клиентите да вземат решение за покупка.</p><p>Например: Политики за доставка и връщане, ръководства за размери и други често задавани въпроси.</p>"
+        },
+        "page": {
+          "label": "Съдържание на раздела от страница"
+        }
+      },
+      "presets": {
+        "name": "Раздел"
+      }
+    },
+    "text": {
+      "name": "Текст",
+      "settings": {
+        "text": {
+          "label": "Описание",
+          "default": "<p>Споделете информация за Вашата марка с клиентите си.</p>"
+        },
+        "text_size": {
+          "label": "Размер на текста",
+          "options__default": {
+            "label": "По подразбиране"
+          },
+          "options__lg": {
+            "label": "Голям"
+          }
+        }
+      },
+      "presets": {
+        "name": "Текст",
+        "category": "Основни"
+      }
+    },
+    "variant_picker": {
+      "name": "Избор на вариант",
+      "settings": {
+        "product": {
+          "label": "Продукт"
+        },
+        "picker_type": {
+          "label": "Тип",
+          "options__dropdown": {
+            "label": "Падащо меню"
+          },
+          "options__button": {
+            "label": "Бутони"
+          }
+        }
+      },
+      "presets": {
+        "name": "Избор на вариант"
+      }
+    },
+    "product_details": {
+      "name": "Детайли"
+    },
+    "cart_products": {
+      "name": "Продукти в количката"
+    }
+  }
+}

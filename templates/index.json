@@ -1,0 +1,167 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "xl",
+            "heading_level": "h2"
+          },
+          "blocks": {}
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Give customers details about the banner image(s) or content on the template.</strong></p>",
+            "text_size": "lg"
+          },
+          "blocks": {}
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop all →",
+            "button_link": "shopify://collections/all",
+            "button_variant": "link",
+            "button_size": "lg"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/kona-hero.png",
+        "full_page_height_enable": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "static": true,
+          "settings": {
+            "heading": "Featured collection",
+            "heading_size": "md",
+            "heading_level": "h2"
+          },
+          "blocks": {}
+        },
+        "static-product-card": {
+          "type": "product-card",
+          "static": true,
+          "settings": {
+            "product": "{{ closest.product }}"
+          },
+          "blocks": {
+            "image": {
+              "type": "image",
+              "static": true,
+              "settings": {
+                "image": "{{ closest.product.featured_image }}"
+              },
+              "blocks": {}
+            },
+            "heading": {
+              "type": "text",
+              "static": true,
+              "settings": {
+                "text": "<p>{{ closest.product.title }}</p>",
+                "text_size": ""
+              },
+              "blocks": {}
+            },
+            "price": {
+              "type": "price",
+              "static": true,
+              "settings": {
+                "product": "{{ closest.product }}"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "settings": {
+        "collection": "snowboards",
+        "products_to_show": 8
+      }
+    },
+    "collection_list": {
+      "type": "collection-list",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "static": true,
+          "settings": {
+            "heading": "Collections",
+            "heading_size": "md",
+            "heading_level": "h2"
+          },
+          "blocks": {}
+        },
+        "collection-card": {
+          "type": "collection-card",
+          "static": true,
+          "settings": {
+            "collection": "{{ closest.collection }}"
+          },
+          "blocks": {
+            "image": {
+              "type": "image",
+              "static": true,
+              "settings": {
+                "image": "{{ closest.collection.image }}"
+              },
+              "blocks": {}
+            },
+            "heading": {
+              "type": "heading",
+              "static": true,
+              "settings": {
+                "heading": "{{ closest.collection.title }}",
+                "heading_size": "",
+                "heading_level": "div"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "settings": {
+        "collection_list": [],
+        "columns_desktop": 3
+      }
+    },
+    "islands_demo": {
+      "type": "islands-demo",
+      "settings": {
+        "heading": "Islands Architecture Demo"
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "collection_list",
+    "islands_demo"
+  ]
+}

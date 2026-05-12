@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "Samlingsliste",
+      "settings": {
+        "collection_list": {
+          "label": "Samlinger"
+        },
+        "columns_desktop": {
+          "label": "Antal kolonner på desktop"
+        }
+      },
+      "presets": {
+        "name": "Samlingsliste",
+        "blocks": {
+          "heading": {
+            "heading": "Samlinger"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "Kontaktformular",
+      "presets": {
+        "name": "Kontaktformular"
+      }
+    },
+    "email_signup_banner": {
+      "name": "E-mail tilmeldingsbanner",
+      "presets": {
+        "name": "E-mail tilmeldingsbanner",
+        "blocks": {
+          "heading": {
+            "heading": "Åbner snart"
+          },
+          "text": {
+            "text": "<p>Vær den første til at vide, hvornår vi lancerer.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "Fremhævet samling",
+      "settings": {
+        "collection": {
+          "label": "Samling"
+        },
+        "products_to_show": {
+          "label": "Maksimalt antal produkter der vises"
+        }
+      },
+      "presets": {
+        "name": "Fremhævet samling",
+        "category": "Produkter",
+        "blocks": {
+          "heading": {
+            "heading": "Fremhævet samling"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "Sidefod"
+    },
+    "header": {
+      "name": "Header",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "Aktivér sticky header",
+          "info": "Header vises på skærmen, når kunder scroller op."
+        }
+      }
+    },
+    "image_banner": {
+      "name": "Billedbanner",
+      "settings": {
+        "image": {
+          "label": "Første billede"
+        },
+        "image_2": {
+          "label": "Andet billede"
+        },
+        "full_page_height_enable": {
+          "label": "Fuld sidehøjde"
+        }
+      },
+      "presets": {
+        "name": "Billedbanner",
+        "category": "Bannere",
+        "blocks": {
+          "heading": {
+            "heading": "Billedbanner"
+          },
+          "text": {
+            "text": "<p><strong>Giv kunderne detaljer om bannerbilledet/-billederne eller indholdet i skabelonen.</strong></p>"
+          },
+          "button": {
+            "button_label": "Shop alle →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "Blogindlæg"
+    },
+    "main_cart": {
+      "name": "Kurvside"
+    },
+    "main_list_collections": {
+      "name": "Samlingsliste-side"
+    },
+    "main_page": {
+      "name": "Side"
+    },
+    "main_password_footer": {
+      "name": "Adgangskode sidefod"
+    },
+    "main_password_header": {
+      "name": "Adgangskode header"
+    },
+    "main_product": {
+      "name": "Produktinformation"
+    },
+    "product_recommendations": {
+      "name": "Produktanbefalinger",
+      "settings": {
+        "paragraph": {
+          "content": "Dynamiske anbefalinger bruger ordre- og produktinformation til at ændre sig og forbedres over tid. [Læs mere](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "Maksimalt antal produkter der vises"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Islands demo",
+      "settings": {
+        "heading": {
+          "label": "Overskrift",
+          "default": "Islands Architecture Demo"
+        }
+      },
+      "presets": {
+        "name": "Islands demo"
+      }
+    },
+    "section": {
+      "name": "Sektion",
+      "settings": {
+        "header__layout": {
+          "content": "Layout"
+        },
+        "gap": {
+          "label": "Mellemrum"
+        },
+        "header__size": {
+          "content": "Størrelse"
+        },
+        "section_width": {
+          "label": "Bredde",
+          "options__page": {
+            "label": "Side"
+          },
+          "options__full": {
+            "label": "Fuld"
+          }
+        },
+        "header__padding": {
+          "content": "Padding"
+        },
+        "padding_block_start": {
+          "label": "Top"
+        },
+        "padding_block_end": {
+          "label": "Bund"
+        }
+      },
+      "presets": {
+        "name": "Sektion"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "Landevælger",
+      "settings": {
+        "heading": {
+          "label": "Overskrift",
+          "info": "Overskrift kræves for at vise landevælgeren",
+          "default": "Land"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "Menu",
+      "settings": {
+        "heading": {
+          "label": "Overskrift",
+          "info": "Overskrift kræves for at vise menuen",
+          "default": "Hurtige links"
+        },
+        "menu": {
+          "label": "Menu",
+          "info": "Viser kun menupunkter på øverste niveau"
+        }
+      },
+      "presets": {
+        "name": "Menu",
+        "category": "Sidefod"
+      }
+    },
+    "header_logo": {
+      "name": "Logo"
+    },
+    "header_menu_mobile": {
+      "name": "Menu mobil",
+      "settings": {
+        "menu": {
+          "label": "Primær navigation"
+        }
+      }
+    },
+    "article_card": {
+      "name": "Artikelkort"
+    },
+    "article_content": {
+      "name": "Indhold"
+    },
+    "button": {
+      "name": "Knap",
+      "settings": {
+        "button_label": {
+          "label": "Knapetiket",
+          "info": "Lad etiketten være tom for at skjule knappen.",
+          "default": "Knapetiket"
+        },
+        "button_link": {
+          "label": "Knaplink"
+        },
+        "button_variant": {
+          "label": "Knapvariant",
+          "options__default": {
+            "label": "Standard"
+          },
+          "options__link": {
+            "label": "Link"
+          }
+        },
+        "button_size": {
+          "label": "Knapstørrelse",
+          "options__default": {
+            "label": "Standard"
+          },
+          "options__lg": {
+            "label": "Stor"
+          }
+        }
+      },
+      "presets": {
+        "name": "Knap",
+        "category": "Grundlæggende"
+      }
+    },
+    "buy_buttons": {
+      "name": "Købsknapper",
+      "settings": {
+        "product": {
+          "label": "Produkt"
+        },
+        "show_dynamic_checkout": {
+          "label": "Vis dynamiske betalingsknapper",
+          "info": "Ved hjælp af de betalingsmetoder, der er tilgængelige i din butik, ser kunderne deres foretrukne mulighed, som PayPal eller Apple Pay. [Læs mere](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "Købsknapper"
+      }
+    },
+    "collection_card": {
+      "name": "Samlingskort",
+      "settings": {
+        "collection": {
+          "label": "Samling"
+        }
+      },
+      "presets": {
+        "name": "Samlingskort"
+      }
+    },
+    "details": {
+      "name": "Detaljer"
+    },
+    "email_signup": {
+      "name": "E-mail tilmelding",
+      "presets": {
+        "name": "E-mail tilmelding"
+      }
+    },
+    "header_menu": {
+      "name": "Menu",
+      "settings": {
+        "menu": {
+          "label": "Primær navigation"
+        }
+      }
+    },
+    "heading": {
+      "name": "Overskrift",
+      "settings": {
+        "heading": {
+          "label": "Overskrift",
+          "default": "Fortæl om dit brand"
+        },
+        "heading_size": {
+          "label": "Overskriftstørrelse",
+          "options__default": {
+            "label": "Standard"
+          },
+          "options__md": {
+            "label": "Medium"
+          },
+          "options__lg": {
+            "label": "Stor"
+          },
+          "options__xl": {
+            "label": "Ekstra stor"
+          }
+        },
+        "heading_level": {
+          "label": "Overskriftsniveau",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "Overskrift",
+        "category": "Grundlæggende"
+      }
+    },
+    "image": {
+      "name": "Billede",
+      "settings": {
+        "image": {
+          "label": "Billede"
+        }
+      }
+    },
+    "page_content": {
+      "name": "Sideindhold"
+    },
+    "price": {
+      "name": "Pris",
+      "settings": {
+        "product": {
+          "label": "Produkt"
+        }
+      }
+    },
+    "product_card": {
+      "name": "Produktkort",
+      "settings": {
+        "product": {
+          "label": "Produkt"
+        }
+      },
+      "presets": {
+        "name": "Produktkort",
+        "category": "Produkt"
+      }
+    },
+    "product_media_gallery": {
+      "name": "Produktmedie"
+    },
+    "search_input": {
+      "name": "Søgefelt"
+    },
+    "tab": {
+      "name": "Fane",
+      "settings": {
+        "title": {
+          "label": "Overskrift",
+          "default": "Forsendelsesoplysninger"
+        },
+        "content": {
+          "label": "Faneindhold",
+          "default": "<p>Brug foldbare faner til mere detaljeret information, der hjælper kunderne med at træffe en købsbeslutning.</p><p>Eks: Forsendelses- og returpolitikker, størrelsesguider og andre almindelige spørgsmål.</p>"
+        },
+        "page": {
+          "label": "Faneindhold fra side"
+        }
+      },
+      "presets": {
+        "name": "Fane"
+      }
+    },
+    "text": {
+      "name": "Tekst",
+      "settings": {
+        "text": {
+          "label": "Beskrivelse",
+          "default": "<p>Del information om dit brand med dine kunder.</p>"
+        },
+        "text_size": {
+          "label": "Tekststørrelse",
+          "options__default": {
+            "label": "Standard"
+          },
+          "options__lg": {
+            "label": "Stor"
+          }
+        }
+      },
+      "presets": {
+        "name": "Tekst",
+        "category": "Grundlæggende"
+      }
+    },
+    "variant_picker": {
+      "name": "Variantvælger",
+      "settings": {
+        "product": {
+          "label": "Produkt"
+        },
+        "picker_type": {
+          "label": "Type",
+          "options__dropdown": {
+            "label": "Rullemenu"
+          },
+          "options__button": {
+            "label": "Knapper"
+          }
+        }
+      },
+      "presets": {
+        "name": "Variantvælger"
+      }
+    },
+    "product_details": {
+      "name": "Detaljer"
+    },
+    "cart_products": {
+      "name": "Kurvprodukter"
+    }
+  }
+}

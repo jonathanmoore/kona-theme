@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "collection_list": {
+      "name": "产品系列列表",
+      "settings": {
+        "collection_list": {
+          "label": "产品系列"
+        },
+        "columns_desktop": {
+          "label": "桌面端列数"
+        }
+      },
+      "presets": {
+        "name": "产品系列列表",
+        "blocks": {
+          "heading": {
+            "heading": "产品系列"
+          }
+        }
+      }
+    },
+    "contact_form": {
+      "name": "联系表单",
+      "presets": {
+        "name": "联系表单"
+      }
+    },
+    "email_signup_banner": {
+      "name": "邮件订阅横幅",
+      "presets": {
+        "name": "邮件订阅横幅",
+        "blocks": {
+          "heading": {
+            "heading": "即将开业"
+          },
+          "text": {
+            "text": "<p>抢先了解我们的上线时间。</p>"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "name": "精选产品系列",
+      "settings": {
+        "collection": {
+          "label": "产品系列"
+        },
+        "products_to_show": {
+          "label": "最多显示产品数量"
+        }
+      },
+      "presets": {
+        "name": "精选产品系列",
+        "category": "产品",
+        "blocks": {
+          "heading": {
+            "heading": "精选产品系列"
+          }
+        }
+      }
+    },
+    "footer": {
+      "name": "页脚"
+    },
+    "header": {
+      "name": "页眉",
+      "settings": {
+        "enable_sticky_header": {
+          "label": "启用固定页眉",
+          "info": "当顾客向上滚动时，页眉显示在屏幕上。"
+        }
+      }
+    },
+    "image_banner": {
+      "name": "图片横幅",
+      "settings": {
+        "image": {
+          "label": "第一张图片"
+        },
+        "image_2": {
+          "label": "第二张图片"
+        },
+        "full_page_height_enable": {
+          "label": "整页高度"
+        }
+      },
+      "presets": {
+        "name": "图片横幅",
+        "category": "横幅",
+        "blocks": {
+          "heading": {
+            "heading": "图片横幅"
+          },
+          "text": {
+            "text": "<p><strong>向顾客提供有关横幅图片或模板内容的详细信息。</strong></p>"
+          },
+          "button": {
+            "button_label": "查看全部 →"
+          }
+        }
+      }
+    },
+    "main_blog": {
+      "name": "博客文章"
+    },
+    "main_cart": {
+      "name": "购物车页面"
+    },
+    "main_list_collections": {
+      "name": "产品系列列表页面"
+    },
+    "main_page": {
+      "name": "页面"
+    },
+    "main_password_footer": {
+      "name": "密码页脚"
+    },
+    "main_password_header": {
+      "name": "密码页眉"
+    },
+    "main_product": {
+      "name": "产品信息"
+    },
+    "product_recommendations": {
+      "name": "产品推荐",
+      "settings": {
+        "paragraph": {
+          "content": "动态推荐会根据订单和产品信息不断变化和改进。[了解更多](https://help.shopify.com/themes/development/recommended-products)"
+        },
+        "products_to_show": {
+          "label": "最多显示产品数量"
+        }
+      }
+    },
+    "islands_demo": {
+      "name": "Islands 演示",
+      "settings": {
+        "heading": {
+          "label": "标题",
+          "default": "Islands 架构演示"
+        }
+      },
+      "presets": {
+        "name": "Islands 演示"
+      }
+    },
+    "section": {
+      "name": "分区",
+      "settings": {
+        "header__layout": {
+          "content": "布局"
+        },
+        "gap": {
+          "label": "间距"
+        },
+        "header__size": {
+          "content": "尺寸"
+        },
+        "section_width": {
+          "label": "宽度",
+          "options__page": {
+            "label": "页面"
+          },
+          "options__full": {
+            "label": "完整"
+          }
+        },
+        "header__padding": {
+          "content": "内边距"
+        },
+        "padding_block_start": {
+          "label": "顶部"
+        },
+        "padding_block_end": {
+          "label": "底部"
+        }
+      },
+      "presets": {
+        "name": "分区"
+      }
+    }
+  },
+  "blocks": {
+    "footer_country_selector": {
+      "name": "国家/地区选择器",
+      "settings": {
+        "heading": {
+          "label": "标题",
+          "info": "显示国家/地区选择器需要标题",
+          "default": "国家/地区"
+        }
+      }
+    },
+    "footer_menu": {
+      "name": "菜单",
+      "settings": {
+        "heading": {
+          "label": "标题",
+          "info": "显示菜单需要标题",
+          "default": "快速链接"
+        },
+        "menu": {
+          "label": "菜单",
+          "info": "仅显示顶级菜单项"
+        }
+      },
+      "presets": {
+        "name": "菜单",
+        "category": "页脚"
+      }
+    },
+    "header_logo": {
+      "name": "徽标"
+    },
+    "header_menu_mobile": {
+      "name": "移动端菜单",
+      "settings": {
+        "menu": {
+          "label": "主导航"
+        }
+      }
+    },
+    "article_card": {
+      "name": "文章卡片"
+    },
+    "article_content": {
+      "name": "内容"
+    },
+    "button": {
+      "name": "按钮",
+      "settings": {
+        "button_label": {
+          "label": "按钮标签",
+          "info": "留空标签以隐藏按钮。",
+          "default": "按钮标签"
+        },
+        "button_link": {
+          "label": "按钮链接"
+        },
+        "button_variant": {
+          "label": "按钮样式",
+          "options__default": {
+            "label": "默认"
+          },
+          "options__link": {
+            "label": "链接"
+          }
+        },
+        "button_size": {
+          "label": "按钮尺寸",
+          "options__default": {
+            "label": "默认"
+          },
+          "options__lg": {
+            "label": "大"
+          }
+        }
+      },
+      "presets": {
+        "name": "按钮",
+        "category": "基础"
+      }
+    },
+    "buy_buttons": {
+      "name": "购买按钮",
+      "settings": {
+        "product": {
+          "label": "产品"
+        },
+        "show_dynamic_checkout": {
+          "label": "显示动态结账按钮",
+          "info": "顾客可以看到他们偏好的付款方式，如 PayPal 或 Apple Pay，这些方式基于您商店中可用的付款方式。[了解更多](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+        }
+      },
+      "presets": {
+        "name": "购买按钮"
+      }
+    },
+    "collection_card": {
+      "name": "产品系列卡片",
+      "settings": {
+        "collection": {
+          "label": "产品系列"
+        }
+      },
+      "presets": {
+        "name": "产品系列卡片"
+      }
+    },
+    "details": {
+      "name": "详细信息"
+    },
+    "email_signup": {
+      "name": "邮件订阅",
+      "presets": {
+        "name": "邮件订阅"
+      }
+    },
+    "header_menu": {
+      "name": "菜单",
+      "settings": {
+        "menu": {
+          "label": "主导航"
+        }
+      }
+    },
+    "heading": {
+      "name": "标题",
+      "settings": {
+        "heading": {
+          "label": "标题",
+          "default": "介绍您的品牌"
+        },
+        "heading_size": {
+          "label": "标题尺寸",
+          "options__default": {
+            "label": "默认"
+          },
+          "options__md": {
+            "label": "中"
+          },
+          "options__lg": {
+            "label": "大"
+          },
+          "options__xl": {
+            "label": "超大"
+          }
+        },
+        "heading_level": {
+          "label": "标题级别",
+          "options__div": {
+            "label": "Div"
+          },
+          "options__h1": {
+            "label": "H1"
+          },
+          "options__h2": {
+            "label": "H2"
+          },
+          "options__h3": {
+            "label": "H3"
+          }
+        }
+      },
+      "presets": {
+        "name": "标题",
+        "category": "基础"
+      }
+    },
+    "image": {
+      "name": "图片",
+      "settings": {
+        "image": {
+          "label": "图片"
+        }
+      }
+    },
+    "page_content": {
+      "name": "页面内容"
+    },
+    "price": {
+      "name": "价格",
+      "settings": {
+        "product": {
+          "label": "产品"
+        }
+      }
+    },
+    "product_card": {
+      "name": "产品卡片",
+      "settings": {
+        "product": {
+          "label": "产品"
+        }
+      },
+      "presets": {
+        "name": "产品卡片",
+        "category": "产品"
+      }
+    },
+    "product_media_gallery": {
+      "name": "产品媒体"
+    },
+    "search_input": {
+      "name": "搜索输入框"
+    },
+    "tab": {
+      "name": "标签页",
+      "settings": {
+        "title": {
+          "label": "标题",
+          "default": "配送信息"
+        },
+        "content": {
+          "label": "标签页内容",
+          "default": "<p>使用可折叠标签页提供更详细的信息，帮助顾客做出购买决策。</p><p>例如：配送和退货政策、尺码指南以及其他常见问题。</p>"
+        },
+        "page": {
+          "label": "来自页面的标签页内容"
+        }
+      },
+      "presets": {
+        "name": "标签页"
+      }
+    },
+    "text": {
+      "name": "文本",
+      "settings": {
+        "text": {
+          "label": "描述",
+          "default": "<p>与顾客分享您的品牌信息。</p>"
+        },
+        "text_size": {
+          "label": "文本尺寸",
+          "options__default": {
+            "label": "默认"
+          },
+          "options__lg": {
+            "label": "大"
+          }
+        }
+      },
+      "presets": {
+        "name": "文本",
+        "category": "基础"
+      }
+    },
+    "variant_picker": {
+      "name": "多属性选择器",
+      "settings": {
+        "product": {
+          "label": "产品"
+        },
+        "picker_type": {
+          "label": "类型",
+          "options__dropdown": {
+            "label": "下拉菜单"
+          },
+          "options__button": {
+            "label": "按钮"
+          }
+        }
+      },
+      "presets": {
+        "name": "多属性选择器"
+      }
+    },
+    "product_details": {
+      "name": "详细信息"
+    },
+    "cart_products": {
+      "name": "购物车产品"
+    }
+  }
+}

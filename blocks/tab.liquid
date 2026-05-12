@@ -1,0 +1,51 @@
+{% doc %}
+  Renders a collapsible tab with a heading and content area.
+{% enddoc %}
+
+<div class="tab mb-10 [.tab_+_&]:-mt-6" {{ block.shopify_attributes }}>
+  <details id="Details-{{ block.id }}-{{ section.id }}">
+    <summary>
+      <h2 class="text-lead font-body-weight-bold flex justify-between">
+        {{ block.settings.title | default: block.settings.page.title }}
+        <span class="h-5 w-5 [details[open]_&]:rotate-180">
+          {% render 'icon-caret' %}
+        </span>
+      </h2>
+    </summary>
+    <div class="prose prose-invert pb-4 pt-4" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+      {{ block.settings.content }}
+      {{ block.settings.page.content }}
+    </div>
+  </details>
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.tab.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:blocks.tab.settings.title.label",
+      "default": "t:blocks.tab.settings.title.default"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:blocks.tab.settings.content.label",
+      "default": "t:blocks.tab.settings.content.default"
+    },
+    {
+      "type": "page",
+      "id": "page",
+      "label": "t:blocks.tab.settings.page.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.tab.presets.name"
+    }
+  ]
+}
+{% endschema %}
